@@ -1680,7 +1680,7 @@ pre code {
 </tr>
 <tr>
 <td><strong>Test</strong> (unten)</td>
-<td>Verifikation — validate · --check · CI pass/fail</td>
+<td>Verifikation — validate · --check · CI pass/fail (CI = automatische Prüf-Pipeline)</td>
 <td>objektive Entscheidung</td>
 </tr>
 </tbody>
@@ -3041,6 +3041,7 @@ pre code {
 .rank { color: #ffd88a; font-weight: 700; }
 ;" data-marpit-pagination-total="38"><div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h1 id="open-source-toolbox">Open-Source Toolbox</h1>
+<h2 id="harnesses--die-steuerungsebene-%C3%BCber-dem-modell">Harnesses — die Steuerungsebene über dem Modell</h2>
 <footer>IT4Science Days 2026 · Agentic AI Workshop</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="IT4Science Days 2026 · Agentic AI Workshop" data-class="smaller" data-theme="default" data-style="section {
@@ -3265,7 +3266,7 @@ pre code {
 <div>
 <p><strong>1. OpenCode</strong> — der Allrounder</p>
 <ul>
-<li>CLI-Agent, TUI, <code>opencode run &quot;…&quot;</code> — Modell je Agent.</li>
+<li>Agent im Terminal (CLI/TUI) — <code>opencode run &quot;…&quot;</code>, Modell je Agent.</li>
 <li>LSP, Plugins, Skills, MCP · mit OmO: AST-Grep, Background-Agents.</li>
 </ul>
 <p><strong>2. pi</strong> — das Minimal-Harness</p>
@@ -3275,7 +3276,7 @@ pre code {
 </ul>
 <p><strong>3. zot</strong> — das schlanke Agent-Harness</p>
 <ul>
-<li>Single-Binary (Go), TUI + JSON-RPC + MCP.</li>
+<li>Single-Binary (Go), TUI + JSON-RPC (fernsteuerbar) + MCP.</li>
 <li>Ollama/llama.cpp → lokale Modelle, souverän.</li>
 </ul>
 </div>
@@ -4244,13 +4245,12 @@ pre code {
 <p><strong>Jeder verlässt den Raum mit einem eigenen, CI-validierten Research-Repo.</strong></p>
 <ul>
 <li><strong>Literatur-Corpus als reiner Text</strong>: <code>papers.yaml</code> = Source of Truth.</li>
-<li><strong>Eine Konfiguration</strong> (<code>config/taxonomy.yaml</code>) steuert das ganze System.</li>
-<li>Pipeline: <strong>validieren → generieren → Statistiken → Reports</strong>.</li>
-<li><strong>CI</strong> sucht wöchentlich neue Papers und stellt sie auf <strong>GitHub Pages</strong>.</li>
+<li><strong>Eine Config</strong> (<code>config/taxonomy.yaml</code>) steuert alles.</li>
+<li>Pipeline: <strong>validieren → generieren → Stats → Reports</strong>.</li>
+<li><strong>CI</strong> (Prüf-Pipeline) holt wöchentlich neue Papers → <strong>GitHub Pages</strong>.</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/tobias-weiss-ai-xr/skeleton-research.git my-research
 <span class="hljs-built_in">cd</span> my-research
-<span class="hljs-comment"># → config/taxonomy.yaml anpassen, papers.yaml seeden, Pipeline laufen lassen <img class="emoji" draggable="false" alt="🚀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f680.svg" data-marp-twemoji=""/></span>
 </code></pre>
 <footer>IT4Science Days 2026 · Agentic AI Workshop</footer>
 </section>
@@ -4709,14 +4709,11 @@ pre code {
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="jump-start-in-5-schritten">Jump-Start in 5 Schritten</h2>
 <ol>
-<li><strong>Forken</strong>: <code>skeleton-research</code> klonen — sauberer Ausgangspunkt.</li>
-<li><strong>Taxonomie setzen</strong>: <code>config/taxonomy.yaml</code> auf dein Thema zuschneiden.<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">categories:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">agentic-ai</span>
-</code></pre>
-</li>
-<li><strong>Seeden</strong>: <code>papers.yaml</code> mit deinen Start-Papers füllen (echte URLs!).</li>
-<li><strong>Pipeline laufen lassen</strong>: <code>python scripts/pipeline.py</code> — validiert &amp; generiert.</li>
-<li><strong>Pushen</strong>: CI validiert, generiert, deployed auf GitHub Pages.</li>
+<li><strong>Forken</strong>: <code>skeleton-research</code> klonen.</li>
+<li><strong>Taxonomie setzen</strong>: <code>config/taxonomy.yaml</code> — nur <code>categories:</code> anpassen.</li>
+<li><strong>Seeden</strong>: Start-Papers in <code>papers.yaml</code> (echte URLs!).</li>
+<li><strong>Pipeline</strong>: <code>python scripts/pipeline.py</code> — validiert &amp; generiert.</li>
+<li><strong>Pushen</strong>: CI validiert &amp; deployed auf GitHub Pages.</li>
 </ol>
 <blockquote>
 <p><strong>Nie generierte Dateien von Hand editieren</strong> — sie regenerieren sich aus <code>papers.yaml</code>.</p>
@@ -4977,7 +4974,7 @@ pre code {
 </tbody>
 </table>
 <blockquote>
-<p><strong>Du kuratierst, der Agent erledigt das Rauschen.</strong> CI hält den Corpus gesund — jede Woche ein Discovery-PR.</p>
+<p><strong>Du kuratierst, der Agent erledigt das Rauschen.</strong> CI hält den Corpus gesund — wöchentlich ein Discovery-PR (Änderungsvorschlag).</p>
 </blockquote>
 <footer>IT4Science Days 2026 · Agentic AI Workshop</footer>
 </section>
@@ -8675,6 +8672,9 @@ pre code {
 ;" data-marpit-pagination-total="38"><div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h1 id="questions--discussion">Questions &amp; Discussion</h1>
 <p>Vielen Dank!</p>
+<blockquote>
+<p>Materialien &amp; Folien: dieses Repo — Fragen danach gern als GitHub-Issue.</p>
+</blockquote>
 <p>Diskussionsthemen:</p>
 <ul>
 <li>Wo liegt das größte Potenzial — und wo die größte Skepsis?</li>
@@ -8924,7 +8924,10 @@ CHRISTIAN — die Pyramide als roter Faden. Spec oben (Source of Truth), Contrac
 der Mitte (Delta-Spec = Agenten-Prompt), Tests unten (objektive Verifikation).
 Wir kommen auf dieses Bild immer wieder zurück.</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>notes:
 CHRISTIAN — die drei Ebenen kurz erläutern. Dieses Muster taucht in skeleton-research
-(papers.yaml=Spec, AGENTS.md=Pipeline, CI=Test) UND in OpenSpec wieder auf.</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>notes:
+(papers.yaml=Spec, AGENTS.md=Pipeline, CI=Test) UND in OpenSpec wieder auf.
+Glossar für die Zielgruppe (Postdocs, nicht alle Devs): SHALL = verbindliche
+Anforderung, Given/When/Then = Szenario-Schablone (Ausgangslage → Aktion →
+erwartetes Ergebnis) — wie ein Versuchsprotokoll.</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>notes:
 CHRISTIAN — Block 1 · 09:15–09:30 (15 min).</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>notes:
 CHRISTIAN — Block 1 · 09:15–09:30. Weg von &quot;Prompting&quot; hin zu &quot;Contracts&quot;.</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>notes:
 CHRISTIAN — Block 2 · 09:30–09:50 (20 min), Lead. Tobias ergänzt die
@@ -8937,7 +8940,8 @@ planen, verifizieren, korrigieren.
 (4) Strukturierte Ausgaben, parallele Tool-Calls, Multi-Agent — Produktionsreife.
 (5) Qwen 3.6/3.5 (MoE), GLM 4.7/5, DeepSeek V4, GPT-OSS, Llama, Gemma 4 —
 für viele Tasks reicht ein kleines Modell.
-(6) Ollama, vLLM, llama.cpp auf eigener Hardware.
+(6) Ollama, vLLM, llama.cpp auf eigener Hardware. MPG-Bezug: sensible
+Forschungsdaten → lokale Modelle (DSGVO); GWDG/SAIA-Zugang existiert institutsseitig.
 TOBIAS nach #5/#6 (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle wirklich
 laufen, Routing über Aliase → vertieft in Block 5.</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>notes:
 CHRISTIAN — eigene Inhalte. Bitte vorab ausfüllen.</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>notes:
@@ -8947,6 +8951,8 @@ TOBIAS — Timing (20 min): 12 min Vergleich inkl. Live-Demo — derselbe Prompt
 allen dreien, Ergebnis-Differenz zeigen: „gleiche Modelle, unterschiedliche
 Ergebnisse“ wird bewiesen, nicht behauptet. 3 min Ranking. Danach Tooling-Folie.
 Details: OpenCode mit OmO → AST-Grep (25 Sprachen), parallele Background-Agents.
+Glossar für Nicht-Devs (Zielgruppe Postdocs): LSP = Language Server (Code-Verständnis
+im Editor), MCP = Model Context Protocol, AST-Grep = strukturelle Code-Suche.
 pi: nichts eingebacken, alles baubar. zot: Extensions, Slash-Commands,
 `zot &quot;prompt&quot;` · `zot -p` · `zot rpc` — RPC für eigene Automation.
 Ranking: OpenCode Tagesgeschäft, pi minimal &amp; erweiterbar, zot Skripting/RPC.
@@ -8959,13 +8965,15 @@ minimal bauen — Zahlen dazu gleich im Token-Teil.“</p></div><div class="besp
 Pause 10:10–10:20.</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>notes:
 TOBIAS — Block 4 · 10:20–10:45 (25 min), Lead (Christian unterstützt). Herzstück: Wie Teilnehmende mit
 skeleton-research ihre eigene Forschung unterstützen. Tobias führt das Repo.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>notes:
-TOBIAS — Kernnutzen: &quot;Wie unterstützt das meine Forschung?&quot; Ein Repo = strukturierter,
-reproduzierbarer, auto-validierter Stand des Literaturwissens. CI macht es lebendig.</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>notes:
+TOBIAS — Kernnutzen: “Wie unterstützt das meine Forschung?” Ein Repo = strukturierter,
+reproduzierbarer, auto-validierter Stand des Literaturwissens. CI macht es lebendig.
+Danach: config/taxonomy.yaml anpassen, papers.yaml seeden, Pipeline laufen lassen.</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>notes:
 TOBIAS — der Unix-Geist wird durch die Struktur gezeigt, nicht benannt:
 ein Tool/ein Job, Text als Schnittstelle, Pipeline als objektiver Richter.
 papers.yaml = Spec, Pipeline = Contract, CI = Test → die Pyramide in Aktion.</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>notes:
-TOBIAS — live zeigen. Wichtig: „Niemals generierte Dateien editieren&quot; (README.md,
-docs/papers.json, reports) — sie werden regeneriert. Das ist &quot;Lösche &amp; Regeneriere&quot;.</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>notes:
+TOBIAS — live zeigen. Wichtig: „Niemals generierte Dateien editieren“ (README.md,
+docs/papers.json, reports) — sie werden regeneriert. Das ist “Lösche &amp; Regeneriere”.
+YAML-Beispiel Schritt 2: `categories: - id: agentic-ai` (id + name + description).</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>notes:
 TOBIAS — das ist der eigentliche Wert: nicht das Repo selbst, sondern dass der
 Agent die Pflege (Discovery, Validierung, Trends) übernimmt, während der Mensch
 die Qualität kuratiert. Der Mensch bleibt in der Verantwortung.</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>notes:
@@ -8986,7 +8994,8 @@ Aufgabe — best-for-coding → Qwen3-Coder-Next, best-for-agentic → GLM 4.7,
 budget → DeepSeek V4 Flash; omO: Sisyphus/Prometheus/Oracle je Kategorie),
 2 min Caching/Kontext-Hygiene (kleiner, präziser Kontext = weniger Wiederholung),
 1 min Prinzipien → Brücke zu Anwendung 2 („dein Spec ist auch Token-Optimierung:
-der Contract ersetzt Wiederholung“).</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>notes:
+der Contract ersetzt Wiederholung&quot;). Glossar: KV-Cache = Modell merkt sich
+Kontext-Berechnungen über Schritte; Kompaktion = alten Kontext zusammenfassen/verwerfen.</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>notes:
 CHRISTIAN — Block 6 · 11:00–11:25 (25 min), Lead (Tobias unterstützt). Hands-on: Teilnehmende bauen ihren eigenen
 Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>notes:
 CHRISTIAN — 20–25 min. Referenz: der fertige add-research-gap-analysis-Change in

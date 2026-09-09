@@ -243,13 +243,16 @@ Wir kommen auf dieses Bild immer wieder zurück.
 |-------|-----|-------|
 | **Spec** (oben) | Verhalten als Verträge — SHALL/MUST/SHOULD, Given/When/Then | Source of Truth, das „Warum" |
 | **Contract** (Mitte) | Delta-Spec — proposal → design → specs → tasks | der Prompt, den der Agent bekommt |
-| **Test** (unten) | Verifikation — validate · --check · CI pass/fail | objektive Entscheidung |
+| **Test** (unten) | Verifikation — validate · --check · CI pass/fail (CI = automatische Prüf-Pipeline) | objektive Entscheidung |
 
 > **Spec governs → Contract implements → Tests verify → Spec evolves.**
 
 <!-- notes:
 CHRISTIAN — die drei Ebenen kurz erläutern. Dieses Muster taucht in skeleton-research
 (papers.yaml=Spec, AGENTS.md=Pipeline, CI=Test) UND in OpenSpec wieder auf.
+Glossar für die Zielgruppe (Postdocs, nicht alle Devs): SHALL = verbindliche
+Anforderung, Given/When/Then = Szenario-Schablone (Ausgangslage → Aktion →
+erwartetes Ergebnis) — wie ein Versuchsprotokoll.
 -->
 
 ---
@@ -335,7 +338,8 @@ planen, verifizieren, korrigieren.
 (4) Strukturierte Ausgaben, parallele Tool-Calls, Multi-Agent — Produktionsreife.
 (5) Qwen 3.6/3.5 (MoE), GLM 4.7/5, DeepSeek V4, GPT-OSS, Llama, Gemma 4 —
 für viele Tasks reicht ein kleines Modell.
-(6) Ollama, vLLM, llama.cpp auf eigener Hardware.
+(6) Ollama, vLLM, llama.cpp auf eigener Hardware. MPG-Bezug: sensible
+Forschungsdaten → lokale Modelle (DSGVO); GWDG/SAIA-Zugang existiert institutsseitig.
 TOBIAS nach #5/#6 (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle wirklich
 laufen, Routing über Aliase → vertieft in Block 5.
 -->
@@ -364,6 +368,8 @@ CHRISTIAN — eigene Inhalte. Bitte vorab ausfüllen.
 
 # Open-Source Toolbox
 
+## Harnesses — die Steuerungsebene über dem Modell
+
 <!-- notes:
 TOBIAS — Block 3 · 09:50–10:10 (20 min), Lead. Christian ergänzt.
 Die Harnesses nach Stage/Use-Case ranken.
@@ -381,7 +387,7 @@ Die Harnesses nach Stage/Use-Case ranken.
 <div>
 
 **1. OpenCode** — der Allrounder
-- CLI-Agent, TUI, `opencode run "…"` — Modell je Agent.
+- Agent im Terminal (CLI/TUI) — `opencode run "…"`, Modell je Agent.
 - LSP, Plugins, Skills, MCP · mit OmO: AST-Grep, Background-Agents.
 
 **2. pi** — das Minimal-Harness
@@ -389,7 +395,7 @@ Die Harnesses nach Stage/Use-Case ranken.
 - „Adapt pi, nicht umgekehrt“.
 
 **3. zot** — das schlanke Agent-Harness
-- Single-Binary (Go), TUI + JSON-RPC + MCP.
+- Single-Binary (Go), TUI + JSON-RPC (fernsteuerbar) + MCP.
 - Ollama/llama.cpp → lokale Modelle, souverän.
 
 </div>
@@ -415,6 +421,8 @@ TOBIAS — Timing (20 min): 12 min Vergleich inkl. Live-Demo — derselbe Prompt
 allen dreien, Ergebnis-Differenz zeigen: „gleiche Modelle, unterschiedliche
 Ergebnisse“ wird bewiesen, nicht behauptet. 3 min Ranking. Danach Tooling-Folie.
 Details: OpenCode mit OmO → AST-Grep (25 Sprachen), parallele Background-Agents.
+Glossar für Nicht-Devs (Zielgruppe Postdocs): LSP = Language Server (Code-Verständnis
+im Editor), MCP = Model Context Protocol, AST-Grep = strukturelle Code-Suche.
 pi: nichts eingebacken, alles baubar. zot: Extensions, Slash-Commands,
 `zot "prompt"` · `zot -p` · `zot rpc` — RPC für eigene Automation.
 Ranking: OpenCode Tagesgeschäft, pi minimal & erweiterbar, zot Skripting/RPC.
@@ -483,19 +491,19 @@ skeleton-research ihre eigene Forschung unterstützen. Tobias führt das Repo.
 **Jeder verlässt den Raum mit einem eigenen, CI-validierten Research-Repo.**
 
 - **Literatur-Corpus als reiner Text**: `papers.yaml` = Source of Truth.
-- **Eine Konfiguration** (`config/taxonomy.yaml`) steuert das ganze System.
-- Pipeline: **validieren → generieren → Statistiken → Reports**.
-- **CI** sucht wöchentlich neue Papers und stellt sie auf **GitHub Pages**.
+- **Eine Config** (`config/taxonomy.yaml`) steuert alles.
+- Pipeline: **validieren → generieren → Stats → Reports**.
+- **CI** (Prüf-Pipeline) holt wöchentlich neue Papers → **GitHub Pages**.
 
 ```bash
 git clone https://github.com/tobias-weiss-ai-xr/skeleton-research.git my-research
 cd my-research
-# → config/taxonomy.yaml anpassen, papers.yaml seeden, Pipeline laufen lassen 🚀
 ```
 
 <!-- notes:
-TOBIAS — Kernnutzen: "Wie unterstützt das meine Forschung?" Ein Repo = strukturierter,
+TOBIAS — Kernnutzen: “Wie unterstützt das meine Forschung?” Ein Repo = strukturierter,
 reproduzierbarer, auto-validierter Stand des Literaturwissens. CI macht es lebendig.
+Danach: config/taxonomy.yaml anpassen, papers.yaml seeden, Pipeline laufen lassen.
 -->
 
 ---
@@ -533,21 +541,18 @@ papers.yaml = Spec, Pipeline = Contract, CI = Test → die Pyramide in Aktion.
 
 ## Jump-Start in 5 Schritten
 
-1. **Forken**: `skeleton-research` klonen — sauberer Ausgangspunkt.
-2. **Taxonomie setzen**: `config/taxonomy.yaml` auf dein Thema zuschneiden.
-    ```yaml
-    categories:
-      - id: agentic-ai
-    ```
-3. **Seeden**: `papers.yaml` mit deinen Start-Papers füllen (echte URLs!).
-4. **Pipeline laufen lassen**: `python scripts/pipeline.py` — validiert & generiert.
-5. **Pushen**: CI validiert, generiert, deployed auf GitHub Pages.
+1. **Forken**: `skeleton-research` klonen.
+2. **Taxonomie setzen**: `config/taxonomy.yaml` — nur `categories:` anpassen.
+3. **Seeden**: Start-Papers in `papers.yaml` (echte URLs!).
+4. **Pipeline**: `python scripts/pipeline.py` — validiert & generiert.
+5. **Pushen**: CI validiert & deployed auf GitHub Pages.
 
 > **Nie generierte Dateien von Hand editieren** — sie regenerieren sich aus `papers.yaml`.
 
 <!-- notes:
-TOBIAS — live zeigen. Wichtig: „Niemals generierte Dateien editieren" (README.md,
-docs/papers.json, reports) — sie werden regeneriert. Das ist "Lösche & Regeneriere".
+TOBIAS — live zeigen. Wichtig: „Niemals generierte Dateien editieren“ (README.md,
+docs/papers.json, reports) — sie werden regeneriert. Das ist “Lösche & Regeneriere”.
+YAML-Beispiel Schritt 2: `categories: - id: agentic-ai` (id + name + description).
 -->
 
 ---
@@ -565,7 +570,7 @@ docs/papers.json, reports) — sie werden regeneriert. Das ist "Lösche & Regene
 | Trends & Zeitgeist | `trend_scanner.py`, `landscape_analyzer.py`, `topic_planner.py` |
 | Kurz-Briefings | `brief_generator.py` |
 
-> **Du kuratierst, der Agent erledigt das Rauschen.** CI hält den Corpus gesund — jede Woche ein Discovery-PR.
+> **Du kuratierst, der Agent erledigt das Rauschen.** CI hält den Corpus gesund — wöchentlich ein Discovery-PR (Änderungsvorschlag).
 
 <!-- notes:
 TOBIAS — das ist der eigentliche Wert: nicht das Repo selbst, sondern dass der
@@ -717,7 +722,8 @@ Aufgabe — best-for-coding → Qwen3-Coder-Next, best-for-agentic → GLM 4.7,
 budget → DeepSeek V4 Flash; omO: Sisyphus/Prometheus/Oracle je Kategorie),
 2 min Caching/Kontext-Hygiene (kleiner, präziser Kontext = weniger Wiederholung),
 1 min Prinzipien → Brücke zu Anwendung 2 („dein Spec ist auch Token-Optimierung:
-der Contract ersetzt Wiederholung“).
+der Contract ersetzt Wiederholung"). Glossar: KV-Cache = Modell merkt sich
+Kontext-Berechnungen über Schritte; Kompaktion = alten Kontext zusammenfassen/verwerfen.
 -->
 
 ---
@@ -890,6 +896,8 @@ Links können als QR-Code oder Handout ergänzt werden.
 # Questions & Discussion
 
 Vielen Dank!
+
+> Materialien & Folien: dieses Repo — Fragen danach gern als GitHub-Issue.
 
 Diskussionsthemen:
 - Wo liegt das größte Potenzial — und wo die größte Skepsis?

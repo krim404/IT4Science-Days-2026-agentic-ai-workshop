@@ -21,6 +21,11 @@ TOLERANCE_PX = 2
 MEASURE_JS = """
 <script>
 (function () {
+  // Determinismus: Font-Metriken einfrieren (fontconfig-Race im Headless)
+  var st = document.createElement('style');
+  st.textContent = "* { font-family: 'Liberation Sans', Arial, sans-serif !important; }" +
+    "pre, code, .MARP-PRE { font-family: 'Liberation Mono', monospace !important; }";
+  document.head.appendChild(st);
   var finish = function () {
     var out = [];
     var sections = document.querySelectorAll('section');
@@ -65,15 +70,14 @@ MEASURE_JS = """
   d.textContent = '###RESULT###' + JSON.stringify(out);
   document.body.appendChild(d);
   };
-  var imgs = document.querySelectorAll('img');
-  var pending = imgs.length;
-  var done = function () { if (--pending <= 0) { setTimeout(finish, 50); } };
-  if (pending === 0) { done(); return; }
-  for (var p = 0; p < imgs.length; p++) {
-    var im = imgs[p];
-    if (im.complete) { done(); }
-    else { im.addEventListener('load', done); im.addEventListener('error', done); }
-  }
+  // Warten bis Marp-Core Code-Fitting (MARP-PRE SVG-Skalierung) + Fonts fertig sind;
+  // 2× rAF + kleines Timeout — sonst misst man den ungefitteten Zustand.
+  var go = function () {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { setTimeout(finish, 100); });
+    });
+  };
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(go); } else { go(); }
 })();
 </script>
 """.replace("%TOLERANCE%", str(TOLERANCE_PX))
@@ -87,22 +91,11 @@ def find_chromium():
     sys.exit("kein Chromium/Chrome gefunden")
 
 
-def main():
-    if len(sys.argv) != 2:
-        sys.exit(__doc__)
-    deck = Path(sys.argv[1])
-    if not deck.exists():
-        sys.exit(f"nicht gefunden: {deck}")
-    html = deck.read_text()
-    if "</body>" not in html:
-        sys.exit("kein gültiges HTML")
-    injected = html.replace("</body>", MEASURE_JS + "\n</body>")
-
+def measure(chromium, injected):
+    """Ein Chromium-Lauf; liefert Violations-Liste oder None bei Extraktionsfehler."""
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as tmp:
         tmp.write(injected)
         tmp_path = tmp.name
-
-    chromium = find_chromium()
     proc = subprocess.run(
         [
             chromium,
@@ -119,18 +112,45 @@ def main():
         timeout=120,
     )
     Path(tmp_path).unlink(missing_ok=True)
-
     match = re.search(r"###RESULT###(\[.*?\])</div>", proc.stdout, re.S)
-    if not match:
-        print(proc.stdout[-2000:], file=sys.stderr)
-        sys.exit("Konnte Messergebnis nicht extrahieren (Exit 2)")
+    return json.loads(match.group(1)) if match else None
 
-    violations = json.loads(match.group(1))
+
+def main():
+    if len(sys.argv) != 2:
+        sys.exit(__doc__)
+    deck = Path(sys.argv[1])
+    if not deck.exists():
+        sys.exit(f"nicht gefunden: {deck}")
+    html = deck.read_text()
+    if "</body>" not in html:
+        sys.exit("kein gültiges HTML")
+    injected = html.replace("</body>", MEASURE_JS + "\n</body>")
+
+    chromium = find_chromium()
+    n_sections = len(re.findall("<section", html))
+
+    # Konsens über 3 Läufe; Läufe ohne Ergebnis (Dump vor Fitting) werden verworfen.
+    # Worst-Case der gültigen Läufe zählt.
+    runs = [measure(chromium, injected) for _ in range(3)]
+    valid = [r for r in runs if r is not None]
+    if not valid:
+        sys.exit("Konnte Messergebnis nicht extrahieren (Exit 2)")
+    worst = {}
+    for run in valid:
+        for v in run:
+            key = (v["slide"], v["title"])
+            if key not in worst or v["worst"]["overlapPx"] > worst[key]["worst"]["overlapPx"]:
+                worst[key] = v
+    violations = sorted(worst.values(), key=lambda v: v["slide"])
+
+    dropped = len(runs) - len(valid)
+    suffix = f", 3 Läufe" + (f", {dropped} verworfen" if dropped else "")
     if not violations:
-        print(f"PASS ✅  {len(re.findall('<section', html))} Folien, keine Überlappung mit der Fußzeile (Toleranz {TOLERANCE_PX}px)")
+        print(f"PASS ✅  {n_sections} Folien, keine Überlappung mit der Fußzeile (Toleranz {TOLERANCE_PX}px{suffix})")
         return
 
-    print(f"FAIL ❌  {len(violations)} Folie(n) überlappen die Fußzeile:\n")
+    print(f"FAIL ❌  {len(violations)} Folie(n) überlappen die Fußzeile (Worst-Case aus 3 Läufen):\n")
     for v in violations:
         w = v["worst"]
         print(f"  Folie {v['slide']:>2}: +{w['overlapPx']}px  {w['tag']}  „{w['text']}”  [{v['title']}]")
