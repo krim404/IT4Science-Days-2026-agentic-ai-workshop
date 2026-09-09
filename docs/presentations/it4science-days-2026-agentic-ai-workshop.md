@@ -64,7 +64,6 @@ style: |
   }
   .speaker-christian { background: #14432a; color: #7ee2a8; border: 1px solid #2f9e5f; }
   .speaker-tobias    { background: #1a2f52; color: #8ab8ff; border: 1px solid #3b6fc4; }
-  .speaker-both      { background: #4a3a12; color: #ffd88a; border: 1px solid #b88a2e; }
   /* Placeholder boxes for content to be added */
   .todo {
     background: #3a2a10;
@@ -136,17 +135,17 @@ validiert wird, und haben einen OpenSpec-Change selbst angewendet.
 
 | Zeit | Block | Dauer | Wer |
 |------|-------|-------|-----|
-| 09:00–09:10 | Ankommen, Vorstellung, Ablauf | 10 min | beide |
+| 09:00–09:10 | Ankommen, Vorstellung, Ablauf | 10 min | Christian |
 | 09:10–09:25 | Grundlagen & Definition | 15 min | Christian |
 | 09:25–09:45 | Foundation Models — aktuelle Entwicklungen | 20 min | Christian + Tobias |
 | 09:45–10:05 | Open-Source Toolbox | 20 min | Tobias + Christian |
 | 10:05–10:15 | ☕ Pause | 10 min | — |
-| 10:15–10:40 | Anwendung 1: Eigenes Research-Repo | 25 min | beide |
+| 10:15–10:40 | Anwendung 1: Eigenes Research-Repo | 25 min | Tobias |
 | 10:40–11:00 | Spec Driven Development | 20 min | Christian |
 | 11:00–11:10 | Token-optimized Development | 10 min | Tobias |
-| 11:10–11:35 | Anwendung 2: Spec selbst anwenden | 25 min | beide |
+| 11:10–11:35 | Anwendung 2: Spec selbst anwenden | 25 min | Christian |
 | 11:35–11:40 | ☕ Pause | 5 min | — |
-| 11:40–12:00 | Q&A, Outcomes, Wrap Up | 20 min | beide |
+| 11:40–12:00 | Q&A, Outcomes, Wrap Up | 20 min | Tobias |
 
 <!-- notes:
 Agenda auf 1 min durchgehen. Zwei Hands-on-Blöcke: (1) eigenes Research-Repo,
@@ -157,31 +156,31 @@ Agenda auf 1 min durchgehen. Zwei Hands-on-Blöcke: (1) eigenes Research-Repo,
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 # Grundlagen: Das Spec · Contract · Test Modell
 
 <!-- notes:
-BEIDE — Sektions-Trenner. Einführung der zentralen Metapher des Workshops.
+CHRISTIAN — Sektions-Trenner. Einführung der zentralen Metapher des Workshops.
 -->
 
 ---
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 ## Eine Metapher für den ganzen Workshop
 
 <img class="hero" src="../../assets/spec-contract-test-pyramid.png" alt="Spec · Contract · Test Pyramide"/>
 
 <!-- notes:
-BEIDE — die Pyramide als roter Faden. Spec oben (Source of Truth), Contract in
+CHRISTIAN — die Pyramide als roter Faden. Spec oben (Source of Truth), Contract in
 der Mitte (Delta-Spec = Agenten-Prompt), Tests unten (objektive Verifikation).
 Wir kommen auf dieses Bild immer wieder zurück.
 -->
 
 ---
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 ## Was bedeutet die Pyramide?
 
@@ -194,7 +193,7 @@ Wir kommen auf dieses Bild immer wieder zurück.
 > **Spec governs → Contract implements → Tests verify → Spec evolves.**
 
 <!-- notes:
-BEIDE — die drei Ebenen kurz erläutern. Dieses Muster taucht in skeleton-research
+CHRISTIAN — die drei Ebenen kurz erläutern. Dieses Muster taucht in skeleton-research
 (papers.yaml=Spec, AGENTS.md=Pipeline, CI=Test) UND in OpenSpec wieder auf.
 -->
 
@@ -234,12 +233,12 @@ CHRISTIAN — Block 1 · 09:10–09:25. Weg von "Prompting" hin zu "Contracts".
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 # Foundation Models — aktuelle Entwicklungen
 
 <!-- notes:
-BEIDE — Block 2 · 09:25–09:45 (20 min). Christian leitet, Tobias ergänzt die
+CHRISTIAN — Block 2 · 09:25–09:45 (20 min), Lead. Tobias ergänzt die
 Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 -->
 
@@ -310,12 +309,12 @@ CHRISTIAN — eigene Inhalte. Bitte vorab ausfüllen.
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 # Open-Source Toolbox
 
 <!-- notes:
-BEIDE — Block 3 · 09:45–10:05 (20 min). Tobias führt, Christian ergänzt.
+TOBIAS — Block 3 · 09:45–10:05 (20 min), Lead. Christian ergänzt.
 Die Harnesses nach Stage/Use-Case ranken.
 -->
 
@@ -396,26 +395,25 @@ oh-my-opencode leitet zu Block 6 (Token-optimized) über.
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
 
 # ☕ Pause
 
 10 Minuten.
 
 <!-- notes:
-BEIDE — Pause 10:05–10:15.
+Pause 10:05–10:15.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 # Anwendung 1: Eigenes Research-Repo
 
 <!-- notes:
-BEIDE — Block 4 · 10:15–10:40 (25 min). Herzstück: Wie Teilnehmende mit
+TOBIAS — Block 4 · 10:15–10:40 (25 min), Lead (Christian unterstützt). Herzstück: Wie Teilnehmende mit
 skeleton-research ihre eigene Forschung unterstützen. Tobias führt das Repo.
 -->
 
@@ -681,18 +679,18 @@ Der Geist dahinter: kleine präzise Bausteine, die komponiert werden.
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 # Anwendung 2: Spec selbst anwenden
 
 <!-- notes:
-BEIDE — Block 7 · 11:10–11:35 (25 min). Hands-on: Teilnehmende bauen ihren eigenen
+CHRISTIAN — Block 7 · 11:10–11:35 (25 min), Lead (Tobias unterstützt). Hands-on: Teilnehmende bauen ihren eigenen
 Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).
 -->
 
 ---
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 ## Übung 2 — dein eigenes Research-Gap-Spec
 
@@ -708,13 +706,13 @@ openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"
 ```
 
 <!-- notes:
-BEIDE — 20–25 min. Referenz: der fertige add-research-gap-analysis-Change in
+CHRISTIAN — 20–25 min. Referenz: der fertige add-research-gap-analysis-Change in
 ai-literacy-research. Ergebnis-Sampling: 2–3 kurze Demos.
 -->
 
 ---
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
 
 ## Übung 2 — Ergebnis-Kriterien
 
@@ -728,7 +726,7 @@ ai-literacy-research. Ergebnis-Sampling: 2–3 kurze Demos.
 > Jede:r verlässt den Raum mit beidem: eigenem Research-Repo **und** eigenem Mini-Change.
 
 <!-- notes:
-BEIDE — Ergebnis-Check gegen die Pyramide. Das ist der "Aha-Moment": dieselbe
+CHRISTIAN — Ergebnis-Check gegen die Pyramide. Das ist der "Aha-Moment": dieselbe
 Struktur in übergreifter und in eigener Repo-Größe.
 -->
 
@@ -736,31 +734,30 @@ Struktur in übergreifter und in eigener Repo-Größe.
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
 
 # ☕ Pause
 
 5 Minuten.
 
 <!-- notes:
-BEIDE — Pause 11:35–11:40.
+Pause 11:35–11:40.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 # Q&A · Outcomes · Wrap Up
 
 <!-- notes:
-BEIDE — Block 8 · 11:40–12:00 (20 min). Teilnehmende präsentieren Outcomes.
+TOBIAS — Block 8 · 11:40–12:00 (20 min), Moderation. Teilnehmende präsentieren Outcomes.
 -->
 
 ---
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 ## Das Muster auf eigene Projekte übertragen
 
@@ -774,13 +771,13 @@ BEIDE — Block 8 · 11:40–12:00 (20 min). Teilnehmende präsentieren Outcomes
 > und genau so bei OpenSpec.
 
 <!-- notes:
-BEIDE — jeder Block des Workshops folgte derselben Pyramide. Jetzt aufs eigene
+TOBIAS — jeder Block des Workshops folgte derselben Pyramide. Jetzt aufs eigene
 Projekt übertragen.
 -->
 
 ---
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 ## Resources
 
@@ -802,7 +799,7 @@ Links können als QR-Code oder Handout ergänzt werden.
 
 <!-- _class: lead -->
 
-<div class="speaker speaker-both">👥 beide</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 # Questions & Discussion
 
@@ -815,7 +812,7 @@ Diskussionsthemen:
 - Agentische Literatur-Reviews für deine Forschung?
 
 <!-- notes:
-BEIDE — Moderation: Erfahrungsaustausch & Anwendungsfälle aus Teilnehmenden-Perspektive.
+TOBIAS — Moderation: Erfahrungsaustausch & Anwendungsfälle aus Teilnehmenden-Perspektive.
 -->
 
 ---
