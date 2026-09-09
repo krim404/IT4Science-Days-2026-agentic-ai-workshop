@@ -126,7 +126,7 @@ git add -A && git commit -m "bootstrap corpus" && git push
 
 ## Hands-on 2: Spec selbst anwenden
 
-Einen eigenen Mini-**OpenSpec-Change** strukturieren (`proposal.md` → `specs/` → `tasks.md`) und von einem Agenten implementieren lassen. Referenz ist der fertige Change **`add-research-gap-analysis`** im Repo [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research):
+Einen eigenen Mini-**OpenSpec-Change** strukturieren (`proposal.md` → `specs/` → `tasks.md`) und von einem Agenten implementieren lassen. Referenz ist der fertige Change **`add-research-gap-analysis`** im Repo [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) (`openspec/changes/archive/2026-08-23-add-research-gap-analysis`):
 
 ```bash
 openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"

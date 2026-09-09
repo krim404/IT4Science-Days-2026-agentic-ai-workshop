@@ -584,7 +584,7 @@ ADDED: Behavioral capability:
 ```
 
 ```yaml
-# openspec/changes/add-research-gap-analysis/tasks.md  (Contract)
+# openspec/changes/archive/2026-08-23-add-research-gap-analysis/tasks.md  (Contract)
 - [ ] design gap-score formula (thinness × momentum)
 - [ ] implement gap-score computation in stats module
 - [ ] add validate + CI check for reproducible rank
@@ -607,7 +607,7 @@ Klärungsrunden. Die Spec ist behaviorale Anforderung; die Tasks zählen den For
 - **Corpus**: 9.600+ Papers, 20 Kategorien, lebende systematische Übersicht.
 - **OpenSpec-Struktur** am echten Beispiel:
   - `openspec/specs/` — paper-corpus · discovery-pipeline · analysis-reporting (Source of Truth)
-  - `openspec/changes/add-research-gap-analysis/` — proposal → design → specs → tasks
+  - `openspec/changes/archive/2026-08-23-add-research-gap-analysis/` — proposal → design → specs → tasks
   
 > Gap-Score = **0.6 × Dünne (thinness) + 0.4 × Momentum + Floor-Bonus**
 > → rankt Bereiche mit wenig Literatur und starkem Wachstum.
