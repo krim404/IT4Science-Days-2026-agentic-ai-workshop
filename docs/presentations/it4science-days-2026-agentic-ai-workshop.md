@@ -783,9 +783,9 @@ Projekt übertragen.
 
 - **OpenCode** — github.com/sst/opencode
 - **pi** — pi.dev · @earendil-works/pi-coding-agent
-- **zot** — zot.dev (gerade noch Coding-Agent-Harness)
+- **zot** — Agent-Harness, intern (Live-Demo im Workshop; Repo auf Anfrage)
 - **OpenSpec** — github.com/FissionAI/OpenSpec
-- **SAIA Accelerator** — codeberg.org/graphwiz-ai/opencode-saia-plugin
+- **SAIA Accelerator** — codeberg.org/graphwiz-ai/opencode-saia-plugin (Branch `main`)
 - **oh-my-opencode** — github.com/code-yeongyu/oh-my-opencode
 - **skeleton-research** — github.com/tobias-weiss-ai-xr/skeleton-research
 - **ai-literacy-research** — github.com/tobias-weiss-ai-xr/ai-literacy-research

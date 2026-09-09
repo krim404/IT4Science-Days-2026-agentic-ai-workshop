@@ -5,7 +5,7 @@
 <h1 align="center">Agentic AI in der Praxis</h1>
 <p align="center"><b>Vom Spec zum produktiven Workflow</b> · IT4Science Days 2026 · 3h Workshop (09:00–12:00) · Deutsch</p>
 
-> **⚠️ Migrated from Codeberg → GitHub**: This repository lives on [GitHub](https://github.com/tobias-weiss-ai-xr/IT4Science-Days-2026-agentic-ai-workshop). A Codeberg mirror is kept in sync manually.
+> **⚠️ Migrated from Codeberg → GitHub**: This repository lives on [GitHub](https://github.com/tobias-weiss-ai-xr/IT4Science-Days-2026-agentic-ai-workshop). A Codeberg mirror is kept in sync manually: [graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop](https://codeberg.org/graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop) (Branch `master`).
 >
 > **Diese README ist die einzige Quelle der Wahrheit für den Ablauf.** Die Marp-Folien liegen unter `docs/presentations/`.
 
@@ -149,5 +149,5 @@ openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"
 - [Impuls zu SpecDrivenDevelopment (GWDG News)](https://gwdg.de/about-us/gwdg-news/2026/GN_05-2026_www.pdf#page=14)
 - [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) — forkbares Research-Corpus-Skeleton
 - [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) — OpenSpec-Showcase (Research-Gap-Analyse)
-- [SAIA Plugin für OpenCode](https://codeberg.org/graphwiz-ai/opencode-saia-plugin/src/branch/bleedingEdge)
+- [SAIA Plugin für OpenCode](https://codeberg.org/graphwiz-ai/opencode-saia-plugin/src/branch/main)
 - [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://github.com/FissionAI/OpenSpec) · [pi](https://pi.dev)
