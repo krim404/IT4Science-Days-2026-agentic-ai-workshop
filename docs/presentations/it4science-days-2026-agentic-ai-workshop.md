@@ -129,27 +129,79 @@ validiert wird, und haben einen OpenSpec-Change selbst angewendet.
 
 ---
 
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
+
+## Wer wir sind — zwei Hooks
+
+<div class="columns smaller">
+<div>
+
+**Christian Uhl**
+Zentrum für angewandte Informatik & Data Science, Uni Gießen
+
+> **Mein Hook:** Agentic AI in Lehre & Datenprojekten —
+> vom Prompt zum **validierten Ergebnis**, nicht zum Chat-Verlauf.
+
+</div>
+<div>
+
+**Tobias Weiß**
+DevOps Engineer, Uni Marburg
+
+> **Mein Hook:** Research-Pipelines & IT-Betrieb agentisch —
+> dieses Foliendeck selbst ist ein Artefakt derselben Pyramide:
+> mit pi + OpenSpec aus Specs gebaut.
+
+</div>
+</div>
+
+<!-- notes:
+CHRISTIAN — führt durch die Vorstellung (~3 min); Tobias liefert Hook 2 selbst (~1 min).
+Hooks personalisieren! Vor dem Workshop final formulieren — konkret werden:
+je EIN greifbares Beispiel, wie agentic AI im eigenen Alltag arbeitet.
+-->
+
+---
+
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
+
+## Ihre Reihe — Blitzlicht
+
+- **Name · Fachrichtung · eine Aufgabe**, die agentisch für euch arbeiten soll.
+- ≤ 30 Sekunden je Person — wir sammeln Wünsche an die Whiteboard-Wand.
+- Diese Wünsche checken wir am Ende gegen die Outcomes.
+
+> Bei großen Runden: 5–6 Stichworte aus dem Raum, Rest per Karte/Zettel.
+
+<!-- notes:
+CHRISTIAN — moderiert (~4 min). Die gesammelten Wünsche sichtbar notieren —
+Wrap-Up greift sie auf. Zeit hart timen.
+-->
+
+---
+
 <!-- _class: lead -->
 
 # Agenda (3h)
 
 | Zeit | Block | Dauer | Wer |
 |------|-------|-------|-----|
-| 09:00–09:10 | Ankommen, Vorstellung, Ablauf | 10 min | Christian |
-| 09:10–09:25 | Grundlagen & Definition | 15 min | Christian |
-| 09:25–09:45 | Foundation Models — aktuelle Entwicklungen | 20 min | Christian + Tobias |
-| 09:45–10:05 | Open-Source Toolbox | 20 min | Tobias + Christian |
-| 10:05–10:15 | ☕ Pause | 10 min | — |
-| 10:15–10:40 | Anwendung 1: Eigenes Research-Repo | 25 min | Tobias |
-| 10:40–11:00 | Spec Driven Development | 20 min | Christian |
-| 11:00–11:10 | Token-optimized Development | 10 min | Tobias |
-| 11:10–11:35 | Anwendung 2: Spec selbst anwenden | 25 min | Christian |
-| 11:35–11:40 | ☕ Pause | 5 min | — |
-| 11:40–12:00 | Q&A, Outcomes, Wrap Up | 20 min | Tobias |
+| 09:00–09:15 | Ankommen, Vorstellung (Hooks + TN-Runde), Ablauf | 15 min | Christian |
+| 09:15–09:30 | Grundlagen & Definition | 15 min | Christian |
+| 09:30–09:50 | Foundation Models — aktuelle Entwicklungen | 20 min | Christian + Tobias |
+| 09:50–10:10 | Open-Source Toolbox | 20 min | Tobias + Christian |
+| 10:10–10:20 | ☕ Pause | 10 min | — |
+| 10:20–10:45 | Anwendung 1: Eigenes Research-Repo | 25 min | Tobias |
+| 10:45–11:00 | Spec Driven & Token-optimized Development | 15 min | Christian + Tobias |
+| 11:00–11:25 | Anwendung 2: Spec selbst anwenden | 25 min | Christian |
+| 11:25–11:30 | ☕ Pause | 5 min | — |
+| 11:30–11:45 | Outcomes — TN präsentieren ihre Ergebnisse | 15 min | Tobias |
+| 11:45–12:00 | Q&A, Diskussion, Wrap Up | 15 min | Tobias |
 
 <!-- notes:
 Agenda auf 1 min durchgehen. Zwei Hands-on-Blöcke: (1) eigenes Research-Repo,
-(2) OpenSpec selbst anwenden. Christian übernimmt 1+5, Tobias 3+4+6, gemeinsam 2+7.
+(2) OpenSpec selbst anwenden. Christian: Vorstellung, Grundlagen (2), Lead Block 7 (Spec/Token).
+Tobias: Toolbox (4), Anwendung 1 (6), Outcomes (10), Q&A (11). Gemeinsam: 3, 7, 8.
 -->
 
 ---
@@ -206,7 +258,7 @@ CHRISTIAN — die drei Ebenen kurz erläutern. Dieses Muster taucht in skeleton-
 # Grundlagen & Definition
 
 <!-- notes:
-CHRISTIAN — Block 1 · 09:10–09:25 (15 min).
+CHRISTIAN — Block 1 · 09:15–09:30 (15 min).
 -->
 
 ---
@@ -226,7 +278,7 @@ CHRISTIAN — Block 1 · 09:10–09:25 (15 min).
 </div>
 
 <!-- notes:
-CHRISTIAN — Block 1 · 09:10–09:25. Weg von "Prompting" hin zu "Contracts".
+CHRISTIAN — Block 1 · 09:15–09:30. Weg von "Prompting" hin zu "Contracts".
 -->
 
 ---
@@ -238,7 +290,7 @@ CHRISTIAN — Block 1 · 09:10–09:25. Weg von "Prompting" hin zu "Contracts".
 # Foundation Models — aktuelle Entwicklungen
 
 <!-- notes:
-CHRISTIAN — Block 2 · 09:25–09:45 (20 min), Lead. Tobias ergänzt die
+CHRISTIAN — Block 2 · 09:30–09:50 (20 min), Lead. Tobias ergänzt die
 Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 -->
 
@@ -286,7 +338,7 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 <!-- notes:
 CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias springt
 nach #5/#6 ein (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle laufen
-tatsächlich, Kosten-Kollaps konkret, Routing-Preview → vertieft in Block 6.
+tatsächlich, Kosten-Kollaps konkret, Routing-Preview → vertieft in Block 5.
 -->
 
 ---
@@ -314,7 +366,7 @@ CHRISTIAN — eigene Inhalte. Bitte vorab ausfüllen.
 # Open-Source Toolbox
 
 <!-- notes:
-TOBIAS — Block 3 · 09:45–10:05 (20 min), Lead. Christian ergänzt.
+TOBIAS — Block 3 · 09:50–10:10 (20 min), Lead. Christian ergänzt.
 Die Harnesses nach Stage/Use-Case ranken.
 -->
 
@@ -387,8 +439,8 @@ für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
 > **Das Modell ist das Gehirn, die Workflows sind der Muskel.**
 
 <!-- notes:
-TOBIAS — Tooling-Landschaft ranken. OpenSpec ist die Brücke zu Block 5 (SDD).
-oh-my-opencode leitet zu Block 6 (Token-optimized) über.
+TOBIAS — Tooling-Landschaft ranken. OpenSpec ist die Brücke zu Block 5 (Spec & Token).
+oh-my-opencode leitet innerhalb von Block 5 zum Token-Teil über.
 -->
 
 ---
@@ -401,7 +453,7 @@ oh-my-opencode leitet zu Block 6 (Token-optimized) über.
 10 Minuten.
 
 <!-- notes:
-Pause 10:05–10:15.
+Pause 10:10–10:20.
 -->
 
 ---
@@ -413,7 +465,7 @@ Pause 10:05–10:15.
 # Anwendung 1: Eigenes Research-Repo
 
 <!-- notes:
-TOBIAS — Block 4 · 10:15–10:40 (25 min), Lead (Christian unterstützt). Herzstück: Wie Teilnehmende mit
+TOBIAS — Block 4 · 10:20–10:45 (25 min), Lead (Christian unterstützt). Herzstück: Wie Teilnehmende mit
 skeleton-research ihre eigene Forschung unterstützen. Tobias führt das Repo.
 -->
 
@@ -548,10 +600,13 @@ kein Wiedereinlernen — die Regeln liegen im Repo. Die Pipeline erzwingt sie.
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-# Spec Driven Development
+# Spec Driven & Token-optimized Development
 
 <!-- notes:
-CHRISTIAN — Block 5 · 10:40–11:00 (20 min). Die Pyramide in Reinkultur.
+CHRISTIAN + TOBIAS — Block 5 · 10:45–11:00 (15 min), kompakt zusammengelegt.
+Timing: ~6 min SDD-Kern (Spec → Delta-Spec → Verify), ~2 min Showcase-Beispiel
+(kürzbar/überspringbar), ~7 min Token-Teil (Tobias: Routing, Caching, Prinzipien).
+Die Pyramide in Reinkultur: Anforderungen als Tests für Agenten.
 -->
 
 ---
@@ -618,20 +673,8 @@ Klärungsrunden. Die Spec ist behaviorale Anforderung; die Tasks zählen den For
 > → rankt Bereiche mit wenig Literatur und starkem Wachstum.
 
 <!-- notes:
-TOBIAS — der fertige Change als Referenz für den Hands-on-Block 7. Die Teilnehmenden
+TOBIAS — der fertige Change als Referenz für den Hands-on-Block 6. Die Teilnehmenden
 sehen eine echte, vollständige Spec/Change/Tasks-Struktur und können sie nachbauen.
--->
-
----
-
-<!-- _class: lead -->
-
-<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
-
-# Token-optimized Development
-
-<!-- notes:
-TOBIAS — Block 6 · 11:00–11:10 (10 min). Wie wir 3–5× Token sparen.
 -->
 
 ---
@@ -684,7 +727,7 @@ Der Geist dahinter: kleine präzise Bausteine, die komponiert werden.
 # Anwendung 2: Spec selbst anwenden
 
 <!-- notes:
-CHRISTIAN — Block 7 · 11:10–11:35 (25 min), Lead (Tobias unterstützt). Hands-on: Teilnehmende bauen ihren eigenen
+CHRISTIAN — Block 6 · 11:00–11:25 (25 min), Lead (Tobias unterstützt). Hands-on: Teilnehmende bauen ihren eigenen
 Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).
 -->
 
@@ -740,7 +783,7 @@ Struktur in übergreifter und in eigener Repo-Größe.
 5 Minuten.
 
 <!-- notes:
-Pause 11:35–11:40.
+Pause 11:25–11:30.
 -->
 
 ---
@@ -749,10 +792,41 @@ Pause 11:35–11:40.
 
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
-# Q&A · Outcomes · Wrap Up
+# Outcomes — eure Ergebnisse
 
 <!-- notes:
-TOBIAS — Block 8 · 11:40–12:00 (20 min), Moderation. Teilnehmende präsentieren Outcomes.
+TOBIAS — Block 7 · 11:30–11:45 (15 min), Moderation. 3–4 Freiwillige präsentieren
+à 3–4 min. Mit der stärksten Demo starten. Zeit hart timen: bei 3 min Warnsignal.
+-->
+
+---
+
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
+
+## Outcomes — das zeigen wir
+
+- **3–4 Freiwillige**, je 3–4 min: eigenes Research-Repo + eigener Mini-Change.
+- Live-Demo oder Screenshot — Hauptsache **Pipeline grün, Change validiert**.
+- Bewertung an der Pyramide: ein SHALL-Satz (Spec), ein Change (Contract), ein grüner Check (Test).
+
+> Das Publikum reviewed mit: Was würde die Pyramide an deinem Projekt bemängeln?
+
+<!-- notes:
+TOBIAS — Ergebnis-Kriterien wie in Übung 2. Wünsche aus der Vorstellungsrunde
+aufgreifen: „Hat das jemand von euch angestoßen?“
+-->
+
+---
+
+<!-- _class: lead -->
+
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
+
+# Q&A · Diskussion · Wrap Up
+
+<!-- notes:
+TOBIAS — Block 8 · 11:45–12:00 (15 min), Moderation. Offene Fragen, Diskussion,
+Wrap-Up — Wünsche aus der Vorstellungsrunde Revue passieren lassen.
 -->
 
 ---

@@ -44,20 +44,20 @@ Fortsetzung der Veranstaltungsreihe **HackyHour**.
 
 | Zeit | Block | Dauer | Verantwortung |
 |------|-------|-------|---------------|
-| 09:00–09:10 | Ankommen, Vorstellung, Ablauf | 10 min | Christian |
-| 09:10–09:25 | Grundlagen & Definition — Was ist agentisches Arbeiten? | 15 min | Christian |
-| 09:25–09:45 | Aktuelle Entwicklungen bei den Foundation Modellen | 20 min | Christian + Tobias |
-| 09:45–10:05 | Open-Source Toolbox — Harnesses (OpenCode, pi, zot) + Tooling | 20 min | Tobias + Christian |
-| 10:05–10:15 | ☕ Pause | 10 min | — |
-| 10:15–10:40 | **Anwendung 1: Eigenes Research Repo** — [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research), Git, Harness | 25 min | Tobias |
-| 10:40–11:00 | Spec Driven Development — Anforderungen als Treiber agentischer Entwicklung | 20 min | Christian |
-| 11:00–11:10 | Token-optimized Development — Modell-Routing, Caching | 10 min | Tobias |
-| 11:10–11:35 | **Anwendung 2: Spec selbst anwenden** (im Research Repo) | 25 min | Christian |
-| 11:35–11:40 | ☕ Pause | 5 min | — |
-| 11:40–12:00 | Q&A, TN präsentieren Outcomes, Diskussion, Wrap Up | 20 min | Tobias |
+| 09:00–09:15 | Ankommen, Vorstellung — **Hooks der Referenten** (wie wir agentic AI nutzen) + **TN-Vorstellungsrunde**, Ablauf | 15 min | Christian |
+| 09:15–09:30 | Grundlagen & Definition — Was ist agentisches Arbeiten? | 15 min | Christian |
+| 09:30–09:50 | Aktuelle Entwicklungen bei den Foundation Modellen | 20 min | Christian + Tobias |
+| 09:50–10:10 | Open-Source Toolbox — Harnesses (OpenCode, pi, zot) + Tooling | 20 min | Tobias + Christian |
+| 10:10–10:20 | ☕ Pause | 10 min | — |
+| 10:20–10:45 | **Anwendung 1: Eigenes Research Repo** — [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research), Git, Harness | 25 min | Tobias |
+| 10:45–11:00 | Spec Driven & Token-optimized Development — kompakt: Anforderungen als Treiber, Modell-Routing, Caching | 15 min | Christian + Tobias |
+| 11:00–11:25 | **Anwendung 2: Spec selbst anwenden** (im Research Repo) | 25 min | Christian |
+| 11:25–11:30 | ☕ Pause | 5 min | — |
+| 11:30–11:45 | **Outcomes** — TN präsentieren ihre Ergebnisse | 15 min | Tobias |
+| 11:45–12:00 | Q&A, Diskussion, Wrap Up | 15 min | Tobias |
 
 **Lernlogik der Reihenfolge:**
-Grundlage → Werkzeuge → **sofort selbst anwenden (Research Repo)** → Vertiefung (Spec/Token) → **Spec selbst anwenden** → Austausch.
+Einstieg mit zwei **Praxis-Hooks** der Referenten und **TN-Vorstellungsrunde** (Wünsche sammeln) → Grundlage → Werkzeuge → **sofort selbst anwenden (Research Repo)** → Vertiefung kompakt (Spec & Token) → **Spec selbst anwenden** → **Outcomes präsentieren** → Austausch.
 
 > Details und Rankings zu Foundation Models & Toolbox: [`docs/research-foundation-models-toolbox.md`](docs/research-foundation-models-toolbox.md).
 
