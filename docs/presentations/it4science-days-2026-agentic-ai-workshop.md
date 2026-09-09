@@ -285,8 +285,9 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 > Beispiel-Landschaft (SAIA academic cloud, 08/2026): Claude Sonnet 4.6 · GPT-5.6 · Gemini 3.1 · GLM 4.7/5 · DevStral 2 · DeepSeek V4 Flash — je nach Aufgabe geroutet.
 
 <!-- notes:
-CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias ergänzt
-Modell-Routing (klein/teuer-Mix) in Block 6.
+CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias springt
+nach #5/#6 ein (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle laufen
+tatsächlich, Kosten-Kollaps konkret, Routing-Preview → vertieft in Block 6.
 -->
 
 ---
@@ -340,6 +341,7 @@ Die Harnesses nach Stage/Use-Case ranken.
 **3. zot** — das schlanke Agent-Harness
 - TUI + JSON-RPC (Prozess-Integration) + SDK.
 - Extensions, Slash-Commands, MCP.
+- SAIA/GWDG-Modellkatalog → souveräne Modellwahl.
 - `zot "prompt"` · `zot -p` · `zot rpc`.
 
 </div>
@@ -355,13 +357,17 @@ Die Harnesses nach Stage/Use-Case ranken.
 
 > Ein **Harness ist die Steuerungsebene**: gleiche Modelle, unterschiedliche Ergebnisse — je nach Harness.
 
+**Claude Code** (kommerziell) als Vergleichsmaßstab — Open-Source spielt oben mit.
+
 </div>
 </div>
 
 <!-- notes:
-TOBIAS — drei Harnesses live zeigen. Ranking-Sicht: OpenCode fürs Tagesgeschäft,
-pi für minimal & erweiterbar, zot für Skripting/RPC. Pi steckt dahinter, wie
-dieser Workshop entstanden ist.
+TOBIAS — Timing (20 min): 12 min Vergleich inkl. Live-Demo — derselbe Prompt in
+allen dreien, Ergebnis-Differenz zeigen: „gleiche Modelle, unterschiedliche
+Ergebnisse" wird bewiesen, nicht behauptet. 3 min Ranking. Danach Tooling-Folie.
+Ranking-Sicht: OpenCode fürs Tagesgeschäft, pi für minimal & erweiterbar, zot
+für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
 -->
 
 ---
@@ -374,7 +380,8 @@ dieser Workshop entstanden ist.
 |------|----------|
 | **OpenSpec** | Spec-driven Development — Delta-Specs als Agenten-Prompts |
 | **SAIA Accelerator** | Plugin für OpenCode/zot/pi — GWDG Chat-AI-Modelle, Auto-Sync |
-| **oh-my-opencode** | Token-optimierte Agent-Routing (Sisyphus, Prometheus, Atlas …) |
+| **oh-my-opencode** | Token-optimierte Agent-Routing (Sisyphus, Prometheus, Oracle …) |
+| **skeleton-research** | Forkbares Corpus-Skeleton — gleich hands-on in Anwendung 1 |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review — als wiederverwendbare Routinen |
 | **Ollama / vLLM / llama.cpp** | Lokale Modell-Serving auf eigener Hardware |
 
@@ -635,12 +642,14 @@ TOBIAS — Block 6 · 11:00–11:10 (10 min). Wie wir 3–5× Token sparen.
 
 ## Weniger Token, gleiche Qualität
 
+> Praktisch gemessen: **3–5× weniger Token** bei gleicher Ergebnisqualität — zwei Hebel.
+
 <div class="columns smaller">
 <div>
 
 **Routing: das richtige Modell pro Aufgabe**
 - Klein & schnell für Muster-Erkennung, groß & langsam für Denk-Aufgaben.
-- oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Atlas…) → Modell je Kategorie.
+- oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Oracle…) → Modell je Kategorie.
 - SAIA: devstral / GLM je nach Aufgabe — `specified-low` vs. `deep` vs. `ultrabrain`.
 
 **Caching & Kontext-Hygiene**
@@ -662,7 +671,9 @@ pi-memory / Knowledge Graph persistieren Erfahrung außerhalb des Kontexts.</div
 </div>
 
 <!-- notes:
-TOBIAS — 10 min. Zwei Hebel: Routing (Modell-Wahl) + Caching/Kontext-Hygiene.
+TOBIAS — 10 min: 5 min Routing (Live: SAIA-Tier-Wahl für dieselbe Aufgabe),
+3 min Caching/Kontext-Hygiene, 2 min Prinzipien → Brücke zu Anwendung 2
+(„ihr Spec ist auch Token-Optimierung: der Contract ersetzt Wiederholung").
 Der Geist dahinter: kleine präzise Bausteine, die komponiert werden.
 -->
 

@@ -2787,6 +2787,7 @@ pre code {
 <ul>
 <li>TUI + JSON-RPC (Prozess-Integration) + SDK.</li>
 <li>Extensions, Slash-Commands, MCP.</li>
+<li>SAIA/GWDG-Modellkatalog → souveräne Modellwahl.</li>
 <li><code>zot &quot;prompt&quot;</code> · <code>zot -p</code> · <code>zot rpc</code>.</li>
 </ul>
 </div>
@@ -2821,6 +2822,7 @@ pre code {
 <blockquote>
 <p>Ein <strong>Harness ist die Steuerungsebene</strong>: gleiche Modelle, unterschiedliche Ergebnisse — je nach Harness.</p>
 </blockquote>
+<p><strong>Claude Code</strong> (kommerziell) als Vergleichsmaßstab — Open-Source spielt oben mit.</p>
 </div>
 </div>
 <footer>IT4Science Days 2026 · Agentic AI Workshop</footer>
@@ -3058,7 +3060,11 @@ pre code {
 </tr>
 <tr>
 <td><strong>oh-my-opencode</strong></td>
-<td>Token-optimierte Agent-Routing (Sisyphus, Prometheus, Atlas …)</td>
+<td>Token-optimierte Agent-Routing (Sisyphus, Prometheus, Oracle …)</td>
+</tr>
+<tr>
+<td><strong>skeleton-research</strong></td>
+<td>Forkbares Corpus-Skeleton — gleich hands-on in Anwendung 1</td>
 </tr>
 <tr>
 <td><strong>Superpowers Skills</strong></td>
@@ -6034,12 +6040,15 @@ pre code {
 ;" data-marpit-pagination-total="35">
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="weniger-token-gleiche-qualit%C3%A4t">Weniger Token, gleiche Qualität</h2>
+<blockquote>
+<p>Praktisch gemessen: <strong>3–5× weniger Token</strong> bei gleicher Ergebnisqualität — zwei Hebel.</p>
+</blockquote>
 <div class="columns smaller">
 <div>
 <p><strong>Routing: das richtige Modell pro Aufgabe</strong></p>
 <ul>
 <li>Klein &amp; schnell für Muster-Erkennung, groß &amp; langsam für Denk-Aufgaben.</li>
-<li>oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Atlas…) → Modell je Kategorie.</li>
+<li>oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Oracle…) → Modell je Kategorie.</li>
 <li>SAIA: devstral / GLM je nach Aufgabe — <code>specified-low</code> vs. <code>deep</code> vs. <code>ultrabrain</code>.</li>
 </ul>
 <p><strong>Caching &amp; Kontext-Hygiene</strong></p>
@@ -8094,14 +8103,17 @@ CHRISTIAN — Block 1 · 09:10–09:25 (15 min).</p></div><div class="bespoke-ma
 CHRISTIAN — Block 1 · 09:10–09:25. Weg von &quot;Prompting&quot; hin zu &quot;Contracts&quot;.</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>notes:
 BEIDE — Block 2 · 09:25–09:45 (20 min). Christian leitet, Tobias ergänzt die
 Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>notes:
-CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias ergänzt
-Modell-Routing (klein/teuer-Mix) in Block 6.</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>notes:
+CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias springt
+nach #5/#6 ein (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle laufen
+tatsächlich, Kosten-Kollaps konkret, Routing-Preview → vertieft in Block 6.</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>notes:
 CHRISTIAN — eigene Inhalte. Bitte vorab ausfüllen.</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>notes:
 BEIDE — Block 3 · 09:45–10:05 (20 min). Tobias führt, Christian ergänzt.
 Die Harnesses nach Stage/Use-Case ranken.</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>notes:
-TOBIAS — drei Harnesses live zeigen. Ranking-Sicht: OpenCode fürs Tagesgeschäft,
-pi für minimal &amp; erweiterbar, zot für Skripting/RPC. Pi steckt dahinter, wie
-dieser Workshop entstanden ist.</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>notes:
+TOBIAS — Timing (20 min): 12 min Vergleich inkl. Live-Demo — derselbe Prompt in
+allen dreien, Ergebnis-Differenz zeigen: „gleiche Modelle, unterschiedliche
+Ergebnisse&quot; wird bewiesen, nicht behauptet. 3 min Ranking. Danach Tooling-Folie.
+Ranking-Sicht: OpenCode fürs Tagesgeschäft, pi für minimal &amp; erweiterbar, zot
+für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>notes:
 TOBIAS — Tooling-Landschaft ranken. OpenSpec ist die Brücke zu Block 5 (SDD).
 oh-my-opencode leitet zu Block 6 (Token-optimized) über.</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>notes:
 BEIDE — Pause 10:05–10:15.</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>notes:
@@ -8127,7 +8139,9 @@ Klärungsrunden. Die Spec ist behaviorale Anforderung; die Tasks zählen den For
 TOBIAS — der fertige Change als Referenz für den Hands-on-Block 7. Die Teilnehmenden
 sehen eine echte, vollständige Spec/Change/Tasks-Struktur und können sie nachbauen.</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>notes:
 TOBIAS — Block 6 · 11:00–11:10 (10 min). Wie wir 3–5× Token sparen.</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>notes:
-TOBIAS — 10 min. Zwei Hebel: Routing (Modell-Wahl) + Caching/Kontext-Hygiene.
+TOBIAS — 10 min: 5 min Routing (Live: SAIA-Tier-Wahl für dieselbe Aufgabe),
+3 min Caching/Kontext-Hygiene, 2 min Prinzipien → Brücke zu Anwendung 2
+(„ihr Spec ist auch Token-Optimierung: der Contract ersetzt Wiederholung&quot;).
 Der Geist dahinter: kleine präzise Bausteine, die komponiert werden.</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>notes:
 BEIDE — Block 7 · 11:10–11:35 (25 min). Hands-on: Teilnehmende bauen ihren eigenen
 Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>notes:
