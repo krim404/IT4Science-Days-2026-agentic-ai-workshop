@@ -8,7 +8,10 @@ style: |
     background-color: #1a1a1a;
     color: #e8e8e8;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding-bottom: 64px;
   }
+  section.smaller table { font-size: 16px; }
+  section.smaller table th, section.smaller table td { padding: 4px 9px; }
   h1, h2, h3 {
     color: #ffffff;
     font-weight: 700;
@@ -180,7 +183,7 @@ Wrap-Up greift sie auf. Zeit hart timen.
 
 ---
 
-<!-- _class: lead -->
+<!-- _class: lead smaller -->
 
 # Agenda (3h)
 
@@ -303,42 +306,38 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 <div class="columns smaller">
 <div>
 
-**1. Reasoning-Modelle** reif
-- Rechenzeit skalieren statt nur Parameter — o-Serie, DeepSeek-R1, Claude-Thinking.
-- Planen, verifizieren, korrigieren — nicht nur kompletieren.
+**1. Reasoning reif** — planen statt kompletieren
 
-**2. Kontextlängen explodieren**
-- 200K → 1M+ Token (Gemini 3.1 Pro).
-- Ganze Codebases & Specs im Kontext → echte Agenten möglich.
+**2. Kontext explodiert** — 200K → 1M+ Token
 
-**3. MCP wird Standard**
-- Model Context Protocol als „USB-C der Tools".
-- Modell ↔ Tool-Kompatibilität entkoppelt.
+**3. MCP wird Standard** — „USB-C der Tools“
 
 </div>
 <div>
 
-**4. Funktionen-Calls & Tool-Use reifen**
-- Strukturierte Ausgaben, parallele Tool-Calls, Multi-Agent.
-- Nicht mehr Demo, sondern Produktionsreife.
+**4. Tool-Use produktionsreif** — strukturiert, parallel
 
-**5. OpenSource holt auf**
-- Qwen 3.6/3.5 (MoE), GLM 4.7/5, DeepSeek V4, GPT-OSS, Llama, Gemma 4.
-- **Kosten-Kollaps**: für viele Tasks reicht ein kleines Modell.
+**5. OpenSource holt auf** — Kosten-Kollaps
 
-**6. Lokale & souveräne Modelle**
-- Ollama, vLLM, llama.cpp auf eigener Hardware.
-- Souveränität + Datenschutz (DSGVO) ohne Qualitätsverlust.
+**6. Lokal & souverän** — DSGVO ohne Qualitätsverlust
 
 </div>
 </div>
 
-> Beispiel-Landschaft (SAIA-Katalog, Stand 09/2026): GLM 4.7 · Qwen3.8-2.4T-A95B (MoE) · Qwen3-Coder-Next · DevStral 2 · DeepSeek V4 Flash · Llama 3.1 8B — Routing über Katalog-Aliase (`best-for-*` / `budget` / `fastest`).
+> SAIA-Katalog (09/2026): GLM 4.7 · Qwen3.8 · DevStral 2 · DeepSeek V4 Flash · Llama 3.1 8B — geroutet über Aliase (`best-for-*` / `budget` / `fastest`).
 
 <!-- notes:
-CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias springt
-nach #5/#6 ein (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle laufen
-tatsächlich, Kosten-Kollaps konkret, Routing-Preview → vertieft in Block 5.
+CHRISTIAN — Ranking 1–6, je ~1 min. Details pro Punkt:
+(1) Rechenzeit skalieren statt Parameter — o-Serie, DeepSeek-R1, Claude-Thinking:
+planen, verifizieren, korrigieren.
+(2) 200K → 1M+ (Gemini 3.1 Pro): ganze Codebases & Specs im Kontext → echte Agenten.
+(3) Model Context Protocol entkoppelt Modell ↔ Tool.
+(4) Strukturierte Ausgaben, parallele Tool-Calls, Multi-Agent — Produktionsreife.
+(5) Qwen 3.6/3.5 (MoE), GLM 4.7/5, DeepSeek V4, GPT-OSS, Llama, Gemma 4 —
+für viele Tasks reicht ein kleines Modell.
+(6) Ollama, vLLM, llama.cpp auf eigener Hardware.
+TOBIAS nach #5/#6 (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle wirklich
+laufen, Routing über Aliase → vertieft in Block 5.
 -->
 
 ---
@@ -372,6 +371,8 @@ Die Harnesses nach Stage/Use-Case ranken.
 
 ---
 
+<!-- _class: smaller -->
+
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 ## Drei Harnesses im Vergleich
@@ -380,20 +381,16 @@ Die Harnesses nach Stage/Use-Case ranken.
 <div>
 
 **1. OpenCode** — der Allrounder
-- CLI-Coding-Agent, TUI, `opencode run "…"` — Modell/Provider je Agent wählbar.
-- LSP, Plugins, Skills, MCP im Kern.
-- Mit OmO-Plugin: AST-Grep (25 Sprachen), parallele Background-Agents.
+- CLI-Agent, TUI, `opencode run "…"` — Modell je Agent.
+- LSP, Plugins, Skills, MCP · mit OmO: AST-Grep, Background-Agents.
 
 **2. pi** — das Minimal-Harness
-- Minimaler Terminal-Harness, stark erweiterbar.
 - Skills · Prompt-Templates · Extensions · Themes.
-- Philosophie: „Adapt pi, nicht umgekehrt" — nichts eingebacken, alles baubar.
+- „Adapt pi, nicht umgekehrt“.
 
 **3. zot** — das schlanke Agent-Harness
-- Single-Binary in Go, TUI + JSON-RPC (Prozess-Integration).
-- Extensions, Slash-Commands, MCP.
-- Ollama & llama.cpp anbindbar → lokale Modelle, souverän.
-- `zot "prompt"` · `zot -p` · `zot rpc`.
+- Single-Binary (Go), TUI + JSON-RPC + MCP.
+- Ollama/llama.cpp → lokale Modelle, souverän.
 
 </div>
 <div>
@@ -416,9 +413,13 @@ Die Harnesses nach Stage/Use-Case ranken.
 <!-- notes:
 TOBIAS — Timing (20 min): 12 min Vergleich inkl. Live-Demo — derselbe Prompt in
 allen dreien, Ergebnis-Differenz zeigen: „gleiche Modelle, unterschiedliche
-Ergebnisse" wird bewiesen, nicht behauptet. 3 min Ranking. Danach Tooling-Folie.
-Ranking-Sicht: OpenCode fürs Tagesgeschäft, pi für minimal & erweiterbar, zot
-für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
+Ergebnisse“ wird bewiesen, nicht behauptet. 3 min Ranking. Danach Tooling-Folie.
+Details: OpenCode mit OmO → AST-Grep (25 Sprachen), parallele Background-Agents.
+pi: nichts eingebacken, alles baubar. zot: Extensions, Slash-Commands,
+`zot "prompt"` · `zot -p` · `zot rpc` — RPC für eigene Automation.
+Ranking: OpenCode Tagesgeschäft, pi minimal & erweiterbar, zot Skripting/RPC.
+**Claude Code** (kommerziell) als Vergleichsmaßstab — Open-Source spielt oben mit.
+pi steckt dahinter, wie dieser Workshop entstanden ist.
 -->
 
 ---
@@ -429,14 +430,14 @@ für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
 
 | Tool | Funktion |
 |------|----------|
-| **OpenSpec** | Spec-driven Development — Delta-Specs als Agenten-Prompts |
-| **SAIA Accelerator** | Plugin für OpenCode/zot/pi — GWDG Chat-AI-Modelle, Auto-Sync |
-| **oh-my-opencode** | Routing je Aufgabe (Sisyphus, Prometheus, Oracle …), AST-Grep, Background-Agents |
-| **skeleton-research** | Forkbares Corpus-Skeleton — gleich hands-on in Anwendung 1 |
-| **Superpowers Skills** | TDD, Debugging, Brainstorming, Review — als wiederverwendbare Routinen |
-| **rtk** | CLI-Proxy: filtert Bash-/Tool-Output (Failures only …) — **−60–90 % Input-Token**, ein Rust-Binary |
-| **ponytail / caveman** | Prompt-Skills: **minimale Lösungen** (YAGNI) + **knappe Prosa** — Output-Token diszipliniert |
-| **Ollama / vLLM / llama.cpp** | Lokale Modell-Serving auf eigener Hardware |
+| **OpenSpec** | Delta-Specs als Agenten-Prompts |
+| **SAIA Accelerator** | GWDG-Modelle für OpenCode/zot/pi, Auto-Sync |
+| **oh-my-opencode** | Routing je Aufgabe, AST-Grep, Background-Agents |
+| **skeleton-research** | Forkbares Corpus-Skeleton — Hands-on in Anwendung 1 |
+| **Superpowers** | TDD, Debugging, Review als Routinen |
+| **rtk** | Filtert Tool-Output — **−60–90 % Input-Token** |
+| **ponytail / caveman** | Skills: minimale Lösungen, knappe Prosa |
+| **Ollama / vLLM / llama.cpp** | Lokales Modell-Serving |
 
 > **Das Modell ist das Gehirn, die Workflows sind der Muskel.**
 
@@ -537,8 +538,6 @@ papers.yaml = Spec, Pipeline = Contract, CI = Test → die Pyramide in Aktion.
     ```yaml
     categories:
       - id: agentic-ai
-        name: "Agentic AI"
-        description: "Agentic workflows & harnesses"
     ```
 3. **Seeden**: `papers.yaml` mit deinen Start-Papers füllen (echte URLs!).
 4. **Pipeline laufen lassen**: `python scripts/pipeline.py` — validiert & generiert.
@@ -559,7 +558,7 @@ docs/papers.json, reports) — sie werden regeneriert. Das ist "Lösche & Regene
 
 | Agentische Aufgabe | Werkzeug im Repo |
 |--------------------|------------------|
-| Neue Papers entdecken | Discovery: arXiv, OpenAlex, dblp, Crossref, EUPMC, GitHub/GitLab/Codeberg |
+| Neue Papers entdecken | Discovery: arXiv, OpenAlex, dblp, Crossref, EUPMC + Code-Hosts |
 | Dem Topic zuordnen | automatische Taxonomie-Zuordnung |
 | Validiert halten | `validate_papers.py` — echte URLs, Schema, keine Erfindungen |
 | README & Berichte | `generate_readme.py`, `generate_reports.py` |
@@ -692,15 +691,12 @@ sehen eine echte, vollständige Spec/Change/Tasks-Struktur und können sie nachb
 <div class="columns smaller">
 <div>
 
-**Routing: das richtige Modell pro Aufgabe**
-- Klein & schnell für Muster-Erkennung, groß & langsam für Denk-Aufgaben.
-- oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Oracle…) → Modell je Kategorie.
-- SAIA: Katalog-Aliase als Routing — `best-for-coding` → Qwen3-Coder-Next, `best-for-agentic` → GLM 4.7, `budget` → DeepSeek V4 Flash.
+**Routing** — das richtige Modell pro Aufgabe
+- omO: benannte Agents → Modell je Kategorie.
+- SAIA: Aliase — `best-for-coding`, `budget`, `fastest`.
 
 **Caching & Kontext-Hygiene**
-- Prompt-/KV-Caching: Kontext über Steps wiederverwenden.
-- Kompaktion (auto + prune): nur das Behalten, was zählt.
-- Kleiner, präziser Kontext = weniger Wiederholung.
+- Prompt-/KV-Caching, Kompaktion: nur behalten, was zählt.
 
 </div>
 <div>
@@ -716,10 +712,12 @@ pi-memory / Knowledge Graph persistieren Erfahrung außerhalb des Kontexts.</div
 </div>
 
 <!-- notes:
-TOBIAS — 10 min: 5 min Routing (Live: SAIA-Tier-Wahl für dieselbe Aufgabe),
-3 min Caching/Kontext-Hygiene, 2 min Prinzipien → Brücke zu Anwendung 2
-(„ihr Spec ist auch Token-Optimierung: der Contract ersetzt Wiederholung").
-Der Geist dahinter: kleine präzise Bausteine, die komponiert werden.
+TOBIAS — Block 5 · ~7 min: 4 min Routing (Live: SAIA-Alias-Wahl für dieselbe
+Aufgabe — best-for-coding → Qwen3-Coder-Next, best-for-agentic → GLM 4.7,
+budget → DeepSeek V4 Flash; omO: Sisyphus/Prometheus/Oracle je Kategorie),
+2 min Caching/Kontext-Hygiene (kleiner, präziser Kontext = weniger Wiederholung),
+1 min Prinzipien → Brücke zu Anwendung 2 („dein Spec ist auch Token-Optimierung:
+der Contract ersetzt Wiederholung“).
 -->
 
 ---
@@ -741,10 +739,9 @@ Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).
 
 ## Übung 2 — dein eigenes Research-Gap-Spec
 
-- **Ziel**: eine behaviorale Spec + Tasks für eine neue Auswertung in deinem Research-Repo.
-- Mini-Aufgabe als **OpenSpec-Change** strukturieren: `proposal.md` · `specs/` · `tasks.md`.
+- **Ziel**: behaviorale Spec + Tasks für eine neue Auswertung — als OpenSpec-Change (`proposal.md` · `specs/` · `tasks.md`).
 - Agent (OpenCode / pi / zot / SAIA) implementieren lassen — kleine, abgegrenzte Aufgabe.
-- Eine Regel der Pyramide erzwingen: **Tasks erst „done", wenn die Verifikation (CI/--check) grün ist**.
+- Eine Regel der Pyramide: **Tasks erst „done“, wenn die Verifikation (CI/--check) grün ist**.
 
 ```bash
 openspec new change trend-auswertung --description "Trend-Auswertung pro Kategorie"
@@ -845,12 +842,11 @@ Wrap-Up — Wünsche aus der Vorstellungsrunde Revue passieren lassen.
 4. **Wissen persistieren**: pi-memory / Knowledge Graph ab Session 1 — nicht in Prompt-Stücken.
 5. **Loop institutionalisieren**: Betriebserkenntnisse werden neue Changes (Spec evolves).
 
-> Die **Pyramide** ist überall: papers.yaml=Spec · Pipeline=Contract · CI=Test —
-> und genau so bei OpenSpec.
+> Die **Pyramide** ist überall: papers.yaml=Spec · Pipeline=Contract · CI=Test.
 
 <!-- notes:
-TOBIAS — jeder Block des Workshops folgte derselben Pyramide. Jetzt aufs eigene
-Projekt übertragen.
+TOBIAS — jeder Block des Workshops folgte derselben Pyramide — auch OpenSpec.
+Jetzt aufs eigene Projekt übertragen.
 -->
 
 ---
@@ -859,17 +855,27 @@ Projekt übertragen.
 
 ## Resources
 
+<div class="columns smaller">
+<div>
+
 - **OpenCode** — github.com/sst/opencode
 - **pi** — pi.dev · @earendil-works/pi-coding-agent
 - **zot** — zot.sh · github.com/patriceckhart/zot
-- **OpenSpec** — npmjs.com/package/openspec (CLI v1.9)
-- **SAIA Accelerator** — codeberg.org/graphwiz-ai/opencode-saia-plugin (Branch `main`)
+- **OpenSpec** — npmjs.com/package/openspec
+- **SAIA Accelerator** — codeberg.org/graphwiz-ai/opencode-saia-plugin
 - **oh-my-opencode** — github.com/code-yeongyu/oh-my-opencode
+
+</div>
+<div>
+
 - **skeleton-research** — github.com/tobias-weiss-ai-xr/skeleton-research
 - **ai-literacy-research** — github.com/tobias-weiss-ai-xr/ai-literacy-research
-- **Superpowers Skills** — github.com/obra/superpowers
+- **Superpowers** — github.com/obra/superpowers
 - **rtk** — github.com/rtk-ai/rtk
 - **ponytail** — github.com/DietrichGebert/ponytail · **caveman** — github.com/JuliusBrussee/caveman
+
+</div>
+</div>
 
 <!-- notes:
 Links können als QR-Code oder Handout ergänzt werden.

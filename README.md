@@ -8,6 +8,8 @@
 > **⚠️ Migrated from Codeberg → GitHub**: This repository lives on [GitHub](https://github.com/tobias-weiss-ai-xr/IT4Science-Days-2026-agentic-ai-workshop). A Codeberg mirror is kept in sync manually: [graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop](https://codeberg.org/graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop) (Branch `master`).
 >
 > **Diese README ist die einzige Quelle der Wahrheit für den Ablauf.** Die Marp-Folien liegen unter `docs/presentations/`.
+> Nach jeder Folien-Änderung: `.html` neu rendern (`npx @marp-team/marp-cli <deck>.md -o <deck>.html`) und den
+> Fußzeilen-Check laufen lassen: `python3 tests/check_footer.py docs/presentations/<deck>.html` (muss PASS liefern).
 
 ---
 
