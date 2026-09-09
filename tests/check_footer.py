@@ -21,8 +21,9 @@ TOLERANCE_PX = 2
 MEASURE_JS = """
 <script>
 (function () {
-  var out = [];
-  var sections = document.querySelectorAll('section');
+  var finish = function () {
+    var out = [];
+    var sections = document.querySelectorAll('section');
   for (var i = 0; i < sections.length; i++) {
     var sec = sections[i];
     var footer = sec.querySelector('footer');
@@ -63,6 +64,16 @@ MEASURE_JS = """
   d.id = 'footer-check-result';
   d.textContent = '###RESULT###' + JSON.stringify(out);
   document.body.appendChild(d);
+  };
+  var imgs = document.querySelectorAll('img');
+  var pending = imgs.length;
+  var done = function () { if (--pending <= 0) { setTimeout(finish, 50); } };
+  if (pending === 0) { done(); return; }
+  for (var p = 0; p < imgs.length; p++) {
+    var im = imgs[p];
+    if (im.complete) { done(); }
+    else { im.addEventListener('load', done); im.addEventListener('error', done); }
+  }
 })();
 </script>
 """.replace("%TOLERANCE%", str(TOLERANCE_PX))
