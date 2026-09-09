@@ -256,7 +256,7 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 - Planen, verifizieren, korrigieren — nicht nur kompletieren.
 
 **2. Kontextlängen explodieren**
-- 200K → 1M+ Token, Gemini 2M.
+- 200K → 1M+ Token (Gemini 3.1 Pro).
 - Ganze Codebases & Specs im Kontext → echte Agenten möglich.
 
 **3. MCP wird Standard**
@@ -281,7 +281,7 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 </div>
 </div>
 
-> Beispiel-Landschaft (SAIA academic cloud, 08/2026): Claude Sonnet 4.6 · GPT-5.6 · Gemini 3.1 · GLM 4.7/5 · DevStral 2 · DeepSeek V4 Flash — je nach Aufgabe geroutet.
+> Beispiel-Landschaft (SAIA-Katalog, Stand 09/2026): GLM 4.7 · Qwen3.8-2.4T-A95B (MoE) · Qwen3-Coder-Next · DevStral 2 · DeepSeek V4 Flash · Llama 3.1 8B — Routing über Katalog-Aliase (`best-for-*` / `budget` / `fastest`).
 
 <!-- notes:
 CHRISTIAN — Ranking 1–6 nach Relevanz für agentisches Arbeiten. Tobias springt
@@ -328,9 +328,9 @@ Die Harnesses nach Stage/Use-Case ranken.
 <div>
 
 **1. OpenCode** — der Allrounder
-- CLI-Coding-Agent, Multi-Model-Routing über LiteLLM.
-- LSP + AST-grep, 25 Sprachen, Plugins, Skills, MCP.
-- `opencode run "…"` · TUI · 30+ parallele Agents.
+- CLI-Coding-Agent, TUI, `opencode run "…"` — Modell/Provider je Agent wählbar.
+- LSP, Plugins, Skills, MCP im Kern.
+- Mit OmO-Plugin: AST-Grep (25 Sprachen), parallele Background-Agents.
 
 **2. pi** — das Minimal-Harness
 - Minimaler Terminal-Harness, stark erweiterbar.
@@ -379,7 +379,7 @@ für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
 |------|----------|
 | **OpenSpec** | Spec-driven Development — Delta-Specs als Agenten-Prompts |
 | **SAIA Accelerator** | Plugin für OpenCode/zot/pi — GWDG Chat-AI-Modelle, Auto-Sync |
-| **oh-my-opencode** | Token-optimierte Agent-Routing (Sisyphus, Prometheus, Oracle …) |
+| **oh-my-opencode** | Routing je Aufgabe (Sisyphus, Prometheus, Oracle …), AST-Grep, Background-Agents |
 | **skeleton-research** | Forkbares Corpus-Skeleton — gleich hands-on in Anwendung 1 |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review — als wiederverwendbare Routinen |
 | **Ollama / vLLM / llama.cpp** | Lokale Modell-Serving auf eigener Hardware |
@@ -648,7 +648,7 @@ TOBIAS — Block 6 · 11:00–11:10 (10 min). Wie wir 3–5× Token sparen.
 **Routing: das richtige Modell pro Aufgabe**
 - Klein & schnell für Muster-Erkennung, groß & langsam für Denk-Aufgaben.
 - oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Oracle…) → Modell je Kategorie.
-- SAIA: devstral / GLM je nach Aufgabe — `specified-low` vs. `deep` vs. `ultrabrain`.
+- SAIA: Katalog-Aliase als Routing — `best-for-coding` → Qwen3-Coder-Next, `best-for-agentic` → GLM 4.7, `budget` → DeepSeek V4 Flash.
 
 **Caching & Kontext-Hygiene**
 - Prompt-/KV-Caching: Kontext über Steps wiederverwenden.
@@ -700,9 +700,9 @@ Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).
 - Eine Regel der Pyramide erzwingen: **Tasks erst „done", wenn die Verifikation (CI/--check) grün ist**.
 
 ```bash
-openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"
-# → proposal / design / specs / tasks generieren
-# → Agent implementieren → validate → CI
+openspec new change trend-auswertung --description "Trend-Auswertung pro Kategorie"
+# → Agent füllt proposal → design → specs → tasks (openspec instructions <artifact>)
+# → Agent implementieren → openspec validate --changes → CI
 ```
 
 <!-- notes:
@@ -784,7 +784,7 @@ Projekt übertragen.
 - **OpenCode** — github.com/sst/opencode
 - **pi** — pi.dev · @earendil-works/pi-coding-agent
 - **zot** — zot.sh · github.com/patriceckhart/zot
-- **OpenSpec** — github.com/FissionAI/OpenSpec
+- **OpenSpec** — npmjs.com/package/openspec (CLI v1.9)
 - **SAIA Accelerator** — codeberg.org/graphwiz-ai/opencode-saia-plugin (Branch `main`)
 - **oh-my-opencode** — github.com/code-yeongyu/oh-my-opencode
 - **skeleton-research** — github.com/tobias-weiss-ai-xr/skeleton-research

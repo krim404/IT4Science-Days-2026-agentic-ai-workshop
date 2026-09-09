@@ -1,8 +1,16 @@
 # Recherche: Foundation Models & Toolbox — IT4Science Days 2026
 
-> Stand: August 2026 · Quelle: lokale Repos (pi, OpenCode, oh-my-openagent, zot, SAIA,
+> Stand: August 2026 · Quelle: lokale Repos (pi, OpenCode, oh-my-opencode, zot, SAIA,
 > skeleton-research, dev-agent, predictive-agent), pi-Doku, SAIA-Modellkatalog,
-> oh-my-openagent-Features, agent-*-research-Corpora.
+> oh-my-opencode-Features, agent-*-research-Corpora.
+>
+> **Korrektur 09/2026 (wissenschaftliche Prüfung):** SAIA-Katalog = Open-Modelle
+> (GLM 4.7, Qwen3.8, Qwen3-Coder-Next, DevStral 2, DeepSeek V4 Flash, Llama 3.1 8B;
+> Routing-Aliase `best-for-*`/`budget`/`fastest` laut SAIA-Plugin-opencode.json).
+> OpenCode: kein LiteLLM-Routing, kein "30+ parallele Agents" belegt — AST-Grep/
+> Background-Agents stammen aus dem omO-Plugin ("5+ parallel").
+> zot = zot.sh (patriceckhart/zot): Go-Single-Binary, TUI+JSON-RPC, MCP,
+> Ollama/llama.cpp — KEINE SAIA/GWDG-Integration belegbar.
 
 ---
 
@@ -38,7 +46,7 @@
 | **3** | **Lange Kontexte & Prompt-Caching** | 1M-Token-Fenster (GPT-5.6), KV-Cache, Cache-Retention (1h). Direkter Kosten-/Latenz-Hebel für lange Agent-Sessions. |
 | **4** | **Coding-spezialisierte Modelle** | Qwen3-Coder-Next, DevStral 2, Grok-Code. Direkt relevant für den Workshop (agentisches Programmieren). |
 | **5** | **Lokale & souveräne Modelle** | Ollama, vLLM, LM Studio, GPT-OSS, Llama. Daten verlassen nicht das Haus — IT4Science-Kernanliegen. |
-| **6** | **Modell-Routing & Multi-Model-Orchestrierung** | Kategorie-basierte Delegation (oh-my-openagent: Sisyphus/Hephaestus/Oracle/Librarian/Explore). Brücke zum Toolbox-Block. |
+| **6** | **Modell-Routing & Multi-Model-Orchestrierung** | Kategorie-basierte Delegation (oh-my-opencode: Sisyphus/Hephaestus/Oracle/Librarian/Explore). Brücke zum Toolbox-Block. |
 | **7** | **Multimodal** | Qwen-Omni, Gemini, GPT-5.4 — Vision in Agenten. Aufsteigend, aber nachrangig für Coding-Workshop. |
 
 ### Schlüsseltrends 2026→2027
@@ -57,10 +65,10 @@
 | Tool | Rolle | Stoic-Unix-Signatur |
 |------|-------|---------------------|
 | **pi** | Minimaler Terminal-Coding-Harness; Skills/Extensions/Prompt-Templates; Multi-Provider; Session-Branching/Compaction | "No MCP, no sub-agents, no plan-mode, no built-in to-dos" — do one thing, compose |
-| **OpenCode** | Agentischer Coding-Terminal; Multi-Model-Routing (LiteLLM); 30+ parallele Hintergrund-Agenten; LSP + AST-grep; Plugin-System | CLI-first, erweiterbar |
-| **oh-my-openagent (OmO)** | OpenCode-Plugin: Sisyphus/Prometheus/Oracle/Librarian/Explore; Background Agents; Ralph Loop; Kategorie-basierte Modell-Delegation; Hash-Anchored Edits; LSP/AST; eingebaute MCPs | "Discipline Agent" — läuft bis 100% done |
+| **OpenCode** | Agentischer Coding-Terminal; Multi-Model (Provider/Modell je Agent); LSP; Plugins, Skills, MCP | CLI-first, erweiterbar |
+| **oh-my-opencode (OmO)** | OpenCode-Plugin: Sisyphus/Prometheus/Oracle/Librarian/Explore/Hephaestus; Background Agents ("5+ Spezialisten parallel"); Ralph Loop; Kategorie-basierte Modell-Delegation; Hash-Anchored Edits; AST-Grep (25 Sprachen); LSP; eingebaute MCPs | "Discipline Agent" — läuft bis 100% done |
 | **Claude Code** | Kommerzielle Referenz (Anthropic) | Vendor-Lock-in-Vergleichsmaßstab |
-| **zot** | Extension/Plugin-Framework für akademische Clouds (SAIA/GWDG, Hessian); Modellkatalog-Integration | Souveräne Modellwahl für IT4Science |
+| **zot** | Go-Single-Binary-Harness: TUI + JSON-RPC, Extensions, Slash-Commands, MCP; Ollama/llama.cpp-Anbindung ([zot.sh](https://www.zot.sh), patriceckhart/zot) | Lokale/souveräne Modellwahl |
 
 ### Tooling rund um den Harness
 
@@ -81,7 +89,7 @@
 |------|-------|-------|
 | **1** | **Harness-Konzept** | "Gleiche Modelle, unterschiedliche Ergebnisse je nach Steuerung" — der zentrale Gedanke |
 | **2** | **pi** | Der Host-Agent dieses Workshops; minimal, komponierbar, Skills/Extensions |
-| **3** | **OpenCode + oh-my-openagent** | Multi-Model, parallele Agenten, Ralph Loop, LSP/AST — der Workhorse |
+| **3** | **OpenCode + oh-my-opencode** | Multi-Model, parallele Agenten, Ralph Loop, LSP/AST — der Workhorse |
 | **4** | **zot + SAIA** | Akademische Cloud-Modelle für IT4Science — Souveränität in der Praxis |
 | **5** | **OpenSpec** | Brücke zum Hands-on: Spec als Vertrag |
 | **6** | **skeleton-research** | Brücke zum Hands-on: agentic Literature Review |

@@ -80,7 +80,7 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 
 | Harness | Rolle | Setzen wir ein für |
 |---------|-------|--------------------|
-| **OpenCode** | CLI-Coding-Agent, Multi-Model-Routing (LiteLLM), LSP+AST-grep, Plugins | tägliche Coding-Agents |
+| **OpenCode** | CLI-Coding-Agent — Multi-Model, LSP, Plugins, Skills, MCP | tägliche Coding-Agents |
 | **pi** | minimaler Terminal-Harness, erweiterbar (Skills, Extensions, Themes) | kontrollierte Workflows · dieser Workshop |
 | **zot** | schlankes Agent-Harness mit TUI + JSON-RPC | Headless & Automation |
 
@@ -90,7 +90,7 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 |------|----------|
 | **OpenSpec** | Spec-driven Development — Delta-Specs als Agenten-Prompts |
 | **SAIA Accelerator** | Plugin für OpenCode/zot/pi — GWDG Chat-AI-Modelle, Auto-Sync |
-| **oh-my-opencode** | Token-optimierte Agent-Routing (benannte Agents je Aufgabe) |
+| **oh-my-opencode** | Routing je Aufgabe (benannte Agents), AST-Grep (25 Sprachen), Background-Agents |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review als wiederverwendbare Routinen |
 | **Ollama / vLLM / llama.cpp** | Lokales Modell-Serving auf eigener Hardware |
 
@@ -129,9 +129,9 @@ git add -A && git commit -m "bootstrap corpus" && git push
 Einen eigenen Mini-**OpenSpec-Change** strukturieren (`proposal.md` → `specs/` → `tasks.md`) und von einem Agenten implementieren lassen. Referenz ist der fertige Change **`add-research-gap-analysis`** im Repo [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) (`openspec/changes/archive/2026-08-23-add-research-gap-analysis`):
 
 ```bash
-openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"
-# → proposal / design / specs / tasks generieren
-# → Agent implementieren → validate → CI
+openspec new change trend-auswertung --description "Trend-Auswertung pro Kategorie"
+# → Agent füllt proposal → design → specs → tasks (openspec instructions <artifact>)
+# → Agent implementieren → openspec validate --changes → CI
 ```
 
 > Regel aus der Pyramide: Tasks erst **done**, wenn die Verifikation (CI/--check) grün ist.
@@ -150,4 +150,4 @@ openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"
 - [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) — forkbares Research-Corpus-Skeleton
 - [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) — OpenSpec-Showcase (Research-Gap-Analyse)
 - [SAIA Plugin für OpenCode](https://codeberg.org/graphwiz-ai/opencode-saia-plugin/src/branch/main)
-- [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://github.com/FissionAI/OpenSpec) · [pi](https://pi.dev) · [zot](https://www.zot.sh)
+- [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://www.npmjs.com/package/openspec) · [pi](https://pi.dev) · [zot](https://www.zot.sh)

@@ -2066,7 +2066,7 @@ pre code {
 </ul>
 <p><strong>2. Kontextlängen explodieren</strong></p>
 <ul>
-<li>200K → 1M+ Token, Gemini 2M.</li>
+<li>200K → 1M+ Token (Gemini 3.1 Pro).</li>
 <li>Ganze Codebases &amp; Specs im Kontext → echte Agenten möglich.</li>
 </ul>
 <p><strong>3. MCP wird Standard</strong></p>
@@ -2094,7 +2094,7 @@ pre code {
 </div>
 </div>
 <blockquote>
-<p>Beispiel-Landschaft (SAIA academic cloud, 08/2026): Claude Sonnet 4.6 · GPT-5.6 · Gemini 3.1 · GLM 4.7/5 · DevStral 2 · DeepSeek V4 Flash — je nach Aufgabe geroutet.</p>
+<p>Beispiel-Landschaft (SAIA-Katalog, Stand 09/2026): GLM 4.7 · Qwen3.8-2.4T-A95B (MoE) · Qwen3-Coder-Next · DevStral 2 · DeepSeek V4 Flash · Llama 3.1 8B — Routing über Katalog-Aliase (<code>best-for-*</code> / <code>budget</code> / <code>fastest</code>).</p>
 </blockquote>
 <footer>IT4Science Days 2026 · Agentic AI Workshop</footer>
 </section>
@@ -2749,9 +2749,9 @@ pre code {
 <div>
 <p><strong>1. OpenCode</strong> — der Allrounder</p>
 <ul>
-<li>CLI-Coding-Agent, Multi-Model-Routing über LiteLLM.</li>
-<li>LSP + AST-grep, 25 Sprachen, Plugins, Skills, MCP.</li>
-<li><code>opencode run &quot;…&quot;</code> · TUI · 30+ parallele Agents.</li>
+<li>CLI-Coding-Agent, TUI, <code>opencode run &quot;…&quot;</code> — Modell/Provider je Agent wählbar.</li>
+<li>LSP, Plugins, Skills, MCP im Kern.</li>
+<li>Mit OmO-Plugin: AST-Grep (25 Sprachen), parallele Background-Agents.</li>
 </ul>
 <p><strong>2. pi</strong> — das Minimal-Harness</p>
 <ul>
@@ -3034,7 +3034,7 @@ pre code {
 </tr>
 <tr>
 <td><strong>oh-my-opencode</strong></td>
-<td>Token-optimierte Agent-Routing (Sisyphus, Prometheus, Oracle …)</td>
+<td>Routing je Aufgabe (Sisyphus, Prometheus, Oracle …), AST-Grep, Background-Agents</td>
 </tr>
 <tr>
 <td><strong>skeleton-research</strong></td>
@@ -5997,7 +5997,7 @@ pre code {
 <ul>
 <li>Klein &amp; schnell für Muster-Erkennung, groß &amp; langsam für Denk-Aufgaben.</li>
 <li>oh-my-opencode: benannte Agents (Sisyphus, Prometheus, Oracle…) → Modell je Kategorie.</li>
-<li>SAIA: devstral / GLM je nach Aufgabe — <code>specified-low</code> vs. <code>deep</code> vs. <code>ultrabrain</code>.</li>
+<li>SAIA: Katalog-Aliase als Routing — <code>best-for-coding</code> → Qwen3-Coder-Next, <code>best-for-agentic</code> → GLM 4.7, <code>budget</code> → DeepSeek V4 Flash.</li>
 </ul>
 <p><strong>Caching &amp; Kontext-Hygiene</strong></p>
 <ul>
@@ -6450,9 +6450,9 @@ pre code {
 <li>Agent (OpenCode / pi / zot / SAIA) implementieren lassen — kleine, abgegrenzte Aufgabe.</li>
 <li>Eine Regel der Pyramide erzwingen: <strong>Tasks erst „done&quot;, wenn die Verifikation (CI/--check) grün ist</strong>.</li>
 </ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">openspec propose <span class="hljs-string">&quot;Füge eine Trend-Auswertung pro Kategorie hinzu&quot;</span>
-<span class="hljs-comment"># → proposal / design / specs / tasks generieren</span>
-<span class="hljs-comment"># → Agent implementieren → validate → CI</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">openspec new change trend-auswertung --description <span class="hljs-string">&quot;Trend-Auswertung pro Kategorie&quot;</span>
+<span class="hljs-comment"># → Agent füllt proposal → design → specs → tasks (openspec instructions &lt;artifact&gt;)</span>
+<span class="hljs-comment"># → Agent implementieren → openspec validate --changes → CI</span>
 </code></pre>
 <footer>IT4Science Days 2026 · Agentic AI Workshop</footer>
 </section>
@@ -7569,7 +7569,7 @@ pre code {
 <li><strong>OpenCode</strong> — github.com/sst/opencode</li>
 <li><strong>pi</strong> — pi.dev · @earendil-works/pi-coding-agent</li>
 <li><strong>zot</strong> — zot.sh · github.com/patriceckhart/zot</li>
-<li><strong>OpenSpec</strong> — github.com/FissionAI/OpenSpec</li>
+<li><strong>OpenSpec</strong> — npmjs.com/package/openspec (CLI v1.9)</li>
 <li><strong>SAIA Accelerator</strong> — codeberg.org/graphwiz-ai/opencode-saia-plugin (Branch <code>main</code>)</li>
 <li><strong>oh-my-opencode</strong> — github.com/code-yeongyu/oh-my-opencode</li>
 <li><strong>skeleton-research</strong> — github.com/tobias-weiss-ai-xr/skeleton-research</li>
