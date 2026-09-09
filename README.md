@@ -92,6 +92,8 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 | **SAIA Accelerator** | Plugin für OpenCode/zot/pi — GWDG Chat-AI-Modelle, Auto-Sync |
 | **oh-my-opencode** | Routing je Aufgabe (benannte Agents), AST-Grep (25 Sprachen), Background-Agents |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review als wiederverwendbare Routinen |
+| **rtk** | CLI-Proxy: filtert Bash-/Tool-Output — −60–90 % Input-Token, ein Rust-Binary |
+| **ponytail / caveman** | Prompt-Skills — minimale Lösungen (YAGNI) + knappe Prosa, Output-Token diszipliniert |
 | **Ollama / vLLM / llama.cpp** | Lokales Modell-Serving auf eigener Hardware |
 
 > **Das Modell ist das Gehirn, die Workflows sind der Muskel.**

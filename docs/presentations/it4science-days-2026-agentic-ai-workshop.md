@@ -434,6 +434,8 @@ für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
 | **oh-my-opencode** | Routing je Aufgabe (Sisyphus, Prometheus, Oracle …), AST-Grep, Background-Agents |
 | **skeleton-research** | Forkbares Corpus-Skeleton — gleich hands-on in Anwendung 1 |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review — als wiederverwendbare Routinen |
+| **rtk** | CLI-Proxy: filtert Bash-/Tool-Output (Failures only …) — **−60–90 % Input-Token**, ein Rust-Binary |
+| **ponytail / caveman** | Prompt-Skills: **minimale Lösungen** (YAGNI) + **knappe Prosa** — Output-Token diszipliniert |
 | **Ollama / vLLM / llama.cpp** | Lokale Modell-Serving auf eigener Hardware |
 
 > **Das Modell ist das Gehirn, die Workflows sind der Muskel.**
@@ -441,6 +443,8 @@ für Skripting/RPC. Pi steckt dahinter, wie dieser Workshop entstanden ist.
 <!-- notes:
 TOBIAS — Tooling-Landschaft ranken. OpenSpec ist die Brücke zu Block 5 (Spec & Token).
 oh-my-opencode leitet innerhalb von Block 5 zum Token-Teil über.
+rtk + ponytail/caveman als Token-Hebel vorwegnehmen: „Output filtern, knapp reden,
+minimal bauen — Zahlen dazu gleich im Token-Teil.“
 -->
 
 ---
@@ -864,6 +868,8 @@ Projekt übertragen.
 - **skeleton-research** — github.com/tobias-weiss-ai-xr/skeleton-research
 - **ai-literacy-research** — github.com/tobias-weiss-ai-xr/ai-literacy-research
 - **Superpowers Skills** — github.com/obra/superpowers
+- **rtk** — github.com/rtk-ai/rtk
+- **ponytail** — github.com/DietrichGebert/ponytail · **caveman** — github.com/JuliusBrussee/caveman
 
 <!-- notes:
 Links können als QR-Code oder Handout ergänzt werden.
