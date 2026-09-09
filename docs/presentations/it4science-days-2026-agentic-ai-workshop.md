@@ -338,9 +338,9 @@ Die Harnesses nach Stage/Use-Case ranken.
 - Philosophie: „Adapt pi, nicht umgekehrt" — nichts eingebacken, alles baubar.
 
 **3. zot** — das schlanke Agent-Harness
-- TUI + JSON-RPC (Prozess-Integration) + SDK.
+- Single-Binary in Go, TUI + JSON-RPC (Prozess-Integration).
 - Extensions, Slash-Commands, MCP.
-- SAIA/GWDG-Modellkatalog → souveräne Modellwahl.
+- Ollama & llama.cpp anbindbar → lokale Modelle, souverän.
 - `zot "prompt"` · `zot -p` · `zot rpc`.
 
 </div>
@@ -352,7 +352,7 @@ Die Harnesses nach Stage/Use-Case ranken.
 |-------|------|-----|
 | 1 | **OpenCode** | tägliche Coding-Agents, Routing |
 | 2 | **pi** | kontrollierte, minimalistische Workflows |
-| 3 | **zot** | Headless/SDK-Integration, eigene Automation |
+| 3 | **zot** | RPC/Headless-Integration, eigene Automation |
 
 > Ein **Harness ist die Steuerungsebene**: gleiche Modelle, unterschiedliche Ergebnisse — je nach Harness.
 
@@ -783,7 +783,7 @@ Projekt übertragen.
 
 - **OpenCode** — github.com/sst/opencode
 - **pi** — pi.dev · @earendil-works/pi-coding-agent
-- **zot** — Agent-Harness, intern (Live-Demo im Workshop; Repo auf Anfrage)
+- **zot** — zot.sh · github.com/patriceckhart/zot
 - **OpenSpec** — github.com/FissionAI/OpenSpec
 - **SAIA Accelerator** — codeberg.org/graphwiz-ai/opencode-saia-plugin (Branch `main`)
 - **oh-my-opencode** — github.com/code-yeongyu/oh-my-opencode

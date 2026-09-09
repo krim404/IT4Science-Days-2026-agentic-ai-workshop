@@ -82,7 +82,7 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 |---------|-------|--------------------|
 | **OpenCode** | CLI-Coding-Agent, Multi-Model-Routing (LiteLLM), LSP+AST-grep, Plugins | tägliche Coding-Agents |
 | **pi** | minimaler Terminal-Harness, erweiterbar (Skills, Extensions, Themes) | kontrollierte Workflows · dieser Workshop |
-| **zot** | schlankes Agent-Harness mit TUI + JSON-RPC/SDK | Headless & Automation |
+| **zot** | schlankes Agent-Harness mit TUI + JSON-RPC | Headless & Automation |
 
 ### Weiteres Tooling
 
@@ -150,4 +150,4 @@ openspec propose "Füge eine Trend-Auswertung pro Kategorie hinzu"
 - [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) — forkbares Research-Corpus-Skeleton
 - [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) — OpenSpec-Showcase (Research-Gap-Analyse)
 - [SAIA Plugin für OpenCode](https://codeberg.org/graphwiz-ai/opencode-saia-plugin/src/branch/main)
-- [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://github.com/FissionAI/OpenSpec) · [pi](https://pi.dev)
+- [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://github.com/FissionAI/OpenSpec) · [pi](https://pi.dev) · [zot](https://www.zot.sh)
