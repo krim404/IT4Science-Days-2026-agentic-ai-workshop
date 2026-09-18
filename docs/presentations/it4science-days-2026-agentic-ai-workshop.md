@@ -547,56 +547,131 @@ laufen, Routing über Aliase → vertieft in Block 5.
 
 ## Foundation Models: Praxis-Einordnung
 
-| Aufgabe | Sinnvolle Wahl | Warum |
-|---------|----------------|-------|
-| Code schreiben, umbauen, testen | spezialisierte offene Modelle (Qwen3-Coder-Next, DevStral 2) | auf Code trainiert, günstig, lokal betreibbar |
-| Abläufe mit Werkzeugen steuern | agentisch starke Modelle (GLM 4.7, kommerzielle Spitze) | verlässliche Werkzeugaufrufe, weniger Abbrüche |
-| Ganze Repositories oder lange Texte | Modelle mit großem Kontextfenster | Spezifikation und Quelltext passen gemeinsam hinein |
-| Sensible Forschungsdaten | lokal betrieben (Ollama, vLLM, llama.cpp) | die Daten verlassen das Haus nicht |
-| Viele gleichartige Fälle | kleine Modelle (Llama 3.1 8B, DeepSeek V4 Flash) | Geschwindigkeit und Kosten entscheiden, nicht Brillanz |
+| Aufgabe | Derzeit stark | Anmerkung |
+|---------|---------------|-----------|
+| Freie Textproduktion, Übersetzung | **GPT-6** | derzeit führend bei Prosa |
+| Räumliche Aufgaben, 3D-Modellierung | **GPT-6** | in eigenen Tests überzeugend |
+| Code schreiben, größere Umbauten | **Claude**, zunehmend **GLM** | Claude teuer, aber oft auf Anhieb erfolgreich |
+| Code gezielt umschreiben | **Qwen3.8-Flash-Next**, **GLM** | offene Gewichte, schnell, günstig |
+| Abläufe mit Werkzeugen steuern | **GLM 4.7**, Claude | verlässliche Werkzeugaufrufe |
+| Sensible Forschungsdaten | **lokal**: Ollama, vLLM, llama.cpp | die Daten verlassen das Haus nicht |
+| Viele gleichartige Fälle | kleine Modelle, z. B. **DeepSeek V4 Flash** | Geschwindigkeit und Kosten entscheiden |
 
-> **Die Modellwahl ist keine Glaubensfrage, sondern eine Frage der Aufgabe.**
-> Datenschutz und Budget entscheiden mit.
+> **Die offenen Modelle holen massiv auf.** In vielen Aufgaben ist der Abstand
+> inzwischen kleiner als der Preisunterschied.
+
+<div style="font-size:15px; color:#9a9a9a; margin-top:4px;">
+Quelle: eigene Erfassung
+</div>
 
 <!-- notes:
 CHRISTIAN. Diese Folie beantwortet die Frage, die im Raum tatsaechlich gestellt
-wird: Welches Modell soll ich denn nun nehmen?
+wird: Welches Modell soll ich denn nun nehmen? Bewusst nicht auf agentisches
+Arbeiten beschraenkt, der Raum arbeitet auch schreibend und auswertend.
 
 ABLAUF
 
 (1) Rahmen setzen
     Die Landschaft aendert sich schneller, als eine Folie altern kann. Deshalb
-    hier keine Rangliste, sondern ein Auswahlkriterium, das auch in einem Jahr
-    noch traegt: Man waehlt nach Aufgabe, nicht nach Ruf des Anbieters.
+    keine Rangliste, sondern ein Auswahlkriterium, das auch naechstes Jahr traegt:
+    Man waehlt nach Aufgabe, nicht nach Ruf des Anbieters. Kein Modell ist in
+    allem vorn.
 
-(2) Die Zeilen durchgehen
-    Nicht alle gleich ausfuehrlich. Die beiden unteren Zeilen sind fuer dieses
-    Publikum die wichtigsten.
-    Sensible Daten: Der entscheidende Punkt fuer Forschungsdaten. Lokal betriebene
-    Modelle sind qualitativ nicht mehr weit von der kommerziellen Spitze entfernt,
-    und die Frage, ob Daten das Haus verlassen duerfen, ist oft vorab entschieden.
-    Viele gleichartige Faelle: Der haeufigste Denkfehler ist, fuer jede Aufgabe das
-    groesste Modell zu nehmen. Fuer Klassifikation oder Extraktion aus tausend
-    Dokumenten ist das die teuerste und langsamste Variante.
+(2) Die beiden oberen Zeilen
+    Fuer viele im Raum die relevantesten, weil sie taeglich schreiben und nicht
+    taeglich programmieren. GPT-6 ist bei freier Textproduktion derzeit vorn.
+    Der 3D-Punkt ueberrascht erfahrungsgemaess und lohnt einen Satz: raeumliche
+    Aufgaben galten lange als Schwaeche dieser Modelle.
 
-(3) Einordnung offene Gewichte
-    Rueckgriff auf die Begriffsfolie: offene Gewichte sind nicht Open Source. Der
-    Abstand zur kommerziellen Spitze ist in den letzten Jahren deutlich kleiner
-    geworden, fuer viele Aufgaben ist er praktisch bedeutungslos.
+(3) Die Code-Zeilen
+    Ehrlich einordnen: Claude ist bei groesseren Umbauten oft auf Anhieb
+    erfolgreich und entsprechend teuer. Fuer gezielte Umschreibungen leistet
+    Qwen3.8-Flash-Next inzwischen mehr als die vorher spezialisierten
+    Coder-Modelle, bei offenen Gewichten und einem Bruchteil der Kosten.
+    GLM steht in beiden Zeilen, weil es in beiden Faellen brauchbar arbeitet und
+    dabei am schnellsten aufholt. Das ist der Beleg fuer den Schlusssatz der
+    Folie: Der Abstand schrumpft dort am deutlichsten, wo er lange am groessten war.
 
-(4) Ausblick, kurz halten
-    Zwei Entwicklungen, die absehbar sind: Modelle steuern ihren eigenen
-    Rechenaufwand zunehmend selbst, und die Betriebskosten fallen weiter. Beides
-    spricht dafuer, sich nicht auf einen Anbieter festzulegen, sondern die
-    Steuerungsebene austauschbar zu halten. Das leitet zu Tobias ueber.
+(4) Untere Zeilen
+    Sensible Daten: fuer Forschungsdaten der entscheidende Punkt, oft vorab
+    entschieden. Viele gleichartige Faelle: der haeufigste Denkfehler ist, fuer
+    jede Aufgabe das groesste Modell zu nehmen.
 
-(5) Optional, wenn Zeit bleibt
-    Kurze Live-Demonstration mit einem eigenen Modell. Faellt bei Zeitdruck
-    ersatzlos weg, die Folie traegt auch ohne.
+(5) Schlusssatz und Ausblick
+    Der Abstand zwischen offenen und proprietaeren Modellen schrumpft schneller,
+    als die Preise fallen. Praktische Folge: sich nicht auf einen Anbieter
+    festlegen, sondern die Steuerungsebene austauschbar halten. Das leitet zu
+    Tobias ueber.
 
-Falls nach konkreten Modellnamen gefragt wird: Die Auswahl entspricht dem, was
-ueber den GWDG-Zugang tatsaechlich verfuegbar ist. Details in der Recherche unter
-docs/research-foundation-models-toolbox.md.
+(6) Optional, wenn Zeit bleibt
+    Kurze Live-Demonstration. Faellt bei Zeitdruck ersatzlos weg.
+
+Zur Quellenangabe auf der Folie: Die Einschaetzungen stammen aus dem eigenen
+laufenden Einsatz, nicht aus Benchmarks. Genau so vortragen, das ist
+glaubwuerdiger als eine geliehene Rangliste.
+Begruendung fuer Rueckfragen: Objektives Benchmarking ist bei diesen Modellen
+methodisch schwierig. Testdaten geraten in Trainingsdaten, die Ergebnisse haengen
+stark von Aufgabenzuschnitt und Umgebung ab, und zwischen Veroeffentlichung und
+Vortrag liegen oft mehrere Modellgenerationen. Wer Zahlen moechte, bekommt den
+Verweis auf docs/research-foundation-models-toolbox.md.
+-->
+
+---
+
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
+
+## Beim agentischen Arbeiten entscheidet das Harness
+
+- **Einzelne Frage** → das Modell entscheidet
+- **Mehrere Schritte, Werkzeuge, Selbstkorrektur** → das Harness entscheidet
+- Mehrfach unabhängig beobachtet: günstiges Modell im guten Harness vor teurem im schlechten
+- Reihenfolge in der Praxis: erst das Harness, dann die Modellfrage
+
+> **Auch das beste Modell ist nur so gut wie sein Harness.**
+
+<!-- notes:
+CHRISTIAN. Diese Folie ist der Angelpunkt des Vormittags und zugleich die
+Uebergabe an Tobias. Sie beantwortet die Frage, die die vorige Folie aufwirft:
+Wenn die Modellwahl so von der Aufgabe abhaengt, worauf kommt es dann wirklich an?
+
+(1) Zuerst die Einschraenkung setzen, sonst entsteht ein Widerspruch zur
+    vorigen Folie: Fuer eine einzelne Aufgabe, etwa einen Text oder eine
+    Uebersetzung, entscheidet weiterhin das Modell. Die Aussage dieser Folie gilt
+    fuer agentisches Arbeiten, also mehrere Schritte, Werkzeugaufrufe und
+    Selbstkorrektur. Erst dort summieren sich die Einfluesse der Umgebung.
+
+(2) Ausformulierung fuer den zweiten Punkt, die Folie traegt nur das Stichwort:
+    Bei einer einzelnen Frage, etwa einer Uebersetzung, entscheidet das Modell.
+    Sobald es ueber mehrere Schritte arbeitet, Werkzeuge benutzt und sich selbst
+    korrigiert, verschiebt sich das Gewicht zum Harness, weil sich dessen
+    Einfluesse ueber die Schritte summieren.
+
+(3) Die Beobachtung nuechtern vortragen
+    Es handelt sich nicht um eine einzelne Messung, sondern um ein Muster, das
+    sich in mehreren unabhaengigen Versuchen gezeigt hat. Genau so formulieren,
+    ohne Zahl. Eine erfundene Prozentangabe wuerde die Aussage schwaechen.
+
+(4) Warum das so ist, in einem Satz
+    Das Modell sieht nur, was die Umgebung ihm zeigt, darf nur, was sie erlaubt,
+    und laeuft nur so lange, wie sie es laufen laesst. Ein starkes Modell mit
+    schlechtem Kontext arbeitet an der falschen Aufgabe, nur eloquenter.
+
+(5) Rueckverweis auf die Bausteinfolie
+    Dort wurde die Arbeitsteilung bereits gesetzt: Das Modell entscheidet, was
+    geschehen soll, die Umgebung sorgt dafuer, dass es geschehen kann. Hier ist
+    die praktische Konsequenz daraus.
+
+(6) Entlastung fuer den Raum
+    Das ist eine gute Nachricht und sollte auch so gesagt werden: Niemand muss
+    das teuerste Abonnement abschliessen, um brauchbar zu arbeiten. Wer seine
+    Spezifikationen und Pruefungen in Ordnung bringt, kommt mit guenstigen oder
+    lokal betriebenen Modellen weit.
+
+(7) Uebergabe an Tobias
+    Genau das ist der Gegenstand des naechsten Blocks. Tobias zeigt drei
+    Umgebungen im Vergleich und fuehrt vor, dass dasselbe Modell darin
+    unterschiedliche Ergebnisse liefert. Uebergabesatz: Was das konkret bedeutet,
+    zeigt Tobias jetzt am lebenden Objekt.
 -->
 
 ---
@@ -667,6 +742,65 @@ pi: nichts eingebacken, alles baubar. zot: Extensions, Slash-Commands,
 Ranking: OpenCode Tagesgeschäft, pi minimal & erweiterbar, zot Skripting/RPC.
 **Claude Code** (kommerziell) als Vergleichsmaßstab, Open-Source spielt oben mit.
 pi steckt dahinter, wie dieser Workshop entstanden ist.
+-->
+
+---
+
+<!-- _class: smaller -->
+
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
+
+## Die kommerzielle Gegenprobe
+
+| Harness | Zuschnitt |
+|---------|-----------|
+| **Claude Code** (Anthropic) | auf die eigenen Modelle abgestimmt, hoher Token-Verbrauch |
+| **Codex** (OpenAI) | auf die eigenen Modelle abgestimmt |
+| **Antigravity CLI** (Google) | auf die eigenen Modelle abgestimmt, löst Gemini CLI ab |
+
+- Für die Modelle des Anbieters optimiert → **nicht übertragbar**
+- In unabhängigen Vergleichen eher **Mittelfeld**
+- Stärke: **ohne Konfiguration sofort brauchbar**
+
+> Bequemlichkeit gegen Kontrolle. Wer nichts einstellen möchte, fährt gut.
+> Wer optimieren will, stößt an Grenzen.
+
+<!-- notes:
+CHRISTIAN. Kurzer Einschub nach Tobias' Vergleich der offenen Harnesses, damit
+niemand den Raum mit dem Eindruck verlaesst, Open Source sei hier eine
+ideologische Entscheidung.
+
+(1) Warum ueberhaupt erwaehnen
+    Ein Teil des Raums nutzt genau diese Werkzeuge oder hat davon gehoert. Wer
+    sie verschweigt, wirkt unglaubwuerdig.
+
+(2) Die Staerke zuerst nennen, sie ist echt
+    Installieren und loslegen. Keine Konfiguration, keine Modellwahl, keine
+    Einrichtung. Fuer den Einstieg ist das ein erheblicher Vorteil, und fuer
+    viele Aufgaben reicht es dauerhaft.
+
+(3) Der Preis dafuer
+    Die Optimierung gilt dem jeweils eigenen Modell. Was dort gut funktioniert,
+    laesst sich nicht auf andere Modelle uebertragen. In unabhaengigen
+    Vergleichen landen diese Systeme deshalb eher im Mittelfeld.
+    Claude Code ist ausserdem dafuer bekannt, sehr viele Token zu verbrauchen.
+    Das ist bei einem Institutsbudget ein reales Argument.
+
+(4) Das Muster ist die eigentliche Aussage
+    Drei grosse Anbieter, drei eigene Harnesses, jedes auf die eigenen Modelle
+    abgestimmt. Genau daraus folgt die fehlende Uebertragbarkeit.
+    Zum Namen, falls jemand Gemini CLI kennt: Google hat es im Juni 2026 auf
+    Antigravity CLI umgestellt. Fuer Pro-, Ultra- und Gratis-Zugaenge ist Gemini
+    CLI abgeschaltet, ueber Code-Assist-Lizenzen laeuft es weiter. Antigravity CLI
+    benutzt dasselbe Harness wie die gleichnamige Desktop-Anwendung.
+    Nicht zu verwechseln mit Antimatter, einer Oberflaeche zur Steuerung mehrerer
+    Agenten mit Projektbrettern und Kanaelen. Andere Produktkategorie.
+
+(5) Schluss und Rueckbindung
+    Der Merksatz traegt den Einschub: Bequemlichkeit gegen Kontrolle. Beides ist
+    legitim, es haengt davon ab, ob man ein Werkzeug benutzen oder es formen will.
+    Rueckverweis auf die eigene Folie zuvor: Auch hier entscheidet nicht das
+    Modell, sondern wie gut die Umgebung zur Aufgabe passt.
 -->
 
 ---
@@ -847,60 +981,113 @@ kein Wiedereinlernen — die Regeln liegen im Repo. Die Pipeline erzwingt sie.
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-# Spec Driven & Token-optimized Development
+# Spezifikation und Token
+
+## Präzise Verträge schreiben, sparsam mit Kontext umgehen
 
 <!-- notes:
-CHRISTIAN + TOBIAS — Block 5 · 10:45–11:00 (15 min), kompakt zusammengelegt.
-Timing: ~6 min SDD-Kern (Spec → Delta-Spec → Verify), ~2 min Showcase-Beispiel
-(kürzbar/überspringbar), ~7 min Token-Teil (Tobias: Routing, Caching, Prinzipien).
-Die Pyramide in Reinkultur: Anforderungen als Tests für Agenten.
+CHRISTIAN und TOBIAS. Block 5, 10:45 bis 11:00, zwei Themen in einem Block.
+Aufteilung: Christian der Spezifikationsteil, Tobias der Token-Teil. Das
+Showcase-Beispiel ist kuerzbar, wenn die Zeit knapp wird.
+Verbindung beider Haelften ausdruecklich benennen, sonst wirkt der Block
+zusammengewuerfelt: Eine praezise Spezifikation ist selbst die wirksamste
+Einsparung. Wer den Auftrag genau beschreibt, muss ihn nicht dreimal erklaeren.
 -->
 
 ---
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## SDD: Specs führen, Delta-Specs liefern
+## Wo die drei Ebenen im Projekt liegen
 
-| Ebene | Ort | Rolle |
-|-------|-----|-------|
-| **Specs** (Source of Truth) | `openspec/specs/` | Verhalten als Verträge: SHALL/MUST/SHOULD, Given/When/Then |
-| **Changes** (Delta) | `openspec/changes/<name>/` | proposal · design · specs · tasks, der Agenten-Prompt |
-| **Archive** (Decision Log) | `openspec/archive/` | „Warum" bleibt in 6 Monaten beantwortbar |
+| Ort | Was dort liegt | Rolle |
+|-----|----------------|-------|
+| `openspec/specs/` | das dauerhaft gültige Verhalten | **Spezifikation**: gilt, bis sie geändert wird |
+| `openspec/changes/<name>/` | die eine Änderung, die gerade ansteht | **Vertrag**: genau das bekommt der Agent |
+| `openspec/archive/` | alle abgeschlossenen Änderungen | **Begründung**: warum wurde das so entschieden |
 
-> Specs sind der **Vertrag zwischen Mensch und Agent**: klarer Scope, überprüfbare Acceptance Criteria.
+> Der Agent liest nie das ganze Projekt, sondern den Vertrag.
+> Das ist zugleich die wirksamste Einsparung an Kontext.
 
 <!-- notes:
-CHRISTIAN — Grundprinzip Spec→Change→Archive. Das ist genau die Pyramide:
-Spec oben (Source of Truth), Change-Mitte (Contract), Tests unten (Verifikation).
+CHRISTIAN. Diese Folie wiederholt nicht die Pyramide, sondern zeigt, wo die drei
+Ebenen als Dateien liegen. Der Zugewinn gegenueber vorhin ist die dritte Zeile.
+
+(1) Erste Zeile, Spezifikation
+    Was dort steht, gilt dauerhaft. Es wird nicht pro Sitzung neu verhandelt.
+
+(2) Zweite Zeile, Vertrag
+    Nur die Differenz. Nicht "baue mir ein Analysewerkzeug", sondern "ergaenze
+    diese eine Auswertung, gemessen an diesem Kriterium".
+
+(3) Dritte Zeile, Archiv
+    Der fuer Forschende interessanteste Teil und der am haeufigsten unterschaetzte.
+    Abgeschlossene Aenderungen bleiben mitsamt Begruendung liegen. In einem halben
+    Jahr ist die Frage "warum haben wir das so gerechnet" noch beantwortbar. Das
+    ist Methodendokumentation, die nebenbei entsteht.
+
+(4) Ueberleitung zum Token-Teil von Tobias
+    Der Schlusssatz ist die Bruecke: Ein praeziser Vertrag ist zugleich die
+    wirksamste Einsparung, weil er Wiederholung ersetzt.
 -->
 
 ---
 
+<!-- _class: smaller -->
+
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## Ein Change in Aktion: Research-Gap-Analyse
+## Zwei Schulen: Spec-Kit und OpenSpec
 
-```yaml
-# openspec/specs/analysis-reporting/spec.md  (Source of Truth)
-ADDED: Behavioral capability:
-  - id: research-gap-analysis
-    requirement: >-
-      the system SHALL rank research areas by a gap score, combining
-      publication thinness with momentum, and reproduce within 3 months
-```
+| | **Spec-Kit** | **OpenSpec** |
+|---|---|---|
+| Grundidee | beschreiben, **was gebaut** werden soll | beschreiben, **wie sich Bestehendes ändert** |
+| Typischer Fall | Neubau, neue Funktionen | laufende Weiterentwicklung |
+| Quelle der Wahrheit | eine Spezifikation je Vorhaben | eine dauerhafte Spezifikation plus Änderungen |
+| Ablauf | specify · clarify · plan · tasks · implement | propose · apply · sync · archive |
+| Aufwand | höher, dafür mehr Prozessführung | niedriger |
 
-```yaml
-# openspec/changes/archive/2026-08-23-add-research-gap-analysis/tasks.md  (Contract)
-- [ ] design gap-score formula (thinness × momentum)
-- [ ] implement gap-score computation in stats module
-- [ ] add validate + CI check for reproducible rank
-- [ ] write spec-delta + acceptance test
-```
+> **Neues Vorhaben: Spec-Kit. Bestehendes System, das wächst: OpenSpec.**
+> Wir bearbeiten heute ein bestehendes Repository, deshalb OpenSpec.
 
 <!-- notes:
-CHRISTIAN — konkret durchgehen. Der Agent bekommt die exakte Differenz, keine
-Klärungsrunden. Die Spec ist behaviorale Anforderung; die Tasks zählen den Fortschritt.
+CHRISTIAN. Diese Folie beantwortet vorab die Frage, warum ausgerechnet OpenSpec.
+Ohne sie wirkt die Werkzeugwahl beliebig. Kurz halten, es geht um die Denkweise,
+nicht um einen Werkzeugvergleich.
+
+(1) Der eigentliche Unterschied in einem Satz
+    Spec-Kit denkt in Vorhaben, OpenSpec denkt in Aenderungen. Beides ist
+    spezifikationsgetrieben, der Zuschnitt ist verschieden.
+
+(2) Spec-Kit
+    Pro Funktion ein eigener Satz Dokumente: Spezifikation, Plan, Aufgaben. Das
+    traegt sehr gut, solange ein System entworfen wird. Der Preis zeigt sich
+    spaeter: Nach fuenfzig Vorhaben liegen fuenfzig Momentaufnahmen vor, und die
+    Frage, welche davon den heutigen Zustand beschreibt, ist nicht mehr leicht
+    zu beantworten.
+
+(3) OpenSpec
+    Eine dauerhafte Spezifikation, daneben Aenderungen als Differenz, ausgewiesen
+    als ADDED, MODIFIED oder REMOVED. Nach dem Abschluss wandert die Aenderung in
+    die Hauptspezifikation. Das entspricht einem Versionsverlauf: aktueller
+    Zustand, Differenz, neuer Zustand.
+
+(4) Analogie fuer den Raum
+    Spec-Kit ist das Architekturdokument je Bauabschnitt. OpenSpec ist die
+    Migration mit vorher festgelegtem Schema-Unterschied. Wer lieber ein Bild
+    aus der Forschung will: einmal das Studienprotokoll je Teilstudie, einmal das
+    fortgeschriebene Handbuch mit Aenderungsnachweis.
+
+(5) Praktische Empfehlung, falls gefragt wird
+    Beides schliesst sich nicht aus. Wer ein Vorhaben neu aufsetzt, faehrt mit
+    Spec-Kit komfortabler, weil es mehr fuehrt. Wer ein bestehendes Repository
+    laufend umbaut, empfindet OpenSpec als leichter. Der Hauptgewinn von OpenSpec
+    ist, dass die Frage "welche Spezifikation gilt eigentlich noch" gar nicht
+    erst entsteht.
+
+(6) Bezug zur Uebung
+    In Anwendung 2 wird OpenSpec verwendet, weil dort ein bestehendes Repository
+    weiterentwickelt wird. Das ist der Grund, kein Werturteil.
 -->
 
 ---
@@ -971,52 +1158,92 @@ Kontext-Berechnungen über Schritte; Kompaktion = alten Kontext zusammenfassen/v
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-# Anwendung 2: Spec selbst anwenden
+# Anwendung 2: Ihre eigene Spezifikation
+
+## Von einem Satz zu einer überprüften Änderung
 
 <!-- notes:
-CHRISTIAN — Block 6 · 11:00–11:25 (25 min), Lead (Tobias unterstützt). Hands-on: Teilnehmende bauen ihren eigenen
-Mini-OpenSpec-Change (ideal im eigenen, zuvor erstellten Research-Repo).
+CHRISTIAN. Block 6, 11:00 bis 11:25, Christian fuehrt, Tobias unterstuetzt am Platz.
+Praktische Uebung im eigenen Research-Repository aus Anwendung 1.
+Vor dem Start ansagen, dass niemand fertig werden muss. Ziel ist, die Struktur
+einmal selbst geschrieben zu haben, nicht ein fertiges Werkzeug.
+Beide Referenten gehen durch den Raum. Erfahrungsgemaess scheitert der Einstieg
+seltener am Verstaendnis als an der Installation.
 -->
 
 ---
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## Übung 2: Ihr eigenes Research-Gap-Spec
+## Übung 2: Ihre eigene Auswertung
 
-- **Ziel**: behaviorale Spec + Tasks für eine neue Auswertung, als OpenSpec-Change (`proposal.md` · `specs/` · `tasks.md`).
-- Agent (OpenCode / pi / zot / SAIA) implementieren lassen, eine kleine, abgegrenzte Aufgabe.
-- Eine Regel der Pyramide: **Tasks erst „done“, wenn die Verifikation (CI/--check) grün ist**.
+- **Ziel**: eine überprüfbare Anforderung und eine Aufgabenliste dazu.
+- **Klein halten**: eine Auswertung, eine Kennzahl. Nicht das ganze Vorhaben.
+- **Fertig heißt**: die Prüfung läuft durch. Nicht: der Agent meldet Vollzug.
 
 ```bash
-openspec new change trend-auswertung --description "Trend-Auswertung pro Kategorie"
-# → Agent füllt proposal → design → specs → tasks (openspec instructions <artifact>)
-# → Agent implementieren → openspec validate --changes → CI
+npm install -g openspec            # falls noch nicht vorhanden
+openspec new change trend-auswertung
+openspec validate --changes        # entscheidet, ob es zählt
 ```
 
+> **Ohne OpenSpec** genauso möglich: dieselbe Struktur als Markdown-Datei.
+
 <!-- notes:
-CHRISTIAN — 20–25 min. Referenz: der fertige add-research-gap-analysis-Change in
-ai-literacy-research. Ergebnis-Sampling: 2–3 kurze Demos.
+CHRISTIAN. Der haeufigste Zeitfresser in diesem Block ist die Installation, nicht
+die Aufgabe. Deshalb steht der Ausweg auf der Folie und nicht nur im Kopf.
+
+(1) Vor dem Start
+    Kurz abfragen, bei wem openspec laeuft. Wer es nicht installiert bekommt,
+    arbeitet sofort mit der Markdown-Variante weiter, ohne Wartezeit.
+
+(2) Waehrend der Uebung
+    Beide Referenten gehen durch den Raum. Haeufigster inhaltlicher Fehler: zu
+    grosser Zuschnitt. Gegenfrage, die fast immer hilft: Woran wuerden Sie
+    merken, dass es falsch ist?
+
+(3) Referenz
+    Der fertige Change add-research-gap-analysis in ai-literacy-research liegt als
+    Vorlage bereit und darf abgeschrieben werden.
+
+(4) Am Ende
+    Zwei oder drei kurze Ergebnisse einsammeln, die im naechsten Block gezeigt
+    werden. Freiwillige jetzt ansprechen, nicht erst nach der Pause.
 -->
 
 ---
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## Übung 2: Ergebnis-Kriterien
+## Übung 2: Woran Sie Ihr Ergebnis messen
 
-| Ziel | Erfüllt, wenn … |
-|------|-----------------|
-| **Spec** geschrieben | SHALL-Satz mit Given/When/Then, Scope klar |
-| **Contract** definiert | Change mit proposal, specs, tasks |
-| **Test** grün | Validierung/CI besteht, Reproduzierbarkeit belegt |
+| Ebene | Mindestziel | Vollständig |
+|-------|-------------|-------------|
+| **Spezifikation** | ein Satz, der widerlegt werden kann | Szenario mit Ausgangslage, Eingriff, erwartetem Ergebnis |
+| **Vertrag** | eine Aufgabenliste mit drei Punkten | Vorschlag, Entwurf, Spezifikation, Aufgaben |
+| **Tests** | eine Prüfung, die fehlschlagen könnte | die Prüfung läuft automatisch und besteht |
 
-> **Spec governs → Contract implements → Tests verify → Spec evolves.**
-> Jede:r verlässt den Raum mit beidem: eigenem Research-Repo **und** eigenem Mini-Change.
+> **Erledigt ist, was die Prüfung besteht.**
+> Wer nur das Mindestziel erreicht, hat die Methode trotzdem verstanden.
 
 <!-- notes:
-CHRISTIAN — Ergebnis-Check gegen die Pyramide. Das ist der "Aha-Moment": dieselbe
-Struktur in übergreifter und in eigener Repo-Größe.
+CHRISTIAN. Bewusst zweistufig. Bei fuenfundzwanzig Minuten erreicht ein Teil des
+Raums die rechte Spalte nicht, und das ist kein Scheitern.
+
+(1) Mindestziel ansagen, bevor gearbeitet wird
+    Wer die linke Spalte erreicht, hat die Struktur verstanden. Das nimmt Druck
+    und erhoeht erfahrungsgemaess die Zahl derer, die ueberhaupt anfangen.
+
+(2) Die linke Spalte der ersten Zeile ist der eigentliche Lerninhalt
+    Ein Satz, der widerlegt werden kann. Wer das hinbekommt, hat den Kern der
+    Methode verstanden, auch ohne eine einzige Zeile Code.
+
+(3) Dritte Zeile erklaeren
+    Eine Pruefung, die nicht fehlschlagen kann, prueft nichts. Das ist derselbe
+    Gedanke wie bei einem Experiment ohne moegliches Negativergebnis.
+
+(4) Schlusssatz stehen lassen
+    Er kommt aus der Pyramide und wird im Wrap-Up erneut aufgegriffen.
 -->
 
 ---
