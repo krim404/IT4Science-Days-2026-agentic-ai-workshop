@@ -8,8 +8,8 @@
 > **⚠️ Migrated from Codeberg → GitHub**: This repository lives on [GitHub](https://github.com/tobias-weiss-ai-xr/IT4Science-Days-2026-agentic-ai-workshop). A Codeberg mirror is kept in sync manually: [graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop](https://codeberg.org/graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop) (Branch `master`).
 >
 > **Diese README ist die einzige Quelle der Wahrheit für den Ablauf.** Die Marp-Folien liegen unter `docs/presentations/`.
-> Nach jeder Folien-Änderung: `.html` neu rendern (`npx @marp-team/marp-cli <deck>.md -o <deck>.html`) und den
-> Fußzeilen-Check laufen lassen: `python3 tests/check_footer.py docs/presentations/<deck>.html` (muss PASS liefern).
+> Nach jeder Folien-Änderung: `./build.sh` — rendert das Deck und prüft die Fußzeilen-Überlappung (muss PASS liefern).
+> `./build.sh --list` gibt zusätzlich das Folienverzeichnis mit Nummern aus. Einmalig nötig: `npm install -g @marp-team/marp-cli`.
 
 ---
 
@@ -46,7 +46,7 @@ Fortsetzung der Veranstaltungsreihe **HackyHour**.
 
 | Zeit | Block | Dauer | Verantwortung |
 |------|-------|-------|---------------|
-| 09:00–09:15 | Ankommen, Vorstellung — **Hooks der Referenten** (wie wir agentic AI nutzen) + **TN-Vorstellungsrunde**, Ablauf | 15 min | Christian |
+| 09:00–09:15 | Ankommen, Vorstellung — **Praxisbeispiele der Referenten** (wie wir agentic AI nutzen) + **TN-Vorstellungsrunde**, Ablauf | 15 min | Christian |
 | 09:15–09:30 | Grundlagen & Definition — Was ist agentisches Arbeiten? | 15 min | Christian |
 | 09:30–09:50 | Aktuelle Entwicklungen bei den Foundation Modellen | 20 min | Christian + Tobias |
 | 09:50–10:10 | Open-Source Toolbox — Harnesses (OpenCode, pi, zot) + Tooling | 20 min | Tobias + Christian |
@@ -59,7 +59,7 @@ Fortsetzung der Veranstaltungsreihe **HackyHour**.
 | 11:45–12:00 | Q&A, Diskussion, Wrap Up | 15 min | Tobias |
 
 **Lernlogik der Reihenfolge:**
-Einstieg mit zwei **Praxis-Hooks** der Referenten und **TN-Vorstellungsrunde** (Wünsche sammeln) → Grundlage → Werkzeuge → **sofort selbst anwenden (Research Repo)** → Vertiefung kompakt (Spec & Token) → **Spec selbst anwenden** → **Outcomes präsentieren** → Austausch.
+Einstieg mit zwei **Praxisbeispielen** der Referenten und **TN-Vorstellungsrunde** (Wünsche sammeln) → Grundlage → Werkzeuge → **sofort selbst anwenden (Research Repo)** → Vertiefung kompakt (Spec & Token) → **Spec selbst anwenden** → **Outcomes präsentieren** → Austausch.
 
 > Details und Rankings zu Foundation Models & Toolbox: [`docs/research-foundation-models-toolbox.md`](docs/research-foundation-models-toolbox.md).
 

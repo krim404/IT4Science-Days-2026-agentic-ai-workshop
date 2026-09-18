@@ -70,14 +70,13 @@ MEASURE_JS = """
   d.textContent = '###RESULT###' + JSON.stringify(out);
   document.body.appendChild(d);
   };
-  // Warten bis Marp-Core Code-Fitting (MARP-PRE SVG-Skalierung) + Fonts fertig sind;
-  // 2× rAF + kleines Timeout — sonst misst man den ungefitteten Zustand.
-  var go = function () {
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () { setTimeout(finish, 100); });
-    });
-  };
-  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(go); } else { go(); }
+  // Warten bis Marp-Core Code-Fitting (MARP-PRE SVG-Skalierung) + Fonts fertig sind,
+  // sonst misst man den ungefitteten Zustand. Der Timer begrenzt die Wartezeit:
+  // fonts.ready kann ausbleiben, der DOM-Dump wartet darauf nicht.
+  var done = false;
+  var go = function () { if (!done) { done = true; finish(); } };
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(go); }
+  setTimeout(go, 600);
 })();
 </script>
 """.replace("%TOLERANCE%", str(TOLERANCE_PX))
@@ -88,30 +87,37 @@ def find_chromium():
         path = shutil.which(name)
         if path:
             return path
+    macos = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+    if macos.exists():
+        return str(macos)
     sys.exit("kein Chromium/Chrome gefunden")
 
 
 def measure(chromium, injected):
-    """Ein Chromium-Lauf; liefert Violations-Liste oder None bei Extraktionsfehler."""
+    """Ein Browser-Lauf; liefert die Liste der Ueberlappungen oder None."""
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as tmp:
         tmp.write(injected)
         tmp_path = tmp.name
-    proc = subprocess.run(
-        [
-            chromium,
-            "--headless",
-            "--no-sandbox",
-            "--disable-gpu",
-            "--window-size=1280,800",
-            "--virtual-time-budget=5000",
-            "--dump-dom",
-            f"file://{tmp_path}",
-        ],
-        capture_output=True,
-        text=True,
-        timeout=120,
-    )
-    Path(tmp_path).unlink(missing_ok=True)
+    try:
+        proc = subprocess.run(
+            [
+                chromium,
+                "--headless",
+                "--no-sandbox",
+                "--disable-gpu",
+                "--window-size=1280,800",
+                "--virtual-time-budget=20000",
+                "--dump-dom",
+                f"file://{tmp_path}",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except subprocess.TimeoutExpired:
+        return None
+    finally:
+        Path(tmp_path).unlink(missing_ok=True)
     match = re.search(r"###RESULT###(\[.*?\])</div>", proc.stdout, re.S)
     return json.loads(match.group(1)) if match else None
 
@@ -130,27 +136,15 @@ def main():
     chromium = find_chromium()
     n_sections = len(re.findall("<section", html))
 
-    # Konsens über 3 Läufe; Läufe ohne Ergebnis (Dump vor Fitting) werden verworfen.
-    # Worst-Case der gültigen Läufe zählt.
-    runs = [measure(chromium, injected) for _ in range(3)]
-    valid = [r for r in runs if r is not None]
-    if not valid:
-        sys.exit("Konnte Messergebnis nicht extrahieren (Exit 2)")
-    worst = {}
-    for run in valid:
-        for v in run:
-            key = (v["slide"], v["title"])
-            if key not in worst or v["worst"]["overlapPx"] > worst[key]["worst"]["overlapPx"]:
-                worst[key] = v
-    violations = sorted(worst.values(), key=lambda v: v["slide"])
-
-    dropped = len(runs) - len(valid)
-    suffix = f", 3 Läufe" + (f", {dropped} verworfen" if dropped else "")
+    violations = measure(chromium, injected)
+    if violations is None:
+        sys.exit("Messung fehlgeschlagen. Laeuft ein Chrome-Fenster? Dann schliessen und erneut versuchen. (Exit 2)")
+    violations = sorted(violations, key=lambda v: v["slide"])
     if not violations:
-        print(f"PASS ✅  {n_sections} Folien, keine Überlappung mit der Fußzeile (Toleranz {TOLERANCE_PX}px{suffix})")
+        print(f"PASS ✅  {n_sections} Folien, keine Überlappung mit der Fußzeile (Toleranz {TOLERANCE_PX}px)")
         return
 
-    print(f"FAIL ❌  {len(violations)} Folie(n) überlappen die Fußzeile (Worst-Case aus 3 Läufen):\n")
+    print(f"FAIL ❌  {len(violations)} Folie(n) überlappen die Fußzeile:\n")
     for v in violations:
         w = v["worst"]
         print(f"  Folie {v['slide']:>2}: +{w['overlapPx']}px  {w['tag']}  „{w['text']}”  [{v['title']}]")

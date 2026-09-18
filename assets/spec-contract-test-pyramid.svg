@@ -1,58 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="Segoe UI, system-ui, -apple-system, sans-serif">
-  <!-- Background -->
-  <rect width="1200" height="760" fill="#1a1a1a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640"
+     role="img" aria-labelledby="sct-title sct-desc">
+  <title id="sct-title">Spezifikation, Vertrag, Tests</title>
+  <desc id="sct-desc">Drei Ebenen agentischer Entwicklung: Die Spezifikation regiert als Quelle der Wahrheit, der Vertrag setzt sie als Auftrag an den Agenten um, die Tests entscheiden objektiv. Ein Rueckflusspfeil fuehrt von den Tests zurueck zur Spezifikation, die dadurch waechst.</desc>
 
-  <!-- Title -->
-  <text x="600" y="55" fill="#ffffff" font-size="36" font-weight="700" text-anchor="middle">Spec · Contract · Test</text>
-  <text x="600" y="88" fill="#888888" font-size="20" text-anchor="middle">The verification pyramid of spec-driven agentic development</text>
-
-  <!-- Flow arrows (left side, downward) -->
   <defs>
-    <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="9" orient="auto">
-      <path d="M1,1 L5,9 L9,1" fill="none" stroke="#555555" stroke-width="1.5"/>
+    <marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8a8a8a"/>
     </marker>
-    <marker id="arrowUp" markerWidth="10" markerHeight="10" refX="5" refY="1" orient="auto">
-      <path d="M1,9 L5,1 L9,9" fill="none" stroke="#555555" stroke-width="1.5"/>
+    <marker id="ar-fb" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7ee2a8"/>
     </marker>
   </defs>
 
-  <!-- Arrow: Spec → Contract (left, downward) -->
-  <line x1="50" y1="280" x2="50" y2="300" stroke="#555555" stroke-width="2" marker-end="url(#arrowDown)"/>
-  <text x="65" y="295" fill="#666666" font-size="14" font-style="italic">governs</text>
+  <rect width="1200" height="640" fill="#1a1a1a"/>
 
-  <!-- Arrow: Contract → Tests (left, downward) -->
-  <line x1="50" y1="440" x2="50" y2="460" stroke="#555555" stroke-width="2" marker-end="url(#arrowDown)"/>
-  <text x="65" y="455" fill="#666666" font-size="14" font-style="italic">implements</text>
+  <text x="600" y="52" fill="#ffffff" font-size="32" font-weight="700"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Spezifikation · Vertrag · Tests</text>
+  <text x="600" y="84" fill="#9a9a9a" font-size="16"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Wer regiert, wer umsetzt, wer entscheidet</text>
 
-  <!-- Arrow: Tests → Spec (right, upward, the feedback loop) -->
-  <line x1="1150" y1="460" x2="1150" y2="180" stroke="#555555" stroke-width="2" marker-end="url(#arrowUp)" stroke-dasharray="6,4"/>
-  <text x="1165" y="320" fill="#666666" font-size="14" font-style="italic" transform="rotate(90, 1165, 320)">verifies &amp; evolves</text>
+  <!-- Verbindungen zuerst, damit die Boxen darueber liegen -->
+  <line x1="600" y1="224" x2="600" y2="264" stroke="#8a8a8a" stroke-width="1.2" marker-end="url(#ar)"/>
+  <line x1="600" y1="376" x2="600" y2="416" stroke="#8a8a8a" stroke-width="1.2" marker-end="url(#ar)"/>
 
-  <!-- Tier 3: SPEC (top, narrow — golden ratio width 382) -->
-  <rect x="409" y="140" width="382" height="140" rx="10" fill="#1a2f52" stroke="#3b6fc4" stroke-width="2"/>
-  <text x="600" y="185" fill="#8ab8ff" font-size="30" font-weight="700" text-anchor="middle">SPEC</text>
-  <text x="600" y="215" fill="#e8e8e8" font-size="18" text-anchor="middle">Source of Truth — behavioral contracts</text>
-  <text x="600" y="250" fill="#6a9ad8" font-size="15" text-anchor="middle" font-family="monospace">openspec/specs/*/spec.md · SHALL · MUST · GIVEN/WHEN/THEN</text>
+  <path d="M 960 476 H 1032 Q 1040 476 1040 468 V 180 Q 1040 172 1032 172 H 856"
+        fill="none" stroke="#7ee2a8" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#ar-fb)"/>
 
-  <!-- Tier 2: CONTRACT (middle — golden ratio width 618) -->
-  <rect x="291" y="300" width="618" height="140" rx="10" fill="#4a3a12" stroke="#b88a2e" stroke-width="2"/>
-  <text x="600" y="345" fill="#ffd88a" font-size="30" font-weight="700" text-anchor="middle">CONTRACT</text>
-  <text x="600" y="375" fill="#e8e8e8" font-size="18" text-anchor="middle">Delta-Spec — the agent's prompt</text>
-  <text x="600" y="410" fill="#c8a45c" font-size="15" text-anchor="middle" font-family="monospace">changes/&lt;name&gt;/ — proposal · design · specs · tasks</text>
+  <!-- Ebene 1: Spezifikation -->
+  <rect x="360" y="120" width="480" height="104" rx="8" fill="#1a1a1a"/>
+  <rect x="360" y="120" width="480" height="104" rx="8" fill="#1a2f52" stroke="#3b6fc4" stroke-width="1"/>
+  <rect x="376" y="136" width="64" height="16" rx="2" fill="none" stroke="#3b6fc4" stroke-width="0.8"/>
+  <text x="408" y="148" fill="#8ab8ff" font-size="9" font-family="monospace"
+        text-anchor="middle" letter-spacing="0.08em">EBENE 1</text>
+  <text x="600" y="180" fill="#8ab8ff" font-size="24" font-weight="700"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Spezifikation</text>
+  <text x="600" y="206" fill="#c8d8f0" font-size="14"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Quelle der Wahrheit: Was gelten soll</text>
 
-  <!-- Tier 1: TESTS (base, wide — golden ratio width 1000) -->
-  <rect x="100" y="460" width="1000" height="140" rx="10" fill="#14432a" stroke="#2f9e5f" stroke-width="2"/>
-  <text x="600" y="505" fill="#7ee2a8" font-size="30" font-weight="700" text-anchor="middle">TESTS</text>
-  <text x="600" y="535" fill="#e8e8e8" font-size="18" text-anchor="middle">Verify, validate, regenerate</text>
-  <text x="600" y="570" fill="#5cb886" font-size="15" text-anchor="middle" font-family="monospace">validate_papers.py · generate_readme.py --check · CI pass/fail</text>
+  <!-- Ebene 2: Vertrag -->
+  <rect x="300" y="264" width="600" height="104" rx="8" fill="#1a1a1a"/>
+  <rect x="300" y="264" width="600" height="104" rx="8" fill="#3a2a10" stroke="#c8902e" stroke-width="1"/>
+  <rect x="316" y="280" width="64" height="16" rx="2" fill="none" stroke="#c8902e" stroke-width="0.8"/>
+  <text x="348" y="292" fill="#ffd88a" font-size="9" font-family="monospace"
+        text-anchor="middle" letter-spacing="0.08em">EBENE 2</text>
+  <text x="600" y="324" fill="#ffd88a" font-size="24" font-weight="700"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Vertrag</text>
+  <text x="600" y="350" fill="#f0dcb0" font-size="14"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Der Auftrag an den Agenten: Was sich ändert</text>
 
-  <!-- Loop caption -->
-  <text x="600" y="660" fill="#888888" font-size="18" text-anchor="middle" font-style="italic">Spec governs → Contract implements → Tests verify → Spec evolves</text>
+  <!-- Ebene 3: Tests -->
+  <rect x="240" y="416" width="720" height="104" rx="8" fill="#1a1a1a"/>
+  <rect x="240" y="416" width="720" height="104" rx="8" fill="#14432a" stroke="#2f9e5f" stroke-width="1"/>
+  <rect x="256" y="432" width="64" height="16" rx="2" fill="none" stroke="#2f9e5f" stroke-width="0.8"/>
+  <text x="288" y="444" fill="#7ee2a8" font-size="9" font-family="monospace"
+        text-anchor="middle" letter-spacing="0.08em">EBENE 3</text>
+  <text x="600" y="476" fill="#7ee2a8" font-size="24" font-weight="700"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Tests</text>
+  <text x="600" y="502" fill="#b8e8cc" font-size="14"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Die Entscheidung: Bestanden oder nicht</text>
 
-  <!-- Principles footer (Stoic Unix, shown through deeds, not named) -->
-  <text x="600" y="700" fill="#555555" font-size="15" text-anchor="middle">one config · one re-run · each tool does one thing · never edit what is generated · the pipeline is the judge</text>
+  <!-- Beschriftung der Verbindungen -->
+  <rect x="616" y="232" width="72" height="16" rx="2" fill="#1a1a1a"/>
+  <text x="620" y="244" fill="#9a9a9a" font-size="10" font-family="monospace"
+        letter-spacing="0.06em">REGIERT</text>
 
-  <!-- Thin golden-ratio composition guides (very faint) -->
-  <line x1="236" y1="130" x2="236" y2="610" stroke="#222222" stroke-width="0.5" stroke-dasharray="3,6" opacity="0.4"/>
-  <line x1="964" y1="130" x2="964" y2="610" stroke="#222222" stroke-width="0.5" stroke-dasharray="3,6" opacity="0.4"/>
+  <rect x="616" y="384" width="80" height="16" rx="2" fill="#1a1a1a"/>
+  <text x="620" y="396" fill="#9a9a9a" font-size="10" font-family="monospace"
+        letter-spacing="0.06em">SETZT UM</text>
+
+  <rect x="884" y="148" width="112" height="16" rx="2" fill="#1a1a1a"/>
+  <text x="940" y="160" fill="#7ee2a8" font-size="10" font-family="monospace"
+        text-anchor="middle" letter-spacing="0.06em">UND WÄCHST</text>
+
+  <!-- Fusszeile -->
+  <line x1="240" y1="556" x2="960" y2="556" stroke="#3a3a3a" stroke-width="0.8"/>
+  <text x="600" y="584" fill="#c8c8c8" font-size="15"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Die Spezifikation regiert. Der Vertrag setzt um. Die Tests entscheiden.</text>
+  <text x="600" y="610" fill="#7ee2a8" font-size="15" font-weight="600"
+        font-family="'Segoe UI', system-ui, sans-serif" text-anchor="middle">Was die Tests zeigen, verändert die Spezifikation.</text>
 </svg>
