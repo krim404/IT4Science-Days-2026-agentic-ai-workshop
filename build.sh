@@ -7,10 +7,9 @@ set -euo pipefail
 cd "$(dirname "$0")"
 DECK=docs/presentations/it4science-days-2026-agentic-ai-workshop
 
-command -v marp >/dev/null 2>&1 || {
-  echo "marp fehlt. Einmalig: npm install -g @marp-team/marp-cli" >&2; exit 2; }
+command -v marp >/dev/null 2>&1 && MARP=(marp) || MARP=(npx --yes @marp-team/marp-cli)
 
-marp "$DECK.md" -o "$DECK.html" </dev/null >/dev/null 2>&1
+"${MARP[@]}" "$DECK.md" -o "$DECK.html" </dev/null >/dev/null 2>&1
 echo "gerendert: $DECK.html"
 
 [ "${1:-}" = "--list" ] && python3 tools/list_slides.py "$DECK.html" </dev/null
