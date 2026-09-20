@@ -93,8 +93,9 @@ style: |
     background: #242424;
     border-left: 4px solid #666;
     border-radius: 0 8px 8px 0;
-    padding: 10px 16px;
+    padding: 8px 14px;
     font-style: italic;
+    font-size: 22px;
     color: #d0d0d0;
   }
   code {
@@ -217,6 +218,8 @@ Wrap-Up greift sie auf. Zeit hart timen.
 ---
 
 <!-- _class: lead smaller -->
+
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 # Agenda (3h)
 
