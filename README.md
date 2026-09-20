@@ -19,6 +19,20 @@ Dieser Workshop auf den IT4Science Days 2026 zeigt praxisnah, wie Large Language
 
 Im Mittelpunkt steht ein **Hands-on**: Jede Teilnehmende verlässt den Raum mit einem eigenen, CI-validierten Research-Repo und einem selbst geschriebenen, implementierten **Spec-Change**.
 
+### Lernziele
+
+1. **Primär**: ein eigenes, CI-validiertes Research-Repo aufsetzen und die Spec · Contract · Test-Pyramide darin wiedererkennen.
+2. Harnesses und Modelle für den eigenen Anwendungsfall einschätzen können (Ranking-Kriterien, nicht Trends).
+3. Einen konkreten nächsten Schritt für das eigene Projekt formulieren (Outcomes-Block, Exit-Ticket).
+
+### Voraussetzungen
+
+- GitHub-Account (vorab anlegen), `git` und Python ≥ 3.11 lokal, Browser
+- Kein Dev-Hintergrund nötig — Dev-Jargon wird auf den Folien erläutert (CI, Harness, PR …)
+- Optional: SAIA/GWDG-Zugang für eigene LLM-Nutzung; für sensible Daten zeigen wir lokale Modelle
+
+> Ablauf- und Facilitation-Details für Referenten: [`docs/runbook-it4science-2026.md`](docs/runbook-it4science-2026.md) (Arc-Mapping, Formative-Assessment-Maßnahmen M1–M9, Fallback-Plan).
+
 ### Die zentrale Metapher: Spec · Contract · Test
 
 Der ganze Workshop folgt einer Pyramide, die wir später live anwenden:
