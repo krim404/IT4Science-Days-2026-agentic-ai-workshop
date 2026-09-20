@@ -54,8 +54,6 @@ Der ganze Workshop folgt einer Pyramide, die wir später live anwenden:
 | **Christian Uhl** | Zentrum für angewandte Informatik und Data Science, Universität Gießen |
 | **Tobias Weiß** | DevOps Engineer, Universität Marburg — [tobias-weiss.org](https://tobias-weiss.org) |
 
-Fortsetzung der Veranstaltungsreihe **HackyHour**.
-
 ## Agenda (3h, 09:00–12:00)
 
 | Zeit | Block | Dauer | Verantwortung |
