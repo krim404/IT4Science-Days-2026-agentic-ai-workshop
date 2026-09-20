@@ -10,7 +10,8 @@
 > OpenCode: kein LiteLLM-Routing, kein "30+ parallele Agents" belegt — AST-Grep/
 > Background-Agents stammen aus dem omO-Plugin ("5+ parallel").
 > zot = zot.sh (patriceckhart/zot): Go-Single-Binary, TUI+JSON-RPC, MCP,
-> Ollama/llama.cpp — KEINE SAIA/GWDG-Integration belegbar.
+> Ollama/llama.cpp. Update 09/2026: SAIA-Plugins existieren für alle drei Harnesses
+> (pi-saia-plugin · opencode-saia-plugin · zot-saia-plugin, repos siehe README-Links).
 
 ---
 
@@ -75,7 +76,7 @@
 | Tool | Funktion |
 |------|----------|
 | **OpenSpec** | Spec-driven Development: `specs/` (Source of Truth) + `changes/` (Delta) + `archive/` (Decision Log) |
-| **SAIA Accelerator** | OpenCode-Plugin: alle GWDG Chat-AI-Modelle, Auto-Sync der Modellliste |
+| **SAIA-Plugins** | pi-saia-plugin (auto-registriert alle SAIA-Modelle), opencode-saia-plugin, zot-saia-plugin |
 | **skeleton-research** | Forkbares Corpus-Skeleton für agentic Literature Review (Taxonomie → Discovery → Validate → Reports → CI) |
 | **dev-agent / opendesk-dev-agent** | Knowledge Graph (Neo4j) + Experience-Memory (pi-memory) per Slash-Command |
 | **predictive-agent** | Predictive K8s-Health: Kalman-Filter, Markov-Chain, Bayes-Risk-Scoring |

@@ -820,7 +820,7 @@ ideologische Entscheidung.
 | Tool | Funktion |
 |------|----------|
 | **OpenSpec** | Delta-Specs als Agenten-Prompts |
-| **SAIA Accelerator** | OpenCode-Plugin: GWDG Chat-AI-Modelle + Auto-Sync der Modellliste |
+| **SAIA-Plugins** | GWDG Chat-AI-Modelle für pi · OpenCode · zot, Auto-Registrierung |
 | **oh-my-opencode** | Routing je Aufgabe, AST-Grep, Background-Agents |
 | **skeleton-research** | Forkbares Corpus-Skeleton, Hands-on in Anwendung 1 |
 | **Superpowers** | TDD, Debugging, Review als Routinen |
@@ -1342,7 +1342,7 @@ Jetzt aufs eigene Projekt übertragen.
 - **pi**: pi.dev · @earendil-works/pi-coding-agent
 - **zot**: zot.sh · github.com/patriceckhart/zot
 - **OpenSpec**: npmjs.com/package/openspec
-- **SAIA Accelerator**: codeberg.org/graphwiz-ai/opencode-saia-plugin
+- **SAIA-Plugins**: codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin · github.com/tobias-weiss-ai-xr/opencode-saia-plugin · zot-saia-plugin
 - **oh-my-opencode**: github.com/code-yeongyu/oh-my-opencode
 
 </div>

@@ -104,7 +104,7 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 | Tool | Funktion |
 |------|----------|
 | **OpenSpec** | Spec-driven Development — Delta-Specs als Agenten-Prompts |
-| **SAIA Accelerator** | OpenCode-Plugin — GWDG Chat-AI-Modelle, Auto-Sync der Modellliste |
+| **SAIA-Plugins** | `pi-saia-plugin`, `opencode-saia-plugin`, `zot-saia-plugin` — GWDG Chat-AI-Modelle, Auto-Registrierung |
 | **oh-my-opencode** | Routing je Aufgabe (benannte Agents), AST-Grep (25 Sprachen), Background-Agents |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review als wiederverwendbare Routinen |
 | **rtk** | CLI-Proxy: filtert Bash-/Tool-Output — −60–90 % Input-Token, ein Rust-Binary |
@@ -166,5 +166,5 @@ openspec new change trend-auswertung --description "Trend-Auswertung pro Kategor
 - [Impuls zu SpecDrivenDevelopment (GWDG News)](https://gwdg.de/about-us/gwdg-news/2026/GN_05-2026_www.pdf#page=14)
 - [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) — forkbares Research-Corpus-Skeleton
 - [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) — OpenSpec-Showcase (Research-Gap-Analyse)
-- [SAIA Plugin für OpenCode](https://codeberg.org/graphwiz-ai/opencode-saia-plugin/src/branch/main)
+- [pi-saia-plugin](https://codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin) · [opencode-saia-plugin](https://github.com/tobias-weiss-ai-xr/opencode-saia-plugin) (GitHub = Primary, Codeberg = Mirror) · zot-saia-plugin
 - [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://www.npmjs.com/package/openspec) · [pi](https://pi.dev) · [zot](https://www.zot.sh)
