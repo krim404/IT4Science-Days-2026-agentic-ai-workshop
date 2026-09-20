@@ -91,5 +91,5 @@ der 08/2026 aus der Agenda entfernt wurde). Vorschlag für die Aktualisierung in
 > Outcomes-Block, in dem Teilnehmende eigene Ergebnisse präsentieren, gefolgt von
 > Q&A und Diskussion.
 >
-> Voraussetzungen: GitHub-Account, git und Python — ein Software-Development-Hintergrund
+> Voraussetzungen: SAIA-Account oder sonstigen LLM-Provider, git und Python — ein Software-Development-Hintergrund
 > ist nicht nötig. Vortragssprache: Deutsch. Materialien werden unter CC-BY bereitgestellt.
