@@ -74,12 +74,22 @@ in den Köpfen der Referenten.
 Der offizielle Abstract beschreibt noch das alte Format (Vortrag + OpenDesk-Edu-Use-Case,
 der 08/2026 aus der Agenda entfernt wurde). Vorschlag für die Aktualisierung in Indico:
 
-> Christian Uhl (Universität Gießen) und Tobias Weiß (Universität Marburg) zeigen in
-> einem dreistündigen, interaktiven Workshop, wie Large Language Models heute agentisch
-> genutzt werden: aktuelle Foundation Models im Überblick, Open-Source-Harnesses
-> (OpenCode, pi, zot) und Spec-Driven Development. Im Zentrum stehen zwei Hands-ons:
-> Jede Teilnehmende verlässt den Raum mit einem eigenen, CI-validierten Research-Repo
-> (skeleton-research) und erlebt einen Spec-Change, der agentisch umgesetzt wird.
-> Abgeschlossen wird mit einem Outcomes-Block, in dem Teilnehmende ihre Ergebnisse
-> präsentieren. Voraussetzungen: GitHub-Account, git, Python — kein Dev-Hintergrund nötig.
-> Vortragssprache: Deutsch.
+> **Agentic AI in der Praxis — Vom Spec zum produktiven Workflow**
+>
+> Wie werden Large Language Models zuverlässige Arbeitspartner statt bloße Chat-Gegenüber?
+> Christian Uhl (Zentrum für angewandte Informatik und Data Science, Universität Gießen)
+> und Tobias Weiß (DevOps Engineer, Universität Marburg) beantworten diese Frage in
+> einem dreistündigen, interaktiven Workshop für Forschende.
+>
+> Roter Faden ist eine Pyramide: **Spezifikation · Vertrag · Tests**. Darauf aufbauend:
+> ein Überblick über die aktuellen Foundation Models (2026), die Open-Source-Toolbox
+> der Harnesses (OpenCode, pi, zot) und wie Spec-Driven Development agentisches
+> Arbeiten diszipliniert. Zwei Hands-ons stehen im Zentrum: Jede Teilnehmende forkt
+> ein CI-validiertes Research-Repo (skeleton-research) für den eigenen Literatur-Alltag
+> — Pipeline, wöchentliche Discovery und Reports inklusive — und erlebt live, wie ein
+> Spec-Change agentisch umgesetzt und verifiziert wird. Den Abschluss bildet ein
+> Outcomes-Block, in dem Teilnehmende eigene Ergebnisse präsentieren, gefolgt von
+> Q&A und Diskussion.
+>
+> Voraussetzungen: GitHub-Account, git und Python — ein Software-Development-Hintergrund
+> ist nicht nötig. Vortragssprache: Deutsch. Materialien werden unter CC-BY bereitgestellt.
