@@ -221,18 +221,18 @@ Wrap-Up greift sie auf. Zeit hart timen.
 | 09:15–09:30 | Grundlagen & Definition | 15 min | Christian |
 | 09:30–09:50 | Foundation Models: aktuelle Entwicklungen | 20 min | Christian + Tobias |
 | 09:50–10:10 | Open-Source Toolbox | 20 min | Tobias + Christian |
-| 10:10–10:20 | ☕ Pause | 10 min | |
+| 10:10–10:20 | ☕ Pause | 10 min | — |
 | 10:20–10:45 | Anwendung 1: Eigenes Research-Repo | 25 min | Tobias |
 | 10:45–11:00 | Spec Driven & Token-optimized Development | 15 min | Christian + Tobias |
 | 11:00–11:25 | Anwendung 2: Spec selbst anwenden | 25 min | Christian |
-| 11:25–11:30 | ☕ Pause | 5 min | |
+| 11:25–11:30 | ☕ Pause | 5 min | — |
 | 11:30–11:45 | Outcomes: TN präsentieren ihre Ergebnisse | 15 min | Tobias |
 | 11:45–12:00 | Q&A, Diskussion, Wrap Up | 15 min | Tobias |
 
 <!-- notes:
 Agenda auf 1 min durchgehen. Zwei Hands-on-Blöcke: (1) eigenes Research-Repo,
-(2) OpenSpec selbst anwenden. Christian: Vorstellung, Grundlagen (2), Lead Block 7 (Spec/Token).
-Tobias: Toolbox (4), Anwendung 1 (6), Outcomes (10), Q&A (11). Gemeinsam: 3, 7.
+(2) OpenSpec selbst anwenden. Christian: Vorstellung, Grundlagen (2), Spec-Teil von Block 7.
+Tobias: Toolbox (4), Anwendung 1 (6), Token-Teil von 7, Outcomes (10), Q&A (11). Gemeinsam: 3, 7.
 -->
 
 ---
@@ -629,6 +629,10 @@ Verweis auf docs/research-foundation-models-toolbox.md.
 
 > **Auch das beste Modell ist nur so gut wie sein Harness.**
 
+<div style="font-size:15px; color:#9a9a9a; margin-top:4px;">
+Quelle: eigene Erfassung
+</div>
+
 <!-- notes:
 CHRISTIAN. Diese Folie ist der Angelpunkt des Vormittags und zugleich die
 Uebergabe an Tobias. Sie beantwortet die Frage, die die vorige Folie aufwirft:
@@ -764,6 +768,10 @@ pi steckt dahinter, wie dieser Workshop entstanden ist.
 
 > Bequemlichkeit gegen Kontrolle. Wer nichts einstellen möchte, fährt gut.
 > Wer optimieren will, stößt an Grenzen.
+
+<div style="font-size:15px; color:#9a9a9a; margin-top:4px;">
+Quelle: eigene Erfassung
+</div>
 
 <!-- notes:
 CHRISTIAN. Kurzer Einschub nach Tobias' Vergleich der offenen Harnesses, damit
@@ -1044,7 +1052,7 @@ Ebenen als Dateien liegen. Der Zugewinn gegenueber vorhin ist die dritte Zeile.
 | Grundidee | beschreiben, **was gebaut** werden soll | beschreiben, **wie sich Bestehendes ändert** |
 | Typischer Fall | Neubau, neue Funktionen | laufende Weiterentwicklung |
 | Quelle der Wahrheit | eine Spezifikation je Vorhaben | eine dauerhafte Spezifikation plus Änderungen |
-| Ablauf | specify · clarify · plan · tasks · implement | propose · apply · sync · archive |
+| Ablauf | specify · clarify · plan · tasks · implement | new change → instructions → validate → archive |
 | Aufwand | höher, dafür mehr Prozessführung | niedriger |
 
 > **Neues Vorhaben: Spec-Kit. Bestehendes System, das wächst: OpenSpec.**

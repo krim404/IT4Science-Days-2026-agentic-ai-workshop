@@ -13,7 +13,7 @@ assessment, CS specials).
 - **Primäres Lernziel** (ein Satz, messbar): *Jede Teilnehmende verlässt den
   Raum mit einem eigenen, CI-validierten Research-Repo und hat mindestens
   einen Spec-Change gesehen, der agentisch umgesetzt wurde.*
-- **Zielgruppe:** Postdocs / Forschende der MPG (keine Devs, aber Python-tauglich)
+- **Zielgruppe:** Wissenschaftliches Personal und Forschende (keine Devs, aber Python-tauglich)
 - **Dauer:** 180 min (09:00–12:00) · **Modus:** Präsenz · **Größe:** k.A. (bei >15: Roaming wichtiger)
 - **Voraussetzungen:** GitHub-Account, git, Python ≥3.11, Browser (siehe README)
 - **Erfolgsmessung:**
