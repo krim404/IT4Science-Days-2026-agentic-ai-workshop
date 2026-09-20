@@ -4,6 +4,7 @@
 
 <h1 align="center">Agentic AI in der Praxis</h1>
 <p align="center"><b>Vom Spec zum produktiven Workflow</b> · IT4Science Days 2026 · 3h Workshop (09:00–12:00) · Deutsch</p>
+<p align="center">Mi, <b>30.09.2026</b> · Manfred-Eigen-Saal, MPI-NAT · <a href="https://plan.events.mpg.de/event/670/contributions/4047/">Indico-Eintrag</a> · wird gestreamt &amp; aufgezeichnet</p>
 
 > **⚠️ Migrated from Codeberg → GitHub**: This repository lives on [GitHub](https://github.com/tobias-weiss-ai-xr/IT4Science-Days-2026-agentic-ai-workshop). A Codeberg mirror is kept in sync manually: [graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop](https://codeberg.org/graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop) (Branch `master`).
 >

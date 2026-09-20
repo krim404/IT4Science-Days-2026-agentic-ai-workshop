@@ -1,5 +1,7 @@
 # Runbook — Agentic AI in der Praxis (IT4Science Days 2026)
 
+**Termin: Mi 30.09.2026, 09:00–12:00 · Manfred-Eigen-Saal, MPI-NAT · Streaming + interne Aufzeichnung zugesagt** ([Indico](https://plan.events.mpg.de/event/670/contributions/4047/)).
+
 Ops-Dokument für die Referenten (nicht Teil der Folien). Struktur nach
 `workshops-best-practices/examples/workshop-runbook-template.md`, Maßnahmen
 abgeleitet aus dem Corpus `docs/01–09` (active learning, engagement,
@@ -36,7 +38,7 @@ Concept-Blöcke interaktiv halten (Maßnahmen M1, M3) statt kürzen — Agenda b
 
 ## 3. Materials & Environment
 
-- [ ] **Preflight-Versand** an TN (1 Woche vorher): GitHub-Account anlegen, `git --version`, `python3 --version`
+- [ ] **Preflight-Versand** an TN (spätestens 23.09.): GitHub-Account anlegen, `git --version`, `python3 --version`
 - [ ] **Rescue-Umgebung**: fertiger Fork eines Referenten-Repos als Fallback, wenn eigene Maschine/Setup versagt (TN arbeitet dann auf Referenten-Fork weiter)
 - [ ] **Demo-Abhängigkeiten vorgetestet**: skeleton-research-Klon + Pipeline end-to-end am Vortag; opencode/SAIA kurz anpingen
 - [ ] **Fallback je Live-Demo**: Screenshots der Pipeline-Läufe im Repo (`docs/demo-fallback/`), falls Netz/Tool versagt
@@ -63,6 +65,21 @@ in den Köpfen der Referenten.
 ## 5. Nach dem Workshop
 
 - [ ] Exit-Tickets auswerten, 2 Verbesserungen notieren (dieses Runbook aktualisieren)
-- [ ] Folien + Materialien an TN mailen (Repo-Link genügt: CC-BY-Lizenzfolie)
-- [ ] Follow-up nach 2 Wochen: 1 Frage — „Wenden Sie etwas an?" (Verhaltens-Messgröße, die eigentlich zählt)
+- [ ] Folien + Materialien an TN mailen (Repo-Link genügt: CC-BY-Lizenzfolie); Aufzeichnungs-Link ergänzen, sobald internal publiziert
+- [ ] Follow-up nach 2 Wochen (≈ 14.10.): 1 Frage — „Wenden Sie etwas an?" (Verhaltens-Messgröße, die eigentlich zählt)
 - [ ] Feedback-Umfrage (3 Fragen: Relevanz, Tempo, Weiterempfehlung) als Link per Mail
+
+## 6. Indico-Eintrag aktualisieren (offen)
+
+Der offizielle Abstract beschreibt noch das alte Format (Vortrag + OpenDesk-Edu-Use-Case,
+der 08/2026 aus der Agenda entfernt wurde). Vorschlag für die Aktualisierung in Indico:
+
+> Christian Uhl (Universität Gießen) und Tobias Weiß (Universität Marburg) zeigen in
+> einem dreistündigen, interaktiven Workshop, wie Large Language Models heute agentisch
+> genutzt werden: aktuelle Foundation Models im Überblick, Open-Source-Harnesses
+> (OpenCode, pi, zot) und Spec-Driven Development. Im Zentrum stehen zwei Hands-ons:
+> Jede Teilnehmende verlässt den Raum mit einem eigenen, CI-validierten Research-Repo
+> (skeleton-research) und erlebt einen Spec-Change, der agentisch umgesetzt wird.
+> Abgeschlossen wird mit einem Outcomes-Block, in dem Teilnehmende ihre Ergebnisse
+> präsentieren. Voraussetzungen: GitHub-Account, git, Python — kein Dev-Hintergrund nötig.
+> Vortragssprache: Deutsch.
