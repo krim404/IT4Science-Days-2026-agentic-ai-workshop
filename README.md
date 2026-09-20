@@ -104,7 +104,7 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 | Tool | Funktion |
 |------|----------|
 | **OpenSpec** | Spec-driven Development — Delta-Specs als Agenten-Prompts |
-| **SAIA Accelerator** | Plugin für OpenCode/zot/pi — GWDG Chat-AI-Modelle, Auto-Sync |
+| **SAIA Accelerator** | OpenCode-Plugin — GWDG Chat-AI-Modelle, Auto-Sync der Modellliste |
 | **oh-my-opencode** | Routing je Aufgabe (benannte Agents), AST-Grep (25 Sprachen), Background-Agents |
 | **Superpowers Skills** | TDD, Debugging, Brainstorming, Review als wiederverwendbare Routinen |
 | **rtk** | CLI-Proxy: filtert Bash-/Tool-Output — −60–90 % Input-Token, ein Rust-Binary |

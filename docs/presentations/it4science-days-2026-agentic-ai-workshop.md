@@ -820,7 +820,7 @@ ideologische Entscheidung.
 | Tool | Funktion |
 |------|----------|
 | **OpenSpec** | Delta-Specs als Agenten-Prompts |
-| **SAIA Accelerator** | GWDG-Modelle für OpenCode/zot/pi, Auto-Sync |
+| **SAIA Accelerator** | OpenCode-Plugin: GWDG Chat-AI-Modelle + Auto-Sync der Modellliste |
 | **oh-my-opencode** | Routing je Aufgabe, AST-Grep, Background-Agents |
 | **skeleton-research** | Forkbares Corpus-Skeleton, Hands-on in Anwendung 1 |
 | **Superpowers** | TDD, Debugging, Review als Routinen |
