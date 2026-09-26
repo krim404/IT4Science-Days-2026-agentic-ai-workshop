@@ -133,7 +133,7 @@ style: |
 
 # Agentic AI in der Praxis
 
-## Vom Spec zum produktiven Workflow: ein Workshop mit Hands-on
+## Vom Spec zum produktiven Workflow — mit Übungen am eigenen Rechner
 
 **IT4Science Days 2026 · Agentic AI Workshop** · 09:00–12:00
 
@@ -174,7 +174,7 @@ Uni Marburg
 > **Aus der Praxis im Rechenzentrum:** 
 > - openDesk Edu: Digitale Dienste für Forschung, Lehre und Verwaltung.
 > - Wissens-Pipelines & IT-Betrieb agentisch.
-> - Specs, Contracts, Tests: Open-source Software mit open-source Werkzeugen erstellen.
+> - Specs, Contracts, Tests: Open-Source-Software mit Open-Source-Werkzeugen erstellen.
 
 </div>
 </div>
@@ -270,16 +270,16 @@ waren Agent-Aufgaben, keine Bot-Wünsche").
 | Foundation Models: aktuelle Entwicklungen | Christian + Tobias |
 | Open-Source Toolbox | Tobias + Christian |
 | ☕ **Pause 10:10–10:20** | |
-| Anwendung 1: Ihr Thema selbst agentisch bearbeiten | Tobias |
-| Spec Driven & Token-optimized Development | Christian + Tobias |
+| Anwendung 1: Ihr Thema direkt agentisch — ohne Spec | Tobias |
+| Theorie: Spezifikation & Token | Christian + Tobias |
 | Anwendung 2: Ihr Thema via Spec aufs Demo-Repo | Christian |
 | ☕ **Pause 11:25–11:30** | |
 | Outcomes: TN präsentieren ihre Ergebnisse | Tobias |
 | Q&A, Diskussion, Wrap Up | Christian + Tobias |
 
 <!-- notes:
-Agenda auf 1 min durchgehen. Zwei Hands-on-Blöcke: (1) eigenes Research-Repo,
-(2) OpenSpec selbst anwenden. Christian: Vorstellung, Grundlagen (2), Lead Block 7 (Spec/Token).
+Agenda auf 1 min durchgehen. Zwei Anwendungen: (1) direkt agentisch ohne Spec,
+(2) via Spec aufs Demo-Repo. Christian: Vorstellung, Grundlagen (2), Lead Block 7 (Spec/Token).
 Tobias: Toolbox (4), Anwendung 1 (6), Outcomes (10), Q&A (11). Gemeinsam: 3, 7.
 -->
 
@@ -295,7 +295,7 @@ Tobias: Toolbox (4), Anwendung 1 (6), Outcomes (10), Q&A (11). Gemeinsam: 3, 7.
 |---------|-------------------------|------------------------------|
 | **Agent** | von „Chatbot mit Schleife" bis „autonomes System" | Das Modell bestimmt die nächsten Schritte. Feste Abfolge = Workflow. |
 | **Reasoning** | ob das „Denken" ist, ist offen | mehr Rechenzeit zur Laufzeit; keine Aussage über Kognition |
-| **Halluzination** | Begriff selbst umstritten (eher: Konfabulation) | nicht belegte Ausgabe, der Grund für die Testebene |
+| **Halluzination** | Begriff selbst umstritten (eher: Konfabulation) | unbelegte Ausgabe — der Grund für die Testebene |
 | **Open Source** | offene Gewichte sind nicht Open Source (OSI) | wir sagen **offene Gewichte**, wenn wir das meinen |
 | **Reproduzierbarkeit** | gleiche Eingabe, abweichendes Ergebnis | geprüft wird das **Ergebnis**, nicht der Weg dorthin |
 
@@ -449,7 +449,7 @@ Die drei Woerter sind in den Farben gesetzt, in denen die naechste Folie die
 Ebenen zeigt. Das ist beabsichtigt: Der Trenner kuendigt das Bild an.
 Ansage: Ab hier geht es nicht mehr um Werkzeuge, sondern um die Arbeitsweise.
 Dieselbe Struktur taucht heute noch dreimal auf, im Research-Repository, in
-OpenSpec und in der eigenen Uebung am Nachmittag.
+OpenSpec und in der eigenen Uebung heute Vormittag.
 Begriffsklaerung, falls jemand stutzt: In den Werkzeugen heissen diese Ebenen
 englisch Spec, Contract und Test. Gemeint ist dasselbe.
 -->
@@ -547,7 +547,7 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## Wo stehen die Modelle 2026? Ein Ranking
+## Wo stehen die Modelle 2026? Sechs Entwicklungen
 
 <div class="columns smaller">
 <div>
@@ -563,7 +563,7 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 
 **4. Tool-Use produktionsreif**: strukturiert, parallel
 
-**5. OpenSource holt auf**: Kosten-Kollaps
+**5. Open Source holt auf**: Kosten-Kollaps
 
 **6. Lokal & souverän**: DSGVO ohne Qualitätsverlust
 
@@ -813,7 +813,7 @@ Kriterium ist Autonomie, nicht die Oberfläche.
 - Agent im Terminal (CLI/TUI), Modell je Agent.
 - LSP, Plugins, Skills, MCP — omO: Routing je Aufgabe, AST-Grep, Background-Agents.
 
-**2. pi**: das Minimal-Harness
+**2. pi**: der Minimalist
 - Skills · Prompt-Templates · Packages · Themes.
 - „Adapt pi, nicht umgekehrt“.
 
@@ -949,7 +949,7 @@ Pause 10:10–10:20.
 
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
-# Anwendung 1: Ihr Thema X — selbst agentisch bearbeiten
+# Anwendung 1: Ihr Thema X — direkt agentisch, ohne Spec
 
 Teil 1 von 2 · Teil 2 (via Spec) folgt nach dem Theorie-Block
 
@@ -970,7 +970,7 @@ Timing: Modes 2 · Übung 1 (agentisch, ohne Spec) 15 · Agent-Unterstützung 2 
 
 - **Plan-Mode**: der Agent liest nur — stellt Fragen, schlägt Schritte vor. **Nichts wird geändert.**
 - **Build-Mode**: der Agent setzt den freigegebenen Plan um
-- Plan lesen ist der schnellste Weg, agentisches Arbeiten zu *verstehen* — genau so starten wir gleich
+- Plan lesen ist der schnellste Weg, agentisches Arbeiten zu verstehen — genau so starten wir gleich
 
 <!-- notes:
 TOBIAS (~2 min). JLU-Erfahrung: Plan-Mode kannte niemand — deshalb jetzt explizit.
@@ -987,14 +987,14 @@ Für Ungeduldige: Build-Mode sofort, aber Plan vorher lesen lassen.
 
 **~15 Minuten** im Agenten (opencode / pi mit SAIA): stellen Sie Ihr Thema X aus dem Blitzlicht. Was kommt dabei heraus?
 
-| Der Agent übernimmt | heißt konkret |
+| Der Agent übernimmt | Heißt konkret |
 |---|---|
 | Entdecken | neue Veröffentlichungen zu Thema X aufspüren |
 | Einordnen | Funde den Themenfeldern zuordnen |
 | Prüfen | Quellen verifizieren, Erfindungen aussortieren |
 | Berichten | Überblick, Trends, Kurz-Briefings pflegen |
 
-> **Sie kuratieren, der Agent erledigt das Rauschen.** Der Wartungsdienst läuft mit: wöchentlich ein Änderungsvorschlag statt manueller Pflege.
+> **Sie kuratieren, der Agent erledigt das Rauschen.** Parken Sie die Treffer — Übung 2 baut daraus den Corpus.
 
 <!-- notes:
 TOBIAS — das ist der eigentliche Wert: nicht das Repo selbst, sondern dass der
@@ -1003,7 +1003,7 @@ Agent die Pflege übernimmt, während der Mensch die Qualität kuratiert.
 SAIA-Modelle) — ohne Spec, purer Prompt. Kein Tool-Zwang: wem der Harness nicht
 startet, arbeitet mit Nachbar:in zusammen. Timer sichtbar machen. Roamer:
 Starthilfe beim Harness-Start.
-Am Ende einsammeln: Quellen geprüft? zitierbar? Wiederholbar der Lauf?
+Am Ende einsammeln: Quellen geprüft? zitierbar? Ist der Lauf wiederholbar?
 Treffer parken — Übung 2 seedet damit, und die Prüfung entscheidet, was überlebt.
 Script-Mapping für Rückfragen: Discovery = arXiv/OpenAlex/dblp/Crossref/EUPMC
 + Code-Hosts, Einordnen = Taxonomie-Zuordnung, Prüfen = validate_papers.py,
@@ -1171,7 +1171,7 @@ nicht um einen Werkzeugvergleich.
 > → rankt Bereiche mit wenig Literatur und starkem Wachstum.
 
 <!-- notes:
-TOBIAS — der fertige Change als Referenz für den Hands-on-Block 6. Die Teilnehmenden
+TOBIAS — der fertige Change als Referenz für den Anw2-Block. Die Teilnehmenden
 sehen eine echte, vollständige Spec/Change/Tasks-Struktur und können sie nachbauen.
 -->
 
@@ -1225,7 +1225,7 @@ Kontext-Berechnungen über Schritte; Kompaktion = alten Kontext zusammenfassen/v
 
 # Anwendung 2: Ihr Thema X — via Spec aufs Demo-Repo
 
-## Von einem Satz zu einer überprüften Änderung — auf Ihrem Repo aus Teil 1
+## Von einem Satz zu einer überprüften Änderung — Ihr Thema X aus Übung 1 wird zum Corpus
 
 <!-- notes:
 CHRISTIAN. Block 6, 11:00 bis 11:25, Christian fuehrt, Tobias unterstuetzt am Platz.
@@ -1241,7 +1241,7 @@ seltener am Verstaendnis als an der Installation.
 
 ---
 
-<div class="speaker speaker-christian">👤 Christian Uhl</div>
+<div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
 ## Ihr Thema X als Spec — skeleton-research
 
@@ -1416,7 +1416,7 @@ TOBIAS — Block 7 · 11:30–11:45 (15 min), Moderation. 3–4 Freiwillige prä
 
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
-## Outcomes: das zeigen wir
+## Outcomes: Das zeigen wir
 
 - **3–4 Freiwillige**, je 3–4 min: eigenes Research-Repo + eigener Mini-Change.
 - Live-Demo oder Screenshot, Hauptsache **Pipeline grün, Change validiert**.
@@ -1459,7 +1459,7 @@ Diskussionsimpulse (ehem. eigene Folie, hierher migriert):
 4. **Wissen persistieren**: pi-memory / Knowledge Graph ab Session 1, nicht in Prompt-Stücken.
 5. **Loop institutionalisieren**: Betriebserkenntnisse werden neue Changes (Spec evolves).
 
-> Die **Pyramide** ist überall: papers.yaml=Spec · Pipeline=Contract · CI=Test.
+> Die **Pyramide** ist überall: papers.yaml = Spec · Pipeline = Contract · CI = Test.
 
 <!-- notes:
 TOBIAS — jeder Block des Workshops folgte derselben Pyramide — auch OpenSpec.
