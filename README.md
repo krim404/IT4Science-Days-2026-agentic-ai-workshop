@@ -34,6 +34,22 @@ Im Mittelpunkt steht ein **Hands-on**: Jede Teilnehmende verlässt den Raum mit 
 - Kein Bot-Baukasten-Kurs: Wir starten auf Agent-Ebene (Harness, Spec, Pipeline) — Chat-Basics setzen wir voraus, Dev-Wissen nicht
 - Optional: SAIA/GWDG-Zugang für eigene LLM-Nutzung; für sensible Daten zeigen wir lokale Modelle
 
+### Harnesses installieren (vorab, ~5 min)
+
+**OpenCode** ([Docs](https://opencode.ai/docs)):
+
+```bash
+curl -fsSL https://opencode.ai/install | bash   # oder: npm install -g opencode-ai
+```
+
+**pi** ([pi.dev](https://pi.dev), braucht Node ≥ 22.19):
+
+```bash
+curl -fsSL https://pi.dev/install.sh | sh        # oder: npm install -g --ignore-scripts @earendil-works/pi-coding-agent
+```
+
+Wer SAIA/GWDG-Modelle nutzen will: nach dem Start das passende Plugin (`pi-saia-plugin` · `opencode-saia-plugin`) installieren — es registriert die GWDG-Modelle automatisch.
+
 > Ablauf- und Facilitation-Details für Referenten: [`docs/runbook-it4science-2026.md`](docs/runbook-it4science-2026.md) (Arc-Mapping, Formative-Assessment-Maßnahmen M1–M9, Fallback-Plan).
 
 ### Die zentrale Metapher: Spec · Contract · Test
