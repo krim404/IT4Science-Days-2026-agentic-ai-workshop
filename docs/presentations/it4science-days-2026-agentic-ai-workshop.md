@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: 'IT4Science Days 2026 · Agentic AI Workshop'
+footer: 'IT4Science Days 2026 · Agentic AI Workshop · shorturl.at/7h3TW'
 style: |
   section {
     background-color: #1a1a1a;
