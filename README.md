@@ -19,7 +19,7 @@
 
 Dieser Workshop auf den IT4Science Days 2026 zeigt praxisnah, wie Large Language Models heute **agentisch** genutzt werden können, welche neuen Möglichkeiten sich daraus ergeben und wie solche Ansätze sinnvoll in eigene Projekte integriert werden können.
 
-Im Mittelpunkt steht ein **Hands-on**: Jede Teilnehmende verlässt den Raum mit einem eigenen, CI-validierten Research-Repo und einem selbst geschriebenen, implementierten **Spec-Change**.
+Im Mittelpunkt stehen zwei **Anwendungen**: erst direkt agentisch ohne Spec, dann dasselbe Thema via Spec aufs Demo-Repo — jede Teilnehmende verlässt den Raum mit einem eigenen, CI-validierten Research-Repo und einem selbst geschriebenen, implementierten **Spec-Change**.
 
 ### Lernziele
 
@@ -131,45 +131,45 @@ Einordnung, warum agentisches Arbeiten 2026 möglich ist:
 
 > **Das Modell ist das Gehirn, die Workflows sind der Muskel.**
 
-## Hands-on 1: skeleton-research
+## Anwendung 1: Direkt agentisch — ohne Spec
 
-Das Herzstück des Workshops. [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) ist ein forkbares Skeleton für eine **datengetriebene, auto-validierte, agentische Literatur-Review** — dieselbe Architektur wie die `*-research`-Corpus-Repos. Auf die Pyramide übertragen: `papers.yaml` = **Spec**, Pipeline/AGENTS.md = **Contract**, CI = **Test**.
+**Was Sie tun (ca. 15 min):** Starten Sie Ihren Harness ([OpenCode](#harnesses-installieren-vorab-5-min) oder [pi](#harnesses-installieren-vorab-5-min)) und stellen Sie **Ihr Thema X aus dem Blitzlicht als einen einzelnen Prompt** — ohne Gerüst, ohne Dateien, ohne Spec. Sammeln Sie, was der Agent liefert.
 
-- **Eine Datei genügt:** `config/taxonomy.yaml` (Thema, Kategorien, Queries) anpassen → Pipeline läuft.
-- **Source of Truth:** `papers.yaml` — ein strukturierter Eintrag pro Paper.
-- **Auto-Pipeline:** `validate_papers.py` → `generate_readme.py` → `standard_stats.py` → `generate_reports.py`.
-- **Auto-Discovery:** CI entdeckt wöchentlich neue Paper (arXiv, OpenAlex, dblp, crossref, europepmc) und öffnet PRs.
-- **GitHub Pages:** durchsuchbare Paper-Browser-Seite.
-- **Agenten-tauglich:** `AGENTS.md` gibt Coding-Agenten klare Guardrails — eine Config, ein Re-Run, objektiver Pass/Fail.
+Am Ende drei Fragen an das Ergebnis: **Geprüft? Zitierbar? Wiederholbar?**
 
-**5-Schritt-Jump-Start:**
+> Die Baseline-Erfahrung des Vormittags: So stark ein Agent ohne Spec auch wirkt — das Ergebnis bleibt ein Sammel-Haufen. Parken Sie Ihre Treffer, **Anwendung 2 nimmt sie wieder auf.**
+
+## Anwendung 2: Ihr Thema via Spec aufs Demo-Repo
+
+Das Herzstück. [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) ist ein forkbares Skeleton für eine **datengetriebene, auto-validierte, agentische Literatur-Review**. Auf die Pyramide übertragen: `papers.yaml` = **Spec**, Pipeline/AGENTS.md = **Contract**, CI = **Test**. CI entdeckt wöchentlich neue Paper (arXiv, OpenAlex, dblp, Crossref, EuropePMC), validiert und deployt die durchsuchbare Paper-Browser-Seite auf GitHub Pages.
+
+**Was Sie tun (ca. 25 min):**
+
+1. **Kopie holen** — das Demo-Repo wird Ihres
+2. **Themenfeld setzen** — Ihre Ordnung für Thema X (`config/taxonomy.yaml`)
+3. **Seeden** — 3–5 Treffer aus Anwendung 1 in `papers.yaml`; die Validierung entscheidet, was überlebt
+4. **Laufen lassen** — prüfen, erzeugen, berichten (Pipeline)
+5. **Veröffentlichen** — Push; CI validiert & deployt auf GitHub Pages
+
+Danach ein eigener Mini-**OpenSpec-Change** obendrauf — dieselbe Struktur, jetzt als Agenten-Prompt. Referenz: fertiger Change **`add-research-gap-analysis`** in [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) (`openspec/changes/archive/2026-08-23-add-research-gap-analysis`).
 
 ```bash
+# Jump-Start (Schritte 1–4)
 git clone https://github.com/tobias-weiss-ai-xr/skeleton-research.git my-topic-research
 cd my-topic-research
-# 1. Thema & Taxonomie definieren
-$EDITOR config/taxonomy.yaml
-# 2. Corpus seeden (5–10 Paper) oder auto-discovern
-python3 scripts/fetch/fetch_new_papers.py --local
-# 3. Validieren + generieren
+$EDITOR config/taxonomy.yaml                      # 2. Themenfeld setzen
+python3 scripts/fetch/fetch_new_papers.py --local # 3. Seeden (oder Treffer aus Anw. 1 eintragen)
 python3 scripts/validate_papers.py && python3 scripts/generate_readme.py \
-  && python3 scripts/standard_stats.py && python3 scripts/analysis/generate_reports.py
-# 4. Commit & push
-git add -A && git commit -m "bootstrap corpus" && git push
-# 5. CI hält den Corpus gesund (wöchentliche Discovery, Validierung, Pages-Deploy)
+  && python3 scripts/standard_stats.py && python3 scripts/analysis/generate_reports.py  # 4.
+git add -A && git commit -m "bootstrap corpus" && git push   # 5. → CI
+
+# OpenSpec-Change (Anwendung 2, Teil 2)
+openspec new change thema-x
+# → Agent füllt proposal → design → specs → tasks → implementieren
+# → openspec validate --changes entscheidet, ob es zählt
 ```
 
-## Hands-on 2: Spec selbst anwenden
-
-Einen eigenen Mini-**OpenSpec-Change** strukturieren (`proposal.md` → `specs/` → `tasks.md`) und von einem Agenten implementieren lassen. Referenz ist der fertige Change **`add-research-gap-analysis`** im Repo [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) (`openspec/changes/archive/2026-08-23-add-research-gap-analysis`):
-
-```bash
-openspec new change trend-auswertung --description "Trend-Auswertung pro Kategorie"
-# → Agent füllt proposal → design → specs → tasks (openspec instructions <artifact>)
-# → Agent implementieren → openspec validate --changes → CI
-```
-
-> Regel aus der Pyramide: Tasks erst **done**, wenn die Verifikation (CI/--check) grün ist.
+> Regel aus der Pyramide: Tasks erst **done**, wenn die Verifikation (CI/Validate) grün ist.
 
 ## Arbeitsmaterialien
 

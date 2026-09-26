@@ -115,7 +115,8 @@ der 08/2026 aus der Agenda entfernt wurde). Vorschlag für die Aktualisierung in
 > Roter Faden ist eine Pyramide: **Spezifikation · Vertrag · Tests**. Darauf aufbauend:
 > ein Überblick über die aktuellen Foundation Models (2026), die Open-Source-Toolbox
 > der Harnesses (OpenCode, pi, zot) und wie Spec-Driven Development agentisches
-> Arbeiten diszipliniert. Zwei Hands-ons stehen im Zentrum: Jede Teilnehmende forkt
+> arbeitet. Zwei Anwendungen im Zentrum: erst direkt agentisch ohne Spec (Anwendung 1),
+> dann dasselbe Thema via Spec aufs Demo-Repo (Anwendung 2): Jede Teilnehmende forked
 > ein CI-validiertes Research-Repo (skeleton-research) für den eigenen Literatur-Alltag
 > — Pipeline, wöchentliche Discovery und Reports inklusive — und erlebt live, wie ein
 > Spec-Change agentisch umgesetzt und verifiziert wird. Den Abschluss bildet ein
