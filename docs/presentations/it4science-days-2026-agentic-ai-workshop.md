@@ -956,9 +956,9 @@ Teil 1 von 2 · Teil 2 (via Spec) folgt nach dem Theorie-Block
 <!-- notes:
 TOBIAS — Block 4 · 10:20–10:45 (25 min), Lead (Christian unterstützt). Herzstück: direkt
 agentisch los — aber ohne Spec. Der Kontrast (ohne Spec vs. mit Spec in Übung 2) trägt den Vormittag.
-Bogen der Anwendung: Teil 1 hier (Thema X agentisch im eigenen Harness, ohne Spec),
-dann Theorie-Block (Spec Driven & Token), Teil 2 = dasselbe Thema via Spec auf
-Demo-Repo aufsetzen (skeleton-research + OpenSpec-Change, gemergte Übung 2).
+Bogen der Anwendung: ohne Spec (Teil 1: Thema X agentisch im eigenen Harness) →
+Theorie zu Specs (Spec Driven & Token) → mit Spec (Teil 2: dasselbe Thema aufs
+Demo-Repo, skeleton-research + OpenSpec-Change, gemergte Übung 2).
 Timing: Modes 2 · Übung 1 (agentisch, ohne Spec) 15 · Agent-Unterstützung 2 · AGENTS.md 3.
 -->
 
