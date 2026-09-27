@@ -159,10 +159,10 @@ Zentrum für angewandte Informatik & Data Science,
 Uni Gießen
 
 > **Aus Forschung und Lehre:** 
-> - Ein unbekannter, kaum dokumentierter Chip ohne Firmware;
+> - Ein unbekannter, kaum dokumentierter Chip ohne Firmware.
 > - Ein einzelner Fehler hätte ihn zerstört.
-> - Offen war, wie weit man in 24 Stunden kommt.
-> - Ergebnis: eine **FIDO2-fähige Firmware**, **spezifikations- und testgetrieben**.
+> - Sorgfältig war zu langsam, schnell zu riskant.
+> - Nach 24 Stunden: eine **FIDO2-fähige Firmware**, **spezifikations- und testgetrieben**.
 
 </div>
 <div>
@@ -223,11 +223,10 @@ Ton: nicht als Kunststück erzählen. Die Methode ist der Held, nicht der Sprech
 - ≤ 30 Sekunden je Person, wir sammeln Wünsche an die Whiteboard-Wand.
 - Diese Wünsche checken wir am Ende gegen die Outcomes.
 
-> Bei großen Runden: 5–6 Stichproben aus dem Raum, Rest per Karte/Zettel.
-
 <!-- notes:
 CHRISTIAN — moderiert (~3 min). Die gesammelten Wünsche sichtbar notieren —
 Wrap-Up greift sie auf. Zeit hart timen (Erwartungs-Folie braucht 90 s).
+Bei großen Runden: 5–6 Stichproben aus dem Raum, Rest per Karte/Zettel.
 Selbsteinschätzung mit Handzeichen oder kurz mündlich — kein Werturteil,
 mit Abstufung wird die Roamer-Rolle gezielt: Fortgeschrittene kriegen
 Vertiefung, Anfänger Start-Hilfe.
@@ -296,7 +295,7 @@ Tobias: Toolbox (4), Anwendung 1 (6), Outcomes (10), Q&A (11). Gemeinsam: 3, 7.
 | **Agent** | von „Chatbot mit Schleife" bis „autonomes System" | Das Modell bestimmt die nächsten Schritte. Feste Abfolge = Workflow. |
 | **Reasoning** | ob das „Denken" ist, ist offen | mehr Rechenzeit zur Laufzeit; keine Aussage über Kognition |
 | **Halluzination** | Begriff selbst umstritten (eher: Konfabulation) | unbelegte Ausgabe — der Grund für die Testebene |
-| **Open Source** | offene Gewichte sind nicht Open Source (OSI) | wir sagen **offene Gewichte**, wenn wir das meinen |
+| **Open Source** | offene Gewichte sind nicht Open Source (OSI) | wir meinen **offene Gewichte** |
 | **Reproduzierbarkeit** | gleiche Eingabe, abweichendes Ergebnis | geprüft wird das **Ergebnis**, nicht der Weg dorthin |
 
 <!-- notes:
@@ -319,6 +318,7 @@ ABLAUF FOLIE 6
     Bewusst nüchtern halten: mehr Rechenzeit zur Laufzeit, mehr Zwischenschritte.
     Keine Aussage darüber, ob das Denken ist. Diese Frage ist für unsere Zwecke
     unerheblich und kostet nur Diskussionszeit.
+    In manchen Werkzeugen heisst dasselbe "Thinking".
 
 (3) Halluzination
     Der Begriff selbst ist umstritten, in der Literatur eher Konfabulation.
@@ -327,6 +327,9 @@ ABLAUF FOLIE 6
     plausibel unterscheiden.
     Daraus folgt der Umgang: Wir verifizieren maschinell, statt zu vertrauen.
     Genau dafür existiert die Testebene, die gleich kommt.
+    Für die Literaturrecherche konkret: "Steht nicht im Dokument" ist eine
+    richtige Antwort, keine fehlende. Wo diese Antwort nicht erlaubt ist, füllt
+    das Modell die Lücke mit einem plausiblen Wert.
 
 (4) Open Source
     Frei verfügbare Gewichte sind nicht dasselbe wie Open Source im Sinne der
@@ -356,7 +359,7 @@ Wenn die Zeit knapp wird: (2) und (4) auf je einen Satz. (5) niemals kürzen.
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## Worüber wir sprechen: vier Bausteine
+## Agentische Systeme und deren Bausteine
 
 | Baustein | Was es ist | Was es **nicht** ist |
 |----------|------------|----------------------|
@@ -416,25 +419,6 @@ darauf baut der Rest des Vormittags auf.
 
 ---
 
-<!-- _class: smaller -->
-
-<div class="speaker speaker-christian">👤 Christian Uhl</div>
-
-## Was ist agentisches Arbeiten? Eine Definition
-
-- Der **Engpass ist nicht das Programmieren**, sondern die **Anforderungsklärung**.
-- Ein Agent braucht einen **präzisen Auftrag** und einen **stabilen Kontext**; das Ergebnis ist nur so gut wie der **Vertrag** davor.
-- **Agentisches Arbeiten** heißt: Verträge für Maschinen verfassen statt Anweisungen für Menschen.
-
-> **Modell + Kontext + Werkzeuge + Harness = Agent.**
-> Umgangssprachlich heißt das zusammen „KI".
-
-<!-- notes:
-CHRISTIAN — Block 1 · 09:15–09:30. Weg von "Prompting" hin zu "Contracts".
--->
-
----
-
 <!-- _class: lead -->
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
@@ -445,13 +429,63 @@ CHRISTIAN — Block 1 · 09:15–09:30. Weg von "Prompting" hin zu "Contracts".
 
 <!-- notes:
 CHRISTIAN. Abschnittstrenner, kurz halten, etwa zwei Saetze.
-Die drei Woerter sind in den Farben gesetzt, in denen die naechste Folie die
-Ebenen zeigt. Das ist beabsichtigt: Der Trenner kuendigt das Bild an.
+Die drei Woerter sind in den Farben gesetzt, in denen die Pyramide die Ebenen
+zeigt. Davor kommt ein konkretes Beispiel, die Pyramide ordnet es danach ein.
 Ansage: Ab hier geht es nicht mehr um Werkzeuge, sondern um die Arbeitsweise.
 Dieselbe Struktur taucht heute noch dreimal auf, im Research-Repository, in
 OpenSpec und in der eigenen Uebung heute Vormittag.
 Begriffsklaerung, falls jemand stutzt: In den Werkzeugen heissen diese Ebenen
 englisch Spec, Contract und Test. Gemeint ist dasselbe.
+-->
+
+---
+
+<div class="speaker speaker-christian">👤 Christian Uhl</div>
+
+## Fragen oder Beauftragen
+
+<div class="columns">
+<div>
+
+- **Fragen:** „Fassen Sie diese Papers zusammen."
+- **Beauftragen:** „Extrahieren Sie diese fünf Felder aus jedem Paper."
+
+</div>
+<div>
+
+<img class="hero" src="../../assets/prompt-vs-contract.svg" alt="Fragen gegen Beauftragen: nur das Beauftragen hat eine Prüfung mit Abbruchbedingung"/>
+
+</div>
+</div>
+
+<!-- notes:
+CHRISTIAN. Das konkrete Beispiel vor der Pyramide. Die beiden Bahnen
+nacheinander durchgehen, nicht gegeneinander.
+
+(1) Linke Bahn
+    "Fassen Sie diese Papers zusammen." Es kommt ein Text, er liest sich gut,
+    Sie entscheiden nach Eindruck. Dann ist die Bahn zu Ende. Nichts sagt
+    Ihnen, ob das Ergebnis richtig ist.
+    Zusammenfassen ist dabei das schwerere Problem, nicht das leichtere: Die
+    Zusammenfassung entscheidet selbst, was wichtig ist, und niemand kann
+    nachpruefen, was weggefallen ist.
+
+(2) Rechte Bahn
+    "Extrahieren Sie diese fuenf Felder aus jedem Paper." Fuenf benannte Felder
+    kann man pruefen. Der Unterschied ist nicht die Formulierung, sondern dass
+    es ein Kriterium gibt.
+
+(3) Der rote Rueckpfeil ist der Kern der Folie
+    Nur die rechte Bahn kann scheitern, und genau deshalb kann sie auch
+    fertig werden. Merksatz dazu: Wer nicht sagen kann, woran es scheitern
+    wuerde, hat nicht beauftragt, sondern gehofft.
+
+(4) Bezug zum Raum
+    Die Literaturrecherche aus dem Blitzlicht ist genau dieser Fall. Wer dort
+    "fass zusammen" sagt, bekommt die linke Bahn.
+
+Uebergang: Die Pyramide auf der naechsten Folie ordnet die rechte Bahn in
+drei Ebenen.
 -->
 
 ---
@@ -481,7 +515,6 @@ Wir kommen auf dieses Bild immer wieder zurück.
 | **Tests** | Ob die Anforderung erfüllt ist, ohne Ermessensspielraum | Testsuite, Validierung, automatische Prüfung bei jeder Änderung |
 
 > **Erledigt ist eine Aufgabe erst, wenn die Prüfung bestanden ist.**
-> Nicht, wenn der Agent erklärt, er sei fertig.
 
 <!-- notes:
 CHRISTIAN. Diese Folie erklaert das Bild der vorigen Folie Ebene fuer Ebene.
@@ -500,12 +533,16 @@ ABLAUF
     Fuer dieses Publikum uebersetzen: Das entspricht einer Hypothese, die so
     formuliert ist, dass ein Experiment sie widerlegen koennte. Eine
     Anforderung, die keine Pruefung zulaesst, ist eine Absichtserklaerung.
+    Kriterien vor der Arbeit: Wer sie hinterher formuliert, formuliert sie so,
+    dass das Ergebnis passt. Genau deshalb gibt es Praeregistrierung.
 
 (3) Vertrag
     Der Agent bekommt nicht die gesamte Spezifikation, sondern die Differenz:
     Das ist der Stand, das soll sich aendern, daran wird es gemessen.
     Analogie: das Versuchsprotokoll fuer einen einzelnen Durchlauf, nicht die
     gesamte Projektbeschreibung.
+    Der Vertrag ist selbst eine Spezifikation, nur fuer eine einzelne
+    Aenderung. Er nennt das Kriterium, der Test wendet es an.
 
 (4) Tests
     Die Ebene, die entscheidet. Kein Gespraech, keine Einschaetzung, kein
@@ -563,7 +600,7 @@ Tooling-/Souveränitäts-Sicht. Thema nach Relevanz gerankt.
 
 **4. Tool-Use produktionsreif**: strukturiert, parallel
 
-**5. Open Source holt auf**: Kosten-Kollaps
+**5. Offene Gewichte holen auf**: Kosten-Kollaps
 
 **6. Lokal & souverän**: DSGVO ohne Qualitätsverlust
 
@@ -586,6 +623,8 @@ GPT-OSS 120B, Gemma 4 31B, Mistral Medium 3.5 — kleine Modelle heute eher
 Forschungsdaten → lokale Modelle (DSGVO); GWDG/SAIA-Zugang existiert institutsseitig.
 TOBIAS nach #5/#6 (2 min Praxis-Sicht): SAIA-Katalog — welche Modelle wirklich
 laufen (eigene pi-Config, Stand 09/2026) → vertieft in Block 5.
+Schlusssatz der Folie: Knapp ist nicht mehr die Faehigkeit der Modelle, knapp
+ist eine klare Anweisung.
 -->
 
 ---
@@ -669,12 +708,12 @@ Verweis auf docs/research-foundation-models-toolbox.md.
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-## Beim agentischen Arbeiten entscheidet das Harness
+## Das Harness bestimmt, was das Modell erreichen kann
 
-- **Einzelne Frage** → das Modell entscheidet
-- **Mehrere Schritte, Werkzeuge, Selbstkorrektur** → das Harness entscheidet
-- Mehrfach unabhängig beobachtet: günstiges Modell im guten Harness vor teurem im schlechten
-- Reihenfolge in der Praxis: erst das Harness, dann die Modellfrage
+- **Einzelne Frage** → das Modell prägt die Antwort allein
+- **Mehrere Schritte, Werkzeuge, Selbstkorrektur** → das Harness setzt die Reichweite
+- Jeden Schritt darin wählt weiterhin das Modell
+- Günstiges Modell im guten Harness vor teurem im schlechten (eigene Beobachtung)
 
 > **Auch das beste Modell ist nur so gut wie sein Harness.**
 
@@ -685,15 +724,19 @@ Wenn die Modellwahl so von der Aufgabe abhaengt, worauf kommt es dann wirklich a
 
 (1) Zuerst die Einschraenkung setzen, sonst entsteht ein Widerspruch zur
     vorigen Folie: Fuer eine einzelne Aufgabe, etwa einen Text oder eine
-    Uebersetzung, entscheidet weiterhin das Modell. Die Aussage dieser Folie gilt
-    fuer agentisches Arbeiten, also mehrere Schritte, Werkzeugaufrufe und
-    Selbstkorrektur. Erst dort summieren sich die Einfluesse der Umgebung.
+    Uebersetzung, praegt weiterhin das Modell allein das Ergebnis. Die Aussage
+    dieser Folie gilt fuer agentisches Arbeiten, also mehrere Schritte,
+    Werkzeugaufrufe und Selbstkorrektur. Erst dort summieren sich die Einfluesse
+    der Umgebung.
 
-(2) Ausformulierung fuer den zweiten Punkt, die Folie traegt nur das Stichwort:
-    Bei einer einzelnen Frage, etwa einer Uebersetzung, entscheidet das Modell.
-    Sobald es ueber mehrere Schritte arbeitet, Werkzeuge benutzt und sich selbst
-    korrigiert, verschiebt sich das Gewicht zum Harness, weil sich dessen
-    Einfluesse ueber die Schritte summieren.
+(2) Praezise bleiben, sonst wird der Satz falsch: Das Harness entscheidet
+    nichts. Welcher Schritt als naechstes kommt, waehlt immer das Modell.
+    Zwei Lesarten, beide richtig. Im Betrieb ermoeglicht das Harness: Es stellt
+    den Kontext zusammen, ruft Werkzeuge auf, speist Ergebnisse zurueck. Das
+    Modell waehlt, aber nur unter dem, was erreichbar ist. Bei der Auswahl
+    entscheiden Sie: Mit der Wahl des Harness legen Sie fest, welche Schritte es
+    ueberhaupt gibt, also welche Werkzeuge, welche Rechte, wieviel Kontext,
+    wieviele Runden.
 
 (3) Die Beobachtung nuechtern vortragen
     Es handelt sich nicht um eine einzelne Messung, sondern um ein Muster, das
@@ -949,11 +992,13 @@ Pause 10:10–10:20.
 
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
-# Anwendung 1: Ihr Thema X — direkt agentisch, ohne Spec
+# Hands-On: Erste Schritte
 
-Teil 1 von 2 · Teil 2 (via Spec) folgt nach dem Theorie-Block
+## Ihr Thema X, direkt agentisch, ohne Spec
 
 <!-- notes:
+Ausblick ansagen: Das ist Teil 1 von 2. Teil 2 (via Spec) folgt nach dem
+Theorie-Block.
 TOBIAS — Block 4 · 10:20–10:45 (25 min), Lead (Christian unterstützt). Herzstück: direkt
 agentisch los — aber ohne Spec. Der Kontrast (ohne Spec vs. mit Spec in Übung 2) trägt den Vormittag.
 Bogen der Anwendung: ohne Spec (Teil 1: Thema X agentisch im eigenen Harness) →
@@ -994,7 +1039,7 @@ Für Ungeduldige: Build-Mode sofort, aber Plan vorher lesen lassen.
 | Prüfen | Quellen verifizieren, Erfindungen aussortieren |
 | Berichten | Überblick, Trends, Kurz-Briefings pflegen |
 
-> **Sie kuratieren, der Agent erledigt das Rauschen.** Parken Sie die Treffer — Übung 2 baut daraus den Corpus.
+> **Sie entscheiden, was relevant ist. Der Agent übernimmt die Fleißarbeit.** Heben Sie Ihre Treffer auf, in Übung 2 arbeiten Sie damit weiter.
 
 <!-- notes:
 TOBIAS — das ist der eigentliche Wert: nicht das Repo selbst, sondern dass der
@@ -1018,7 +1063,7 @@ Der Mensch bleibt in der Verantwortung.
 
 ## AGENTS.md: der Contract für den Agenten
 
-Die Regeln, die der Agent unterschreibt:
+Die Regeln, die der Agent bei jedem Start liest:
 
 - **Erzeugtes wird nie von Hand geändert** — die Pipeline regeneriert es.
 - **Nichts wird erfunden** — jede Quelle muss real auflösbar sein.
@@ -1070,7 +1115,7 @@ Einsparung. Wer den Auftrag genau beschreibt, muss ihn nicht dreimal erklaeren.
 | `openspec/changes/<name>/` | die eine Änderung, die gerade ansteht | **Vertrag**: genau das bekommt der Agent |
 | `openspec/archive/` | alle abgeschlossenen Änderungen | **Begründung**: warum wurde das so entschieden |
 
-> Der Agent liest nie das ganze Projekt, sondern den Vertrag.
+> Der Agent braucht nicht das ganze Projekt, der Vertrag genügt.
 > Das ist zugleich die wirksamste Einsparung an Kontext.
 
 <!-- notes:
@@ -1223,11 +1268,13 @@ Kontext-Berechnungen über Schritte; Kompaktion = alten Kontext zusammenfassen/v
 
 <div class="speaker speaker-christian">👤 Christian Uhl</div>
 
-# Anwendung 2: Ihr Thema X — via Spec aufs Demo-Repo
+# Hands-On: Mit Spec
 
-## Von einem Satz zu einer überprüften Änderung — Ihr Thema X aus Übung 1 wird zum Corpus
+## Ihr Thema X, via Spec aufs Demo-Repo
 
 <!-- notes:
+Ansage: Von einem Satz zu einer ueberprueften Aenderung. Die Treffer aus
+Uebung 1 werden zum Corpus.
 CHRISTIAN. Block 6, 11:00 bis 11:25, Christian fuehrt, Tobias unterstuetzt am Platz.
 Ablauf: Demo-Repo skeleton-research forken (Kopie holen), Thema X aus Übung 1
 rein (Seeden), Pipeline, dann OpenSpec-Change "thema-x" obendrauf — eine
@@ -1381,6 +1428,12 @@ Raums die rechte Spalte nicht, und das ist kein Scheitern.
 (3) Dritte Zeile erklaeren
     Eine Pruefung, die nicht fehlschlagen kann, prueft nichts. Das ist derselbe
     Gedanke wie bei einem Experiment ohne moegliches Negativergebnis.
+    Hilfe beim Herumgehen: Ein Kriterium nennt auch, was es ausschliesst, etwa
+    "das Feld kommt als nicht angegeben zurueck, statt mit einer Vermutung
+    gefuellt zu werden". Wer eine Skala von 1 bis 5 vorschlaegt, zerlegt sie in
+    Ja-Nein-Pruefungen oder nennt die Schwelle: Bei Ja/Nein urteilen zwei
+    Personen in 87 Prozent der Faelle gleich, bei einer Fuenferskala nur in 38
+    bis 58 Prozent (Rao und Callison-Burch, Autorubric, arXiv 2603.00077).
 
 (4) Schlusssatz stehen lassen
     Er kommt aus der Pyramide und wird im Wrap-Up erneut aufgegriffen.

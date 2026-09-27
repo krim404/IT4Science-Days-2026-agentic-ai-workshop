@@ -41,9 +41,9 @@ feste Uhrzeiten. Diese Minutie ist die interne Referenz. Folien-Nummern = Marp.
 | Zeit | Block | Folien | Wer | Zeit-Kern |
 |---|---|---|---|---|
 | 09:00–09:15 | Ankommen · Wer wir sind · Blitzlicht (Thema X + KI-Selbsteinschätzung) · Erwartungen · Agenda | 01–05 | C (+T) | Blitzlicht ~3, hart timen |
-| 09:15–09:30 | Grundlagen: Begriffe · vier Bausteine · Definition · Metapher/Pyramide | 06–11 | C | |
+| 09:15–09:30 | Grundlagen: Begriffe · Bausteine · Prompt/Vertrag · Metapher/Pyramide | 06–11 | C | |
 | 09:30–09:50 | Foundation Models: Entwicklungen · Katalog · Praxis-Einordnung | 12–14 | C+T | Live-Checks 5 |
-| 09:50–10:10 | Toolbox: Harness-Entscheider · Chat→Terminal · Zwei Harnesses (Live-Demo) · pi · M1 Thumb-Vote | 15–19 | T (+C: kommerziell 2) | Vergleich 12 · Mapping 3 · pi 2 |
+| 09:50–10:10 | Toolbox: Harness-Reichweite · Chat→Terminal · Zwei Harnesses (Live-Demo) · pi · M1 Thumb-Vote | 15–19 | T (+C: kommerziell 2) | Vergleich 12 · Mapping 3 · pi 2 |
 | 10:10–10:20 | ☕ Pause (M2 Stop-Light um 10:08) | 20 | — | |
 | 10:20–10:45 | Anwendung 1: Modes · Übung 1 (direkt agentisch, ohne Spec) · AGENTS.md | 21–24 | T (C roamt) | Modes 2 · Übung 1 15 · AGENTS 3 · Puffer 5 |
 | 10:45–11:00 | Theorie: Spec (Drei Ebenen · Schulen · Showcase) + Token | 25–29 | C+T | Showcase kürzbar bei Zeitnot |
