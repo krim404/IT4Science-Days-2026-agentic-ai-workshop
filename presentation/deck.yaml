@@ -43,16 +43,17 @@
 #  42 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
 #  43 jump-start       background doodle (reused); steps revealed one by one
 #  44 exercise 2       background doodle (new); instructions
-#  45 measure          background doodle (new); a grid
-#  46 pause            background doodle (new, same motif as 29)
-#  47 section 8        background doodle (reused)
-#  48 outcomes         background doodle (new); criteria
-#  49 section 9        background doodle (new)
-#  50 transfer         background doodle (reused); a list of steps
-#  51 resources 1      background doodle (new); a grid
-#  52 resources 2      background doodle (new); a grid
-#  53 thanks           background doodle (reused)
-#  54 references       none
+#  45 exercise 2 steps background doodle (new); a grid of commands, a stepladder
+#  46 measure          background doodle (new); a grid
+#  47 pause            background doodle (new, same motif as 28)
+#  48 section 8        background doodle (reused)
+#  49 outcomes         background doodle (new); criteria
+#  50 section 9        background doodle (new)
+#  51 transfer         background doodle (reused); a list of steps
+#  52 resources 1      background doodle (new); a grid
+#  53 resources 2      background doodle (new); a grid
+#  54 thanks           background doodle (reused)
+#  55 references       none
 title: 'Agentic AI in der Praxis'
 author: 'Christian Uhl · Tobias Weiß'
 date: '30.09.2026'
@@ -1036,13 +1037,12 @@ slides:
   bullets:
   - 'Klein halten: eine Auswertung, eine Kennzahl'
   - 'Fertig heißt: die Prüfung läuft durch'
-  - 'openspec new change thema-x'
-  - 'openspec validate --changes'
+  - 'Mit Agent: erst /opsx-propose, dann /opsx-apply'
   - 'Ohne OpenSpec: dieselbe Struktur als Markdown'
   speaker: 'Christian'
   notes: |
     Der häufigste Zeitfresser ist die Installation, nicht die Aufgabe.
-    Installation, falls nötig: npm install -g openspec
+    Installation, falls nötig: npm install -g @fission-ai/openspec@latest (Node ab 20.19).
     (1) Vor dem Start kurz abfragen, bei wem openspec läuft. Wer es nicht installiert bekommt,
         arbeitet sofort mit der Markdown-Variante weiter.
     (2) Während der Übung gehen beide durch den Raum. Häufigster Fehler: zu großer Zuschnitt.
@@ -1051,6 +1051,46 @@ slides:
         abgeschrieben werden.
     (4) Am Ende zwei oder drei Ergebnisse für die Outcomes einsammeln, Freiwillige jetzt
         ansprechen.
+
+- layout: table
+  title: 'Übung 2 Schritt für Schritt, am Beispiel thema-x'
+  bg_effect:
+    prompt: 'a sturdy wooden stepladder standing upright on a workshop floor'
+    path: deck_images/img_ee03cf773344.png
+    seed: 51
+  headers: ['Schritt', 'Eingabe', 'Ergebnis']
+  rows:
+  - ['1 · Terminal', 'openspec init --tools opencode,pi', 'Befehle und Skills für den Agenten']
+  - ['2 · Agent', '/opsx-propose thema-x: Papers pro Jahr als Kennzahl', 'Proposal, Tasks und Spec']
+  - ['3 · Terminal', 'openspec status --change thema-x', 'welche Teile schon stehen']
+  - ['4 · Terminal', 'openspec validate thema-x --strict', 'gültig, oder die Stelle mit dem Fehler']
+  - ['5 · Agent', '/opsx-apply thema-x', 'der Agent arbeitet die Tasks ab']
+  - ['6 · Terminal', 'openspec list', 'Fortschritt, etwa 4/4 tasks']
+  - ['7 · Agent', '/opsx-archive thema-x', 'die Spec wird fortgeschrieben']
+  sources:
+  - 'OpenSpec 1.13.2, CLI-Referenz': https://github.com/Fission-AI/OpenSpec/blob/main/docs/cli.md
+  speaker: 'Christian'
+  notes: |
+    Zum Zeigen für alle, die hängen bleiben. Geprüft mit OpenSpec 1.13.2. Vor dem Workshop
+    kurz npm view @fission-ai/openspec version prüfen, es erscheint etwa wöchentlich eine neue.
+    (1) Einmal pro Repo. Legt openspec/config.yaml an und die Befehle für OpenCode und pi. Mit
+        --language Deutsch schreibt der Agent die Dateien auf Deutsch, aber nur bei einer neuen
+        config.yaml. Hat das Repo schon ein openspec/, kommen nur die Agenten-Befehle dazu.
+    (2) In OpenCode und pi mit Bindestrich: /opsx-propose. In Claude Code heißt es /opsx:propose.
+        Der Agent legt openspec/changes/thema-x/ an: proposal.md, tasks.md und eine Delta-Spec
+        unter specs/<name>/spec.md. Jetzt selbst lesen und schärfen, das ist der eigentliche Teil
+        der Übung: Woran würden Sie merken, dass es falsch ist?
+    (3) Zeigt, welche Teile fertig sind. design.md ist optional; status meldet die Tasks trotzdem
+        als "blocked by design", solange sie fehlt. Das stört validate und archive nicht.
+    (4) Die Prüfung. Häufigster Fehler: "muss" statt SHALL oder MUST. Die Schlüsselwörter bleiben
+        englisch, der Rest darf deutsch sein. Jedes Requirement braucht ein Scenario mit WHEN und
+        THEN.
+    (5) Der Agent setzt die Tasks um und hakt sie ab.
+    (6) Kontrolle: Alle Tasks erledigt?
+    (7) Der Change wandert nach openspec/changes/archive/<Datum>-thema-x/, die Spec nach
+        openspec/specs/. Im Terminal geht dasselbe mit openspec archive thema-x --yes.
+    Ohne Agent: openspec new change thema-x legt nur den leeren Ordner an, die drei Dateien
+    schreibt man dann selbst.
 
 - layout: table
   title: 'Schon das Mindestziel zeigt, dass die Methode sitzt'
@@ -1162,7 +1202,7 @@ slides:
   - ['OpenCode', 'github.com/sst/opencode']
   - ['pi', 'pi.dev']
   - ['zot', 'zot.sh']
-  - ['OpenSpec', 'npmjs.com/package/openspec']
+  - ['OpenSpec', 'npmjs.com/package/@fission-ai/openspec']
   - ['SAIA-Plugin für pi', 'codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin']
   - ['SAIA-Plugin für OpenCode', 'github.com/tobias-weiss-ai-xr/opencode-saia-plugin']
   - ['oh-my-opencode', 'github.com/code-yeongyu/oh-my-opencode']
@@ -1170,7 +1210,7 @@ slides:
   - 'OpenCode': https://github.com/sst/opencode
   - 'pi': https://pi.dev
   - 'zot': https://zot.sh
-  - 'OpenSpec': https://www.npmjs.com/package/openspec
+  - 'OpenSpec': https://www.npmjs.com/package/@fission-ai/openspec
   - 'pi-saia-plugin': https://codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin
   - 'opencode-saia-plugin': https://github.com/tobias-weiss-ai-xr/opencode-saia-plugin
   - 'oh-my-opencode': https://github.com/code-yeongyu/oh-my-opencode

@@ -124,33 +124,38 @@ images:
   prompt: a spirit level lying on a wooden plank, its bubble centred
 - slide: 44
   tag: bg
+  file: img_ee03cf773344.png
+  seed: 51
+  prompt: a sturdy wooden stepladder standing upright on a workshop floor
+- slide: 45
+  tag: bg
   file: img_81ae17644c53.png
   seed: 47
   prompt: a young sapling growing in a clay pot
-- slide: 45
+- slide: 46
   tag: bg
   file: img_599f6d606690.png
   seed: 45
   prompt: a large steaming coffee mug with a thick handle standing on a saucer, a
     small spoon resting beside it
-- slide: 47
+- slide: 48
   tag: bg
   file: img_2d4ee8ff3b97.png
   seed: 50
   prompt: a vintage chrome microphone on a slender stand
-- slide: 48
+- slide: 49
   tag: bg
   file: img_f26a5c6319f1.png
   seed: 48
   prompt: a large brass hand bell with a turned wooden handle standing upright on
     a wooden table
-- slide: 50
+- slide: 51
   tag: bg
   file: img_628b44257ca0.png
   seed: 53
   prompt: a sturdy canvas tool bag with leather handles, a few tools sticking out
     of it
-- slide: 51
+- slide: 52
   tag: bg
   file: img_490112f91adb.png
   seed: 54
