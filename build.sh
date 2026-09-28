@@ -6,7 +6,7 @@
 #   ./build.sh --dev    Livesuche: bei jedem Speichern der .md neu rendern + pruefen
 set -euo pipefail
 cd "$(dirname "$0")"
-DECK=docs/presentations/it4science-days-2026-agentic-ai-workshop
+DECK=pre-presentation-builder/presentations/it4science-days-2026-agentic-ai-workshop
 
 command -v marp >/dev/null 2>&1 && MARP=(marp) || MARP=(npx --yes @marp-team/marp-cli)
 

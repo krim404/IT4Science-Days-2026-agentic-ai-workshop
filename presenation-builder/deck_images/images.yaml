@@ -1,20 +1,157 @@
 deck: Agentic AI in der Praxis
 images:
+- slide: 1
+  tag: bg
+  file: img_981fc2cf51a3.png
+  seed: 8
+  prompt: two small workbenches side by side, one with a circuit board and tweezers,
+    one with a compact server unit
+- slide: 2
+  tag: bg
+  file: img_775b29258fc2.png
+  seed: 9
+  prompt: a large vintage camera flash unit with a round reflector mounted on a small
+    tripod
+- slide: 3
+  tag: bg
+  file: img_6f8483a60efb.png
+  seed: 10
+  prompt: a sturdy wooden toolbox with a hammer, a wrench and a screwdriver resting
+    inside it
+- slide: 4
+  tag: bg
+  file: img_a2a46d49c392.png
+  seed: 11
+  prompt: an hourglass in a turned wooden frame, the sand half run through
+- slide: 5
+  tag: bg
+  file: img_156ee3c9c084.png
+  seed: 12
+  prompt: a pair of well worn hiking boots with their laces tied together
+- slide: 7
+  tag: bg
+  file: img_cc43938846cd.png
+  seed: 14
+  prompt: a brass magnifying glass with a wooden handle lying on a smooth pebble
+- slide: 11
+  tag: bg
+  file: img_452650e3774e.png
+  seed: 17
+  prompt: an adjustable desk lamp with a round metal shade shining down onto a pair
+    of round reading glasses lying below it
+- slide: 12
+  tag: bg
+  file: img_fa40815db3c4.png
+  seed: 17
+  prompt: a small round smart speaker with a glowing ring of light standing on a side
+    table
+- slide: 17
+  tag: bg
+  file: img_9ba9c29a9502.png
+  seed: 21
+  prompt: three flat stones of decreasing size stacked into a small cairn
+- slide: 18
+  tag: bg
+  file: img_28e81bff8250.png
+  seed: 1007
+  prompt: a traffic light on a slender pole with its green lamp lit
 - slide: 21
+  tag: bg
+  file: img_8560786febfc.png
+  seed: 25
+  prompt: an old brass balance with two pans hanging from a beam, a small stone resting
+    in one pan
+- slide: 22
+  tag: main
+  file: img_5c1ab66c78ca.png
+  seed: 1007
+  prompt: an apple tree whose red apples hang only high up in its crown, on the left
+    a large robot stands on the grass stretching both arms up, its hands far below
+    the lowest apple, on the right a small robot stands on top of a tall wooden stepladder
+    and picks an apple from the top of the crown, both robots with plain smooth bodies
+- slide: 25
+  tag: bg
+  file: img_54f62c489aa1.png
+  seed: 2030
+  prompt: a folded pocket knife with several tools fanned out beside a single plain
+    screwdriver, both lying on a wooden workbench
+- slide: 26
+  tag: bg
+  file: img_f9406daa9505.png
+  seed: 30
+  prompt: a small backpack with several pouches clipped to its outside
+- slide: 27
   tag: bg
   file: img_61de4ae4812e.png
   seed: 28
   prompt: a large steaming coffee mug with a thick handle standing on a saucer, a
     small spoon resting beside it
-- slide: 38
+- slide: 30
+  tag: bg
+  file: img_a60e7375f265.png
+  seed: 34
+  prompt: a long handled butterfly net with a fine mesh leaning against a tree stump
+- slide: 31
+  tag: bg
+  file: img_b0385c402d39.png
+  seed: 35
+  prompt: a round metal gold panning pan filled with wet gravel, a few shiny gold
+    nuggets resting among the stones
+- slide: 33
+  tag: bg
+  file: img_11926e9eb76f.png
+  seed: 7
+  prompt: a sealed envelope with a red wax seal lying on a wooden desk
+- slide: 34
+  tag: bg
+  file: img_eda7374eca78.png
+  seed: 41
+  prompt: a lighthouse standing on a rocky shore, its lamp shining
+- slide: 36
+  tag: bg
+  file: img_8981e5de6eb9.png
+  seed: 38
+  prompt: a small wooden chest with three drawers and plain round brass knobs
+- slide: 37
+  tag: bg
+  file: img_b4fa4bf188c4.png
+  seed: 39
+  prompt: a mason trowel resting on top of a half built brick wall
+- slide: 43
+  tag: bg
+  file: img_197c93489a0a.png
+  seed: 46
+  prompt: a spirit level lying on a wooden plank, its bubble centred
+- slide: 44
+  tag: bg
+  file: img_81ae17644c53.png
+  seed: 47
+  prompt: a young sapling growing in a clay pot
+- slide: 45
   tag: bg
   file: img_599f6d606690.png
   seed: 45
   prompt: a large steaming coffee mug with a thick handle standing on a saucer, a
     small spoon resting beside it
-- slide: 41
+- slide: 47
+  tag: bg
+  file: img_2d4ee8ff3b97.png
+  seed: 50
+  prompt: a vintage chrome microphone on a slender stand
+- slide: 48
   tag: bg
   file: img_f26a5c6319f1.png
   seed: 48
   prompt: a large brass hand bell with a turned wooden handle standing upright on
     a wooden table
+- slide: 50
+  tag: bg
+  file: img_628b44257ca0.png
+  seed: 53
+  prompt: a sturdy canvas tool bag with leather handles, a few tools sticking out
+    of it
+- slide: 51
+  tag: bg
+  file: img_490112f91adb.png
+  seed: 54
+  prompt: a lit oil lantern hanging from an iron hook

@@ -1,54 +1,62 @@
 # Picture audit (one line per slide: verdict; reason). Slides without a background doodle get the gradient.
 #   1 title            background doodle (reused); a cover names the topic and explains nothing yet
-#   2 speakers         none; a comparison of two people, two columns carry it
-#   3 blitzlicht       none; an instruction for the room
-#   4 expectations     none; a list of deliverables
-#   5 agenda           none; a grid
-#   6 section 1        background doodle (reused)
-#   7 terms            none; a grid
-#   8 building blocks  none; a grid, the "what it is not" column carries the argument, a loop diagram would drop it
-#   9 section 2        background doodle (reused)
-#  10 ask/commission   DIAGRAM; two lanes, only one with an exit condition, is a structure
-#  11 levels           DIAGRAM; a hierarchy with a feedback path, the workshop's pyramid metaphor
-#  12 levels table     none; a grid
-#  13 statement        background doodle (reused)
-#  14 section 3        background doodle (reused)
-#  15 six trends       background doodle (reused); a list, the thesis sits in the notes
-#  16 model choice     none; a grid
-#  17 harness          EXPLANATORY FLUX (reused); reach set by equipment, not size, is cause and effect
-#  18 section 4        background doodle (reused)
-#  19 spectrum         DIAGRAM; four stages ordered by autonomy is a structure
-#  20 two harnesses    none; a comparison
-#  21 pi packages      none; a grid
-#  22 pause            background doodle (new); a break
-#  23 section 5        background doodle (reused)
-#  24 modes            background doodle (reused); plan vs build is a verbal distinction
-#  25 exercise 1       none; a grid
-#  26 statement        none; the takeaway of exercise 1
-#  27 AGENTS.md        background doodle (reused); a list of rules
-#  28 section 6        background doodle (reused)
-#  29 where levels     none; a grid
-#  30 two schools      none; a grid
-#  31 showcase         background doodle (reused); a list of parts
-#  32 tokens           background doodle (reused); a list of levers
-#  33 section 7        background doodle (reused)
-#  34 skeleton         background doodle (reused); a list of properties
-#  35 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
-#  36 jump-start       background doodle (reused); steps revealed one by one
-#  37 exercise 2       none; instructions
-#  38 measure          none; a grid
-#  39 pause            background doodle (new, same motif as 22)
-#  40 section 8        background doodle (reused)
-#  41 outcomes         none; criteria
-#  42 section 9        background doodle (new)
-#  43 transfer         background doodle (reused); a list of steps
-#  44 resources 1      none; a grid
-#  45 resources 2      none; a grid
-#  46 thanks           background doodle (reused)
-#  47 references       none
+#   2 speakers         background doodle (new); two people, two work areas, the columns carry the text
+#   3 blitzlicht       background doodle (new); an instruction for the room
+#   4 expectations     background doodle (new); a list of deliverables
+#   5 agenda 1         background doodle (new); a one-column table of blocks
+#   6 agenda 2         background doodle (new); a one-column table of blocks
+#   7 section 1        background doodle (reused)
+#   8 terms            background doodle (new); a grid
+#   9 building blocks  DIAGRAM; the loop inside the harness is a structure, the "what it is not" column moves into the bullets
+#  10 agent setup      DIAGRAM; four inputs around one agent, skills in both directions, is a structure
+#  11 agent builder    SCREENSHOT (fullbleed); a real agent builder is evidence that the four parts are not our invention
+#  12 skill            background doodle (new); a list of properties, the definition sits in the bullets
+#  13 agents today     background doodle (new); a grid, the right column ties each example to the definition
+#  14 cowork           SCREENSHOT (fullbleed); a real agent run is evidence, not decoration
+#  15 section 2        background doodle (reused)
+#  16 ask/commission   DIAGRAM; two lanes, only one with an exit condition, is a structure
+#  17 levels           DIAGRAM; a pyramid with a feedback path, the workshop's pyramid metaphor
+#  18 levels table     background doodle (new); a grid
+#  19 statement        background doodle (new); a traffic light on green, passed
+#  20 section 3        background doodle (reused)
+#  21 six trends       background doodle (reused); a list, the thesis sits in the notes
+#  22 model choice     background doodle (new); a grid
+#  23 harness          EXPLANATORY FLUX (reused); reach set by equipment, not size, is cause and effect
+#  24 section 4        background doodle (reused)
+#  25 spectrum         DIAGRAM; four stages ordered by autonomy is a structure
+#  26 two harnesses    background doodle (new); a comparison, multi tool beside a single screwdriver
+#  27 pi packages      background doodle (new); a grid
+#  28 pause            background doodle (new); a break
+#  29 section 5        background doodle (reused)
+#  30 modes            background doodle (reused); plan vs build is a verbal distinction
+#  31 exercise 1       background doodle (new); a grid
+#  32 statement        background doodle (new); the takeaway of exercise 1
+#  33 AGENTS.md        background doodle (reused); a list of rules
+#  34 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
+#  35 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
+#  36 showcase         background doodle (reused); a list of parts
+#  37 where levels     background doodle (new); a grid
+#  38 two schools      background doodle (new); a grid
+#  39 tokens           background doodle (reused); a list of levers
+#  40 section 7        background doodle (reused)
+#  41 skeleton         background doodle (reused); a list of properties
+#  42 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
+#  43 jump-start       background doodle (reused); steps revealed one by one
+#  44 exercise 2       background doodle (new); instructions
+#  45 measure          background doodle (new); a grid
+#  46 pause            background doodle (new, same motif as 29)
+#  47 section 8        background doodle (reused)
+#  48 outcomes         background doodle (new); criteria
+#  49 section 9        background doodle (new)
+#  50 transfer         background doodle (reused); a list of steps
+#  51 resources 1      background doodle (new); a grid
+#  52 resources 2      background doodle (new); a grid
+#  53 thanks           background doodle (reused)
+#  54 references       none
 title: 'Agentic AI in der Praxis'
 author: 'Christian Uhl · Tobias Weiß'
 date: '30.09.2026'
+url: 'shorturl.at/7h3TW'
 lang: de
 
 background: doodle
@@ -56,17 +64,22 @@ slides:
 
 - layout: title
   title: 'Agentic AI in der Praxis'
-  subtitle: 'Vom Spec zum produktiven Workflow, mit Übungen am eigenen Rechner'
+  subtitle: 'Vom Auftrag zur produktiven Arbeitsweise, mit Übungen am eigenen Rechner'
   bg_effect:
     path: deck_images/img_15d7d72fd0e7.png
   notes: |
     Begrüßung (~1 min). Kurz vorstellen: Wer wir sind, worum es geht.
     IT4Science Days 2026, 09:00 bis 12:00.
     Ziel: Die Teilnehmenden verlassen den Raum mit einem eigenen Research-Repo, das per CI
-    validiert wird, und haben einen OpenSpec-Change selbst angewendet.
+    validiert wird, und haben erlebt, dass ein wirksamer Auftrag an einen Agenten bereits eine
+    Spezifikation ist.
 
 - layout: comparison
-  title: 'Zwei Beispiele aus unserer eigenen Arbeit'
+  title: 'Über uns und zwei Beispiele'
+  bg_effect:
+    prompt: 'two small workbenches side by side, one with a circuit board and tweezers, one with a compact server unit'
+    path: deck_images/img_981fc2cf51a3.png
+    seed: 8
   columns:
   - heading: 'Christian Uhl · ZAD, Uni Gießen'
     bullets:
@@ -79,8 +92,9 @@ slides:
     - 'openDesk Edu: Dienste für Forschung, Lehre, Verwaltung'
     - 'Wissens-Pipelines und IT-Betrieb agentisch'
     - 'Open-Source-Software mit Open-Source-Werkzeugen'
+  speaker: 'Christian · Tobias'
   notes: |
-    CHRISTIAN führt durch die Vorstellung (~3 min); Tobias trägt sein Beispiel selbst vor
+    Christian führt durch die Vorstellung (~3 min); Tobias trägt sein Beispiel selbst vor
     (~1 min). Eigenes Beispiel 60 bis 90 s. Badge mitbringen, hochhalten, durch den Raum
     geben: Das Objekt trägt die Folie, nicht der Text.
 
@@ -95,7 +109,8 @@ slides:
     (3) Ein einzelner Fehler am Secure Element hätte das Gerät dauerhaft unbrauchbar gemacht.
     (4) Der Zielkonflikt: Sorgfältiges Vorgehen war zeitlich ausgeschlossen, unsorgfältiges
         wegen des Risikos.
-    (5) Aufgelöst durch spezifikations- und testgetriebene Entwicklung. Nach 24 Stunden lag eine
+    (5) Aufgelöst dadurch, dass jeder Auftrag an den Agenten ein prüfbares Kriterium hatte:
+        spezifikations- und testgetrieben. Nach 24 Stunden lag eine
         vollständige Custom-Firmware vor, als FIDO2-Sicherheitsschlüssel einsetzbar.
 
     Kernsatz: "Das Tempo war nur deshalb vertretbar, weil die Testsuite jeden Fehler abfängt,
@@ -109,13 +124,18 @@ slides:
 
 - layout: content
   title: 'Ihre Reihe: Blitzlicht in dreißig Sekunden pro Person'
+  bg_effect:
+    prompt: 'a large vintage camera flash unit with a round reflector mounted on a small tripod'
+    path: deck_images/img_775b29258fc2.png
+    seed: 9
   bullets:
   - 'Name, Fachrichtung, ein Thema für eine Literaturrecherche'
   - 'Selbsteinschätzung KI: eher Anfang oder eher fortgeschritten?'
   - 'Wir sammeln die Wünsche am Whiteboard'
   - 'Am Ende prüfen wir sie gegen die Outcomes'
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN moderiert (~3 min). Die gesammelten Wünsche sichtbar notieren, das Wrap-Up greift
+    Moderation (~3 min). Die gesammelten Wünsche sichtbar notieren, das Wrap-Up greift
     sie auf. Zeit hart timen.
     Bei großen Runden: 5 bis 6 Stichproben aus dem Raum, Rest per Karte oder Zettel.
     Selbsteinschätzung mit Handzeichen oder kurz mündlich, kein Werturteil. Mit der Abstufung
@@ -123,13 +143,18 @@ slides:
 
 - layout: content
   title: 'Der Vormittag liefert ein Werkzeug, keinen fertigen Bot'
+  bg_effect:
+    prompt: 'a sturdy wooden toolbox with a hammer, a wrench and a screwdriver resting inside it'
+    path: deck_images/img_6f8483a60efb.png
+    seed: 10
   bullets:
   - 'Ein Research-Repo mit laufender Pipeline'
-  - 'Einen Spec-Change, live umgesetzt'
+  - 'Einen prüfbaren Auftrag, live umgesetzt'
   - 'Werkzeuge für Modelle und Harnesses statt Trendlisten'
   - 'Nicht dabei: der voll-autonome Assistent'
+  speaker: 'Tobias'
   notes: |
-    TOBIAS (~90 s). Erwartungsmanagement aus der JLU-Erfahrung (09/2026): Viele erwarten
+    ~90 s. Erwartungsmanagement aus der JLU-Erfahrung (09/2026): Viele erwarten
     fertige Bots à la Claude Cowork. Ernst nehmen, nicht abwerten.
     Kernsatz: Wir bauen keine voll-autonomen Assistenten, sondern führen und korrigieren die
     Agenten.
@@ -138,33 +163,59 @@ slides:
     Bot-Wünsche.
 
 - layout: table
-  title: 'Drei Stunden, zwei Hands-Ons, dazwischen die Theorie'
-  headers: ['Zeit', 'Block', 'Wer']
+  title: 'Bis zur ersten Pause: Grundlagen, Modelle, Werkzeuge'
+  bg_effect:
+    prompt: 'an hourglass in a turned wooden frame, the sand half run through'
+    path: deck_images/img_a2a46d49c392.png
+    seed: 11
+  headers: ['Block']
   rows:
-  - ['09:00', 'Ankommen, Vorstellung, Blitzlicht', 'Christian, Tobias']
-  - ['09:15', 'Grundlagen', 'Christian']
-  - ['09:30', 'Foundation Models', 'Christian, Tobias']
-  - ['09:50', 'Open-Source Toolbox', 'Tobias, Christian']
-  - ['10:20', 'Hands-On: Erste Schritte', 'Tobias']
-  - ['10:45', 'Spezifikation und Token', 'Christian, Tobias']
-  - ['11:00', 'Hands-On: Mit Spec', 'Christian']
-  - ['11:30', 'Outcomes, Q&A, Wrap Up', 'Tobias, Christian']
+  - ['Ankommen, Vorstellung, Blitzlicht']
+  - ['Grundlagen: Agenten beauftragen']
+  - ['Foundation Models: aktuelle Entwicklungen']
+  - ['Open-Source Toolbox']
+  - ['☕ Pause 10:10 bis 10:20']
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Agenda in einer Minute. Pausen: 10:10 bis 10:20 und 11:25 bis 11:30.
-    Zwei Hands-Ons: erst direkt agentisch ohne Spec, dann via Spec auf das Demo-Repo.
-    Dazwischen der Theorieblock zu Spezifikation und Token.
+    Agenda in einer Minute, verteilt auf zwei Folien. Bis zur ersten Pause:
+    Grundlagen, Modelle, Werkzeuge.
+
+- layout: table
+  title: 'Danach zweimal selbst ausprobieren, dazwischen der Weg zur Spezifikation'
+  bg_effect:
+    prompt: 'a pair of well worn hiking boots with their laces tied together'
+    path: deck_images/img_156ee3c9c084.png
+    seed: 12
+  headers: ['Block']
+  rows:
+  - ['Hands-On: Erste Schritte, direkt agentisch']
+  - ['Vom Auftrag zur Spezifikation, und was sie an Token spart']
+  - ['Hands-On: Mit Spec']
+  - ['☕ Pause 11:25 bis 11:30']
+  - ['Outcomes: Ihre Ergebnisse']
+  - ['Ihre Anwendungsfälle, Q&A, Diskussion']
+  speaker: 'Tobias'
+  notes: |
+    Zwei Hands-Ons: erst direkt agentisch ohne Spec, dann mit Spec auf das Demo-Repo.
+    Dazwischen der Block, in dem aus dem Auftrag die Spezifikation wird. Am Ende Raum für Ihre
+    Anwendungsfälle und die Diskussion.
 
 - layout: section
   number: '1'
   title: 'Grundlagen: worüber wir sprechen'
   bg_effect:
     path: deck_images/img_9c68f94380d4.png
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN, Block 1, 09:15 bis 09:30. Zwei Folien lang geht es nur um Sprache, damit wir
+    Block 1, 09:15 bis 09:30. Zwei Folien lang geht es nur um Sprache, damit wir
     nicht aneinander vorbeireden.
 
 - layout: table
   title: 'Bei diesen fünf Begriffen legen wir uns für heute fest'
+  bg_effect:
+    prompt: 'a brass magnifying glass with a wooden handle lying on a smooth pebble'
+    path: deck_images/img_cc43938846cd.png
+    seed: 14
   headers: ['Begriff', 'Worüber gestritten wird', 'Unsere Festlegung']
   rows:
   - ['Agent', 'von Chatbot bis autonomes System', 'Das Modell bestimmt die nächsten Schritte']
@@ -172,8 +223,9 @@ slides:
   - ['Halluzination', 'Begriff umstritten, eher Konfabulation', 'unbelegte Ausgabe, Grund für die Tests']
   - ['Open Source', 'offene Gewichte sind nicht OSI', 'wir meinen offene Gewichte']
   - ['Reproduzierbarkeit', 'gleiche Eingabe, anderes Ergebnis', 'geprüft wird das Ergebnis, nicht der Weg']
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Nicht alle fünf Zeilen gleich lang behandeln, die letzten beiden tragen das
+    Nicht alle fünf Zeilen gleich lang behandeln, die letzten beiden tragen das
     Publikum. Rahmensatz: Bei diesen Begriffen ist sich die Fachwelt nicht einig. Wir legen uns
     für heute fest. Das ist eine Setzung, kein Stand der Forschung.
 
@@ -197,23 +249,26 @@ slides:
 
     Wenn die Zeit knapp wird: (2) und (4) auf je einen Satz. (5) niemals kürzen.
 
-- layout: table
+- layout: content_image
   title: 'Ein agentisches System besteht aus vier Bausteinen'
-  headers: ['Baustein', 'Was es ist', 'Was es nicht ist']
-  rows:
-  - ['Modell', 'sagt das nächste Token voraus', 'kein Wissensspeicher, keine Datenbank']
-  - ['Kontext', 'was im Eingabefenster steht', 'kein Gedächtnis, endet mit der Sitzung']
-  - ['Werkzeuge', 'Dateien, Shell, Netz, Schnittstellen', 'keine Rechte jenseits des Freigegebenen']
-  - ['Harness', 'stellt Kontext, ruft Werkzeuge, speist zurück', 'trifft die Entscheidungen nicht selbst']
+  bullets:
+  - 'Das Modell ist kein Wissensspeicher'
+  - 'Der Kontext ist kein Gedächtnis'
+  - 'Werkzeuge nur, soweit freigegeben'
+  - 'Das Harness trifft keine Entscheidung'
+  image:
+    path: deck_diagrams/dia_blocks.png
+    purpose: 'Zeigt die Schleife im Harness: Der Kontext geht an das Modell, das Modell wählt den Schritt, ein Werkzeug führt ihn aus, und das Ergebnis fließt zurück in den Kontext.'
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Über Spezifikation und Verifikation lässt sich nicht sprechen, solange offen ist,
-    wer hier eigentlich handelt. Der Raum ist gemischt, beide Hälften meinen mit "KI" etwas
-    anderes. Wir zerlegen den Begriff einmal.
+    Darüber, wie man einen Agenten beauftragt, lässt sich nicht sprechen, solange
+    offen ist, wer hier eigentlich handelt. Der Raum ist gemischt, beide Hälften meinen mit "KI"
+    etwas anderes. Wir zerlegen den Begriff einmal.
 
     Modell: sagt das nächste Token voraus, nichts weiter. Was es nicht im Kontext hat, kann es
     nur rekonstruieren.
     Kontext: Repository, Spezifikation, Verlauf. Kein Gedächtnis. Deshalb gehören Regeln in
-    Dateien und nicht in Sitzungen (AGENTS.md im ersten Hands-On).
+    Dateien und nicht in Sitzungen (nächste Folie).
     Werkzeuge: erst hiermit handelt das System. Wer nichts freigibt, bekommt einen
     Gesprächspartner, keinen Agenten.
     Harness: Kontext zusammenstellen, Werkzeuge aufrufen, Ergebnisse zurückspeisen, Schleife
@@ -225,16 +280,145 @@ slides:
 
     Wenn die Zeit knapp wird: Werkzeuge auf zwei Sätze. Kontext und Harness nicht kürzen.
 
+- layout: content_image
+  title: 'Wer einen Agenten aufbaut, legt vier Dinge fest'
+  bullets:
+  - 'Instruktionen: AGENTS.md, verweisen auf Skills'
+  - 'Skills: Anleitungen zum Nachschlagen'
+  - 'Trigger: Befehl, Zeitplan oder Ereignis'
+  - 'Capabilities legen fest, was er darf'
+  image:
+    path: deck_diagrams/dia_setup.png
+    purpose: 'Zeigt, was einen Agenten ausmacht: Ein Trigger startet ihn, Instruktionen sind immer geladen, Skills wandern bei Bedarf in beide Richtungen, und über Capabilities ruft er Werkzeuge auf.'
+  sources:
+  - 'Model Context Protocol': https://modelcontextprotocol.io
+  speaker: 'Christian'
+  notes: |
+    ~3 min. Die vorige Folie zeigt, woraus ein System besteht, diese, was man
+    festlegt. Instruktionen und Skills landen im Kontext, Capabilities sind die Werkzeuge, der
+    Trigger startet das Harness.
+
+    Instruktionen: kurz, gelten immer. Sie verweisen auf die Skills, statt deren Wissen zu
+    wiederholen. Eine echte AGENTS.md zeigt Tobias im ersten Hands-On.
+    Skills: der Doppelpfeil. Das Modell fordert einen Skill an, sein Inhalt kommt zurück. Was
+    ein Skill genau ist, zeigt die nächste Folie.
+    Trigger: Heute in Übung 1 Ihr Prompt, in Übung 2 zusätzlich die CI per Zeitplan.
+    Capabilities: die Werkzeuge von eben als Konfiguration, meist über das Model Context
+    Protocol (MCP): welche Server, welche Rechte. MCP-Server können Code ausführen, also nur
+    aus vertrauenswürdigen Quellen.
+
+- layout: fullbleed
+  title: 'Auch Agents as a Service brauchen genau diese vier Dinge'
+  image:
+    path: deck_images/screenshot_n8n_agent_builder.png
+    purpose: 'Zeigt einen echten Agent-Builder mit den Feldern Model, Instructions, Skills, Triggers und Capabilities.'
+  speaker: 'Christian'
+  notes: |
+    ~1 min. Beleg, dass die Einteilung der vorigen Folie kein Konstrukt von uns ist: Ein
+    Agent-Builder als Dienst (Screenshot: n8n) fragt genau diese Felder ab. Model ist Pflicht,
+    hier ein Qwen-Modell über eine OpenAI-kompatible Schnittstelle. Unter Triggers stehen Kanal
+    und Zeitplan, unter Capabilities Tools, Workflows und Sub-Agents: Ein Agent ruft gern andere
+    Agenten auf.
+
+- layout: content
+  title: 'Ein Skill ist eine Anleitung, die das Modell selbst nachschlägt'
+  bg_effect:
+    prompt: 'an adjustable desk lamp with a round metal shade shining down onto a pair of round reading glasses lying below it'
+    seed: 17
+    path: deck_images/img_452650e3774e.png
+  bullets:
+  - 'Ein Ordner mit SKILL.md: Name, Beschreibung, Anleitung'
+  - 'Im Kontext steht anfangs nur die Beschreibung'
+  - 'Das Modell entscheidet, wann es nachliest'
+  - 'Offener Standard, läuft in OpenCode und pi'
+  - 'Fremde Skills vorher lesen, sie können Code ausführen'
+  sources:
+  - 'Agent Skills Specification': https://agentskills.io/specification
+  - 'OpenCode Skills': https://opencode.ai/docs/skills/
+  - 'pi Skills': https://pi.dev/docs/latest/skills
+  - 'Snyk ToxicSkills, 02/2026': https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+  speaker: 'Christian'
+  notes: |
+    ~2 min. Ein Skill ist ein Ordner mit SKILL.md, darin Name, Beschreibung, Anleitung,
+    optional Skripte. Im Kontext steht anfangs nur die Beschreibung, etwa 50 bis 100 Token; den
+    Rest liest das Modell erst, wenn es ihn braucht. Offener Standard (agentskills.io), der Pfad
+    .agents/skills/ funktioniert in OpenCode und pi.
+    Beispiel für Forschende: citation-management (K-Dense-AI/scientific-agent-skills) prüft
+    Zitate über OpenAlex und PubMed und erzeugt BibTeX.
+
+    Die Frage aus dem letzten Kurs, "Was ist agentisch an OpenCode mit geladenem Skill?":
+    Agentisch ist nicht der Skill, sondern die Entscheidung des Modells, ihn zu laden. Wer
+    /skill:name tippt, ist selbst der Trigger und nimmt dem Modell diese Entscheidung ab.
+
+    Vorsicht: Skills können Skripte enthalten. Snyk hat im Februar 2026 knapp 4.000 Skills
+    geprüft, 13,4 Prozent mit kritischen Problemen. Nur aus vertrauenswürdigen Quellen, und
+    vorher lesen.
+
+- layout: table
+  title: 'Wo wir Agenten heute schon begegnen'
+  bg_effect:
+    prompt: 'a small round smart speaker with a glowing ring of light standing on a side table'
+    path: deck_images/img_fa40815db3c4.png
+    seed: 17
+  headers: ['Wo', 'Beispiel', 'Der Agent entscheidet selbst']
+  rows:
+  - ['Recherche', 'Deep Research in Gemini, ChatGPT', 'welche Quelle er als Nächstes liest']
+  - ['Büro', 'Copilot Researcher in M365', 'was er in Mails und Dateien sucht']
+  - ['Browser', 'Claude in Chrome, Comet', 'wohin er klickt, was er einträgt']
+  - ['Zuhause', 'Alexa+', 'welchen Dienst er für eine Buchung nutzt']
+  - ['Forschung', 'Elicit, Google Co-Scientist', 'wie er eine Forschungsfrage zerlegt']
+  - ['Software', 'Claude Code, Codex, Copilot', 'welche Datei er ändert, was er testet']
+  sources:
+  - 'Gemini Deep Research': https://gemini.google/de/overview/deep-research/
+  - 'Microsoft 365 Copilot Researcher': https://learn.microsoft.com/en-us/copilot/microsoft-365/faq-researcher
+  - 'Claude in Chrome': https://claude.com/blog/claude-in-chrome-generally-available
+  - 'Alexa+ in Deutschland': https://www.teltarif.de/en/alexaplus-deutschland-amazon/news/103392.html
+  - 'Elicit Research Agent': https://elicit.com/blog/introducing-research-agent-workflows
+  - 'Google Co-Scientist': https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/
+  speaker: 'Christian'
+  notes: |
+    ~2 min. Die Definition von der Begriffe-Folie an Bekanntem festmachen. Die rechte Spalte ist
+    jeweils der Teil, der es zum Agenten macht: Das Modell wählt den nächsten Schritt.
+
+    Einstieg per Handzeichen: Wer hat schon eines davon genutzt? Greift die Selbsteinschätzung
+    aus dem Blitzlicht auf.
+
+    Abgrenzung: Nicht alles, was "Agent" heißt, ist einer. Viele Hotline-Bots, auch Telekom
+    Voice AI Notes, sind feste Abläufe, also Workflows. Gartner nennt das "Agent Washing": Von
+    Tausenden Anbietern gelten nur rund 130 als echt agentisch.
+    Randnotiz: Die Handy-Agenten (Gemini Intelligence, Siri AI auf dem iPhone) sind in der EU
+    derzeit gesperrt.
+    Die meisten denken bei "Agent" an einen Assistenten, der in Mail, Browser oder Shop etwas
+    erledigt. Unsere Definition deckt das ab, sie ist nur allgemeiner.
+
+    Überleitung: Heute arbeiten wir mit der letzten Zeile. Nicht, weil sie die wichtigste ist,
+    sondern weil dort jeder Schritt sichtbar ist und sich prüfen lässt.
+
+- layout: fullbleed
+  title: 'Beispiel: Claude Cowork'
+  image:
+    path: deck_images/screenshot_claude_cowork.png
+    purpose: 'Zeigt einen echten Agentenlauf in Claude Cowork: ausgeführte Befehle, gelesene Dateien, Fortschritt und Kontext.'
+  speaker: 'Christian'
+  notes: |
+    ~1 min. Das ist das Bild, das viele mitbringen, wenn sie Agent hören: ein Assistent, der am
+    eigenen Rechner arbeitet. Hier prüft Claude Cowork gerade die Quellen genau dieses Decks.
+    Der Auftrag ist ein Satz, der Agent wählt die Schritte selbst: Befehle, Dateien lesen,
+    Fortschritt melden.
+    Ein Beispiel im Raum: diese Präsentation. Folien und Bilder hat ein Agent auf Basis unserer
+    rohen Inhalte generiert.
+
 - layout: section
   number: '2'
-  title: 'Spezifikation, Vertrag, Tests'
+  title: 'Wie man einen Agenten beauftragt'
   bg_effect:
     path: deck_images/img_688fddd86552.png
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Abschnittstrenner, etwa zwei Sätze. Ab hier geht es nicht mehr um Werkzeuge,
-    sondern um die Arbeitsweise. Dieselbe Struktur taucht heute noch dreimal auf: im
-    Research-Repository, in OpenSpec und in der eigenen Übung.
-    In den Werkzeugen heißen die Ebenen englisch Spec, Contract und Test.
+    Abschnittstrenner, etwa zwei Sätze. Ab hier geht es nicht mehr um Werkzeuge,
+    sondern darum, wie man einem Agenten einen Auftrag gibt, den er erledigen kann. Die
+    Struktur, die dabei entsteht, taucht heute noch dreimal auf: im Research-Repository, in
+    OpenSpec und in der eigenen Übung.
 
 - layout: content_image
   title: 'Fragen oder Beauftragen'
@@ -244,9 +428,10 @@ slides:
   image:
     path: deck_diagrams/dia_brief.png
     purpose: 'Zeigt, dass nur das Beauftragen eine Prüfung mit Abbruchbedingung hat, die bei einem Fehlschlag zurück in die Umsetzung führt.'
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Das konkrete Beispiel vor der Pyramide. Die beiden Bahnen nacheinander
-    durchgehen, nicht gegeneinander.
+    Der Einstieg: zwei Arten, einem Agenten etwas zu geben. Die beiden Bahnen
+    nacheinander durchgehen, nicht gegeneinander.
 
     (1) Linke Bahn: "Fassen Sie diese Papers zusammen." Es kommt ein Text, er liest sich gut,
         Sie entscheiden nach Eindruck. Dann ist die Bahn zu Ende. Zusammenfassen ist dabei das
@@ -258,34 +443,45 @@ slides:
         sie auch fertig werden. Merksatz: Wer nicht sagen kann, woran es scheitern würde, hat
         nicht beauftragt, sondern gehofft.
     (4) Bezug zum Raum: Die Literaturrecherche aus dem Blitzlicht ist genau dieser Fall.
+    (5) Überleitung: Was muss ein solcher Auftrag enthalten, damit er prüfbar ist? Das zeigt die
+        nächste Folie.
 
 - layout: content_image
-  title: 'Die Spezifikation regiert, der Test entscheidet'
+  title: 'Ein prüfbarer Auftrag hat drei Ebenen'
   bullets:
   - 'Jede Ebene ist eine Datei, kein Gespräch'
   - 'Der Vertrag ist eine Spezifikation für eine Änderung'
   - 'Der Vertrag nennt das Kriterium, der Test wendet es an'
-  - 'Was die Tests zeigen, ändert die Spezifikation'
   image:
     path: deck_diagrams/dia_levels.png
-    purpose: 'Zeigt die drei Ebenen in der Reihenfolge ihrer Autorität und den Rückweg, auf dem die Tests die Spezifikation wachsen lassen.'
+    purpose: 'Zeigt die drei Ebenen als Pyramide in der Reihenfolge ihrer Autorität und den Rückweg, auf dem eine beim Prüfen gefundene Lücke zu einem neuen Vertrag wird.'
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Die Pyramide als roter Faden des Vormittags. Spezifikation oben als Quelle der
-    Wahrheit, Vertrag in der Mitte als Auftrag an den Agenten, Tests unten als objektive
-    Entscheidung. Wir kommen auf dieses Bild immer wieder zurück.
+    Die Pyramide ist der Auftrag von der vorigen Folie, zu Ende gedacht. Sie ist der
+    rote Faden des Vormittags. Spezifikation oben als Quelle der Wahrheit, Vertrag in der Mitte
+    als Auftrag an den Agenten, Tests unten als objektive Entscheidung. Wir kommen auf dieses
+    Bild immer wieder zurück.
     Rückverweis auf den Chip: Genau diese drei Ebenen lagen dort vor.
     Der gestrichelte Pfeil ist der eigentliche Punkt: Die Spezifikation ist kein Dokument, das
-    am Anfang geschrieben und dann abgelegt wird.
+    am Anfang geschrieben und dann abgelegt wird. Ein roter Test ändert den Code, nie die
+    Spezifikation. Was beim Prüfen als Lücke sichtbar wird, wird ein neuer Vertrag, und erst mit
+    ihm wächst die Spezifikation.
+    In den Werkzeugen heißen die Ebenen englisch Spec, Contract und Test.
 
 - layout: table
   title: 'Jede der drei Ebenen legt etwas anderes fest'
+  bg_effect:
+    prompt: 'three flat stones of decreasing size stacked into a small cairn'
+    path: deck_images/img_9ba9c29a9502.png
+    seed: 21
   headers: ['Ebene', 'Legt fest', 'Im Repository']
   rows:
   - ['Spezifikation', 'was gelten soll, prüfbar formuliert', 'specs/, AGENTS.md']
   - ['Vertrag', 'was sich jetzt ändert, und woran man es misst', 'ein Change mit Vorschlag und Aufgaben']
   - ['Tests', 'ob die Anforderung erfüllt ist', 'Testsuite, Validierung, CI']
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Diese Folie erklärt das Bild Ebene für Ebene.
+    Diese Folie erklärt das Bild Ebene für Ebene.
 
     (1) Spezifikation: nicht "das Gerät soll sicher sein", sondern eine Anforderung, deren
         Erfüllung sich prüfen lässt. Für dieses Publikum: eine Hypothese, die so formuliert ist,
@@ -305,9 +501,12 @@ slides:
 - layout: statement
   title: 'Erledigt ist eine Aufgabe erst, wenn die Prüfung bestanden ist.'
   bg_effect:
-    path: deck_images/img_4d92aa5ddea0.png
+    prompt: 'a traffic light on a slender pole with its green lamp lit'
+    seed: 1007
+    path: deck_images/img_28e81bff8250.png
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Stehen lassen und bewusst betonen. Dieser Satz kommt in Übung 2 zurück und ist
+    Stehen lassen und bewusst betonen. Dieser Satz kommt in Übung 2 zurück und ist
     dort das Bewertungskriterium.
 
 - layout: section
@@ -315,8 +514,9 @@ slides:
   title: 'Foundation Models: aktuelle Entwicklungen'
   bg_effect:
     path: deck_images/img_5aa49b19580b.png
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN, Block 2, 09:30 bis 09:50, Lead. Tobias ergänzt die Tooling- und
+    Block 2, 09:30 bis 09:50, Lead. Tobias ergänzt die Tooling- und
     Souveränitäts-Sicht.
 
 - layout: content
@@ -330,12 +530,13 @@ slides:
   - 'Lokal und souverän betreiben ist eine echte Option'
   bg_effect:
     path: deck_images/img_ca26c716ea80.png
+  speaker: 'Christian · Tobias'
   notes: |
-    CHRISTIAN. Je Punkt etwa eine Minute.
+    Je Punkt etwa eine Minute.
     (1) Rechenzeit skalieren statt Parameter: o-Serie, DeepSeek-R1, Claude-Thinking. Planen,
         verifizieren, korrigieren.
     (2) 200K bis über 1M Token (Gemini 3.1 Pro): ganze Codebases und Specs im Kontext.
-    (3) Das Model Context Protocol entkoppelt Modell und Werkzeug.
+    (3) MCP, die Capabilities von der Aufbau-Folie: Ein Standard entkoppelt Modell und Werkzeug.
     (4) Strukturierte Ausgaben, parallele Werkzeugaufrufe, Multi-Agent.
     (5) Qwen 3.5/3.6 (MoE bis 397B), Qwen3.8 27B, GLM 4.7/5.3, Devstral 2, DeepSeek V4, GPT-OSS
         120B, Gemma 4 31B. Kleine Modelle sind heute eher die 30B-Klasse. Für viele Aufgaben
@@ -351,6 +552,10 @@ slides:
 
 - layout: table
   title: 'Das passende Modell hängt von der Aufgabe ab'
+  bg_effect:
+    prompt: 'an old brass balance with two pans hanging from a beam, a small stone resting in one pan'
+    path: deck_images/img_8560786febfc.png
+    seed: 25
   headers: ['Aufgabe', 'Derzeit stark', 'Anmerkung']
   rows:
   - ['Freie Texte, Übersetzung', 'GPT-6', 'derzeit führend bei Prosa']
@@ -361,9 +566,11 @@ slides:
   - ['Sensible Forschungsdaten', 'lokal: Ollama, vLLM', 'die Daten verlassen das Haus nicht']
   - ['Viele gleichartige Fälle', 'DeepSeek V4 Flash', 'Geschwindigkeit und Kosten entscheiden']
   sources:
-  - 'Eigene Erfassung, Stand 09/2026'
+  - text: 'Eigene Erfassung, Stand 09/2026'
+    footnote: true
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Beantwortet die Frage, die im Raum tatsächlich gestellt wird: Welches Modell
+    Beantwortet die Frage, die im Raum tatsächlich gestellt wird: Welches Modell
     soll ich nehmen? Keine Rangliste, sondern ein Kriterium, das auch nächstes Jahr trägt: nach
     Aufgabe wählen, nicht nach Ruf des Anbieters.
 
@@ -390,12 +597,16 @@ slides:
   - 'Jeden Schritt darin wählt weiterhin das Modell'
   - 'Günstiges Modell im guten Harness vor teurem im schlechten'
   image:
-    path: deck_images/img_2f5be1705a43.png
+    prompt: 'an apple tree whose red apples hang only high up in its crown, on the left a large robot stands on the grass stretching both arms up, its hands far below the lowest apple, on the right a small robot stands on top of a tall wooden stepladder and picks an apple from the top of the crown, both robots with plain smooth bodies'
+    seed: 1007
     purpose: 'Zeigt, dass die Ausrüstung und nicht die Größe entscheidet, was erreichbar ist: Der kleine Roboter auf der Leiter pflückt den Apfel, an den der große nicht herankommt.'
+    path: deck_images/img_5c1ab66c78ca.png
   sources:
-  - 'Eigene Beobachtung, kein kontrollierter Vergleich'
+  - text: 'Eigene Beobachtung, kein kontrollierter Vergleich'
+    footnote: true
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Angelpunkt des Vormittags und Übergabe an Tobias.
+    Angelpunkt des Vormittags und Übergabe an Tobias.
 
     (1) Einschränkung zuerst: Für eine einzelne Aufgabe prägt weiterhin das Modell allein das
         Ergebnis. Die Aussage gilt für agentisches Arbeiten, also mehrere Schritte,
@@ -407,8 +618,8 @@ slides:
     (3) Die Beobachtung nüchtern: ein Muster aus mehreren unabhängigen Versuchen, ohne Zahl.
     (4) Warum: Das Modell sieht nur, was die Umgebung zeigt, darf nur, was sie erlaubt, und läuft
         nur so lange, wie sie es laufen lässt.
-    (5) Entlastung: Niemand muss das teuerste Abonnement abschließen. Wer Spezifikationen und
-        Prüfungen in Ordnung bringt, kommt mit günstigen oder lokalen Modellen weit.
+    (5) Entlastung: Niemand muss das teuerste Abonnement abschließen. Wer seine Aufträge prüfbar
+        macht, kommt mit günstigen oder lokalen Modellen weit.
 
     Merksatz: Auch das beste Modell ist nur so gut wie sein Harness.
     Übergabe: Was das konkret bedeutet, zeigt Tobias jetzt am lebenden Objekt.
@@ -418,8 +629,9 @@ slides:
   title: 'Open-Source Toolbox: Harnesses als Steuerungsebene'
   bg_effect:
     path: deck_images/img_134bc248fe82.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS, Block 3, 09:50 bis 10:10, Lead. Christian ergänzt. Die Harnesses nach Einsatz
+    Block 3, 09:50 bis 10:10, Lead. Christian ergänzt. Die Harnesses nach Einsatz
     gegenüberstellen, kein Ranking.
 
 - layout: content_image
@@ -431,15 +643,19 @@ slides:
   image:
     path: deck_diagrams/dia_spectrum.png
     purpose: 'Zeigt die vier Stufen vom Chatfenster bis zur Pipeline und dass die Autonomie mit jeder Stufe wächst.'
+  speaker: 'Tobias'
   notes: |
-    TOBIAS (~2 min). Aus der JLU-Erfahrung: "Was ist agentisch an OpenCode mit geladenem
-    Skill?" Antwort: Der Skill allein ist es nicht; die Schleife aus Entscheiden und Handeln ist
-    es. Brücke zur Begriffe-Folie: Agent heißt, das Modell bestimmt die nächsten Schritte.
+    ~2 min. Brücke zur Begriffe-Folie: Agent heißt, das Modell bestimmt die nächsten
+    Schritte. Wie auf der Skill-Folie: Agentisch ist die Entscheidung, nicht der Skill.
     GUI-Punkt aufgreifen: Auch die OpenCode-GUI ist agentisch. Kriterium ist die Autonomie,
     nicht die Oberfläche.
 
 - layout: comparison
   title: 'Zwei offene Harnesses, der Einsatz entscheidet'
+  bg_effect:
+    prompt: 'a folded pocket knife with several tools fanned out beside a single plain screwdriver, both lying on a wooden workbench'
+    seed: 2030
+    path: deck_images/img_54f62c489aa1.png
   columns:
   - heading: 'OpenCode, der Allrounder'
     bullets:
@@ -451,16 +667,20 @@ slides:
     bullets:
     - 'Skills, Prompt-Templates, Packages'
     - '„Adapt pi, nicht umgekehrt“'
-    - 'Für kontrollierte, minimalistische Workflows'
+    - 'Für schlanke Setups mit voller Kontrolle'
   sources:
-  - 'Eigene Erfassung'
+  - text: 'Eigene Erfassung'
+    footnote: true
+  speaker: 'Tobias · Christian'
   notes: |
-    TOBIAS (~4 min, inkl. Live-Demo): derselbe Prompt in beiden, Ergebnis-Differenz zeigen.
+    ~4 min, inkl. Live-Demo: derselbe Prompt in beiden, Ergebnis-Differenz zeigen.
     "Gleiche Modelle, unterschiedliche Ergebnisse" wird bewiesen, nicht behauptet. Ein Harness
     ist die Steuerungsebene.
     Ergänzend: SAIA-Plugins bringen die GWDG-Chat-AI-Modelle nach pi, OpenCode und zot
     (Auto-Registrierung). Lokales Serving (Ollama, vLLM, llama.cpp) als Souveränitäts-Option.
-    Merksatz: Das Modell ist das Gehirn, die Workflows sind der Muskel.
+    Merksatz: Das Modell ist das Gehirn, das Harness gibt ihm Hände.
+    Ein Agent ruft gern andere Agenten auf: oh-my-opencode verteilt Teilaufgaben an benannte
+    Background-Agents, jeder mit eigenem Modell. Dasselbe Prinzip bringt pi mit pi-subagents.
     Glossar: LSP = Language Server, MCP = Model Context Protocol, AST-Grep = strukturelle
     Code-Suche.
 
@@ -474,6 +694,10 @@ slides:
 
 - layout: table
   title: 'pi bleibt klein, alles andere kommt als Package'
+  bg_effect:
+    prompt: 'a small backpack with several pouches clipped to its outside'
+    path: deck_images/img_f9406daa9505.png
+    seed: 30
   headers: ['Kategorie', 'Beispiele']
   rows:
   - ['Skills', 'superpowers, CVE-Scanner, AGENTS.md-Audit']
@@ -483,8 +707,9 @@ slides:
   - ['Absicherung', 'tool-repair, retry, permissions, secrets, rtk']
   sources:
   - '26 Packages, eigene Installation, Stand 09/2026': https://pi.dev/packages
+  speaker: 'Tobias'
   notes: |
-    TOBIAS (~90 s). Beleg für "Adapt pi, nicht umgekehrt": Der Kern bleibt minimal, die
+    ~90 s. Beleg für "Adapt pi, nicht umgekehrt": Der Kern bleibt minimal, die
     Fähigkeiten kommen als Packages. superpowers, rtk, ponytail und caveman sind die Token-Hebel,
     Zahlen dazu im Token-Block.
 
@@ -512,8 +737,9 @@ slides:
   title: 'Hands-On: Erste Schritte'
   bg_effect:
     path: deck_images/img_50a7acc73184.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS, Block 4, 10:20 bis 10:45, Lead; Christian unterstützt.
+    Block 4, 10:20 bis 10:45, Lead; Christian unterstützt.
     Ihr Thema X, direkt agentisch, ohne Spec. Das ist Teil 1 von 2; Teil 2 via Spec folgt nach
     dem Theorie-Block. Der Kontrast zwischen ohne und mit Spec trägt den Vormittag.
     Timing: Modes 2, Übung 1 15, AGENTS.md 3, Puffer 5.
@@ -527,24 +753,32 @@ slides:
   - 'Den Plan lesen ist der schnellste Weg zum Verständnis'
   bg_effect:
     path: deck_images/img_8ceb1f10ed13.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS (~2 min). JLU-Erfahrung: Den Plan-Mode kannte niemand, deshalb jetzt explizit.
+    ~2 min. JLU-Erfahrung: Den Plan-Mode kannte niemand, deshalb jetzt explizit.
     OpenCode: Mode per Tab wechseln; Claude Code hat dasselbe Konzept.
-    Brücke zur Pyramide: Der Plan ist die Spezifikation im Kleinen. Was ihm fehlt, ist das
-    Kriterium.
+    Brücke zur Pyramide: Im Plan-Mode schreibt der Agent sich den Auftrag selbst. Was dem Plan
+    meist fehlt, ist das Kriterium.
     Für Ungeduldige: Build-Mode sofort, aber den Plan vorher lesen.
 
 - layout: table
   title: 'Übung 1: Ihr Thema X, direkt an den Agenten, fünfzehn Minuten'
+  bg_effect:
+    prompt: 'a long handled butterfly net with a fine mesh leaning against a tree stump'
+    path: deck_images/img_a60e7375f265.png
+    seed: 34
   headers: ['Der Agent übernimmt', 'Heißt konkret']
   rows:
   - ['Entdecken', 'neue Veröffentlichungen zu Thema X aufspüren']
   - ['Einordnen', 'Funde den Themenfeldern zuordnen']
   - ['Prüfen', 'Quellen verifizieren, Erfindungen aussortieren']
   - ['Berichten', 'Überblick, Trends, Kurz-Briefings']
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Etwa 15 Minuten im Agenten (OpenCode oder pi mit SAIA): Die Teilnehmenden stellen
-    ihr Thema X aus dem Blitzlicht, ohne Spec, als reinen Prompt. Was kommt dabei heraus?
+    Etwa 15 Minuten im Agenten (OpenCode oder pi mit SAIA): Die Teilnehmenden geben ihr
+    Thema X aus dem Blitzlicht ohne Spec in den Plan-Mode. Der Agent plant selbst, das ist
+    bereits agentisch. Erst den Plan lesen: Steht darin, woran man erkennt, dass er fertig ist?
+    Dann bauen lassen. Was kommt dabei heraus?
     Kein Tool-Zwang: Wem das Harness nicht startet, arbeitet mit der Nachbarin oder dem
     Nachbarn. Timer sichtbar machen. Beim Herumgehen: Starthilfe beim Harness-Start.
     Am Ende einsammeln: Quellen geprüft? Zitierbar? Ist der Lauf wiederholbar?
@@ -555,8 +789,13 @@ slides:
 
 - layout: statement
   title: 'Sie entscheiden, was relevant ist. Der Agent übernimmt die Fleißarbeit.'
+  bg_effect:
+    prompt: 'a round metal gold panning pan filled with wet gravel, a few shiny gold nuggets resting among the stones'
+    seed: 35
+    path: deck_images/img_b0385c402d39.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Das ist der eigentliche Wert: Der Agent übernimmt die Pflege, der Mensch bleibt für
+    Das ist der eigentliche Wert: Der Agent übernimmt die Pflege, der Mensch bleibt für
     die Qualität verantwortlich.
 
 - layout: content
@@ -568,8 +807,10 @@ slides:
   - 'Geführt per Datei, nicht per Prompt'
   bg_effect:
     path: deck_images/img_840d042c1f8d.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Die Regeln liegen im Repo, nicht in der Sitzung. Kein Wiedereinlernen pro Session,
+    Die Instruktionen von der Aufbau-Folie, jetzt als echte Datei. Die Regeln
+    liegen im Repo, nicht in der Sitzung. Kein Wiedereinlernen pro Session,
     die Pipeline deckt Verstöße objektiv auf. Einordnung in die Pyramide: AGENTS.md gehört zur
     Spezifikations-Ebene, sie gilt dauerhaft.
     Live-Auszug aus der Datei:
@@ -581,24 +822,68 @@ slides:
 
 - layout: section
   number: '6'
-  title: 'Spezifikation und Token'
+  title: 'Vom Auftrag zur Spezifikation, und was sie an Token spart'
   bg_effect:
-    path: deck_images/img_d2dcdd7afb08.png
+    prompt: 'a sealed envelope with a red wax seal lying on a wooden desk'
+    seed: 7
+    path: deck_images/img_11926e9eb76f.png
+  speaker: 'Christian · Tobias'
   notes: |
-    CHRISTIAN und TOBIAS, Block 5, 10:45 bis 11:00. Christian den Spezifikationsteil, Tobias
+    Block 5, 10:45 bis 11:00. Christian den Spezifikationsteil, Tobias
     den Token-Teil. Das Showcase ist kürzbar.
+    Hier fällt der Begriff. Wer Aufträge so schreibt, dass sie prüfbar sind und als Datei
+    bleiben, schreibt Spezifikationen. Die Methode dahinter heißt Spec-Driven Development (SDD).
+    Wir haben sie nicht als Methode eingeführt, sondern sind bei ihr angekommen.
     Verbindung beider Hälften benennen: Eine präzise Spezifikation ist selbst die wirksamste
     Einsparung. Wer den Auftrag genau beschreibt, muss ihn nicht dreimal erklären.
 
+- layout: content
+  title: 'In diesem Kapitel wird aus dem Auftrag eine Datei'
+  bg_effect:
+    prompt: 'a lighthouse standing on a rocky shore, its lamp shining'
+    path: deck_images/img_eda7374eca78.png
+    seed: 41
+  bullets:
+  - 'Eine Vorlage: ein fertiger Change zum Nachbauen'
+  - 'Wo Spezifikation, Vertrag und Archiv liegen'
+  - 'Spec-Kit oder OpenSpec: warum wir OpenSpec nehmen'
+  - 'Warum eine präzise Spezifikation Token spart'
+  speaker: 'Christian'
+  notes: |
+    ~1 min. Überblick, bevor es konkret wird. Der Plan aus Hands-On 1 lebte nur in der
+    Sitzung; jetzt wird der Auftrag zur Datei. Erst die Vorlage, damit alle wissen, wohin es
+    geht, dann wo die Teile liegen, dann das Werkzeug, zum Schluss Tobias zu den Token.
+
+- layout: content
+  title: 'Ein fertiger Change steht als Vorlage bereit'
+  bullets:
+  - 'Repo ai-literacy-research: über 9.600 Papers, 20 Kategorien'
+  - 'openspec/specs/: Corpus, Discovery, Analyse'
+  - 'Change add-research-gap-analysis: proposal, design, specs, tasks'
+  - 'Gap-Score: 0,6 × Dünne + 0,4 × Momentum + Floor-Bonus'
+  bg_effect:
+    path: deck_images/img_04d2cc16f32d.png
+  speaker: 'Tobias'
+  notes: |
+    Erst das Ziel: Der fertige Change als Referenz für das zweite Hands-On. Die Teilnehmenden sehen
+    eine echte, vollständige Spec-, Change- und Tasks-Struktur und dürfen sie nachbauen.
+    Der Gap-Score rankt Bereiche mit wenig Literatur und starkem Wachstum.
+    Archivpfad: openspec/changes/archive/2026-08-23-add-research-gap-analysis/.
+
 - layout: table
   title: 'Im Projekt liegen die drei Ebenen in drei Ordnern'
+  bg_effect:
+    prompt: 'a small wooden chest with three drawers and plain round brass knobs'
+    path: deck_images/img_8981e5de6eb9.png
+    seed: 38
   headers: ['Ort', 'Was dort liegt', 'Rolle']
   rows:
   - ['openspec/specs/', 'das dauerhaft gültige Verhalten', 'Spezifikation']
   - ['openspec/changes/', 'die eine anstehende Änderung', 'Vertrag, genau das bekommt der Agent']
   - ['openspec/archive/', 'alle abgeschlossenen Änderungen', 'Begründung, warum so entschieden']
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Die Folie wiederholt nicht die Pyramide, sondern zeigt, wo die Ebenen als Dateien
+    Die Folie wiederholt nicht die Pyramide, sondern zeigt, wo die Ebenen als Dateien
     liegen. Der Zugewinn ist die dritte Zeile.
     (1) Spezifikation: gilt dauerhaft, wird nicht pro Sitzung neu verhandelt.
     (2) Vertrag: nur die Differenz. Nicht "baue mir ein Analysewerkzeug", sondern "ergänze diese
@@ -610,6 +895,10 @@ slides:
 
 - layout: table
   title: 'Spec-Kit baut Neues, OpenSpec ändert Bestehendes'
+  bg_effect:
+    prompt: 'a mason trowel resting on top of a half built brick wall'
+    path: deck_images/img_b4fa4bf188c4.png
+    seed: 39
   headers: ['', 'Spec-Kit', 'OpenSpec']
   rows:
   - ['Grundidee', 'was gebaut werden soll', 'wie sich Bestehendes ändert']
@@ -620,9 +909,11 @@ slides:
   sources:
   - 'GitHub Spec Kit': https://github.com/github/spec-kit
   - 'Fission AI OpenSpec': https://github.com/Fission-AI/OpenSpec
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Beantwortet vorab, warum ausgerechnet OpenSpec. Kurz halten, es geht um die
-    Denkweise.
+    Die Konsequenz zu Ende gedacht: Wer Aufträge dauerhaft als Dateien führt,
+    braucht ein Werkzeug dafür. Zwei verbreitete Ansätze, und warum wir heute OpenSpec nehmen.
+    Kurz halten, es geht um die Denkweise.
     (1) Spec-Kit denkt in Vorhaben, OpenSpec in Änderungen.
     (2) Spec-Kit: pro Funktion ein Satz Dokumente. Nach fünfzig Vorhaben liegen fünfzig
         Momentaufnahmen vor, und welche den heutigen Stand beschreibt, ist schwer zu sagen.
@@ -635,21 +926,6 @@ slides:
     Werturteil.
 
 - layout: content
-  title: 'Ein fertiger Change steht als Vorlage bereit'
-  bullets:
-  - 'Repo ai-literacy-research: über 9.600 Papers, 20 Kategorien'
-  - 'openspec/specs/: Corpus, Discovery, Analyse'
-  - 'Change add-research-gap-analysis: proposal, design, specs, tasks'
-  - 'Gap-Score: 0,6 × Dünne + 0,4 × Momentum + Floor-Bonus'
-  bg_effect:
-    path: deck_images/img_04d2cc16f32d.png
-  notes: |
-    TOBIAS. Der fertige Change als Referenz für das zweite Hands-On. Die Teilnehmenden sehen
-    eine echte, vollständige Spec-, Change- und Tasks-Struktur und dürfen sie nachbauen.
-    Der Gap-Score rankt Bereiche mit wenig Literatur und starkem Wachstum.
-    Archivpfad: openspec/changes/archive/2026-08-23-add-research-gap-analysis/.
-
-- layout: content
   title: 'Drei- bis fünfmal weniger Token, bei gleicher Qualität'
   bullets:
   - 'Routing: das richtige Modell pro Aufgabe'
@@ -658,11 +934,13 @@ slides:
   - 'Skills und Specs schreiben statt jedes Mal erklären'
   - 'Wissen speichern, nicht Prompt-Stücke'
   sources:
-  - 'Eigene Messung, kein kontrollierter Vergleich'
+  - text: 'Eigene Messung, kein kontrollierter Vergleich'
+    footnote: true
   bg_effect:
     path: deck_images/img_19722dab0474.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS, etwa 7 min. 4 min Routing, live: dieselbe Aufgabe über zwei SAIA-Modelle,
+    Etwa 7 min. 4 min Routing, live: dieselbe Aufgabe über zwei SAIA-Modelle,
     qwen3-coder-next für Code, glm-4.7 für agentische Aufgaben, deepseek-v4-flash als
     Budget-Wahl. oh-my-opencode: benannte Agents mit einem Modell je Kategorie. LiteLLM-Gateway:
     ein Endpunkt, viele Modelle.
@@ -678,8 +956,9 @@ slides:
   title: 'Hands-On: Mit Spec'
   bg_effect:
     path: deck_images/img_79ffd161c69a.png
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN, Block 6, 11:00 bis 11:25; Tobias unterstützt am Platz.
+    Block 6, 11:00 bis 11:25; Tobias unterstützt am Platz.
     Ihr Thema X, via Spec auf das Demo-Repo. Von einem Satz zu einer überprüften Änderung; die
     Treffer aus Übung 1 werden zum Corpus.
     Ablauf: skeleton-research forken, Thema X hinein, Pipeline, dann der OpenSpec-Change
@@ -697,9 +976,11 @@ slides:
   - 'Lebendig statt Momentaufnahme: CI prüft wöchentlich'
   bg_effect:
     path: deck_images/img_02555f54ec75.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS (~3 min). Den Kontrast zu Übung 1 explizit machen: dieselbe Frage, andere Methodik,
-    aus dem Sammel-Haufen wird eine geprüfte Struktur.
+    ~3 min. Den Kontrast zu Übung 1 explizit machen: dieselbe Frage, andere Methodik,
+    aus dem Sammel-Haufen wird eine geprüfte Struktur. In Übung 1 hat der Agent den Plan selbst
+    geschrieben, jetzt schreiben Sie das Kriterium dazu.
     Live zeigen: Corpus = papers.yaml (Source of Truth), Steuerung = config/taxonomy.yaml,
     wöchentlicher Dienst = CI nach GitHub Pages.
     Start: git clone https://github.com/tobias-weiss-ai-xr/skeleton-research.git my-research
@@ -715,8 +996,9 @@ slides:
   image:
     path: deck_diagrams/dia_pipeline.png
     purpose: 'Zeigt die vier Stufen und dass die Prüfung das Tor ist: Nur was sie besteht, geht weiter, der Rest geht zurück zum Sammeln.'
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Der Unix-Geist wird durch die Struktur gezeigt, nicht benannt.
+    Der Unix-Geist wird durch die Struktur gezeigt, nicht benannt.
     Mapping für die Live-Demo: Sammeln = papers.yaml plus Discovery (arXiv, OpenAlex, dblp,
     Crossref, EUPMC); Prüfen = validate, exit 0 oder rot; Erzeugen = README, Statistik,
     Reports; Veröffentlichen = CI nach GitHub Pages.
@@ -734,8 +1016,9 @@ slides:
   - 'Veröffentlichen: das Ergebnis geht online'
   bg_effect:
     path: deck_images/img_590182da875b.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS, live zeigen.
+    Live zeigen.
     (1) Fork oder Klon von skeleton-research.
     (2) config/taxonomy.yaml: nur categories anpassen (id, name, description).
     (3) Start-Papers in papers.yaml, echte URLs. Die Prüfung entscheidet, was überlebt.
@@ -746,14 +1029,19 @@ slides:
 
 - layout: content
   title: 'Übung 2: eine überprüfbare Anforderung für Ihr Thema'
+  bg_effect:
+    prompt: 'a spirit level lying on a wooden plank, its bubble centred'
+    path: deck_images/img_197c93489a0a.png
+    seed: 46
   bullets:
   - 'Klein halten: eine Auswertung, eine Kennzahl'
   - 'Fertig heißt: die Prüfung läuft durch'
   - 'openspec new change thema-x'
   - 'openspec validate --changes'
   - 'Ohne OpenSpec: dieselbe Struktur als Markdown'
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Der häufigste Zeitfresser ist die Installation, nicht die Aufgabe.
+    Der häufigste Zeitfresser ist die Installation, nicht die Aufgabe.
     Installation, falls nötig: npm install -g openspec
     (1) Vor dem Start kurz abfragen, bei wem openspec läuft. Wer es nicht installiert bekommt,
         arbeitet sofort mit der Markdown-Variante weiter.
@@ -766,13 +1054,18 @@ slides:
 
 - layout: table
   title: 'Schon das Mindestziel zeigt, dass die Methode sitzt'
+  bg_effect:
+    prompt: 'a young sapling growing in a clay pot'
+    path: deck_images/img_81ae17644c53.png
+    seed: 47
   headers: ['Ebene', 'Mindestziel', 'Vollständig']
   rows:
   - ['Spezifikation', 'ein Satz, der widerlegt werden kann', 'Szenario: Ausgangslage, Eingriff, Ergebnis']
   - ['Vertrag', 'eine Aufgabenliste mit drei Punkten', 'Vorschlag, Entwurf, Spezifikation, Aufgaben']
   - ['Tests', 'eine Prüfung, die fehlschlagen könnte', 'läuft automatisch und besteht']
+  speaker: 'Christian'
   notes: |
-    CHRISTIAN. Bewusst zweistufig. In fünfundzwanzig Minuten erreicht ein Teil des Raums die
+    Bewusst zweistufig. In fünfundzwanzig Minuten erreicht ein Teil des Raums die
     rechte Spalte nicht, und das ist kein Scheitern.
     (1) Mindestziel vor dem Arbeiten ansagen. Das nimmt Druck.
     (2) Die linke Spalte der ersten Zeile ist der eigentliche Lerninhalt: ein Satz, der
@@ -800,33 +1093,41 @@ slides:
   title: 'Outcomes: Ihre Ergebnisse'
   bg_effect:
     path: deck_images/img_f13615321535.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS, Block 7, 11:30 bis 11:45, Moderation. 3 bis 4 Freiwillige präsentieren je 3 bis 4
+    Block 7, 11:30 bis 11:45, Moderation. 3 bis 4 Freiwillige präsentieren je 3 bis 4
     Minuten. Mit der stärksten Demo starten. Bei 3 Minuten Warnsignal.
 
 - layout: content
   title: 'Gezeigt wird ein eigenes Repo mit eigenem Change'
+  bg_effect:
+    prompt: 'a vintage chrome microphone on a slender stand'
+    path: deck_images/img_2d4ee8ff3b97.png
+    seed: 50
   bullets:
   - 'Drei bis vier Freiwillige, je drei bis vier Minuten'
   - 'Pipeline grün, Change validiert, live oder als Screenshot'
   - 'Bewertet an der Pyramide: Spec, Change, grüner Check'
   - 'Das Publikum reviewt mit'
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Die Kriterien wie in Übung 2. Frage an das Publikum: Was würde die Pyramide an
+    Die Kriterien wie in Übung 2. Frage an das Publikum: Was würde die Pyramide an
     diesem Projekt bemängeln?
     Wünsche aus dem Blitzlicht aufgreifen: Hat das jemand von Ihnen angestoßen?
 
 - layout: section
   number: '9'
-  title: 'Q&A, Diskussion, Wrap Up'
+  title: 'Ihre Anwendungsfälle, Q&A, Diskussion'
   bg_effect:
     prompt: 'a large brass hand bell with a turned wooden handle standing upright on a wooden table'
     path: deck_images/img_f26a5c6319f1.png
     seed: 48
+  speaker: 'Tobias'
   notes: |
-    TOBIAS, Block 8, 11:45 bis 12:00, Moderation. Offene Fragen, Diskussion, die Wünsche aus dem
+    Block 8, 11:45 bis 12:00, Moderation. Offene Fragen, Diskussion, die Wünsche aus dem
     Blitzlicht Revue passieren lassen.
     Diskussionsimpulse:
+    Wo begegnen Ihnen schon Agenten, und wofür würden Sie einen beauftragen?
     Wo liegt das größte Potenzial, und wo die größte Skepsis?
     Governance-Regeln für agentische Systeme?
     Eigene Modelle auf lokaler Hardware?
@@ -835,23 +1136,27 @@ slides:
 - layout: content
   title: 'So übertragen Sie das Muster auf eigene Projekte'
   bullets:
-  - 'Klein starten: eine Spec für ein vorhandenes Modul'
-  - 'Erster Change mit drei Tasks, den Agent umsetzen lassen'
+  - 'Klein starten: eine wiederkehrende Aufgabe, ein Prüfkriterium'
+  - 'Den Auftrag als Datei: Spec, erster Change mit drei Tasks'
   - 'Tests und CI als Pflicht, iterieren bis grün'
-  - 'Wissen persistieren, ab der ersten Sitzung'
+  - 'Instruktionen und Skills anlegen statt jedes Mal erklären'
   - 'Erkenntnisse aus dem Betrieb werden neue Changes'
   bg_effect:
     path: deck_images/img_1383728787cd.png
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Jeder Block des Workshops folgte derselben Pyramide, auch OpenSpec. Jetzt auf das
-    eigene Projekt übertragen.
-    Given/When/Then für die erste Spec. Delta-Specs für den ersten Change. pi-memory oder ein
-    Knowledge Graph statt Prompt-Stücken. Der Loop wird institutionalisiert: Die Spezifikation
-    wächst mit dem Betrieb.
-    Die Pyramide ist überall: papers.yaml = Spezifikation, Pipeline = Vertrag, CI = Test.
+    Der Weg des Vormittags, auf das eigene Projekt übertragen: erst ein prüfbarer Auftrag, dann
+    die Datei, dann die Prüfung.
+    Given/When/Then für die erste Spec. Delta-Specs für den ersten Change. Zu Instruktionen und
+    Skills: pi-memory oder ein Knowledge Graph statt Prompt-Stücken. Der Loop wird
+    institutionalisiert: Die Spezifikation wächst mit dem Betrieb.
 
 - layout: table
   title: 'Die Werkzeuge des Vormittags zum Nachinstallieren'
+  bg_effect:
+    prompt: 'a sturdy canvas tool bag with leather handles, a few tools sticking out of it'
+    path: deck_images/img_628b44257ca0.png
+    seed: 53
   headers: ['Werkzeug', 'Adresse']
   rows:
   - ['OpenCode', 'github.com/sst/opencode']
@@ -869,12 +1174,17 @@ slides:
   - 'pi-saia-plugin': https://codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin
   - 'opencode-saia-plugin': https://github.com/tobias-weiss-ai-xr/opencode-saia-plugin
   - 'oh-my-opencode': https://github.com/code-yeongyu/oh-my-opencode
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. Links auch im Handout und auf der Quellenfolie. zot hat ebenfalls ein SAIA-Plugin
+    Links auch im Handout und auf der Quellenfolie. zot hat ebenfalls ein SAIA-Plugin
     (zot-saia-plugin).
 
 - layout: table
   title: 'Repositories und Skills zum Weiterarbeiten'
+  bg_effect:
+    prompt: 'a lit oil lantern hanging from an iron hook'
+    path: deck_images/img_490112f91adb.png
+    seed: 54
   headers: ['Name', 'Adresse']
   rows:
   - ['skeleton-research', 'github.com/tobias-weiss-ai-xr/skeleton-research']
@@ -890,8 +1200,9 @@ slides:
   - 'rtk': https://github.com/rtk-ai/rtk
   - 'ponytail': https://github.com/DietrichGebert/ponytail
   - 'caveman': https://github.com/JuliusBrussee/caveman
+  speaker: 'Tobias'
   notes: |
-    TOBIAS. skeleton-research ist das Demo-Repo aus dem zweiten Hands-On, ai-literacy-research
+    skeleton-research ist das Demo-Repo aus dem zweiten Hands-On, ai-literacy-research
     das Showcase mit dem fertigen Change.
 
 - layout: statement

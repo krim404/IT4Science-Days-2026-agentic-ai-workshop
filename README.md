@@ -8,7 +8,7 @@
 
 > **⚠️ Migrated from Codeberg → GitHub**: This repository lives on [GitHub](https://github.com/tobias-weiss-ai-xr/IT4Science-Days-2026-agentic-ai-workshop). A Codeberg mirror is kept in sync manually: [graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop](https://codeberg.org/graphwiz-ai/IT4Science-Days-2026-agentic-ai-workshop) (Branch `master`).
 >
-> **Diese README ist die einzige Quelle der Wahrheit für den Ablauf.** Die Marp-Folien liegen unter `docs/presentations/`.
+> **Diese README ist die einzige Quelle der Wahrheit für den Ablauf.** Die Marp-Folien liegen unter `pre-presentation-builder/presentations/`.
 > Nach jeder Folien-Änderung: `./build.sh` — rendert das Deck und prüft die Fußzeilen-Überlappung (muss PASS liefern).
 > `./build.sh --list` gibt zusätzlich das Folienverzeichnis mit Nummern aus. Einmalig nötig: `npm install -g @marp-team/marp-cli`.
 > Vollständiger Ablauf (Branch → Build-Gate → Merge → beide Remotes): siehe [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -50,7 +50,7 @@ curl -fsSL https://pi.dev/install.sh | sh        # oder: npm install -g --ignore
 
 Wer SAIA/GWDG-Modelle nutzen will: nach dem Start das passende Plugin (`pi-saia-plugin` · `opencode-saia-plugin`) installieren — es registriert die GWDG-Modelle automatisch.
 
-> Ablauf- und Facilitation-Details für Referenten: [`docs/runbook-it4science-2026.md`](docs/runbook-it4science-2026.md) (Arc-Mapping, Formative-Assessment-Maßnahmen M1–M9, Fallback-Plan).
+> Ablauf- und Facilitation-Details für Referenten: [`pre-presentation-builder/runbook-it4science-2026.md`](pre-presentation-builder/runbook-it4science-2026.md) (Arc-Mapping, Formative-Assessment-Maßnahmen M1–M9, Fallback-Plan).
 
 ### Die zentrale Metapher: Spec · Contract · Test
 
@@ -92,7 +92,7 @@ Der ganze Workshop folgt einer Pyramide, die wir später live anwenden:
 **Lernlogik der Reihenfolge:**
 Einstieg mit zwei **Praxisbeispielen** der Referenten und **TN-Vorstellungsrunde** (Wünsche sammeln) → Grundlage → Werkzeuge → **sofort selbst anwenden (Research Repo)** → Vertiefung kompakt (Spec & Token) → **Spec selbst anwenden** → **Outcomes präsentieren** → Austausch.
 
-> Details und Rankings zu Foundation Models & Toolbox: [`docs/research-foundation-models-toolbox.md`](docs/research-foundation-models-toolbox.md).
+> Details und Rankings zu Foundation Models & Toolbox: [`pre-presentation-builder/research-foundation-models-toolbox.md`](pre-presentation-builder/research-foundation-models-toolbox.md).
 
 ## Foundation Models — aktuelle Entwicklungen (Auszug)
 
@@ -173,8 +173,8 @@ openspec new change thema-x
 
 ## Arbeitsmaterialien
 
-- `docs/presentations/it4science-days-2026-agentic-ai-workshop.md` — Marp-Folien (`.html` = gerendert)
-- `docs/research-foundation-models-toolbox.md` — Recherche: Foundation Models & Toolbox (Ranking)
+- `pre-presentation-builder/presentations/it4science-days-2026-agentic-ai-workshop.md` — Marp-Folien (`.html` = gerendert)
+- `pre-presentation-builder/research-foundation-models-toolbox.md` — Recherche: Foundation Models & Toolbox (Ranking)
 - `assets/spec-contract-test-pyramid.png` — die Spec·Contract·Test-Metapher
 - `assets/teaser.png` · `assets/teaser-banner.png` — Banner für Social/Titel
 

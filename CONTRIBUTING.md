@@ -22,7 +22,7 @@ Regel: ein Thema = ein Branch = kleine Commits. Große Umbauten bitte vorher per
 
 ## 2. Bearbeiten
 
-Hauptdatei: `docs/presentations/it4science-days-2026-agentic-ai-workshop.md` (Marp-Deck, ~43 Folien).
+Hauptdatei: `pre-presentation-builder/presentations/it4science-days-2026-agentic-ai-workshop.md` (Marp-Deck, ~43 Folien).
 
 **Deck-Konventionen:**
 
@@ -71,9 +71,9 @@ Für größere Reviews: Branch pushen, PR öffnen, zweiter Speaker reviewed, dan
 
 | Datei | Inhalt |
 |---|---|
-| `docs/presentations/it4science-days-2026-agentic-ai-workshop.md` | Das Deck (einzige Folienquelle; HTML ist Build-Artefakt) |
-| `docs/runbook-it4science-2026.md` | Durchführungs-Drehbuch: Arc, Maßnahmen M1–M12, Fallbacks, Indico-Abstract |
-| `docs/research-foundation-models-toolbox.md` | Recherchestand Modell-/Toolbox-Fakten |
+| `pre-presentation-builder/presentations/it4science-days-2026-agentic-ai-workshop.md` | Das Deck (einzige Folienquelle; HTML ist Build-Artefakt) |
+| `pre-presentation-builder/runbook-it4science-2026.md` | Durchführungs-Drehbuch: Arc, Maßnahmen M1–M12, Fallbacks, Indico-Abstract |
+| `pre-presentation-builder/research-foundation-models-toolbox.md` | Recherchestand Modell-/Toolbox-Fakten |
 | `README.md` | Überblick, Lernziele, Voraussetzungen, Agenda, Links |
 | `tests/check_footer.py` + `build.sh` | Build-Gate (siehe Schritt 3) |
 | `tools/list_slides.py` | Folienverzeichnis für `--list` |

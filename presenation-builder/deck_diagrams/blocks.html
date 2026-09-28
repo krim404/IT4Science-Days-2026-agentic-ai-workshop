@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Die vier Bausteine</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 576px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 576 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="blocks-title blocks-desc">
+  <title id="blocks-title">Die vier Bausteine eines agentischen Systems</title>
+  <desc id="blocks-desc">Eine Schleife aus drei Bausteinen: Der Kontext geht an das Modell, das Modell
+  wählt den Schritt, die Werkzeuge führen ihn aus, und ihr Ergebnis landet wieder im Kontext; das Harness
+  als Rahmen darum schützt und führt diese Schleife.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3E5A66"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F07F9A"/>
+    </marker>
+  </defs>
+
+  <rect width="576" height="480" fill="#FFFFFF"/>
+
+  <rect x="16" y="16" width="544" height="448" rx="8" fill="#F07F9A" fill-opacity="0.05" stroke="#F07F9A" stroke-opacity="0.6" stroke-dasharray="4 4"/>
+  <text x="36" y="50" fill="#105274" font-size="28" font-weight="600" font-family="'Source Sans 3', system-ui, sans-serif">Harness</text>
+  <text x="36" y="76" fill="#3E5A66" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif">schützt und führt die Schleife</text>
+  <path d="M 392.000 165.193 A 164 164 0 0 1 446.409 334.457" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 395.331 416.000 A 164 164 0 0 1 181.884 417.041" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 130.013 336.000 A 164 164 0 0 1 182.768 166.214" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="184" y="88" width="208" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="288" y="122" fill="#105274" font-size="24" font-weight="600" font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Kontext</text>
+  <text x="288" y="150" fill="#3E5A66" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">was das Modell sieht</text>
+  <rect x="328" y="336" width="208" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="432" y="370" fill="#105274" font-size="24" font-weight="600" font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Modell</text>
+  <text x="432" y="398" fill="#3E5A66" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">wählt den Schritt</text>
+  <rect x="40" y="336" width="208" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="144" y="370" fill="#105274" font-size="24" font-weight="600" font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Werkzeuge</text>
+  <text x="144" y="398" fill="#3E5A66" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">führen ihn aus</text>
+</svg>
+</body>
+</html>
