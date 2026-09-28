@@ -1,0 +1,20 @@
+deck: Agentic AI in der Praxis
+images:
+- slide: 21
+  tag: bg
+  file: img_61de4ae4812e.png
+  seed: 28
+  prompt: a large steaming coffee mug with a thick handle standing on a saucer, a
+    small spoon resting beside it
+- slide: 38
+  tag: bg
+  file: img_599f6d606690.png
+  seed: 45
+  prompt: a large steaming coffee mug with a thick handle standing on a saucer, a
+    small spoon resting beside it
+- slide: 41
+  tag: bg
+  file: img_f26a5c6319f1.png
+  seed: 48
+  prompt: a large brass hand bell with a turned wooden handle standing upright on
+    a wooden table

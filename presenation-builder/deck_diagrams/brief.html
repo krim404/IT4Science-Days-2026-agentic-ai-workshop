@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Fragen oder Beauftragen</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 480px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="brief-title brief-desc">
+  <title id="brief-title">Fragen oder Beauftragen</title>
+  <desc id="brief-desc">Zwei parallele Bahnen. Fragen verläuft über Prompt, Antwort und ein Urteil
+  nach Eindruck und endet ohne Abbruchbedingung. Beauftragen verläuft über Vertrag, Umsetzung und
+  Prüfung: Die Prüfung ist bestanden, dann ist die Aufgabe erledigt, oder nicht bestanden, dann geht
+  die Arbeit zurück in die Umsetzung.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3E5A66"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F07F9A"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="480" fill="#FFFFFF"/>
+
+  <!-- arrows first, so boxes paint over the line ends -->
+  <path d="M 104 88 L 104 120" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 104 192 L 104 224" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <!-- the lane runs out: dashed, no head, nothing at the end -->
+  <path d="M 104 296 L 104 336" fill="none" stroke="#3E5A66" stroke-width="1.6"
+        stroke-dasharray="4 6" stroke-opacity="0.55"/>
+
+  <path d="M 294 88 L 294 120" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 294 192 L 294 224" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 294 296 L 294 336" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <!-- check -> build: own channel right of the lane -->
+  <path d="M 372 264 L 388 264 Q 396 264 396 256 L 396 164 Q 396 156 388 156 L 372 156"
+        fill="none" stroke="#F07F9A" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+
+  <!-- arrow labels: masked, clear of the stroke -->
+  <text x="304" y="322" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif">bestanden</text>
+  <rect x="390" y="184" width="86" height="48" fill="#FFFFFF"/>
+  <text x="433" y="203" fill="#F07F9A" font-size="18"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">nicht</text>
+  <text x="433" y="223" fill="#F07F9A" font-size="18"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">bestanden</text>
+
+  <!-- asking lane -->
+  <rect x="16" y="24" width="176" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="16" y="24" width="176" height="64" rx="6" fill="#3E5A66" fill-opacity="0.10" stroke="#9BBFAE"/>
+  <text x="104" y="66" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Prompt</text>
+
+  <rect x="16" y="128" width="176" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="16" y="128" width="176" height="64" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="104" y="170" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Antwort</text>
+
+  <rect x="16" y="232" width="176" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="16" y="232" width="176" height="64" rx="6" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="104" y="262" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Urteil</text>
+  <text x="104" y="285" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">nach Eindruck</text>
+
+  <text x="104" y="362" fill="#3E5A66" fill-opacity="0.75" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">keine</text>
+  <text x="104" y="386" fill="#3E5A66" fill-opacity="0.75" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Abbruchbedingung</text>
+
+  <!-- commissioning lane -->
+  <rect x="216" y="24" width="156" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="216" y="24" width="156" height="64" rx="6" fill="#3E5A66" fill-opacity="0.10" stroke="#9BBFAE"/>
+  <text x="294" y="66" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Vertrag</text>
+
+  <rect x="216" y="128" width="156" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="216" y="128" width="156" height="64" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="294" y="170" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Umsetzung</text>
+
+  <rect x="216" y="232" width="156" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="216" y="232" width="156" height="64" rx="6" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="294" y="262" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Prüfung</text>
+  <text x="294" y="285" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">am Kriterium</text>
+
+  <rect x="216" y="344" width="156" height="64" rx="6" fill="#FFFFFF"/>
+  <rect x="216" y="344" width="156" height="64" rx="6" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="294" y="386" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Erledigt</text>
+</svg>
+</body>
+</html>

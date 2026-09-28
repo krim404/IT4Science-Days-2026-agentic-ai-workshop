@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Spezifikation, Vertrag, Tests</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 480px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="levels-title levels-desc">
+  <title id="levels-title">Spezifikation, Vertrag, Tests</title>
+  <desc id="levels-desc">Drei gestapelte Ebenen. Die Spezifikation regiert den Vertrag, der Vertrag
+  setzt sie um, die Tests entscheiden, und was die Tests zeigen, fließt zurück in die Spezifikation,
+  die dadurch wächst.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3E5A66"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F07F9A"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="480" fill="#FFFFFF"/>
+
+  <!-- arrows first, so boxes paint over the line ends -->
+  <path d="M 172 144 L 172 184" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 172 280 L 172 320" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <!-- what the tests show feeds back into the spec -->
+  <path d="M 320 372 L 376 372 Q 400 372 400 348 L 400 124 Q 400 100 376 100 L 320 100"
+        fill="none" stroke="#F07F9A" stroke-width="1.6" stroke-dasharray="6 5"
+        marker-end="url(#arrow-accent)"/>
+
+  <!-- arrow labels: masked, clear of the stroke -->
+  <text x="184" y="169" fill="#3E5A66" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif">regiert</text>
+  <text x="184" y="305" fill="#3E5A66" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif">setzt um</text>
+  <rect x="352" y="226" width="96" height="20" fill="#FFFFFF"/>
+  <text x="400" y="241" fill="#F07F9A" font-size="20" font-family="'Source Sans 3', system-ui, sans-serif"
+        text-anchor="middle">und wächst</text>
+
+  <!-- level 1 -->
+  <rect x="24" y="56" width="296" height="88" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="56" width="296" height="88" rx="6" fill="#3E5A66" fill-opacity="0.10" stroke="#9BBFAE"/>
+  <text x="172" y="96" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Spezifikation</text>
+  <text x="172" y="122" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">was gelten soll</text>
+
+  <!-- level 2 -->
+  <rect x="24" y="192" width="296" height="88" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="192" width="296" height="88" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="172" y="232" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Vertrag</text>
+  <text x="172" y="258" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">eine Änderung und ihr Maß</text>
+
+  <!-- level 3, the one that decides -->
+  <rect x="24" y="328" width="296" height="88" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="328" width="296" height="88" rx="6" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="172" y="368" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Tests</text>
+  <text x="172" y="394" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">bestanden oder nicht</text>
+</svg>
+</body>
+</html>
