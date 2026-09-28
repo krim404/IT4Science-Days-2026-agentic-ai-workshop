@@ -24,36 +24,37 @@
 #  23 harness          EXPLANATORY FLUX (reused); reach set by equipment, not size, is cause and effect
 #  24 section 4        background doodle (reused)
 #  25 spectrum         DIAGRAM; four stages ordered by autonomy is a structure
-#  26 two harnesses    background doodle (new); a comparison, multi tool beside a single screwdriver
-#  27 pi packages      background doodle (new); a grid
-#  28 pause            background doodle (new); a break
-#  29 section 5        background doodle (reused)
-#  30 modes            background doodle (reused); plan vs build is a verbal distinction
-#  31 exercise 1       background doodle (new); a grid
-#  32 statement        background doodle (new); the takeaway of exercise 1
-#  33 AGENTS.md        background doodle (reused); a list of rules
-#  34 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
-#  35 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
-#  36 showcase         background doodle (reused); a list of parts
-#  37 where levels     background doodle (new); a grid
-#  38 two schools      background doodle (new); a grid
-#  39 tokens           background doodle (reused); a list of levers
-#  40 section 7        background doodle (reused)
-#  41 skeleton         background doodle (reused); a list of properties
-#  42 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
-#  43 jump-start       background doodle (reused); steps revealed one by one
-#  44 exercise 2       background doodle (new); instructions
-#  45 exercise 2 steps background doodle (new); a grid of commands, a stepladder
-#  46 measure          background doodle (new); a grid
-#  47 pause            background doodle (new, same motif as 28)
-#  48 section 8        background doodle (reused)
-#  49 outcomes         background doodle (new); criteria
-#  50 section 9        background doodle (new)
-#  51 transfer         background doodle (reused); a list of steps
-#  52 resources 1      background doodle (new); a grid
-#  53 resources 2      background doodle (new); a grid
-#  54 thanks           background doodle (reused)
-#  55 references       none
+#  26 human in loop    background doodle (new); a list of three pillars, a steering wheel
+#  27 two harnesses    background doodle (new); a comparison, multi tool beside a single screwdriver
+#  28 pi packages      background doodle (new); a grid
+#  29 pause            background doodle (new); a break
+#  30 section 5        background doodle (reused)
+#  31 modes            background doodle (reused); plan vs build is a verbal distinction
+#  32 exercise 1       background doodle (new); a grid
+#  33 statement        background doodle (new); the takeaway of exercise 1
+#  34 AGENTS.md        background doodle (reused); a list of rules
+#  35 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
+#  36 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
+#  37 showcase         background doodle (reused); a list of parts
+#  38 where levels     background doodle (new); a grid
+#  39 two schools      background doodle (new); a grid
+#  40 tokens           background doodle (reused); a list of levers
+#  41 section 7        background doodle (reused)
+#  42 skeleton         background doodle (reused); a list of properties
+#  43 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
+#  44 jump-start       background doodle (reused); steps revealed one by one
+#  45 exercise 2       background doodle (new); instructions
+#  46 exercise 2 steps background doodle (new); a grid of commands, a stepladder
+#  47 measure          background doodle (new); a grid
+#  48 pause            background doodle (new, same motif as 29)
+#  49 section 8        background doodle (reused)
+#  50 outcomes         background doodle (new); criteria
+#  51 section 9        background doodle (new)
+#  52 transfer         background doodle (reused); a list of steps
+#  53 resources 1      background doodle (new); a grid
+#  54 resources 2      background doodle (new); a grid
+#  55 thanks           background doodle (reused)
+#  56 references       none
 title: 'Agentic AI in der Praxis'
 author: 'Christian Uhl · Tobias Weiß'
 date: '30.09.2026'
@@ -650,6 +651,36 @@ slides:
     Schritte. Wie auf der Skill-Folie: Agentisch ist die Entscheidung, nicht der Skill.
     GUI-Punkt aufgreifen: Auch die OpenCode-GUI ist agentisch. Kriterium ist die Autonomie,
     nicht die Oberfläche.
+
+- layout: content
+  title: 'Der Agent arbeitet, die Verantwortung bleibt bei Ihnen'
+  bg_effect:
+    prompt: 'a large wooden ship steering wheel with turned spokes mounted on its stand'
+    path: deck_images/img_232ec118ebef.png
+    seed: 32
+  bullets:
+  - 'Sie verstehen, was der Agent getan hat'
+  - 'Sie geben frei, der Agent schlägt nur vor'
+  - 'Geht etwas schief, stehen Sie dafür ein'
+  - 'Ungeprüft nur, wo ein Fehler nichts kostet'
+  sources:
+  - 'Ewerlöf, Coding is NOT Solved, 26.09.2026': https://blog.alexewerlof.com/p/coding-is-not-solved
+  speaker: 'Tobias'
+  notes: |
+    ~2 min. Human in the Loop. Die Autonomie wächst von Stufe zu Stufe, die Verantwortung wandert
+    nicht mit. Kernsatz nach Ewerlöf: Verantworten kann nur, wer versteht.
+    Die ersten drei Punkte sind Ewerlöfs drei Säulen: Wissen (was ist passiert, und warum),
+    Mandat (wer darf entscheiden) und Verantwortung (wer steht gerade, wenn es schiefgeht). Das
+    Modell hat keine davon.
+    Wo wir das heute schon eingebaut haben: Plan-Mode, nichts wird geändert, bis Sie zustimmen.
+    Tests und CI, die entscheiden, statt dem Eindruck zu glauben. Das Archiv, das festhält,
+    warum so entschieden wurde.
+    Faustregel für den Prüfaufwand: Wenig Kontrolle ist in Ordnung, wo ein Fehler nichts kostet,
+    etwa beim eigenen Skript oder beim Machbarkeitstest. Eine Auswertung, die in eine
+    Publikation geht, gehört nicht dazu.
+    Warnung aus dem Artikel: Wer die Ausgabe nicht liest, vertraut ihr am meisten. Einen Finger
+    zu viel auf einem Bild sieht jeder, einen Logikfehler in einer Auswertung nicht. Deshalb die
+    Prüfung, nicht der Blick.
 
 - layout: comparison
   title: 'Zwei offene Harnesses, der Einsatz entscheidet'
