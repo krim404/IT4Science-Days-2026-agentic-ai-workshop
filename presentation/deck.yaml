@@ -561,23 +561,25 @@ slides:
   headers: ['Aufgabe', 'Derzeit stark', 'Anmerkung']
   rows:
   - ['Freie Texte, Übersetzung', 'GPT-6', 'derzeit führend bei Prosa']
-  - ['Räumliche Aufgaben, 3D', 'GPT-6', 'in eigenen Tests überzeugend']
-  - ['Code, größere Umbauten', 'Claude, zunehmend GLM', 'Claude teuer, oft auf Anhieb erfolgreich']
+  - ['Vision', 'GPT-6, Claude Fable 5', 'Fable 5 führt die Arena Vision']
+  - ['Code, größere Umbauten', 'Claude Opus 5.5, zunehmend GLM', 'Claude teuer, oft auf Anhieb erfolgreich']
   - ['Code gezielt umschreiben', 'Qwen3.8-Flash-Next, GLM', 'offene Gewichte, schnell, günstig']
-  - ['Abläufe mit Werkzeugen', 'GLM 4.7, Claude', 'verlässliche Werkzeugaufrufe']
-  - ['Sensible Forschungsdaten', 'lokal: Ollama, vLLM', 'die Daten verlassen das Haus nicht']
-  - ['Viele gleichartige Fälle', 'DeepSeek V4 Flash', 'Geschwindigkeit und Kosten entscheiden']
+  - ['Abläufe mit Werkzeugen', 'GLM 5.3 Flash, Claude Sonnet 5.5', 'verlässliche Werkzeugaufrufe']
+  - ['Sensible Forschungsdaten', 'Qwen3.8 27B, lokal via vLLM', 'die Daten verlassen das Haus nicht']
+  - ['Viele gleichartige Fälle', 'DeepSeek V4.1 Flash', 'Geschwindigkeit und Kosten entscheiden']
   sources:
   - text: 'Eigene Erfassung, Stand 09/2026'
     footnote: true
+  - text: 'Arena Vision Leaderboard, Stand 28.09.2026'
+    url: 'https://arena.ai/leaderboard/vision'
   speaker: 'Christian'
   notes: |
     Beantwortet die Frage, die im Raum tatsächlich gestellt wird: Welches Modell
     soll ich nehmen? Keine Rangliste, sondern ein Kriterium, das auch nächstes Jahr trägt: nach
     Aufgabe wählen, nicht nach Ruf des Anbieters.
 
-    Die oberen Zeilen sind für viele im Raum die relevantesten, weil sie täglich schreiben. Der
-    3D-Punkt überrascht erfahrungsgemäß.
+    Die oberen Zeilen sind für viele im Raum die relevantesten, weil sie täglich schreiben.
+    Vision: GPT-6 überzeugt in eigenen Tests, auf der Arena-Vision-Rangliste führt Claude Fable 5.
     Code: Claude ist bei größeren Umbauten oft auf Anhieb erfolgreich und entsprechend teuer.
     Qwen3.8-Flash-Next leistet für gezielte Umschreibungen mehr als frühere Coder-Modelle, bei
     offenen Gewichten. GLM steht zweimal, weil es am schnellsten aufholt.
