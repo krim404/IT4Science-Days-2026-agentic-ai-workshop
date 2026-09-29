@@ -639,17 +639,18 @@ ist eine klare Anweisung.
 |---------|---------------|-----------|
 | Freie Textproduktion, Übersetzung | **GPT-6** | derzeit führend bei Prosa |
 | Räumliche Aufgaben, 3D-Modellierung | **GPT-6** | in eigenen Tests überzeugend |
+| Bildverstehen (Vision) | **GPT-6 Astra**, **Claude Fable 5** | Fable 5 führt die Arena-Vision-Rangliste |
 | Code schreiben, größere Umbauten | **Claude**, zunehmend **GLM** | Claude teuer, aber oft auf Anhieb erfolgreich |
 | Code gezielt umschreiben | **Qwen3.8-Flash-Next**, **GLM** | offene Gewichte, schnell, günstig |
 | Abläufe mit Werkzeugen steuern | **GLM 4.7**, Claude | verlässliche Werkzeugaufrufe |
-| Sensible Forschungsdaten | **lokal**: Ollama, vLLM, llama.cpp | die Daten verlassen das Haus nicht |
+| Sensible Forschungsdaten | **Qwen3.8 27B**, lokal via vLLM (Ollama, llama.cpp) | die Daten verlassen das Haus nicht |
 | Viele gleichartige Fälle | kleine Modelle, z. B. **DeepSeek V4 Flash** | Geschwindigkeit und Kosten entscheiden |
 
 > **Die offenen Modelle holen massiv auf.** In vielen Aufgaben ist der Abstand
 > inzwischen kleiner als der Preisunterschied.
 
 <div style="font-size:15px; color:#9a9a9a; margin-top:4px;">
-Quelle: eigene Erfassung
+Quelle: eigene Erfassung · Arena-Vision-Rangliste (28.09.2026)
 </div>
 
 <!-- notes:
@@ -669,7 +670,9 @@ ABLAUF
     Fuer viele im Raum die relevantesten, weil sie taeglich schreiben und nicht
     taeglich programmieren. GPT-6 ist bei freier Textproduktion derzeit vorn.
     Der 3D-Punkt ueberrascht erfahrungsgemaess und lohnt einen Satz: raeumliche
-    Aufgaben galten lange als Schwaeche dieser Modelle.
+    Aufgaben galten lange als Schwaeche dieser Modelle. Die Vision-Zeile nennt
+    erstmals eine externe Rangliste (Arena Vision, Stand 28.09.2026); Fable 5
+    fuehrt dort, GPT-6 Astra ueberzeugt in eigenen Tests.
 
 (3) Die Code-Zeilen
     Ehrlich einordnen: Claude ist bei groesseren Umbauten oft auf Anhieb
