@@ -1,7 +1,7 @@
 # Picture audit (one line per slide: verdict; reason). Slides without a background doodle get the gradient.
 #   1 title            background doodle (reused); a cover names the topic and explains nothing yet
 #   2 speakers         background doodle (new); two people, two work areas, the columns carry the text
-#   3 blitzlicht       background doodle (new); an instruction for the room
+#   3 show of hands    background doodle (new); an instruction for the room
 #   4 expectations     background doodle (new); a list of deliverables
 #   5 agenda 1         background doodle (new); a one-column table of blocks
 #   6 agenda 2         background doodle (new); a one-column table of blocks
@@ -23,38 +23,39 @@
 #  22 model choice     background doodle (new); a grid
 #  23 harness          EXPLANATORY FLUX (reused); reach set by equipment, not size, is cause and effect
 #  24 section 4        background doodle (reused)
-#  25 spectrum         DIAGRAM; four stages ordered by autonomy is a structure
+#  25 spectrum         DIAGRAM; four levels of delegated authority, independent of interface
 #  26 human in loop    background doodle (new); a list of three pillars, a steering wheel
 #  27 two harnesses    background doodle (new); a comparison, multi tool beside a single screwdriver
 #  28 pi packages      background doodle (new); a grid
-#  29 pause            background doodle (new); a break
-#  30 section 5        background doodle (reused)
-#  31 modes            background doodle (reused); plan vs build is a verbal distinction
-#  32 exercise 1       background doodle (new); a grid
-#  33 statement        background doodle (new); the takeaway of exercise 1
-#  34 AGENTS.md        background doodle (reused); a list of rules
-#  35 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
-#  36 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
-#  37 showcase         background doodle (reused); a list of parts
-#  38 where levels     background doodle (new); a grid
-#  39 two schools      background doodle (new); a grid
-#  40 tokens           background doodle (reused); a list of levers
-#  41 section 7        background doodle (reused)
-#  42 skeleton         background doodle (reused); a list of properties
-#  43 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
-#  44 jump-start       background doodle (reused); steps revealed one by one
-#  45 exercise 2       background doodle (new); instructions
-#  46 exercise 2 steps background doodle (new); a grid of commands, a stepladder
-#  47 measure          background doodle (new); a grid
-#  48 pause            background doodle (new, same motif as 29)
-#  49 section 8        background doodle (reused)
-#  50 outcomes         background doodle (new); criteria
-#  51 section 9        background doodle (new)
-#  52 transfer         background doodle (reused); a list of steps
-#  53 resources 1      background doodle (new); a grid
-#  54 resources 2      background doodle (new); a grid
-#  55 thanks           background doodle (reused)
-#  56 references       none
+#  29 pi recommended   none; a two-column table of packages, the gradient carries it
+#  30 pause            background doodle (new); a break
+#  31 section 5        background doodle (reused)
+#  32 modes            background doodle (reused); plan vs build is a verbal distinction
+#  33 exercise 1       background doodle (new); a grid
+#  34 statement        background doodle (new); the takeaway of exercise 1
+#  35 AGENTS.md        background doodle (reused); a list of rules
+#  36 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
+#  37 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
+#  38 showcase         background doodle (reused); a list of parts
+#  39 where levels     background doodle (new); a grid
+#  40 two schools      background doodle (new); a grid
+#  41 tokens           background doodle (reused); a list of levers
+#  42 section 7        background doodle (reused)
+#  43 skeleton         background doodle (reused); a list of properties
+#  44 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
+#  45 jump-start       background doodle (reused); steps revealed one by one
+#  46 exercise 2       background doodle (new); instructions
+#  47 exercise 2 steps background doodle (new); a grid of commands, a stepladder
+#  48 measure          background doodle (new); a grid
+#  49 pause            background doodle (new, same motif as 29)
+#  50 section 8        background doodle (reused)
+#  51 outcomes         background doodle (new); criteria
+#  52 section 9        background doodle (new)
+#  53 transfer         background doodle (reused); a list of steps
+#  54 resources 1      background doodle (new); a grid
+#  55 resources 2      background doodle (new); a grid
+#  56 thanks           background doodle (reused)
+#  57 references       none
 title: 'Agentic AI in der Praxis'
 author: 'Christian Uhl · Tobias Weiß'
 date: '30.09.2026'
@@ -115,9 +116,10 @@ slides:
         spezifikations- und testgetrieben. Nach 24 Stunden lag eine
         vollständige Custom-Firmware vor, als FIDO2-Sicherheitsschlüssel einsetzbar.
 
-    Kernsatz: "Das Tempo war nur deshalb vertretbar, weil die Testsuite jeden Fehler abfängt,
-    bevor er das Gerät erreicht." Die Tests laufen auf dem Entwicklungsrechner, ein Fehlversuch
-    kostet dort nichts.
+    Kernsatz: "Tests auf dem Entwicklungsrechner machten viele Fehler sichtbar, bevor wir
+    die Firmware auf das Gerät übertrugen." Sie decken die geprüften Fälle ab, nicht jeden
+    möglichen Fehler. Hardwareannahmen und irreversible Schritte brauchen zusätzlich Review
+    und gezielte Prüfung am Gerät. Eine bestandene Testsuite ist kein Sicherheitsnachweis.
 
     Übertragung, nicht auslassen: Das Äquivalent in der Forschung ist nicht der zerstörte Chip,
     sondern verbrauchte Messzeit oder eine bereits publizierte Auswertung.
@@ -125,23 +127,23 @@ slides:
     Ton: Die Methode ist der Held, nicht der Sprecher.
 
 - layout: content
-  title: 'Ihre Reihe: Blitzlicht in dreißig Sekunden pro Person'
+  title: 'Ihre Reihe: ein paar Fragen per Handzeichen'
   bg_effect:
     prompt: 'a large vintage camera flash unit with a round reflector mounted on a small tripod'
     path: deck_images/img_775b29258fc2.png
     seed: 9
   bullets:
-  - 'Name, Fachrichtung, ein Thema für eine Literaturrecherche'
-  - 'Selbsteinschätzung KI: eher Anfang oder eher fortgeschritten?'
-  - 'Wir sammeln die Wünsche am Whiteboard'
-  - 'Am Ende prüfen wir sie gegen die Outcomes'
+  - 'Wer nutzt KI-Chats wie ChatGPT regelmäßig?'
+  - 'Wer hat schon einen Agenten etwas erledigen lassen?'
+  - 'Wer schreibt selbst Code, und sei es nur ein Skript?'
+  - 'Überlegen Sie sich ein Thema für eine Literaturrecherche'
   speaker: 'Christian'
   notes: |
-    Moderation (~3 min). Die gesammelten Wünsche sichtbar notieren, das Wrap-Up greift
-    sie auf. Zeit hart timen.
-    Bei großen Runden: 5 bis 6 Stichproben aus dem Raum, Rest per Karte oder Zettel.
-    Selbsteinschätzung mit Handzeichen oder kurz mündlich, kein Werturteil. Mit der Abstufung
-    wird das Herumgehen gezielt: Fortgeschrittene bekommen Vertiefung, Anfänger Starthilfe.
+    Moderation (~3 min), großer Hörsaal: keine Vorstellungsrunde, nur Handzeichen.
+    Nach jeder Frage den Anteil laut schätzen ("etwa die Hälfte"), kein Werturteil. Die Anteile
+    machen das Herumgehen gezielt: Fortgeschrittene bekommen Vertiefung, Anfänger Starthilfe.
+    Das Recherche-Thema behält jede Person für sich; es ist das Thema X in Übung 1. Die
+    Anteile merken, das Wrap-Up fragt noch einmal nach.
 
 - layout: content
   title: 'Der Vormittag liefert ein Werkzeug, keinen fertigen Bot'
@@ -152,7 +154,7 @@ slides:
   bullets:
   - 'Ein Research-Repo mit laufender Pipeline'
   - 'Einen prüfbaren Auftrag, live umgesetzt'
-  - 'Werkzeuge für Modelle und Harnesses statt Trendlisten'
+  - 'Werkzeuge für Modelle und Harnesses'
   - 'Nicht dabei: der voll-autonome Assistent'
   speaker: 'Tobias'
   notes: |
@@ -161,7 +163,7 @@ slides:
     Kernsatz: Wir bauen keine voll-autonomen Assistenten, sondern führen und korrigieren die
     Agenten.
     Dialogmuster für "Ich will nur einen Bot": den Kernsatz sagen, dann "Genau das ist heute."
-    Bei Unruhe die Blitzlicht-Wünsche aufgreifen: Die meisten waren Agent-Aufgaben, keine
+    Bei Unruhe die Recherche-Themen vom Anfang aufgreifen: Das sind Agent-Aufgaben, keine
     Bot-Wünsche.
 
 - layout: table
@@ -172,7 +174,7 @@ slides:
     seed: 11
   headers: ['Block']
   rows:
-  - ['Ankommen, Vorstellung, Blitzlicht']
+  - ['Ankommen, Vorstellung, Handzeichen-Runde']
   - ['Grundlagen: Agenten beauftragen']
   - ['Foundation Models: aktuelle Entwicklungen']
   - ['Open-Source Toolbox']
@@ -223,13 +225,20 @@ slides:
   - ['Agent', 'von Chatbot bis autonomes System', 'Das Modell bestimmt die nächsten Schritte']
   - ['Reasoning', 'ob das Denken ist', 'mehr Rechenzeit zur Laufzeit']
   - ['Halluzination', 'Begriff umstritten, eher Konfabulation', 'unbelegte Ausgabe, Grund für die Tests']
-  - ['Open Source', 'offene Gewichte sind nicht OSI', 'wir meinen offene Gewichte']
-  - ['Reproduzierbarkeit', 'gleiche Eingabe, anderes Ergebnis', 'geprüft wird das Ergebnis, nicht der Weg']
+  - ['Open Weights', 'Gewichte offen, Rest oft nicht', 'Lizenzen getrennt prüfen']
+  - ['Reproduzierbarkeit', 'gleiche Eingabe, anderes Ergebnis', 'Stand sichern, Analyse wiederholen']
   speaker: 'Christian'
   notes: |
     Nicht alle fünf Zeilen gleich lang behandeln, die letzten beiden tragen das
     Publikum. Rahmensatz: Bei diesen Begriffen ist sich die Fachwelt nicht einig. Wir legen uns
     für heute fest. Das ist eine Setzung, kein Stand der Forschung.
+
+    Warum diese Folie in jedem unserer Vorträge steht:
+    - Jeder dieser Begriffe ist umstritten, und ohne Festlegung beginnt die erste Fragerunde
+      mit einer Grundsatzdebatte über Definitionen.
+    - Eine offen benannte Setzung nimmt dem Einwand die Spitze: Wir beanspruchen nicht die
+      richtige Definition, wir sagen nur, wie wir die Wörter heute verwenden.
+    - Danach geht es um die Sache, nicht mehr um das Vokabular.
 
     (1) Agent: Trennlinie ist, wer den Ablauf bestimmt. Bestimmt das Modell die nächsten
         Schritte, ist es ein Agent. Eine feste Abfolge ist ein Workflow, auch wenn ein Modell
@@ -242,22 +251,24 @@ slides:
         vertrauen. Für die Literaturrecherche konkret: "Steht nicht im Dokument" ist eine
         richtige Antwort, keine fehlende. Wo sie nicht erlaubt ist, füllt das Modell die Lücke
         mit einem plausiblen Wert.
-    (4) Open Source: Frei verfügbare Gewichte sind nicht Open Source im Sinne der OSI.
-        Trainingsdaten und Verfahren bleiben meist verschlossen.
-    (5) Reproduzierbarkeit: hier Zeit lassen. Die Sorge aussprechen: gleiche Eingabe,
-        abweichendes Ergebnis widerspricht wissenschaftlichem Arbeiten. Die Antwort: Der Weg ist
-        nicht reproduzierbar, das Ergebnis muss es sein. Beim Chip hat niemand dem Agenten
-        geglaubt, die Testsuite hat entschieden.
+    (4) Open Weights: Zugängliche Modellgewichte allein machen ein Modell noch nicht zu
+        Open-Source-KI. Lizenz, Trainingsinformationen und Nutzungsbedingungen getrennt prüfen.
+        Bei OpenCode und pi sprechen wir dagegen über Open-Source-Software.
+    (5) Reproduzierbarkeit: Ein Agentenlauf kann trotz gleicher Eingabe anders verlaufen.
+        Deshalb Datenstand, Code, Umgebung, Modellversion, Einstellungen und relevante
+        Anweisungen dokumentieren. Den erzeugten Analysecode mit gesicherten Eingaben erneut
+        ausführen; verbleibende Schwankungen benennen. Tests prüfen definierte Eigenschaften,
+        stellen aber weder Reproduzierbarkeit noch wissenschaftliche Gültigkeit allein her.
 
     Wenn die Zeit knapp wird: (2) und (4) auf je einen Satz. (5) niemals kürzen.
 
 - layout: content_image
   title: 'Ein agentisches System besteht aus vier Bausteinen'
   bullets:
-  - 'Das Modell ist kein Wissensspeicher'
-  - 'Der Kontext ist kein Gedächtnis'
+  - 'Modellwissen ist keine Datenbank'
+  - 'Kontext ist Arbeitsgedächtnis'
   - 'Werkzeuge nur, soweit freigegeben'
-  - 'Das Harness trifft keine Entscheidung'
+  - 'Das Harness setzt Grenzen'
   image:
     path: deck_diagrams/dia_blocks.png
     purpose: 'Zeigt die Schleife im Harness: Der Kontext geht an das Modell, das Modell wählt den Schritt, ein Werkzeug führt ihn aus, und das Ergebnis fließt zurück in den Kontext.'
@@ -267,15 +278,18 @@ slides:
     offen ist, wer hier eigentlich handelt. Der Raum ist gemischt, beide Hälften meinen mit "KI"
     etwas anderes. Wir zerlegen den Begriff einmal.
 
-    Modell: sagt das nächste Token voraus, nichts weiter. Was es nicht im Kontext hat, kann es
-    nur rekonstruieren.
-    Kontext: Repository, Spezifikation, Verlauf. Kein Gedächtnis. Deshalb gehören Regeln in
-    Dateien und nicht in Sitzungen (nächste Folie).
+    Modell: erzeugt die nächsten Tokens und nutzt dabei gelerntes Wissen. Dieses Wissen ist
+    keine verlässlich abfragbare Fakten-Datenbank; aktuelle und projektspezifische Belege
+    gehören in den Kontext.
+    Kontext: aktuell bereitgestellte Dateien, Spezifikation, Verlauf und Werkzeugergebnisse.
+    Arbeitsgedächtnis ist hier eine Metapher für begrenzten Arbeitskontext. Dauerhafte Regeln
+    gehören in Dateien und müssen bei Bedarf wieder geladen werden (nächste Folie).
     Werkzeuge: erst hiermit handelt das System. Wer nichts freigibt, bekommt einen
     Gesprächspartner, keinen Agenten.
     Harness: Kontext zusammenstellen, Werkzeuge aufrufen, Ergebnisse zurückspeisen, Schleife
-    beenden. Das Modell entscheidet, was geschehen soll; das Harness sorgt dafür, dass es
-    geschehen kann. In der Literatur heißt dieselbe Schicht überwiegend "Scaffolding".
+    beenden. Das Modell schlägt Schritte vor; das Harness entscheidet anhand seiner Regeln,
+    was ausgeführt werden darf, eine Freigabe braucht oder abgebrochen wird.
+    Diese Umgebung wird auch als "Scaffolding" bezeichnet.
 
     Alle vier zusammen sind das, was umgangssprachlich "KI" heißt.
     Übergabe an Tobias' Block: Dasselbe Modell, ein anderes Harness, ein anderes Ergebnis.
@@ -382,8 +396,8 @@ slides:
     ~2 min. Die Definition von der Begriffe-Folie an Bekanntem festmachen. Die rechte Spalte ist
     jeweils der Teil, der es zum Agenten macht: Das Modell wählt den nächsten Schritt.
 
-    Einstieg per Handzeichen: Wer hat schon eines davon genutzt? Greift die Selbsteinschätzung
-    aus dem Blitzlicht auf.
+    Einstieg per Handzeichen: Wer hat schon eines davon genutzt? Greift die zweite Frage der
+    Handzeichen-Runde auf.
 
     Abgrenzung: Nicht alles, was "Agent" heißt, ist einer. Viele Hotline-Bots, auch Telekom
     Voice AI Notes, sind feste Abläufe, also Workflows. Gartner nennt das "Agent Washing": Von
@@ -444,7 +458,7 @@ slides:
     (3) Der Rückpfeil ist der Kern: Nur die rechte Bahn kann scheitern, und genau deshalb kann
         sie auch fertig werden. Merksatz: Wer nicht sagen kann, woran es scheitern würde, hat
         nicht beauftragt, sondern gehofft.
-    (4) Bezug zum Raum: Die Literaturrecherche aus dem Blitzlicht ist genau dieser Fall.
+    (4) Bezug zum Raum: Die Literaturrecherche, die Sie sich am Anfang überlegt haben, ist genau dieser Fall.
     (5) Überleitung: Was muss ein solcher Auftrag enthalten, damit er prüfbar ist? Das zeigt die
         nächste Folie.
 
@@ -461,7 +475,7 @@ slides:
   notes: |
     Die Pyramide ist der Auftrag von der vorigen Folie, zu Ende gedacht. Sie ist der
     rote Faden des Vormittags. Spezifikation oben als Quelle der Wahrheit, Vertrag in der Mitte
-    als Auftrag an den Agenten, Tests unten als objektive Entscheidung. Wir kommen auf dieses
+    als Auftrag an den Agenten, Tests unten als Prüfung definierter Kriterien. Wir kommen auf dieses
     Bild immer wieder zurück.
     Rückverweis auf den Chip: Genau diese drei Ebenen lagen dort vor.
     Der gestrichelte Pfeil ist der eigentliche Punkt: Die Spezifikation ist kein Dokument, das
@@ -480,7 +494,7 @@ slides:
   rows:
   - ['Spezifikation', 'was gelten soll, prüfbar formuliert', 'specs/, AGENTS.md']
   - ['Vertrag', 'was sich jetzt ändert, und woran man es misst', 'ein Change mit Vorschlag und Aufgaben']
-  - ['Tests', 'ob die Anforderung erfüllt ist', 'Testsuite, Validierung, CI']
+  - ['Tests', 'ob die geprüften Fälle bestehen', 'Testsuite, Validierung, CI']
   speaker: 'Christian'
   notes: |
     Diese Folie erklärt das Bild Ebene für Ebene.
@@ -494,8 +508,11 @@ slides:
         ist der Stand, das soll sich ändern, daran wird es gemessen. Analogie: das
         Versuchsprotokoll für einen Durchlauf. Der Vertrag ist selbst eine Spezifikation, nur für
         eine Änderung. Er nennt das Kriterium, der Test wendet es an.
-    (3) Tests: Die Ebene, die entscheidet. Bestanden oder nicht bestanden. Hier löst sich die
-        Sorge um Reproduzierbarkeit auf: Der Weg ist nicht reproduzierbar, das Ergebnis wird es.
+    (3) Tests: Bestanden oder nicht bestanden gilt für die tatsächlich geprüften Fälle.
+        Grün bedeutet: Die definierten Prüfungen wurden bestanden. Ob diese Prüfungen
+        fachlich ausreichen, verantworten wir. Dazu gehören unabhängige Referenzfälle,
+        Negativfälle und Review. Reproduzierbarkeit verlangt zusätzlich gesicherte Daten,
+        Code und Umgebung sowie eine wiederholbare Analyse.
 
     Glossar für Rückfragen: SHALL, MUST, SHOULD sind die üblichen Signalwörter. "Gegeben, wenn,
     dann" ist die Schablone für Szenarien: Ausgangslage, Eingriff, erwartetes Ergebnis.
@@ -509,7 +526,9 @@ slides:
   speaker: 'Christian'
   notes: |
     Stehen lassen und bewusst betonen. Dieser Satz kommt in Übung 2 zurück und ist
-    dort das Bewertungskriterium.
+    dort das Bewertungskriterium. Eine bestandene Prüfung ist notwendig, aber allein keine
+    Garantie für ein fachlich richtiges Ergebnis. Die Kriterien werden vorab festgelegt und
+    ihre Abdeckung wird von Menschen beurteilt.
 
 - layout: section
   number: '3'
@@ -553,31 +572,33 @@ slides:
     Schlusssatz: Knapp ist nicht mehr die Fähigkeit der Modelle, knapp ist eine klare Anweisung.
 
 - layout: table
-  title: 'Das passende Modell hängt von der Aufgabe ab'
+  title: 'Unsere Modellwahl im Alltag'
   bg_effect:
     prompt: 'an old brass balance with two pans hanging from a beam, a small stone resting in one pan'
     path: deck_images/img_8560786febfc.png
     seed: 25
-  headers: ['Aufgabe', 'Derzeit stark', 'Anmerkung']
+  headers: ['Aufgabe', 'Unsere Wahl', 'Einordnung']
   rows:
-  - ['Freie Texte, Übersetzung', 'GPT-6', 'derzeit führend bei Prosa']
-  - ['Räumliche Aufgaben, 3D', 'GPT-6', 'in eigenen Tests überzeugend']
-  - ['Code, größere Umbauten', 'Claude, zunehmend GLM', 'Claude teuer, oft auf Anhieb erfolgreich']
+  - ['Freie Texte, Übersetzung', 'GPT-6 Astra', 'bewährt in unseren Schreibaufgaben']
+  - ['Vision', 'GPT-6 Astra, Claude Fable 5', 'Fable 5 führt die Arena Vision']
+  - ['Code, größere Umbauten', 'Claude Opus 5.5, zunehmend GLM', 'bei uns oft wenige Korrekturen']
   - ['Code gezielt umschreiben', 'Qwen3.8-Flash-Next, GLM', 'offene Gewichte, schnell, günstig']
-  - ['Abläufe mit Werkzeugen', 'GLM 4.7, Claude', 'verlässliche Werkzeugaufrufe']
-  - ['Sensible Forschungsdaten', 'lokal: Ollama, vLLM', 'die Daten verlassen das Haus nicht']
-  - ['Viele gleichartige Fälle', 'DeepSeek V4 Flash', 'Geschwindigkeit und Kosten entscheiden']
+  - ['Abläufe mit Werkzeugen', 'GLM 5.3 Flash, Claude Sonnet 5.5', 'verlässliche Werkzeugaufrufe']
+  - ['Sensible Forschungsdaten', 'Qwen3.8 27B, lokal via vLLM', 'die Daten verlassen das Haus nicht']
+  - ['Viele gleichartige Fälle', 'DeepSeek V4.1 Flash', 'Geschwindigkeit und Kosten entscheiden']
   sources:
   - text: 'Eigene Erfassung, Stand 09/2026'
     footnote: true
+  - text: 'Arena Vision Leaderboard, Stand 28.09.2026'
+    url: 'https://arena.ai/leaderboard/vision'
   speaker: 'Christian'
   notes: |
     Beantwortet die Frage, die im Raum tatsächlich gestellt wird: Welches Modell
     soll ich nehmen? Keine Rangliste, sondern ein Kriterium, das auch nächstes Jahr trägt: nach
     Aufgabe wählen, nicht nach Ruf des Anbieters.
 
-    Die oberen Zeilen sind für viele im Raum die relevantesten, weil sie täglich schreiben. Der
-    3D-Punkt überrascht erfahrungsgemäß.
+    Die oberen Zeilen sind für viele im Raum die relevantesten, weil sie täglich schreiben.
+    Vision: GPT-6 Astra überzeugt in eigenen Tests, auf der Arena-Vision-Rangliste führt Claude Fable 5.
     Code: Claude ist bei größeren Umbauten oft auf Anhieb erfolgreich und entsprechend teuer.
     Qwen3.8-Flash-Next leistet für gezielte Umschreibungen mehr als frühere Coder-Modelle, bei
     offenen Gewichten. GLM steht zweimal, weil es am schnellsten aufholt.
@@ -594,10 +615,10 @@ slides:
 - layout: content_image
   title: 'Das Harness bestimmt, was das Modell erreichen kann'
   bullets:
-  - 'Einzelne Frage: das Modell prägt die Antwort allein'
-  - 'Mehrere Schritte: das Harness setzt die Reichweite'
-  - 'Jeden Schritt darin wählt weiterhin das Modell'
-  - 'Günstiges Modell im guten Harness vor teurem im schlechten'
+  - 'Modell und Kontext prägen die Antwort'
+  - 'Das Harness begrenzt die Ausführung'
+  - 'Das Modell schlägt nächste Schritte vor'
+  - 'Gutes Harness kann Modellschwächen ausgleichen'
   image:
     prompt: 'an apple tree whose red apples hang only high up in its crown, on the left a large robot stands on the grass stretching both arms up, its hands far below the lowest apple, on the right a small robot stands on top of a tall wooden stepladder and picks an apple from the top of the crown, both robots with plain smooth bodies'
     seed: 1007
@@ -610,14 +631,13 @@ slides:
   notes: |
     Angelpunkt des Vormittags und Übergabe an Tobias.
 
-    (1) Einschränkung zuerst: Für eine einzelne Aufgabe prägt weiterhin das Modell allein das
-        Ergebnis. Die Aussage gilt für agentisches Arbeiten, also mehrere Schritte,
-        Werkzeugaufrufe, Selbstkorrektur.
-    (2) Präzise bleiben: Das Harness entscheidet nichts. Welcher Schritt als nächstes kommt,
-        wählt immer das Modell. Im Betrieb ermöglicht das Harness: Kontext, Werkzeuge,
-        Rückspeisung. Bei der Auswahl entscheiden Sie: Mit der Wahl des Harness legen Sie fest,
-        welche Schritte es überhaupt gibt.
-    (3) Die Beobachtung nüchtern: ein Muster aus mehreren unabhängigen Versuchen, ohne Zahl.
+    (1) Modell, Anweisung und verfügbarer Kontext beeinflussen schon eine einzelne Antwort.
+        Bei mehreren Schritten kommen Werkzeugauswahl, Rückmeldungen und Abbruchregeln hinzu.
+    (2) Das Modell schlägt Schritte vor. Das Harness steuert Kontext, Ausführung, Rechte und
+        Abbruchbedingungen. Mit seiner Konfiguration legen Sie fest, welche Schritte möglich
+        sind und welche Freigaben sie brauchen.
+    (3) Eigene Praxiserfahrung, kein allgemeiner Leistungsvergleich: Ein passendes Harness
+        kann Schwächen eines Modells ausgleichen. Das gilt nicht für jede Aufgabe.
     (4) Warum: Das Modell sieht nur, was die Umgebung zeigt, darf nur, was sie erlaubt, und läuft
         nur so lange, wie sie es laufen lässt.
     (5) Entlastung: Niemand muss das teuerste Abonnement abschließen. Wer seine Aufträge prüfbar
@@ -640,17 +660,20 @@ slides:
   title: 'Agentisch ist nicht das Terminal, sondern die Autonomie'
   bullets:
   - 'Auch eine GUI kann agentisch sein'
-  - 'Das Terminal ist heute der reifste Ort dafür'
-  - 'Prüfbar, wiederholbar, automatisierbar'
+  - 'Autonomie heißt: delegierte Befugnisse'
+  - 'CI automatisiert, sie entscheidet nicht selbst'
   image:
     path: deck_diagrams/dia_spectrum.png
-    purpose: 'Zeigt die vier Stufen vom Chatfenster bis zur Pipeline und dass die Autonomie mit jeder Stufe wächst.'
+    purpose: 'Zeigt vier Stufen delegierter Befugnisse: Vorschlagen, einzeln freigegeben handeln, im Rahmen selbst handeln und ohne Einzelfreigabe handeln. Die Oberfläche bestimmt diese Befugnisse nicht.'
   speaker: 'Tobias'
   notes: |
     ~2 min. Brücke zur Begriffe-Folie: Agent heißt, das Modell bestimmt die nächsten
     Schritte. Wie auf der Skill-Folie: Agentisch ist die Entscheidung, nicht der Skill.
     GUI-Punkt aufgreifen: Auch die OpenCode-GUI ist agentisch. Kriterium ist die Autonomie,
     nicht die Oberfläche.
+    Die Stufen beschreiben Freigaben und Befugnisse, keine Rangfolge von Produkten.
+    Eine feste CI-Pipeline kann vollständig deterministisch sein. Unser Ziel ist ein klar
+    begrenzter Auftrag mit überprüften Ergebnissen, nicht möglichst viel Autonomie.
 
 - layout: content
   title: 'Der Agent arbeitet, die Verantwortung bleibt bei Ihnen'
@@ -706,8 +729,9 @@ slides:
   speaker: 'Tobias · Christian'
   notes: |
     ~4 min, inkl. Live-Demo: derselbe Prompt in beiden, Ergebnis-Differenz zeigen.
-    "Gleiche Modelle, unterschiedliche Ergebnisse" wird bewiesen, nicht behauptet. Ein Harness
-    ist die Steuerungsebene.
+    Die Demo illustriert, wie Harnesses Kontext und Werkzeuge bereitstellen. Ein einzelner
+    Lauf beweist keinen Leistungsunterschied: Auch Wiederholungen im selben Harness können
+    anders ausfallen. Ein belastbarer Vergleich braucht gleiche Bedingungen und mehrere Läufe.
     Ergänzend: SAIA-Plugins bringen die GWDG-Chat-AI-Modelle nach pi, OpenCode und zot
     (Auto-Registrierung). Lokales Serving (Ollama, vLLM, llama.cpp) als Souveränitäts-Option.
     Merksatz: Das Modell ist das Gehirn, das Harness gibt ihm Hände.
@@ -718,8 +742,9 @@ slides:
 
     Danach CHRISTIAN (~2 min), kommerzielle Gegenprobe: Claude Code, Codex, Antigravity CLI.
     (1) Die Stärke ist echt: installieren und loslegen, für viele Aufgaben reicht es dauerhaft.
-    (2) Der Preis: Die Optimierung gilt dem eigenen Modell und lässt sich nicht übertragen. In
-        unabhängigen Vergleichen eher Mittelfeld. Claude Code verbraucht viele Token.
+    (2) Für unsere Auswahl zählen Modellanbindung, Erweiterbarkeit, Freigaben und Kosten pro
+        erfolgreich erledigter Aufgabe. Aussagen über Rangplätze oder Tokenverbrauch brauchen
+        vergleichbare Aufgaben, Einstellungen und mehrere Läufe; hier zeigen wir Praxiserfahrung.
     (3) Das Muster: drei Anbieter, drei Harnesses, jedes auf die eigenen Modelle abgestimmt.
         Gemini CLI wurde im Juni 2026 auf Antigravity CLI umgestellt.
     (4) Schluss: Bequemlichkeit gegen Kontrolle. Beides ist legitim.
@@ -754,6 +779,51 @@ slides:
     UI: pi-webui, pi-desktop-ui, glimpseui, pi-chrome.
     Absicherung: pi-tool-repair, pi-retry, pi-permission-system, pi-slash-command-guard,
     pi-secrets, pi-quotas, pi-rtk, pi-continue.
+
+- layout: table
+  title: 'Für den Start empfehlen wir diese acht Packages'
+  headers: ['Package', 'Leistet']
+  rows:
+  - ['pi-plan-mode', 'liest und plant nur, bis Sie freigeben']
+  - ['pi-permission-system', 'legt fest, was der Agent ohne Rückfrage darf']
+  - ['pi-secrets', 'Zugangsdaten erreichen das Modell nie']
+  - ['superpowers', 'Skills für Planen, Testen und Fehlersuche']
+  - ['pi-subagents', 'verteilt Teilaufgaben an eigene Agenten']
+  - ['pi-websearch', 'Websuche als Werkzeug des Agenten']
+  - ['pi-tool-repair, pi-retry', 'fangen fehlerhafte Aufrufe und Abbrüche ab']
+  - ['pi-rtk', 'kürzt Shell-Ausgaben und spart Token']
+  sources:
+  - text: 'Eigene Installation, Stand 09/2026'
+    footnote: true
+  - 'Alle Packages: pi.dev/packages': https://pi.dev/packages
+  - 'Option für SAIA: pi-saia-plugin': https://github.com/tobias-weiss-ai-xr/pi-saia-plugin
+  speaker: 'Tobias'
+  notes: |
+    ~90 s. Die Auswahl aus der eigenen Installation, mit der ein Einstieg sicher und sparsam
+    läuft. Nicht alles auf einmal installieren, sondern bei Bedarf ergänzen.
+    - Die ersten drei sind Human in the Loop als Werkzeug: Plan-Mode ändert nichts ohne
+      Zustimmung, das Permission-System regelt die Freigaben, pi-secrets hält Passwörter und
+      API-Schlüssel aus dem Kontext und aus den Ausgaben heraus.
+    - superpowers und pi-subagents bringen die Arbeitsweise mit: erst planen, dann testen,
+      größere Aufgaben aufteilen.
+    - pi-websearch ist für die Literaturrecherche die naheliegende Ergänzung.
+    - tool-repair und retry lohnen sich vor allem mit offenen Modellen, deren Werkzeugaufrufe
+      öfter danebengehen. rtk ist einer der Token-Hebel aus dem Token-Block.
+    - Option: pi-saia-plugin stammt von Tobias und lohnt sich für alle, die mit SAIA arbeiten.
+      Es registriert alle SAIA-Modelle als Provider, der Schlüssel kommt per /login saia.
+    Installation je Package im Terminal:
+      pi install npm:@narumitw/pi-plan-mode
+      pi install npm:pi-permission-system
+      pi install npm:pi-secrets
+      pi install https://github.com/obra/superpowers
+      pi install npm:pi-subagents
+      pi install npm:@mammothb/pi-websearch
+      pi install npm:pi-tool-repair
+      pi install npm:@monotykamary/pi-retry
+      pi install npm:@sherif-fanous/pi-rtk
+      pi install git:github.com/tobias-weiss-ai-xr/pi-saia-plugin
+    Weitere Packages durchsuchen: https://pi.dev/packages
+    Vorsicht wie bei Skills: Packages können Code ausführen. Vor der Installation ansehen.
 
 - layout: statement
   title: 'Pause. Zehn Minuten.'
@@ -808,7 +878,7 @@ slides:
   speaker: 'Tobias'
   notes: |
     Etwa 15 Minuten im Agenten (OpenCode oder pi mit SAIA): Die Teilnehmenden geben ihr
-    Thema X aus dem Blitzlicht ohne Spec in den Plan-Mode. Der Agent plant selbst, das ist
+    Recherche-Thema vom Anfang ohne Spec in den Plan-Mode. Der Agent plant selbst, das ist
     bereits agentisch. Erst den Plan lesen: Steht darin, woran man erkennt, dass er fertig ist?
     Dann bauen lassen. Was kommt dabei heraus?
     Kein Tool-Zwang: Wem das Harness nicht startet, arbeitet mit der Nachbarin oder dem
@@ -843,7 +913,7 @@ slides:
   notes: |
     Die Instruktionen von der Aufbau-Folie, jetzt als echte Datei. Die Regeln
     liegen im Repo, nicht in der Sitzung. Kein Wiedereinlernen pro Session,
-    die Pipeline deckt Verstöße objektiv auf. Einordnung in die Pyramide: AGENTS.md gehört zur
+    die Pipeline erkennt nur Verstöße, für die Prüfungen eingerichtet sind. Einordnung in die Pyramide: AGENTS.md gehört zur
     Spezifikations-Ebene, sie gilt dauerhaft.
     Live-Auszug aus der Datei:
       NEVER edit README.md, it is auto-generated from papers.yaml.
@@ -866,8 +936,8 @@ slides:
     Hier fällt der Begriff. Wer Aufträge so schreibt, dass sie prüfbar sind und als Datei
     bleiben, schreibt Spezifikationen. Die Methode dahinter heißt Spec-Driven Development (SDD).
     Wir haben sie nicht als Methode eingeführt, sondern sind bei ihr angekommen.
-    Verbindung beider Hälften benennen: Eine präzise Spezifikation ist selbst die wirksamste
-    Einsparung. Wer den Auftrag genau beschreibt, muss ihn nicht dreimal erklären.
+    Verbindung beider Hälften benennen: Eine präzise Spezifikation kann Rückfragen und
+    Korrekturschleifen verringern. Ob sie insgesamt Token und Kosten spart, muss man messen.
 
 - layout: content
   title: 'In diesem Kapitel wird aus dem Auftrag eine Datei'
@@ -903,7 +973,7 @@ slides:
     Archivpfad: openspec/changes/archive/2026-08-23-add-research-gap-analysis/.
 
 - layout: table
-  title: 'Im Projekt liegen die drei Ebenen in drei Ordnern'
+  title: 'Wo Spezifikation, Auftrag und Tests liegen'
   bg_effect:
     prompt: 'a small wooden chest with three drawers and plain round brass knobs'
     path: deck_images/img_8981e5de6eb9.png
@@ -912,18 +982,20 @@ slides:
   rows:
   - ['openspec/specs/', 'das dauerhaft gültige Verhalten', 'Spezifikation']
   - ['openspec/changes/', 'die eine anstehende Änderung', 'Vertrag, genau das bekommt der Agent']
-  - ['openspec/archive/', 'alle abgeschlossenen Änderungen', 'Begründung, warum so entschieden']
+  - ['tests/', 'Prüfungen der Anforderungen', 'Tests, ausgeführt lokal oder in CI']
   speaker: 'Christian'
   notes: |
-    Die Folie wiederholt nicht die Pyramide, sondern zeigt, wo die Ebenen als Dateien
-    liegen. Der Zugewinn ist die dritte Zeile.
+    Die Folie ordnet allen drei Ebenen der Pyramide konkrete Dateien zu.
+    Durchgehendes Beispiel: Papers pro Jahr zählen. Die Spec legt fest, wie fehlende Daten
+    behandelt werden; der Change beauftragt die Auswertung; ein Test prüft bekannte Fallzahlen.
     (1) Spezifikation: gilt dauerhaft, wird nicht pro Sitzung neu verhandelt.
     (2) Vertrag: nur die Differenz. Nicht "baue mir ein Analysewerkzeug", sondern "ergänze diese
         eine Auswertung, gemessen an diesem Kriterium".
-    (3) Archiv: für Forschende der interessanteste Teil. In einem halben Jahr ist "warum haben
-        wir das so gerechnet" noch beantwortbar. Methodendokumentation, die nebenbei entsteht.
-    Überleitung: Der Agent braucht nicht das ganze Projekt, der Vertrag genügt. Das ist zugleich
-    die wirksamste Einsparung an Kontext.
+    (3) Tests: prüfen die vereinbarten Fälle mit bekannten Eingaben und erwarteten Ergebnissen.
+        CI führt diese Prüfungen aus; sie ist selbst keine zusätzliche fachliche Prüfung.
+    Abgeschlossene Änderungen liegen zusätzlich unter openspec/changes/archive/.
+    Das Archiv dokumentiert Entscheidungen, ersetzt aber keine Tests.
+    Überleitung: Der Agent braucht den Änderungsauftrag und den dazu relevanten Projektkontext.
 
 - layout: table
   title: 'Spec-Kit baut Neues, OpenSpec ändert Bestehendes'
@@ -958,16 +1030,17 @@ slides:
     Werturteil.
 
 - layout: content
-  title: 'Drei- bis fünfmal weniger Token, bei gleicher Qualität'
+  title: 'Token, Kosten und Qualität getrennt messen'
   bullets:
-  - 'Routing: das richtige Modell pro Aufgabe'
-  - 'Caching und Kontext-Hygiene: nur behalten, was zählt'
-  - 'Klein ist schön: kleines Modell, kleine Aufgabe'
-  - 'Skills und Specs schreiben statt jedes Mal erklären'
-  - 'Wissen speichern, nicht Prompt-Stücke'
+  - 'Routing: Kosten pro gelöster Aufgabe'
+  - 'Caching: Berechnung wiederverwenden'
+  - 'Kontext: nur Relevantes mitgeben'
+  - 'Specs können Korrekturschleifen sparen'
+  - 'Qualität an festen Kriterien prüfen'
   sources:
-  - text: 'Eigene Messung, kein kontrollierter Vergleich'
+  - text: 'Eigene Praxiserfahrung, kein kontrollierter Vergleich'
     footnote: true
+  - 'Prompt Caching': https://developers.openai.com/api/docs/guides/prompt-caching
   bg_effect:
     path: deck_images/img_19722dab0474.png
   speaker: 'Tobias'
@@ -976,9 +1049,15 @@ slides:
     qwen3-coder-next für Code, glm-4.7 für agentische Aufgaben, deepseek-v4-flash als
     Budget-Wahl. oh-my-opencode: benannte Agents mit einem Modell je Kategorie. LiteLLM-Gateway:
     ein Endpunkt, viele Modelle.
-    2 min Caching und Kontext-Hygiene: kleiner, präziser Kontext heißt weniger Wiederholung.
-    1 min Prinzipien, dann Brücke zum zweiten Hands-On: Ihre Spec ist auch Token-Optimierung,
-    der Vertrag ersetzt Wiederholung.
+    2 min Caching und Kontext-Hygiene: Weniger Kontext kann Input-Token sparen. Caching nutzt
+    bereits berechnete Kontextteile erneut und kann Latenz und Kosten senken, verkleinert aber
+    nicht den logischen Kontext. Modell-Routing verändert vor allem den Preis pro Token und
+    kann Qualität sowie die Zahl nötiger Versuche verändern.
+    1 min Prinzipien, dann Brücke zum zweiten Hands-On: Eine klare Spec kann Rückfragen und
+    Korrekturschleifen sparen; ihr Erstellen und Laden kostet ebenfalls Token.
+    Keine pauschale Einsparquote und kein Versprechen gleicher Qualität. Vergleiche brauchen
+    dieselben Aufgaben und vorab festgelegte Qualitätskriterien; Input-, Output- und gecachte
+    Token, Gesamtkosten, Laufzeit und Fehlversuche getrennt erfassen.
     Glossar: KV-Cache = das Modell merkt sich Kontext-Berechnungen über Schritte; Kompaktion =
     alten Kontext zusammenfassen oder verwerfen. pi-memory und Knowledge Graph persistieren
     Erfahrung außerhalb des Kontexts.
@@ -1003,7 +1082,7 @@ slides:
   title: 'Jeder geht mit einem eigenen, CI-validierten Research-Repo'
   bullets:
   - 'Gleiche Frage wie in Übung 1, jetzt mit Spec'
-  - 'Corpus statt Haufen: ein geprüfter Text-Bestand'
+  - 'Corpus: strukturierter Literaturbestand'
   - 'Regeln statt Handarbeit: prüfen, erzeugen, berichten'
   - 'Lebendig statt Momentaufnahme: CI prüft wöchentlich'
   bg_effect:
@@ -1016,15 +1095,15 @@ slides:
     Live zeigen: Corpus = papers.yaml (Source of Truth), Steuerung = config/taxonomy.yaml,
     wöchentlicher Dienst = CI nach GitHub Pages.
     Start: git clone https://github.com/tobias-weiss-ai-xr/skeleton-research.git my-research
-    Kernnutzen: ein strukturierter, reproduzierbarer, automatisch validierter Stand des
-    Literaturwissens.
+    Kernnutzen: ein versionierter Literaturbestand mit automatischen Strukturprüfungen.
+    Die fachliche Richtigkeit und Vollständigkeit der Inhalte müssen zusätzlich geprüft werden.
 
 - layout: content_image
   title: 'In der Pipeline hat jede Stufe genau eine Aufgabe'
   bullets:
   - 'Ein Werkzeug, ein Job'
   - 'Text ist die Schnittstelle, für Mensch und Agent'
-  - 'Die Pipeline ist der Richter, nicht die Meinung'
+  - 'Grün heißt: definierte Checks bestanden'
   image:
     path: deck_diagrams/dia_pipeline.png
     purpose: 'Zeigt die vier Stufen und dass die Prüfung das Tor ist: Nur was sie besteht, geht weiter, der Rest geht zurück zum Sammeln.'
@@ -1034,8 +1113,13 @@ slides:
     Mapping für die Live-Demo: Sammeln = papers.yaml plus Discovery (arXiv, OpenAlex, dblp,
     Crossref, EUPMC); Prüfen = validate, exit 0 oder rot; Erzeugen = README, Statistik,
     Reports; Veröffentlichen = CI nach GitHub Pages.
-    Vom Agenten erzeugte Änderungen müssen die Validierung bestehen, objektiv.
-    papers.yaml = Spezifikation, Pipeline = Vertrag, CI = Test: die Pyramide in Aktion.
+    Der Validator prüft Felder, Formate, Kategorien und Dubletten. Die separate Quellenprüfung
+    prüft die Erreichbarkeit von Links, läuft im Template aber mit --no-fail nur als Bericht.
+    Keine dieser Prüfungen bestätigt die fachliche Richtigkeit oder Vollständigkeit der Inhalte.
+    Grün bedeutet: Die eingerichteten, blockierenden Prüfungen wurden bestanden.
+    Die drei Ebenen bleiben: openspec/specs/ = Anforderungen, openspec/changes/ = Auftrag,
+    tests/ = Prüfungen. papers.yaml enthält die Daten; die Pipeline verarbeitet sie, CI führt
+    die eingerichteten Prüfungen aus. Das Beispiel bleibt die Auswertung Papers pro Jahr.
 
 - layout: content
   title: 'Der Jump-Start dauert fünf Schritte'
@@ -1053,7 +1137,8 @@ slides:
     Live zeigen.
     (1) Fork oder Klon von skeleton-research.
     (2) config/taxonomy.yaml: nur categories anpassen (id, name, description).
-    (3) Start-Papers in papers.yaml, echte URLs. Die Prüfung entscheidet, was überlebt.
+    (3) Start-Papers in papers.yaml, echte URLs. Titel und Inhalte an den Originalquellen
+        prüfen; die automatische Strukturprüfung allein erkennt keine erfundenen Papers.
     (4) python scripts/pipeline.py
     (5) Push, CI validiert und deployt.
     Wichtig: Was die Pipeline erzeugt, wird nie von Hand geändert (README.md, docs/papers.json,
@@ -1067,7 +1152,7 @@ slides:
     seed: 46
   bullets:
   - 'Klein halten: eine Auswertung, eine Kennzahl'
-  - 'Fertig heißt: die Prüfung läuft durch'
+  - 'Fertig: Tests bestanden, Ergebnis geprüft'
   - 'Mit Agent: erst /opsx-propose, dann /opsx-apply'
   - 'Ohne OpenSpec: dieselbe Struktur als Markdown'
   speaker: 'Christian'
@@ -1094,7 +1179,7 @@ slides:
   - ['1 · Terminal', 'openspec init --tools opencode,pi', 'Befehle und Skills für den Agenten']
   - ['2 · Agent', '/opsx-propose thema-x: Papers pro Jahr als Kennzahl', 'Proposal, Tasks und Spec']
   - ['3 · Terminal', 'openspec status --change thema-x', 'welche Teile schon stehen']
-  - ['4 · Terminal', 'openspec validate thema-x --strict', 'gültig, oder die Stelle mit dem Fehler']
+  - ['4 · Terminal', 'openspec validate thema-x --strict', 'Strukturprüfung der Spec']
   - ['5 · Agent', '/opsx-apply thema-x', 'der Agent arbeitet die Tasks ab']
   - ['6 · Terminal', 'openspec list', 'Fortschritt, etwa 4/4 tasks']
   - ['7 · Agent', '/opsx-archive thema-x', 'die Spec wird fortgeschrieben']
@@ -1113,11 +1198,14 @@ slides:
         der Übung: Woran würden Sie merken, dass es falsch ist?
     (3) Zeigt, welche Teile fertig sind. design.md ist optional; status meldet die Tasks trotzdem
         als "blocked by design", solange sie fehlt. Das stört validate und archive nicht.
-    (4) Die Prüfung. Häufigster Fehler: "muss" statt SHALL oder MUST. Die Schlüsselwörter bleiben
+    (4) Die Strukturprüfung der Spec, kein Test der Implementierung. Häufigster Fehler:
+        "muss" statt SHALL oder MUST. Die Schlüsselwörter bleiben
         englisch, der Rest darf deutsch sein. Jedes Requirement braucht ein Scenario mit WHEN und
         THEN.
     (5) Der Agent setzt die Tasks um und hakt sie ab.
-    (6) Kontrolle: Alle Tasks erledigt?
+    (6) Kontrolle: Alle Tasks erledigt? Häkchen belegen keinen bestandenen Test. Vor dem
+        Archivieren die Implementierung gegen bekannte Eingaben und erwartete Ergebnisse
+        testen, einen Negativfall prüfen und das Ergebnis fachlich reviewen.
     (7) Der Change wandert nach openspec/changes/archive/<Datum>-thema-x/, die Spec nach
         openspec/specs/. Im Terminal geht dasselbe mit openspec archive thema-x --yes.
     Ohne Agent: openspec new change thema-x legt nur den leeren Ordner an, die drei Dateien
@@ -1144,11 +1232,11 @@ slides:
     (3) Eine Prüfung, die nicht fehlschlagen kann, prüft nichts, wie ein Experiment ohne
         mögliches Negativergebnis. Beim Herumgehen: Ein Kriterium nennt auch, was es
         ausschließt, etwa "das Feld kommt als nicht angegeben zurück, statt mit einer Vermutung
-        gefüllt zu werden". Wer eine Skala von 1 bis 5 vorschlägt, zerlegt sie in
-        Ja-Nein-Prüfungen oder nennt die Schwelle: Bei Ja/Nein urteilen zwei Personen in 87
-        Prozent der Fälle gleich, bei einer Fünferskala nur in 38 bis 58 Prozent (Rao und
-        Callison-Burch, Autorubric, arXiv 2603.00077).
-    Schlusssatz: Erledigt ist, was die Prüfung besteht.
+        gefüllt zu werden". Für diese Übung wählen wir konkrete Kriterien mit eindeutigem
+        erwartetem Ergebnis. Wo Abstufungen fachlich sinnvoll sind, braucht eine Skala klare
+        Bewertungsanker; binäre Kriterien sind nicht grundsätzlich überlegen.
+    Schlusssatz: Grün heißt, die definierten Prüfungen sind bestanden. Ob sie ausreichen,
+    verantworten wir.
 
 - layout: statement
   title: 'Pause. Fünf Minuten.'
@@ -1184,7 +1272,7 @@ slides:
   notes: |
     Die Kriterien wie in Übung 2. Frage an das Publikum: Was würde die Pyramide an
     diesem Projekt bemängeln?
-    Wünsche aus dem Blitzlicht aufgreifen: Hat das jemand von Ihnen angestoßen?
+    Per Handzeichen: Wer hat sein Recherche-Thema vom Anfang angestoßen?
 
 - layout: section
   number: '9'
@@ -1195,8 +1283,8 @@ slides:
     seed: 48
   speaker: 'Tobias'
   notes: |
-    Block 8, 11:45 bis 12:00, Moderation. Offene Fragen, Diskussion, die Wünsche aus dem
-    Blitzlicht Revue passieren lassen.
+    Block 8, 11:45 bis 12:00, Moderation. Offene Fragen, Diskussion, die Handzeichen-Runde
+    vom Anfang wiederholen: Wer würde jetzt einen Agenten beauftragen?
     Diskussionsimpulse:
     Wo begegnen Ihnen schon Agenten, und wofür würden Sie einen beauftragen?
     Wo liegt das größte Potenzial, und wo die größte Skepsis?
@@ -1209,7 +1297,7 @@ slides:
   bullets:
   - 'Klein starten: eine wiederkehrende Aufgabe, ein Prüfkriterium'
   - 'Den Auftrag als Datei: Spec, erster Change mit drei Tasks'
-  - 'Tests und CI als Pflicht, iterieren bis grün'
+  - 'Checks bestehen, Ergebnis fachlich prüfen'
   - 'Instruktionen und Skills anlegen statt jedes Mal erklären'
   - 'Erkenntnisse aus dem Betrieb werden neue Changes'
   bg_effect:
