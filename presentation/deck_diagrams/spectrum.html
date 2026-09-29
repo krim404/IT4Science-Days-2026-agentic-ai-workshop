@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Von der Chat-Webseite zur Pipeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 480px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="spec-title spec-desc">
+  <title id="spec-title">Von der Chat-Webseite zur Pipeline</title>
+  <desc id="spec-desc">Vier Stufen untereinander: Chat-GUI, Assistent, Agent im Harness, Agenten
+  mit CI. Ein Pfeil daneben zeigt, dass die Autonomie von oben nach unten wächst. Die letzte Stufe
+  ist das Ziel des Vormittags.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3E5A66"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="480" fill="#FFFFFF"/>
+
+  <!-- arrows first, so boxes paint over the line ends -->
+  <path d="M 184 96 L 184 120" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 184 192 L 184 216" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 184 288 L 184 312" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- autonomy axis -->
+  <path d="M 400 32 L 400 408" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="428" y="220" fill="#3E5A66" font-size="20" text-anchor="middle"
+        transform="rotate(90 428 220)"
+        font-family="'Source Sans 3', system-ui, sans-serif">Autonomie wächst</text>
+
+  <rect x="24" y="24" width="320" height="72" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="24" width="320" height="72" rx="6" fill="#3E5A66" fill-opacity="0.10" stroke="#9BBFAE"/>
+  <text x="184" y="56" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Chat-GUI</text>
+  <text x="184" y="82" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Ergebnisse von Hand übertragen</text>
+
+  <rect x="24" y="120" width="320" height="72" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="120" width="320" height="72" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="184" y="152" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Assistent, Bot</text>
+  <text x="184" y="178" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">vorgefertigte Fähigkeiten</text>
+
+  <rect x="24" y="216" width="320" height="72" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="216" width="320" height="72" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="184" y="248" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Agent im Harness</text>
+  <text x="184" y="274" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">liest, schreibt, entscheidet</text>
+
+  <rect x="24" y="312" width="320" height="72" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="312" width="320" height="72" rx="6" fill="#F07F9A" fill-opacity="0.14" stroke="#F07F9A"/>
+  <text x="184" y="344" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Agenten mit CI</text>
+  <text x="184" y="370" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">mehrere Agenten, Specs, Pipeline</text>
+
+  <text x="184" y="420" fill="#F07F9A" font-size="18" letter-spacing="1.2"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">ZIEL DES VORMITTAGS</text>
+</svg>
+</body>
+</html>

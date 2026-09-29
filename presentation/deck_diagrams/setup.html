@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Aufbau eines Agenten</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 576px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 576 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="setup-title setup-desc">
+  <title id="setup-title">Aufbau eines Agenten</title>
+  <desc id="setup-desc">Ein Agent steht in der Mitte von vier Teilen: Ein Trigger startet ihn,
+  Instruktionen sind immer geladen, Skills fordert das Modell bei Bedarf selbst an und erhält ihren
+  Inhalt zurück, und über Capabilities ruft er Werkzeuge und andere Agenten auf.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3E5A66"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto-start-reverse">
+      <polygon points="0 0, 8 3, 0 6" fill="#F07F9A"/>
+    </marker>
+  </defs>
+
+  <rect width="576" height="480" fill="#FFFFFF"/>
+
+  <!-- arrows before boxes: trigger and instructions feed the agent, the agent calls capabilities -->
+  <path d="M 288 104 L 288 188" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 176 240 L 228 240" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 288 292 L 288 372" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <!-- a skill is requested and its content comes back: both directions -->
+  <path d="M 348 240 L 396 240" fill="none" stroke="#F07F9A" stroke-width="1.6"
+        stroke-dasharray="5 4" marker-start="url(#arrow-accent)" marker-end="url(#arrow-accent)"/>
+
+  <!-- the agent -->
+  <rect x="232" y="192" width="112" height="96" rx="8" fill="#105274"/>
+  <text x="288" y="250" fill="#FFFFFF" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Agent</text>
+
+  <!-- trigger, top -->
+  <rect x="188" y="24" width="200" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="288" y="58" fill="#105274" font-size="24" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Trigger</text>
+  <text x="288" y="86" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">startet den Lauf</text>
+
+  <!-- instructions, left -->
+  <rect x="12" y="200" width="164" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="94" y="234" fill="#105274" font-size="24" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Instruktionen</text>
+  <text x="94" y="262" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">immer geladen</text>
+
+  <!-- skills, right -->
+  <rect x="400" y="200" width="164" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="482" y="234" fill="#105274" font-size="24" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Skills</text>
+  <text x="482" y="262" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">bei Bedarf geladen</text>
+
+  <!-- capabilities, bottom -->
+  <rect x="168" y="376" width="240" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="288" y="410" fill="#105274" font-size="24" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Capabilities</text>
+  <text x="288" y="438" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Werkzeuge, Sub-Agenten</text>
+</svg>
+</body>
+</html>

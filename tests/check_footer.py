@@ -5,7 +5,7 @@ Prüft pro Folie, ob Inhalt in die Fußzeile ragt. Dependency-frei:
 injiziert Mess-JS in das gerenderte HTML und lässt Headless-Chromium
 die Geometrie messen (--dump-dom).
 
-Usage:   python3 tests/check_footer.py docs/presentations/<deck>.html
+Usage:   python3 tests/check_footer.py pre-presentation-builder/presentations/<deck>.html
 Exit 0 = keine Überlappung, 1 = Überlappungen gefunden, 2 = technischer Fehler.
 """
 import json

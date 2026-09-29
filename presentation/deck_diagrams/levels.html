@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Spezifikation, Vertrag, Tests</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 480px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="levels-title levels-desc">
+  <title id="levels-title">Spezifikation, Vertrag, Tests</title>
+  <desc id="levels-desc">Eine Pyramide aus drei Ebenen: oben die Spezifikation, in der Mitte der
+  Vertrag, unten die Tests. Ein Rückweg führt von den Tests zum Vertrag: Eine beim Prüfen gefundene
+  Lücke wird ein neuer Change, erst über ihn ändert sich die Spezifikation.</desc>
+
+  <defs>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F07F9A"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="480" fill="#FFFFFF"/>
+
+  <!-- return path first, so the layers paint over its ends -->
+  <path d="M 364 360 L 440 360 Q 448 360 448 352 L 448 256 Q 448 248 440 248 L 340 248"
+        fill="none" stroke="#F07F9A" stroke-width="1.6" stroke-dasharray="6 5"
+        marker-end="url(#arrow-accent)"/>
+
+  <!-- return label, above its top segment with a gap to the stroke -->
+  <rect x="340" y="192" width="120" height="48" fill="#FFFFFF"/>
+  <text x="400" y="212" fill="#F07F9A" font-size="20" text-anchor="middle"
+        font-family="'Source Sans 3', system-ui, sans-serif">Lücke wird</text>
+  <text x="400" y="234" fill="#F07F9A" font-size="20" text-anchor="middle"
+        font-family="'Source Sans 3', system-ui, sans-serif">neuer Change</text>
+
+  <!-- level 1, apex -->
+  <polygon points="104,88 296,88 320,184 80,184" fill="#FFFFFF"/>
+  <polygon points="104,88 296,88 320,184 80,184" fill="#3E5A66" fill-opacity="0.10" stroke="#9BBFAE"/>
+  <text x="200" y="132" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Spezifikation</text>
+  <text x="200" y="160" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">was gelten soll</text>
+
+  <!-- level 2 -->
+  <polygon points="76,200 324,200 348,296 52,296" fill="#FFFFFF"/>
+  <polygon points="76,200 324,200 348,296 52,296" fill="#FFFFFF" stroke="#105274"/>
+  <text x="200" y="244" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Vertrag</text>
+  <text x="200" y="272" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">eine Änderung und ihr Maß</text>
+
+  <!-- level 3, the base that decides -->
+  <polygon points="48,312 352,312 376,408 24,408" fill="#FFFFFF"/>
+  <polygon points="48,312 352,312 376,408 24,408" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="200" y="356" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Tests</text>
+  <text x="200" y="384" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">bestanden oder nicht</text>
+</svg>
+</body>
+</html>

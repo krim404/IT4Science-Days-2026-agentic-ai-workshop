@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Die Pipeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  svg { width: 480px; height: 480px; display: block; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="pipe-title pipe-desc">
+  <title id="pipe-title">Die Pipeline</title>
+  <desc id="pipe-desc">Vier Stufen untereinander: Sammeln, Prüfen, Erzeugen, Veröffentlichen. Die
+  Prüfung ist das Tor: Nur was sie besteht, geht weiter; was durchfällt, geht zurück zum Sammeln.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3E5A66"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F07F9A"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="480" fill="#FFFFFF"/>
+
+  <!-- arrows first, so boxes paint over the line ends -->
+  <path d="M 176 104 L 176 136" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 176 216 L 176 248" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 176 328 L 176 360" fill="none" stroke="#3E5A66" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <!-- a failed check goes back to collecting -->
+  <path d="M 328 176 L 368 176 Q 384 176 384 160 L 384 80 Q 384 64 368 64 L 328 64"
+        fill="none" stroke="#F07F9A" stroke-width="1.6" stroke-dasharray="6 5"
+        marker-end="url(#arrow-accent)"/>
+
+  <!-- arrow labels: masked, clear of the stroke -->
+  <text x="188" y="238" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif">grün</text>
+  <rect x="364" y="110" width="44" height="20" fill="#FFFFFF"/>
+  <text x="386" y="125" fill="#F07F9A" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">rot</text>
+
+  <rect x="24" y="24" width="304" height="80" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="24" width="304" height="80" rx="6" fill="#3E5A66" fill-opacity="0.10" stroke="#9BBFAE"/>
+  <text x="176" y="60" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Sammeln</text>
+  <text x="176" y="88" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">papers.yaml, Discovery</text>
+
+  <rect x="24" y="136" width="304" height="80" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="136" width="304" height="80" rx="6" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="176" y="172" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Prüfen</text>
+  <text x="176" y="200" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">validate, exit 0 oder rot</text>
+
+  <rect x="24" y="248" width="304" height="80" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="248" width="304" height="80" rx="6" fill="#FFFFFF" stroke="#105274"/>
+  <text x="176" y="284" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Erzeugen</text>
+  <text x="176" y="312" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">README, Statistik, Reports</text>
+
+  <rect x="24" y="360" width="304" height="80" rx="6" fill="#FFFFFF"/>
+  <rect x="24" y="360" width="304" height="80" rx="6" fill="#105274" fill-opacity="0.05" stroke="#3E5A66"/>
+  <text x="176" y="396" fill="#105274" font-size="28" font-weight="600"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">Veröffentlichen</text>
+  <text x="176" y="424" fill="#3E5A66" font-size="20"
+        font-family="'Source Sans 3', system-ui, sans-serif" text-anchor="middle">CI, GitHub Pages</text>
+</svg>
+</body>
+</html>
