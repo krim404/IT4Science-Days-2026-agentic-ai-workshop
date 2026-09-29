@@ -8,7 +8,12 @@
 #   ./build.sh --dev    Livesuche: bei jedem Speichern der .md neu rendern + pruefen
 set -euo pipefail
 cd "$(dirname "$0")"
+# Aufruf: ./build.sh [Deck-Stamm] [Flag]   Stamm = Dateiname ohne .md unter pre-presentation-builder/presentations/
+#   ./build.sh                 Workshop-Deck: rendern + pruefen
+#   ./build.sh openedu-unsere-arbeit   dasselbe fuer das openEDU-Deck
+#   ./build.sh --list [--export] zusaetzlich Folienverzeichnis / PDF+PPTX-Export
 DECK=pre-presentation-builder/presentations/it4science-days-2026-agentic-ai-workshop
+for a in "$@"; do case "$a" in --*) ;; *) DECK=pre-presentation-builder/presentations/$a;; esac; done
 
 command -v marp >/dev/null 2>&1 && MARP=(marp) || MARP=(npx --yes @marp-team/marp-cli)
 
@@ -33,11 +38,12 @@ if [ "${1:-}" = "--dev" ]; then
 fi
 
 render
-[ "${1:-}" = "--list" ] && python3 tools/list_slides.py "$DECK.html" </dev/null
+for a in "$@"; do [ "$a" = "--list" ] && python3 tools/list_slides.py "$DECK.html" </dev/null; done
 check
-[ "${1:-}" = "--export" ] && {
-  export CHROME_PATH="${CHROME_PATH:-$(command -v google-chrome || command -v chromium)}"
-  "${MARP[@]}" "$DECK.md" --pdf  -o presentation/marp-deck.pdf  </dev/null >/dev/null 2>&1
-  "${MARP[@]}" "$DECK.md" --pptx -o presentation/marp-deck.pptx </dev/null >/dev/null 2>&1
-  echo "exportiert: presentation/marp-deck.pdf + marp-deck.pptx"
-}
+for a in "$@"; do case "$a" in
+  --export) export CHROME_PATH="${CHROME_PATH:-$(command -v google-chrome || command -v chromium)}"
+     stem=$(basename "$DECK")
+     "${MARP[@]}" "$DECK.md" --pdf  -o "presentation/$stem.pdf"  </dev/null >/dev/null 2>&1
+     "${MARP[@]}" "$DECK.md" --pptx -o "presentation/$stem.pptx" </dev/null >/dev/null 2>&1
+     echo "exportiert: presentation/$stem.pdf + .pptx" ;;
+esac; done
