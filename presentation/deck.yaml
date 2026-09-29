@@ -27,34 +27,35 @@
 #  26 human in loop    background doodle (new); a list of three pillars, a steering wheel
 #  27 two harnesses    background doodle (new); a comparison, multi tool beside a single screwdriver
 #  28 pi packages      background doodle (new); a grid
-#  29 pause            background doodle (new); a break
-#  30 section 5        background doodle (reused)
-#  31 modes            background doodle (reused); plan vs build is a verbal distinction
-#  32 exercise 1       background doodle (new); a grid
-#  33 statement        background doodle (new); the takeaway of exercise 1
-#  34 AGENTS.md        background doodle (reused); a list of rules
-#  35 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
-#  36 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
-#  37 showcase         background doodle (reused); a list of parts
-#  38 where levels     background doodle (new); a grid
-#  39 two schools      background doodle (new); a grid
-#  40 tokens           background doodle (reused); a list of levers
-#  41 section 7        background doodle (reused)
-#  42 skeleton         background doodle (reused); a list of properties
-#  43 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
-#  44 jump-start       background doodle (reused); steps revealed one by one
-#  45 exercise 2       background doodle (new); instructions
-#  46 exercise 2 steps background doodle (new); a grid of commands, a stepladder
-#  47 measure          background doodle (new); a grid
-#  48 pause            background doodle (new, same motif as 29)
-#  49 section 8        background doodle (reused)
-#  50 outcomes         background doodle (new); criteria
-#  51 section 9        background doodle (new)
-#  52 transfer         background doodle (reused); a list of steps
-#  53 resources 1      background doodle (new); a grid
-#  54 resources 2      background doodle (new); a grid
-#  55 thanks           background doodle (reused)
-#  56 references       none
+#  29 pi recommended   none; a two-column table of packages, the gradient carries it
+#  30 pause            background doodle (new); a break
+#  31 section 5        background doodle (reused)
+#  32 modes            background doodle (reused); plan vs build is a verbal distinction
+#  33 exercise 1       background doodle (new); a grid
+#  34 statement        background doodle (new); the takeaway of exercise 1
+#  35 AGENTS.md        background doodle (reused); a list of rules
+#  36 section 6        background doodle (new); a sealed envelope, the commission becomes a contract
+#  37 chapter overview background doodle (new); a list of what the chapter covers, a lighthouse for orientation
+#  38 showcase         background doodle (reused); a list of parts
+#  39 where levels     background doodle (new); a grid
+#  40 two schools      background doodle (new); a grid
+#  41 tokens           background doodle (reused); a list of levers
+#  42 section 7        background doodle (reused)
+#  43 skeleton         background doodle (reused); a list of properties
+#  44 pipeline         DIAGRAM; four stages with a gate and a return path is a data flow
+#  45 jump-start       background doodle (reused); steps revealed one by one
+#  46 exercise 2       background doodle (new); instructions
+#  47 exercise 2 steps background doodle (new); a grid of commands, a stepladder
+#  48 measure          background doodle (new); a grid
+#  49 pause            background doodle (new, same motif as 29)
+#  50 section 8        background doodle (reused)
+#  51 outcomes         background doodle (new); criteria
+#  52 section 9        background doodle (new)
+#  53 transfer         background doodle (reused); a list of steps
+#  54 resources 1      background doodle (new); a grid
+#  55 resources 2      background doodle (new); a grid
+#  56 thanks           background doodle (reused)
+#  57 references       none
 title: 'Agentic AI in der Praxis'
 author: 'Christian Uhl · Tobias Weiß'
 date: '30.09.2026'
@@ -578,8 +579,8 @@ slides:
     seed: 25
   headers: ['Aufgabe', 'Unsere Wahl', 'Einordnung']
   rows:
-  - ['Freie Texte, Übersetzung', 'GPT-6', 'bewährt in unseren Schreibaufgaben']
-  - ['Vision', 'GPT-6, Claude Fable 5', 'Fable 5 führt die Arena Vision']
+  - ['Freie Texte, Übersetzung', 'GPT-6 Astra', 'bewährt in unseren Schreibaufgaben']
+  - ['Vision', 'GPT-6 Astra, Claude Fable 5', 'Fable 5 führt die Arena Vision']
   - ['Code, größere Umbauten', 'Claude Opus 5.5, zunehmend GLM', 'bei uns oft wenige Korrekturen']
   - ['Code gezielt umschreiben', 'Qwen3.8-Flash-Next, GLM', 'offene Gewichte, schnell, günstig']
   - ['Abläufe mit Werkzeugen', 'GLM 5.3 Flash, Claude Sonnet 5.5', 'verlässliche Werkzeugaufrufe']
@@ -597,7 +598,7 @@ slides:
     Aufgabe wählen, nicht nach Ruf des Anbieters.
 
     Die oberen Zeilen sind für viele im Raum die relevantesten, weil sie täglich schreiben.
-    Vision: GPT-6 überzeugt in eigenen Tests, auf der Arena-Vision-Rangliste führt Claude Fable 5.
+    Vision: GPT-6 Astra überzeugt in eigenen Tests, auf der Arena-Vision-Rangliste führt Claude Fable 5.
     Code: Claude ist bei größeren Umbauten oft auf Anhieb erfolgreich und entsprechend teuer.
     Qwen3.8-Flash-Next leistet für gezielte Umschreibungen mehr als frühere Coder-Modelle, bei
     offenen Gewichten. GLM steht zweimal, weil es am schnellsten aufholt.
@@ -778,6 +779,47 @@ slides:
     UI: pi-webui, pi-desktop-ui, glimpseui, pi-chrome.
     Absicherung: pi-tool-repair, pi-retry, pi-permission-system, pi-slash-command-guard,
     pi-secrets, pi-quotas, pi-rtk, pi-continue.
+
+- layout: table
+  title: 'Für den Start empfehlen wir diese acht Packages'
+  headers: ['Package', 'Leistet']
+  rows:
+  - ['pi-plan-mode', 'liest und plant nur, bis Sie freigeben']
+  - ['pi-permission-system', 'legt fest, was der Agent ohne Rückfrage darf']
+  - ['pi-secrets', 'Zugangsdaten erreichen das Modell nie']
+  - ['superpowers', 'Skills für Planen, Testen und Fehlersuche']
+  - ['pi-subagents', 'verteilt Teilaufgaben an eigene Agenten']
+  - ['pi-websearch', 'Websuche als Werkzeug des Agenten']
+  - ['pi-tool-repair, pi-retry', 'fangen fehlerhafte Aufrufe und Abbrüche ab']
+  - ['pi-rtk', 'kürzt Shell-Ausgaben und spart Token']
+  sources:
+  - text: 'Eigene Installation, Stand 09/2026'
+    footnote: true
+  - 'Alle Packages: pi.dev/packages': https://pi.dev/packages
+  speaker: 'Tobias'
+  notes: |
+    ~90 s. Die Auswahl aus der eigenen Installation, mit der ein Einstieg sicher und sparsam
+    läuft. Nicht alles auf einmal installieren, sondern bei Bedarf ergänzen.
+    - Die ersten drei sind Human in the Loop als Werkzeug: Plan-Mode ändert nichts ohne
+      Zustimmung, das Permission-System regelt die Freigaben, pi-secrets hält Passwörter und
+      API-Schlüssel aus dem Kontext und aus den Ausgaben heraus.
+    - superpowers und pi-subagents bringen die Arbeitsweise mit: erst planen, dann testen,
+      größere Aufgaben aufteilen.
+    - pi-websearch ist für die Literaturrecherche die naheliegende Ergänzung.
+    - tool-repair und retry lohnen sich vor allem mit offenen Modellen, deren Werkzeugaufrufe
+      öfter danebengehen. rtk ist einer der Token-Hebel aus dem Token-Block.
+    Installation je Package im Terminal:
+      pi install npm:@narumitw/pi-plan-mode
+      pi install npm:pi-permission-system
+      pi install npm:pi-secrets
+      pi install https://github.com/obra/superpowers
+      pi install npm:pi-subagents
+      pi install npm:@mammothb/pi-websearch
+      pi install npm:pi-tool-repair
+      pi install npm:@monotykamary/pi-retry
+      pi install npm:@sherif-fanous/pi-rtk
+    Weitere Packages durchsuchen: https://pi.dev/packages
+    Vorsicht wie bei Skills: Packages können Code ausführen. Vor der Installation ansehen.
 
 - layout: statement
   title: 'Pause. Zehn Minuten.'
