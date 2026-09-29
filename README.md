@@ -157,17 +157,31 @@ Danach ein eigener Mini-**OpenSpec-Change** obendrauf — dieselbe Struktur, jet
 # Jump-Start (Schritte 1–4)
 git clone https://github.com/tobias-weiss-ai-xr/skeleton-research.git my-topic-research
 cd my-topic-research
-$EDITOR config/taxonomy.yaml                      # 2. Themenfeld setzen
-python3 scripts/fetch/fetch_new_papers.py --local # 3. Seeden (oder Treffer aus Anw. 1 eintragen)
+pip install -r requirements.txt                   # einmalig (pyyaml, requests, feedparser)
+$EDITOR config/taxonomy.yaml                      # 2. Themenfeld setzen (siehe Hinweise unten)
+python3 scripts/fetch/fetch_new_papers.py --local # 3. Seeden (oder Treffer aus Anw. 1 direkt in papers.yaml eintragen)
+python3 scripts/validate_papers.py --fix          # kürzt arXiv-URLs; rot wegen category? Siehe Hinweise unten
 python3 scripts/validate_papers.py && python3 scripts/generate_readme.py \
   && python3 scripts/standard_stats.py && python3 scripts/analysis/generate_reports.py  # 4.
 git add -A && git commit -m "bootstrap corpus" && git push   # 5. → CI
 
 # OpenSpec-Change (Anwendung 2, Teil 2)
-openspec new change thema-x
-# → Agent füllt proposal → design → specs → tasks → implementieren
-# → openspec validate --changes entscheidet, ob es zählt
+npm install -g @fission-ai/openspec@latest        # Node ≥ 20.19; das Paket "openspec" ist ein anderes!
+openspec init --tools opencode,pi                 # einmal pro Repo
+openspec new change thema-x                       # legt nur einen leeren Ordner an
+# → mit Agent: /opsx-propose thema-x: <Ihre Kennzahl>, dann /opsx-apply thema-x
+# → ohne Agent: proposal.md, tasks.md und specs/<name>/spec.md selbst schreiben
+openspec validate thema-x --strict                # Struktur der Spec; testet NICHT die Umsetzung
+python3 -m pytest                                 # das ist der eigentliche Test
 ```
+
+**Hinweise zu den Schritten 2–3:**
+
+- `config/taxonomy.yaml` (Schritt 2): Setzen Sie `topic.name`, `topic.short` und `topic.description`, benennen Sie die Einträge unter `taxonomy.categories` und `subcategories` (Felder `id` und `display`) und ersetzen Sie alle `YOUR TOPIC …`-Platzhalter in den Queries. Bleiben Platzhalter stehen, findet die Suche 0 Treffer.
+- **Beispiel-Papers löschen:** `papers.yaml` enthält fünf Platzhalter („Example Paper 1–5“, URLs wie `2601.00001`). Der Validator warnt davor, sie bestehen aber und landen sonst in Ihrem README. Vor dem Seeden entfernen oder durch echte Treffer ersetzen.
+- **Rot nach dem Fetch:** Hat eine Query keine `category`, schreibt der Fetcher `category: ''`, und die Validierung fällt durch. Geben Sie jeder Query in `arxiv_queries` eine `category` oder tragen Sie sie von Hand ein. Prüfen Sie außerdem Titel und Abstract gegen die Originalquelle.
+- OpenSpec-Version: getestet mit 1.13.2. Ältere Versionen (z. B. 1.9.0) bringen ein anderes Workflow-Profil mit; dann fehlt `/opsx-propose`, bis Sie `openspec config profile core` ausführen.
+- Was `validate` nicht leistet: Es prüft die Struktur der Spec, nicht den Code, und die CI des Skeletons führt es nicht aus. Machen Sie jedes Scenario zu einem Test und haken Sie die Tasks erst ab, wenn `pytest` und die Pipeline grün sind.
 
 > Regel aus der Pyramide: Tasks erst **done**, wenn die Verifikation (CI/Validate) grün ist.
 
@@ -185,4 +199,4 @@ openspec new change thema-x
 - [skeleton-research](https://github.com/tobias-weiss-ai-xr/skeleton-research) — forkbares Research-Corpus-Skeleton
 - [ai-literacy-research](https://github.com/tobias-weiss-ai-xr/ai-literacy-research) — OpenSpec-Showcase (Research-Gap-Analyse)
 - [pi-saia-plugin](https://codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin) · [opencode-saia-plugin](https://github.com/tobias-weiss-ai-xr/opencode-saia-plugin) (GitHub = Primary, Codeberg = Mirror) · zot-saia-plugin
-- [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://www.npmjs.com/package/openspec) · [pi](https://pi.dev) · [zot](https://www.zot.sh)
+- [OpenCode](https://github.com/sst/opencode) · [OpenSpec](https://www.npmjs.com/package/@fission-ai/openspec) · [pi](https://pi.dev) · [zot](https://www.zot.sh)

@@ -1371,9 +1371,9 @@ TOBIAS — live zeigen. Konkretes Mapping: (1) Fork/Klon von skeleton-research,
 - **Fertig heißt**: die Prüfung läuft durch. Nicht: der Agent meldet Vollzug.
 
 ```bash
-npm install -g openspec            # falls noch nicht vorhanden
+npm install -g @fission-ai/openspec  # falls noch nicht vorhanden
 openspec new change thema-x        # Ihr Thema aus Teil 1
-openspec validate --changes        # entscheidet, ob es zählt
+openspec validate thema-x --strict # Struktur der Spec; die Tests entscheiden
 ```
 
 > **Ohne OpenSpec** genauso möglich: dieselbe Struktur als Markdown-Datei.
@@ -1533,7 +1533,7 @@ Jetzt aufs eigene Projekt übertragen.
 - **OpenCode**: github.com/sst/opencode
 - **pi**: pi.dev · @earendil-works/pi-coding-agent
 - **zot**: zot.sh · github.com/patriceckhart/zot
-- **OpenSpec**: npmjs.com/package/openspec
+- **OpenSpec**: npmjs.com/package/@fission-ai/openspec
 - **SAIA-Plugins**: codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin · github.com/tobias-weiss-ai-xr/opencode-saia-plugin · zot-saia-plugin
 - **oh-my-opencode**: github.com/code-yeongyu/oh-my-opencode
 

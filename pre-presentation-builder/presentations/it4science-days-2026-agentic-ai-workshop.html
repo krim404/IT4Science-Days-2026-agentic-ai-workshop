@@ -9118,9 +9118,9 @@ pre code {
 <li><strong>Klein halten</strong>: eine Auswertung, eine Kennzahl. Nicht das ganze Vorhaben.</li>
 <li><strong>Fertig heißt</strong>: die Prüfung läuft durch. Nicht: der Agent meldet Vollzug.</li>
 </ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">npm install -g openspec            <span class="hljs-comment"># falls noch nicht vorhanden</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">npm install -g @fission-ai/openspec  <span class="hljs-comment"># falls noch nicht vorhanden</span>
 openspec new change thema-x        <span class="hljs-comment"># Ihr Thema aus Teil 1</span>
-openspec validate --changes        <span class="hljs-comment"># entscheidet, ob es zählt</span>
+openspec validate thema-x --strict <span class="hljs-comment"># Struktur der Spec; die Tests entscheiden</span>
 </code></pre>
 <blockquote>
 <p><strong>Ohne OpenSpec</strong> genauso möglich: dieselbe Struktur als Markdown-Datei.</p>
@@ -10934,7 +10934,7 @@ pre code {
 <li><strong>OpenCode</strong>: github.com/sst/opencode</li>
 <li><strong>pi</strong>: pi.dev · @earendil-works/pi-coding-agent</li>
 <li><strong>zot</strong>: zot.sh · github.com/patriceckhart/zot</li>
-<li><strong>OpenSpec</strong>: npmjs.com/package/openspec</li>
+<li><strong>OpenSpec</strong>: npmjs.com/package/@fission-ai/openspec</li>
 <li><strong>SAIA-Plugins</strong>: codeberg.org/tobias-weiss-ai-xr/pi-saia-plugin · github.com/tobias-weiss-ai-xr/opencode-saia-plugin · zot-saia-plugin</li>
 <li><strong>oh-my-opencode</strong>: github.com/code-yeongyu/oh-my-opencode</li>
 </ul>

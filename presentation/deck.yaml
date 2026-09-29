@@ -1136,9 +1136,15 @@ slides:
   notes: |
     Live zeigen.
     (1) Fork oder Klon von skeleton-research.
-    (2) config/taxonomy.yaml: nur categories anpassen (id, name, description).
-    (3) Start-Papers in papers.yaml, echte URLs. Titel und Inhalte an den Originalquellen
-        prüfen; die automatische Strukturprüfung allein erkennt keine erfundenen Papers.
+    (2) config/taxonomy.yaml: topic (name, short, description), categories und subcategories
+        (id, display) anpassen und alle "YOUR TOPIC"-Platzhalter in den Queries ersetzen,
+        sonst findet die Suche 0 Treffer.
+    (3) Zuerst die fünf "Example Paper" in papers.yaml löschen (sie bestehen die Validierung
+        und landen sonst im README). Dann seeden, echte URLs. Hat eine Query keine
+        category, ist validate nach dem Fetch rot; category von Hand setzen (ein zweiter,
+        ungeplanter Fehlschlag neben M3). Titel und Inhalte an den Originalquellen prüfen; die
+        automatische Strukturprüfung allein erkennt keine erfundenen Papers.
+    Vorher pip install -r requirements.txt (siehe README).
     (4) python scripts/pipeline.py
     (5) Push, CI validiert und deployt.
     Wichtig: Was die Pipeline erzeugt, wird nie von Hand geändert (README.md, docs/papers.json,
@@ -1198,7 +1204,8 @@ slides:
         der Übung: Woran würden Sie merken, dass es falsch ist?
     (3) Zeigt, welche Teile fertig sind. design.md ist optional; status meldet die Tasks trotzdem
         als "blocked by design", solange sie fehlt. Das stört validate und archive nicht.
-    (4) Die Strukturprüfung der Spec, kein Test der Implementierung. Häufigster Fehler:
+    (4) Die Strukturprüfung der Spec, kein Test der Implementierung, und die CI des Skeletons
+        führt sie nicht aus. Jedes Scenario braucht einen eigenen Test (pytest). Häufigster Fehler:
         "muss" statt SHALL oder MUST. Die Schlüsselwörter bleiben
         englisch, der Rest darf deutsch sein. Jedes Requirement braucht ein Scenario mit WHEN und
         THEN.
@@ -1210,6 +1217,9 @@ slides:
         openspec/specs/. Im Terminal geht dasselbe mit openspec archive thema-x --yes.
     Ohne Agent: openspec new change thema-x legt nur den leeren Ordner an, die drei Dateien
     schreibt man dann selbst.
+    Versionen: Das Paket heißt @fission-ai/openspec (npm "openspec" ist ein anderes). Bei
+    Version 1.9.0 gibt es ein anderes Workflow-Profil; /opsx-propose erscheint erst nach
+    openspec config profile core.
 
 - layout: table
   title: 'Schon das Mindestziel zeigt, dass die Methode sitzt'
