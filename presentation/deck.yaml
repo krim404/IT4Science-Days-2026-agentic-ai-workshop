@@ -1,7 +1,7 @@
 # Picture audit (one line per slide: verdict; reason). Slides without a background doodle get the gradient.
 #   1 title            background doodle (reused); a cover names the topic and explains nothing yet
 #   2 speakers         background doodle (new); two people, two work areas, the columns carry the text
-#   3 blitzlicht       background doodle (new); an instruction for the room
+#   3 show of hands    background doodle (new); an instruction for the room
 #   4 expectations     background doodle (new); a list of deliverables
 #   5 agenda 1         background doodle (new); a one-column table of blocks
 #   6 agenda 2         background doodle (new); a one-column table of blocks
@@ -126,23 +126,23 @@ slides:
     Ton: Die Methode ist der Held, nicht der Sprecher.
 
 - layout: content
-  title: 'Ihre Reihe: Blitzlicht in dreißig Sekunden pro Person'
+  title: 'Ihre Reihe: ein paar Fragen per Handzeichen'
   bg_effect:
     prompt: 'a large vintage camera flash unit with a round reflector mounted on a small tripod'
     path: deck_images/img_775b29258fc2.png
     seed: 9
   bullets:
-  - 'Name, Fachrichtung, ein Thema für eine Literaturrecherche'
-  - 'Selbsteinschätzung KI: eher Anfang oder eher fortgeschritten?'
-  - 'Wir sammeln die Wünsche am Whiteboard'
-  - 'Am Ende prüfen wir sie gegen die Outcomes'
+  - 'Wer nutzt KI-Chats wie ChatGPT regelmäßig?'
+  - 'Wer hat schon einen Agenten etwas erledigen lassen?'
+  - 'Wer schreibt selbst Code, und sei es nur ein Skript?'
+  - 'Überlegen Sie sich ein Thema für eine Literaturrecherche'
   speaker: 'Christian'
   notes: |
-    Moderation (~3 min). Die gesammelten Wünsche sichtbar notieren, das Wrap-Up greift
-    sie auf. Zeit hart timen.
-    Bei großen Runden: 5 bis 6 Stichproben aus dem Raum, Rest per Karte oder Zettel.
-    Selbsteinschätzung mit Handzeichen oder kurz mündlich, kein Werturteil. Mit der Abstufung
-    wird das Herumgehen gezielt: Fortgeschrittene bekommen Vertiefung, Anfänger Starthilfe.
+    Moderation (~3 min), großer Hörsaal: keine Vorstellungsrunde, nur Handzeichen.
+    Nach jeder Frage den Anteil laut schätzen ("etwa die Hälfte"), kein Werturteil. Die Anteile
+    machen das Herumgehen gezielt: Fortgeschrittene bekommen Vertiefung, Anfänger Starthilfe.
+    Das Recherche-Thema behält jede Person für sich; es ist das Thema X in Übung 1. Die
+    Anteile merken, das Wrap-Up fragt noch einmal nach.
 
 - layout: content
   title: 'Der Vormittag liefert ein Werkzeug, keinen fertigen Bot'
@@ -153,7 +153,7 @@ slides:
   bullets:
   - 'Ein Research-Repo mit laufender Pipeline'
   - 'Einen prüfbaren Auftrag, live umgesetzt'
-  - 'Werkzeuge für Modelle und Harnesses statt Trendlisten'
+  - 'Werkzeuge für Modelle und Harnesses'
   - 'Nicht dabei: der voll-autonome Assistent'
   speaker: 'Tobias'
   notes: |
@@ -162,7 +162,7 @@ slides:
     Kernsatz: Wir bauen keine voll-autonomen Assistenten, sondern führen und korrigieren die
     Agenten.
     Dialogmuster für "Ich will nur einen Bot": den Kernsatz sagen, dann "Genau das ist heute."
-    Bei Unruhe die Blitzlicht-Wünsche aufgreifen: Die meisten waren Agent-Aufgaben, keine
+    Bei Unruhe die Recherche-Themen vom Anfang aufgreifen: Das sind Agent-Aufgaben, keine
     Bot-Wünsche.
 
 - layout: table
@@ -173,7 +173,7 @@ slides:
     seed: 11
   headers: ['Block']
   rows:
-  - ['Ankommen, Vorstellung, Blitzlicht']
+  - ['Ankommen, Vorstellung, Handzeichen-Runde']
   - ['Grundlagen: Agenten beauftragen']
   - ['Foundation Models: aktuelle Entwicklungen']
   - ['Open-Source Toolbox']
@@ -388,8 +388,8 @@ slides:
     ~2 min. Die Definition von der Begriffe-Folie an Bekanntem festmachen. Die rechte Spalte ist
     jeweils der Teil, der es zum Agenten macht: Das Modell wählt den nächsten Schritt.
 
-    Einstieg per Handzeichen: Wer hat schon eines davon genutzt? Greift die Selbsteinschätzung
-    aus dem Blitzlicht auf.
+    Einstieg per Handzeichen: Wer hat schon eines davon genutzt? Greift die zweite Frage der
+    Handzeichen-Runde auf.
 
     Abgrenzung: Nicht alles, was "Agent" heißt, ist einer. Viele Hotline-Bots, auch Telekom
     Voice AI Notes, sind feste Abläufe, also Workflows. Gartner nennt das "Agent Washing": Von
@@ -450,7 +450,7 @@ slides:
     (3) Der Rückpfeil ist der Kern: Nur die rechte Bahn kann scheitern, und genau deshalb kann
         sie auch fertig werden. Merksatz: Wer nicht sagen kann, woran es scheitern würde, hat
         nicht beauftragt, sondern gehofft.
-    (4) Bezug zum Raum: Die Literaturrecherche aus dem Blitzlicht ist genau dieser Fall.
+    (4) Bezug zum Raum: Die Literaturrecherche, die Sie sich am Anfang überlegt haben, ist genau dieser Fall.
     (5) Überleitung: Was muss ein solcher Auftrag enthalten, damit er prüfbar ist? Das zeigt die
         nächste Folie.
 
@@ -825,7 +825,7 @@ slides:
   speaker: 'Tobias'
   notes: |
     Etwa 15 Minuten im Agenten (OpenCode oder pi mit SAIA): Die Teilnehmenden geben ihr
-    Thema X aus dem Blitzlicht ohne Spec in den Plan-Mode. Der Agent plant selbst, das ist
+    Recherche-Thema vom Anfang ohne Spec in den Plan-Mode. Der Agent plant selbst, das ist
     bereits agentisch. Erst den Plan lesen: Steht darin, woran man erkennt, dass er fertig ist?
     Dann bauen lassen. Was kommt dabei heraus?
     Kein Tool-Zwang: Wem das Harness nicht startet, arbeitet mit der Nachbarin oder dem
@@ -1219,7 +1219,7 @@ slides:
   notes: |
     Die Kriterien wie in Übung 2. Frage an das Publikum: Was würde die Pyramide an
     diesem Projekt bemängeln?
-    Wünsche aus dem Blitzlicht aufgreifen: Hat das jemand von Ihnen angestoßen?
+    Per Handzeichen: Wer hat sein Recherche-Thema vom Anfang angestoßen?
 
 - layout: section
   number: '9'
@@ -1230,8 +1230,8 @@ slides:
     seed: 48
   speaker: 'Tobias'
   notes: |
-    Block 8, 11:45 bis 12:00, Moderation. Offene Fragen, Diskussion, die Wünsche aus dem
-    Blitzlicht Revue passieren lassen.
+    Block 8, 11:45 bis 12:00, Moderation. Offene Fragen, Diskussion, die Handzeichen-Runde
+    vom Anfang wiederholen: Wer würde jetzt einen Agenten beauftragen?
     Diskussionsimpulse:
     Wo begegnen Ihnen schon Agenten, und wofür würden Sie einen beauftragen?
     Wo liegt das größte Potenzial, und wo die größte Skepsis?
