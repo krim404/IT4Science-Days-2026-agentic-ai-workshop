@@ -113,10 +113,10 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <ul>
 <li><strong>Digitale Dienste als Infrastruktur</strong> — Mail, Chat, Files, Wiki, Projekte: Grundversorgung wie Strom und Wasser.</li>
 <li><strong>Souveränität ist keine Haltung, sondern Betrieb</strong> — DSGVO, Lizenzfreiheit und kontrollierte Datenflüsse entstehen durch Arbeit an Ingress, Secrets und Datenbanken.</li>
-<li><strong>openDesk als Basis, openEDU als Bildungs-Schicht</strong> — wir erben die Suite, aber der Uni-Alltag (Tenants, HRZ, Groupware) bleibt unsere Aufgabe.</li>
+<li><strong>openDesk als Basis, openEDU als Bildungs-Schicht</strong> — wir erben die Suite; der Uni-Alltag — Tenants, HRZ, Groupware — bleibt unsere Aufgabe.</li>
 </ul>
 <blockquote>
-<p>Nicht die Folie entscheidet über Souveränität, sondern der nächste Deployment-Commit.</p>
+<p>Souveränität entscheidet sich nicht auf Folien, sondern im nächsten Deployment-Commit.</p>
 </blockquote>
 <footer>openEDU · Souveräne Workplace-Suite · Uni Marburg</footer>
 </section>
@@ -220,7 +220,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 </tbody>
 </table>
 <blockquote>
-<p>Ein Login, acht Dienste — der Aufwand steckt in genau dieser Aussage.</p>
+<p>Ein Login, acht Dienste — dieser eine Satz ist unsere Baustelle.</p>
 </blockquote>
 <footer>openEDU · Souveräne Workplace-Suite · Uni Marburg</footer>
 </section>
@@ -280,7 +280,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <li><strong>Basisdienste</strong>: MariaDB/Galera, HAProxy-Ingress — unspektakulär und kritisch.</li>
 </ul>
 <blockquote>
-<p>Upstream mitführen statt forken: unser Verschnitt bleibt klein genug für jeden Monat Upgrade.</p>
+<p>Upstream mitführen statt forken: der Verschnitt bleibt klein genug für das monatliche Upgrade.</p>
 </blockquote>
 <footer>openEDU · Souveräne Workplace-Suite · Uni Marburg</footer>
 </section>
@@ -335,7 +335,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <h2 id="sso-das-herzst%C3%BCck-konsolidiert">SSO: das Herzstück, konsolidiert</h2>
 <ul>
 <li><strong>Ein Realm, alle Dienste</strong>: Keycloak-Realm <code>opendesk</code>, 15 OIDC-Clients e2e verifiziert — 29 Checks, 0 Fehler.</li>
-<li><strong>Portal-Login über oauth2-proxy</strong>: home-Portal und Admin-Portal laufen unter <code>openedu.graphwiz.ai</code>.</li>
+<li><strong>Portal-Login über oauth2-proxy</strong> — Home- und Admin-Portal laufen unter <code>home.openedu.graphwiz.ai</code>.</li>
 <li><strong>Logout sauber gelöst</strong>: Front-/Backchannel je Client-Typ; Native-Clients (OpenCloud, Matrix, Intercom, SOGo) nutzen eigene Mechanismen.</li>
 <li><strong>Sessions für den Uni-Tag</strong>: 18 h TTL statt 30 min Idle — Logout-Knopf entscheidet, nicht der Timer.</li>
 </ul>
@@ -394,7 +394,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="tests-als-sicherheitsnetz">Tests als Sicherheitsnetz</h2>
 <ul>
-<li><strong>SSO-Suite</strong>: 59 bestanden · 0 fehlerhaft · 6 Warnungen (dokumentiert und beabsichtigt).</li>
+<li><strong>SSO-Suite</strong>: 59 bestanden · 0 fehlerhaft · 6 Warnungen — beabsichtigt und dokumentiert.</li>
 <li><strong>Zwei reale Ausfälle sofort gefangen</strong> — Portal-Login-Regressionstest schlug an, bevor Nutzer es gemeldet hätten.</li>
 <li><strong>Warnungen sind Design, nicht Schulden</strong>: Native-Clients ohne Frontchannel-Logout stehen bewusst mit Begründung in der Suite.</li>
 </ul>
@@ -458,7 +458,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <li><strong>oauth2-proxy rot</strong> — stale Secret im Pod + Cookie-Secret im falschen Format → Secret-Management verschärft.</li>
 </ul>
 <blockquote>
-<p>Das Muster: jeder gefundene Fehler wird ein Test, bevor er ein zweites Mal ein Fehler wird.</p>
+<p>Jeder gefundene Fehler wird ein Test, bevor er wiederkommt.</p>
 </blockquote>
 <footer>openEDU · Souveräne Workplace-Suite · Uni Marburg</footer>
 </section>
@@ -514,7 +514,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <ul>
 <li><strong>Tenants <code>opendesk-staff</code> und <code>opendesk-students</code></strong> — getrennte Namespaces, getrennte SSO-Clients.</li>
 <li><strong>SOGo6-Rollover je Tenant</strong>: Admin-Secrets nur im Cluster, nie im Git.</li>
-<li><strong>Bewusst außerhalb von ArgoCD</strong> — Tenants sind Kundenumgebungen, keine Plattform; Kustomizations je Tenant, kein ApplicationSet-Zwang.</li>
+<li><strong>Bewusst außerhalb von ArgoCD</strong> — Tenants sind Kundenumgebungen, keine Plattform: je Tenant eine Kustomization.</li>
 </ul>
 <blockquote>
 <p>Ein Cluster, zwei Zielgruppen, klare Trennung — Staff zuerst, Studierende folgen.</p>
@@ -572,7 +572,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <h2 id="groupware-pflege-sogo-unter-hrz-bedingungen">Groupware-Pflege: SOGo unter HRZ-Bedingungen</h2>
 <ul>
 <li><strong>SOGo 5.12.11 als Source-Rebuild</strong> — HRZ-Inhouse-Basis, Security-Updates nachziehen ist Routine.</li>
-<li><strong>Der Fallstrich</strong>: 5.11-Ära-Patches (<code>.m</code>-Quelldateien) crashen die 5.12.11 — alte Patches strippen, Image neu taggen.</li>
+<li><strong>Der Fallstrich</strong>: 5.11-Ära-Patches (<code>.m</code>-Quelldateien) crashen den 5.12.11-Build — alte Patches strippen, Image neu taggen.</li>
 <li><strong>Die sogo6-Familie</strong> (inkl. <code>sogo6-api-*</code>-Clients) wächst parallel für die Tenants.</li>
 </ul>
 <blockquote>
@@ -632,7 +632,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <ul>
 <li><strong>openEDU- &amp; openSME-Website</strong> — Next.js, vier Sprachen (de/en/fr/zh), Blog mit Backup-/Betriebsthemen.</li>
 <li><strong>Server-Konsolidierung</strong>: kompletter Web-Stack auf einer Maschine, Traefik-File-Router übernimmt Redirects der Alt-Hosts.</li>
-<li><strong>Eigene Marke statt Fremd-Branding</strong> — <code>openedu.graphwiz.ai</code> / <code>opensme.graphwiz.ai</code>, aufgeräumt bis auf externe Fakten.</li>
+<li><strong>Eigene Marke statt Fremd-Branding</strong> — <code>openedu.graphwiz.ai</code> / <code>opensme.graphwiz.ai</code>; eigene Sites sind bereinigt, übrig blieben externe Verweise.</li>
 </ul>
 <blockquote>
 <p>Auch die Website ist Infrastruktur: deploybar, getestet, konsolidiert.</p>
@@ -687,14 +687,14 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 .speaker-tobias { background: #1a2f52; color: #8ab8ff; border: 1px solid #3b6fc4; }
 ;" data-marpit-pagination-total="14">
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
-<h2 id="die-schwester-opensme-mit-rustgo-blaupausen">Die Schwester: openSME mit Rust/Go-Blaupausen</h2>
+<h2 id="die-schwester-opensme-mit-rustgo-stack">Die Schwester: openSME mit Rust/Go-Stack</h2>
 <ul>
 <li><strong>Gleiche Methode, andere Zielgruppe</strong>: Mittelstand statt Universität — der Stack ist bewusst anders gewählt.</li>
 <li><strong>Vorhandene Software statt Eigenbau</strong>: Kanidm (IdP) · Stalwart (Mail) · Conduit (Matrix) · Garage (Objekt-Speicher) · ocis · Vikunja · LiveKit · Forgejo · Caddy.</li>
-<li><strong>Grüne Builds, klare Lizenzen</strong> — jedes Bauteil muss aus dem Source bauen und bleiben.</li>
+<li><strong>Grüne Builds, klare Lizenzen</strong> — jedes Bauteil baut aus dem Source und bleibt grün.</li>
 </ul>
 <blockquote>
-<p>„Rust-basiert&quot; heißt bei uns: fertige, gepflegte Software wählen — nie ein eigenes Identitäts-Binärprogramm schreiben.</p>
+<p>„Rust-basiert“ heißt bei uns: fertige, gepflegte Software wählen — nie einen eigenen Identitätsdienst schreiben.</p>
 </blockquote>
 <footer>openEDU · Souveräne Workplace-Suite · Uni Marburg</footer>
 </section>
@@ -812,7 +812,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <li><strong>Nächst</strong>: openSME-Übertragung, weitere Security-Rebuilds im Monatsrhythmus.</li>
 </ul>
 <blockquote>
-<p>Eine Suite ist nie fertig. Sie ist im Betrieb — und genau das ist der Beweis.</p>
+<p>Eine Suite ist nie fertig. Im Betrieb zu sein — das ist das Ergebnis.</p>
 </blockquote>
 <footer>openEDU · Souveräne Workplace-Suite · Uni Marburg</footer>
 </section>
