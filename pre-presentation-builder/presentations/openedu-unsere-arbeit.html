@@ -275,8 +275,8 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <h2 id="architektur-gitops-mit-erbe">Architektur: GitOps mit Erbe</h2>
 <ul>
 <li>Der Cluster ist deklariert: Kubernetes (SCS) mit ArgoCD — Abweichungen werden sichtbar.</li>
-<li>openDesk CE läuft als Git-Submodul; 62 Upstream-Commits (1.16.2 → 1.18.0) sind eingespielt.</li>
-<li>Darüber die Uni-Schicht: 99 eigene Commits für Helmfiles und Umgebungen.</li>
+<li>openDesk CE läuft als Git-Submodul; der Upstream-Sprung ist eingespielt.</li>
+<li>Darüber die Uni-Schicht mit eigenen Commits für Helmfiles und Umgebungen.</li>
 <li>MariaDB/Galera und HAProxy — unspektakulär und kritisch.</li>
 </ul>
 <blockquote>
@@ -334,10 +334,10 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="sso-das-herzst%C3%BCck-konsolidiert">SSO: das Herzstück, konsolidiert</h2>
 <ul>
-<li>Ein Realm (<code>opendesk</code>) trägt alle Dienste: 15 OIDC-Clients, e2e verifiziert — 29 Checks, 0 Fehler.</li>
+<li>Ein Realm (<code>opendesk</code>) trägt alle Dienste: jeder OIDC-Client e2e verifiziert, jede Prüfung grün.</li>
 <li>Home- und Admin-Portal laufen über oauth2-proxy unter <code>home.openedu.graphwiz.ai</code>.</li>
 <li>Logout je Client-Typ gelöst; native Clients gehen eigene Wege.</li>
-<li>Sessions dauern einen Uni-Tag: 18 h statt 30 min — der Logout-Knopf entscheidet, nicht der Timer.</li>
+<li>Sessions dauern einen Uni-Tag — der Logout-Knopf entscheidet, nicht der Timer.</li>
 </ul>
 <blockquote>
 <p>„Ein Login für alles&quot; war ein Versprechen — jetzt ist es eine Test-Suite.</p>
@@ -394,8 +394,8 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="tests-als-sicherheitsnetz">Tests als Sicherheitsnetz</h2>
 <ul>
-<li>SSO-Suite: 59 grün, 0 rot, 6 Warnungen — jede Warnung ist ein dokumentierter Beschluss.</li>
-<li>Bei zwei realen Ausfällen schlug der Portal-Login-Regressionstest zuerst an — vor jedem Nutzer-Ticket.</li>
+<li>Die SSO-Suite ist grün; jede Warnung ist ein dokumentierter Beschluss.</li>
+<li>Bei realen Ausfällen schlug der Portal-Login-Regressionstest zuerst an — vor jedem Nutzer-Ticket.</li>
 </ul>
 <blockquote>
 <p>Jede Warnung im Testlauf hat einen Beschluss. „Egal&quot; existiert in der Suite nicht.</p>
@@ -450,7 +450,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 .speaker-tobias { background: #1a2f52; color: #8ab8ff; border: 1px solid #3b6fc4; }
 ;" data-marpit-pagination-total="14">
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
-<h2 id="betrieb-ist-debugging-drei-storys">Betrieb ist Debugging: drei Storys</h2>
+<h2 id="betrieb-ist-debugging">Betrieb ist Debugging</h2>
 <ul>
 <li><strong>Keycloak im CrashLoop.</strong> Ein DB-Hostname löste falsch auf — behoben mit ClusterIP statt ExternalName.</li>
 <li><strong>503 auf dem Portal.</strong> Eine Egress-Policy blockte Keycloak, ein zweiter Ingress konkurrierte — Ursachen getrennt, Regeln verfeinert.</li>
@@ -511,7 +511,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="multi-tenancy-zwei-welten-ein-cluster">Multi-Tenancy: zwei Welten, ein Cluster</h2>
 <ul>
-<li>Zwei Tenants — <code>opendesk-staff</code> und <code>opendesk-students</code> — mit getrennten Namespaces und eigenen SSO-Clients.</li>
+<li>Die Tenants <code>opendesk-staff</code> und <code>opendesk-students</code> — getrennte Namespaces, eigene SSO-Clients.</li>
 <li>SOGo6 je Tenant; Admin-Passwörter leben nur im Cluster, nie im Git.</li>
 <li>Tenants sind Kundenumgebungen, keine Plattform — deshalb bewusst außerhalb von ArgoCD geführt.</li>
 </ul>
@@ -570,8 +570,8 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="groupware-pflege-sogo-unter-hrz-bedingungen">Groupware-Pflege: SOGo unter HRZ-Bedingungen</h2>
 <ul>
-<li>SOGo 5.12.11 bauen wir aus dem Source — Security-Updates nachziehen ist Routine.</li>
-<li>Der Fallstrich: Patches aus der 5.11-Ära crashen den neuen Build — alte Patches raus, Image neu taggen.</li>
+<li>SOGo bauen wir aus dem Source — Security-Updates nachziehen ist Routine.</li>
+<li>Der Fallstrich: Patches aus der Vorversion crashen den neuen Build — alte Patches raus, Image neu taggen.</li>
 <li>Parallel wächst die sogo6-Familie für die Tenants.</li>
 </ul>
 <blockquote>
@@ -629,7 +629,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="au%C3%9Fenwirkung-websites-branding-konsolidierung">Außenwirkung: Websites, Branding, Konsolidierung</h2>
 <ul>
-<li>openEDU- und openSME-Website: Next.js, vier Sprachen, Blog zu Backup und Betrieb.</li>
+<li>openEDU- und openSME-Website: Next.js, mehrsprachig, Blog zu Backup und Betrieb.</li>
 <li>Der komplette Web-Stack läuft auf einer Maschine; Traefik übernimmt die Redirects der Alt-Hosts.</li>
 <li>Eigene Marken — <code>openedu.graphwiz.ai</code> und <code>opensme.graphwiz.ai</code>; in den eigenen Sites bleibt keine Fremd-Referenz.</li>
 </ul>
@@ -747,7 +747,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="agentic-ai-im-openedu-betrieb">Agentic AI im openEDU-Betrieb</h2>
 <ul>
-<li>Die Upstream-Reconciliation — 161 Commits aus zwei Richtungen — lief als Agenten-Fleet mit exakten Abnahmekriterien.</li>
+<li>Die Upstream-Reconciliation aus beiden Richtungen lief als Agenten-Fleet mit exakten Abnahmekriterien.</li>
 <li>Test-Suiten entstanden in Agenten-Batches; jedes Ergebnis ist verifizierbar.</li>
 <li>Vor jeder Ausführung steht die Spezifikation: OpenSpec-Changes, dieselbe Pyramide wie im Workshop — Spec · Contract · Test.</li>
 </ul>
@@ -806,7 +806,7 @@ table tbody tr:nth-child(even) td { background-color: #252525; }
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 <h2 id="bilanz--und-was-als-n%C3%A4chstes-kommt">Bilanz — und was als Nächstes kommt</h2>
 <ul>
-<li>Stabil: Portal, SSO über 15 Clients, Test-Suiten grün, Web-Stack konsolidiert.</li>
+<li>Stabil: Portal, SSO für alle Clients, Test-Suiten grün, Web-Stack konsolidiert.</li>
 <li>In Arbeit: DNS-Flip auf die neuen Domains, Rollover der Studierenden-Tenants.</li>
 <li>Danach: openSME-Übertragung, Security-Rebuilds im Monatsrhythmus.</li>
 </ul>
@@ -915,10 +915,9 @@ SOGoSystemDefaults.m) mussten raus — jede Request crashte den sogod.
 Fazit fürs Publikum: Inhouse-Forks tragen Zinsen in Form von
 Rebuild-Arbeit; die kalkulieren wir ein, statt uns zu wundern.</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>notes:
 2026-09-25: kompletter Web-Stack auf v77986 (Traefik v2 File-Router,
-Legacy-Redirects der 1blu-vHosts). De-Branding-Sweep auf Wunsch:
-github/codeberg-Links und openDesk-Referenzen aus eigenen Sites raus,
-übrig blieb nur der externe Matrix-Raum #opendesk. Website: Next.js
-App Router, next-intl, Vitest; Blog-Artikel u. a. Backup (k8up).</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>notes:
+Legacy-Redirects der 1blu-vHosts). De-Branding-Sweep auf Wunsch: github/codeberg-Links und openDesk-Referenzen aus eigenen
+Sites raus, übrig blieb nur der externe Matrix-Raum #opendesk. Website: Next.js App
+Router, next-intl (de/en/fr/zh), Vitest; Blog-Artikel u. a. Backup (k8up).</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>notes:
 Entscheidung 2026-09-09 (Ponytail-Architektur): Security-Kern nicht
 selbst schreiben. Kanidm als IdP, Stalwart statt Dovecot-Stack, Garage
 statt S3-Fremddienst. Diese Folie kurz halten — sie zeigt Reichweite

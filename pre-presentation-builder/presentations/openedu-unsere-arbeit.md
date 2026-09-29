@@ -100,8 +100,8 @@ opendesk-opencloud, sogo-Familie, home-portal, admin-home-portal).
 ## Architektur: GitOps mit Erbe
 
 - Der Cluster ist deklariert: Kubernetes (SCS) mit ArgoCD — Abweichungen werden sichtbar.
-- openDesk CE läuft als Git-Submodul; 62 Upstream-Commits (1.16.2 → 1.18.0) sind eingespielt.
-- Darüber die Uni-Schicht: 99 eigene Commits für Helmfiles und Umgebungen.
+- openDesk CE läuft als Git-Submodul; der Upstream-Sprung ist eingespielt.
+- Darüber die Uni-Schicht mit eigenen Commits für Helmfiles und Umgebungen.
 - MariaDB/Galera und HAProxy — unspektakulär und kritisch.
 
 > Upstream mitführen statt forken: der Verschnitt bleibt klein genug für das monatliche Upgrade.
@@ -121,10 +121,10 @@ die Schichten stehen im Text.
 
 ## SSO: das Herzstück, konsolidiert
 
-- Ein Realm (`opendesk`) trägt alle Dienste: 15 OIDC-Clients, e2e verifiziert — 29 Checks, 0 Fehler.
+- Ein Realm (`opendesk`) trägt alle Dienste: jeder OIDC-Client e2e verifiziert, jede Prüfung grün.
 - Home- und Admin-Portal laufen über oauth2-proxy unter `home.openedu.graphwiz.ai`.
 - Logout je Client-Typ gelöst; native Clients gehen eigene Wege.
-- Sessions dauern einen Uni-Tag: 18 h statt 30 min — der Logout-Knopf entscheidet, nicht der Timer.
+- Sessions dauern einen Uni-Tag — der Logout-Knopf entscheidet, nicht der Timer.
 
 > „Ein Login für alles" war ein Versprechen — jetzt ist es eine Test-Suite.
 
@@ -143,8 +143,8 @@ sso-test-User. Näher dran: SSO war über Monate der breite Graben zwischen
 
 ## Tests als Sicherheitsnetz
 
-- SSO-Suite: 59 grün, 0 rot, 6 Warnungen — jede Warnung ist ein dokumentierter Beschluss.
-- Bei zwei realen Ausfällen schlug der Portal-Login-Regressionstest zuerst an — vor jedem Nutzer-Ticket.
+- Die SSO-Suite ist grün; jede Warnung ist ein dokumentierter Beschluss.
+- Bei realen Ausfällen schlug der Portal-Login-Regressionstest zuerst an — vor jedem Nutzer-Ticket.
 
 > Jede Warnung im Testlauf hat einen Beschluss. „Egal" existiert in der Suite nicht.
 
@@ -160,7 +160,7 @@ e2e-Portal-Login-Test war der Erste, der rot wurde.
 
 <div class="speaker speaker-tobias">👤 Tobias Weiß</div>
 
-## Betrieb ist Debugging: drei Storys
+## Betrieb ist Debugging
 
 - **Keycloak im CrashLoop.** Ein DB-Hostname löste falsch auf — behoben mit ClusterIP statt ExternalName.
 - **503 auf dem Portal.** Eine Egress-Policy blockte Keycloak, ein zweiter Ingress konkurrierte — Ursachen getrennt, Regeln verfeinert.
@@ -184,7 +184,7 @@ Incident — so ist die SSO-Suite überhaupt entstanden.
 
 ## Multi-Tenancy: zwei Welten, ein Cluster
 
-- Zwei Tenants — `opendesk-staff` und `opendesk-students` — mit getrennten Namespaces und eigenen SSO-Clients.
+- Die Tenants `opendesk-staff` und `opendesk-students` — getrennte Namespaces, eigene SSO-Clients.
 - SOGo6 je Tenant; Admin-Passwörter leben nur im Cluster, nie im Git.
 - Tenants sind Kundenumgebungen, keine Plattform — deshalb bewusst außerhalb von ArgoCD geführt.
 
@@ -204,8 +204,8 @@ Cluster-Ops danach fertig.
 
 ## Groupware-Pflege: SOGo unter HRZ-Bedingungen
 
-- SOGo 5.12.11 bauen wir aus dem Source — Security-Updates nachziehen ist Routine.
-- Der Fallstrich: Patches aus der 5.11-Ära crashen den neuen Build — alte Patches raus, Image neu taggen.
+- SOGo bauen wir aus dem Source — Security-Updates nachziehen ist Routine.
+- Der Fallstrich: Patches aus der Vorversion crashen den neuen Build — alte Patches raus, Image neu taggen.
 - Parallel wächst die sogo6-Familie für die Tenants.
 
 > Security-Rebuilds sind bei uns kein Ausnahmezustand, sondern ein Monatsthema mit Test.
@@ -224,7 +224,7 @@ Rebuild-Arbeit; die kalkulieren wir ein, statt uns zu wundern.
 
 ## Außenwirkung: Websites, Branding, Konsolidierung
 
-- openEDU- und openSME-Website: Next.js, vier Sprachen, Blog zu Backup und Betrieb.
+- openEDU- und openSME-Website: Next.js, mehrsprachig, Blog zu Backup und Betrieb.
 - Der komplette Web-Stack läuft auf einer Maschine; Traefik übernimmt die Redirects der Alt-Hosts.
 - Eigene Marken — `openedu.graphwiz.ai` und `opensme.graphwiz.ai`; in den eigenen Sites bleibt keine Fremd-Referenz.
 
@@ -232,10 +232,9 @@ Rebuild-Arbeit; die kalkulieren wir ein, statt uns zu wundern.
 
 <!-- notes:
 2026-09-25: kompletter Web-Stack auf v77986 (Traefik v2 File-Router,
-Legacy-Redirects der 1blu-vHosts). De-Branding-Sweep auf Wunsch:
-github/codeberg-Links und openDesk-Referenzen aus eigenen Sites raus,
-übrig blieb nur der externe Matrix-Raum #opendesk. Website: Next.js
-App Router, next-intl, Vitest; Blog-Artikel u. a. Backup (k8up).
+Legacy-Redirects der 1blu-vHosts). De-Branding-Sweep auf Wunsch: github/codeberg-Links und openDesk-Referenzen aus eigenen
+Sites raus, übrig blieb nur der externe Matrix-Raum #opendesk. Website: Next.js App
+Router, next-intl (de/en/fr/zh), Vitest; Blog-Artikel u. a. Backup (k8up).
 -->
 
 ---
@@ -263,7 +262,7 @@ der Methode, openSME ist eigene Story.
 
 ## Agentic AI im openEDU-Betrieb
 
-- Die Upstream-Reconciliation — 161 Commits aus zwei Richtungen — lief als Agenten-Fleet mit exakten Abnahmekriterien.
+- Die Upstream-Reconciliation aus beiden Richtungen lief als Agenten-Fleet mit exakten Abnahmekriterien.
 - Test-Suiten entstanden in Agenten-Batches; jedes Ergebnis ist verifizierbar.
 - Vor jeder Ausführung steht die Spezifikation: OpenSpec-Changes, dieselbe Pyramide wie im Workshop — Spec · Contract · Test.
 
@@ -283,7 +282,7 @@ Kernsatz ist der Merksatz — deckt sich mit der Workshop-These.
 
 ## Bilanz — und was als Nächstes kommt
 
-- Stabil: Portal, SSO über 15 Clients, Test-Suiten grün, Web-Stack konsolidiert.
+- Stabil: Portal, SSO für alle Clients, Test-Suiten grün, Web-Stack konsolidiert.
 - In Arbeit: DNS-Flip auf die neuen Domains, Rollover der Studierenden-Tenants.
 - Danach: openSME-Übertragung, Security-Rebuilds im Monatsrhythmus.
 
