@@ -3,6 +3,8 @@
 # Stdin wird ueberall geschlossen, damit kein Aufruf auf Eingaben warten kann.
 #   ./build.sh          rendern + pruefen
 #   ./build.sh --list   zusaetzlich das Folienverzeichnis ausgeben
+#   ./build.sh --export zusaetzlich PDF + PPTX als Marp-Render nach presentation/ exportieren
+#                       (deck.pdf/deck.pptx dort stammen aus der Bild-Pipeline und werden NICHT ueberschrieben)
 #   ./build.sh --dev    Livesuche: bei jedem Speichern der .md neu rendern + pruefen
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -33,3 +35,9 @@ fi
 render
 [ "${1:-}" = "--list" ] && python3 tools/list_slides.py "$DECK.html" </dev/null
 check
+[ "${1:-}" = "--export" ] && {
+  export CHROME_PATH="${CHROME_PATH:-$(command -v google-chrome || command -v chromium)}"
+  "${MARP[@]}" "$DECK.md" --pdf  -o presentation/marp-deck.pdf  </dev/null >/dev/null 2>&1
+  "${MARP[@]}" "$DECK.md" --pptx -o presentation/marp-deck.pptx </dev/null >/dev/null 2>&1
+  echo "exportiert: presentation/marp-deck.pdf + marp-deck.pptx"
+}
