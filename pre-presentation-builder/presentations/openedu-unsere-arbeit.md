@@ -51,9 +51,9 @@ Forschung, Lehre, Verwaltung. Diese Folie nur als Anker stehen lassen.
 
 ## Warum souverän, warum wir
 
-- **Digitale Dienste als Infrastruktur** — Mail, Chat, Files, Wiki, Projekte: Grundversorgung wie Strom und Wasser.
-- **Souveränität ist keine Haltung, sondern Betrieb** — DSGVO, Lizenzfreiheit und kontrollierte Datenflüsse entstehen durch Arbeit an Ingress, Secrets und Datenbanken.
-- **openDesk als Basis, openEDU als Bildungs-Schicht** — wir erben die Suite; der Uni-Alltag — Tenants, HRZ, Groupware — bleibt unsere Aufgabe.
+- Mail, Chat, Files, Wiki, Projekte: digitale Grundversorgung wie Strom und Wasser.
+- Souveränität ist keine Haltung, sondern Betrieb — sie entsteht an Ingress, Secrets und Datenbanken.
+- Die Basis heißt openDesk, die Bildungs-Schicht openEDU: Wir erben die Suite — Tenants, HRZ, Groupware bleiben unsere Arbeit.
 
 > Souveränität entscheidet sich nicht auf Folien, sondern im nächsten Deployment-Commit.
 
@@ -99,10 +99,10 @@ opendesk-opencloud, sogo-Familie, home-portal, admin-home-portal).
 
 ## Architektur: GitOps mit Erbe
 
-- **Kubernetes (SCS k3s) + ArgoCD** — der Cluster ist deklariert, Drift wird sichtbar.
-- **openDesk CE als Git-Submodul** — Upstream 1.16.2 → 1.18.0 (62 Commits Reconciliation).
-- **Uni-Schicht darüber**: 99 umr-edu-Commits eigener Helmfile-/Umgebungslogik.
-- **Basisdienste**: MariaDB/Galera, HAProxy-Ingress — unspektakulär und kritisch.
+- Der Cluster ist deklariert: Kubernetes (SCS) mit ArgoCD — Abweichungen werden sichtbar.
+- openDesk CE läuft als Git-Submodul; 62 Upstream-Commits (1.16.2 → 1.18.0) sind eingespielt.
+- Darüber die Uni-Schicht: 99 eigene Commits für Helmfiles und Umgebungen.
+- MariaDB/Galera und HAProxy — unspektakulär und kritisch.
 
 > Upstream mitführen statt forken: der Verschnitt bleibt klein genug für das monatliche Upgrade.
 
@@ -121,10 +121,10 @@ die Schichten stehen im Text.
 
 ## SSO: das Herzstück, konsolidiert
 
-- **Ein Realm, alle Dienste**: Keycloak-Realm `opendesk`, 15 OIDC-Clients e2e verifiziert — 29 Checks, 0 Fehler.
-- **Portal-Login über oauth2-proxy** — Home- und Admin-Portal laufen unter `home.openedu.graphwiz.ai`.
-- **Logout sauber gelöst**: Front-/Backchannel je Client-Typ; Native-Clients (OpenCloud, Matrix, Intercom, SOGo) nutzen eigene Mechanismen.
-- **Sessions für den Uni-Tag**: 18 h TTL statt 30 min Idle — Logout-Knopf entscheidet, nicht der Timer.
+- Ein Realm (`opendesk`) trägt alle Dienste: 15 OIDC-Clients, e2e verifiziert — 29 Checks, 0 Fehler.
+- Home- und Admin-Portal laufen über oauth2-proxy unter `home.openedu.graphwiz.ai`.
+- Logout je Client-Typ gelöst; native Clients gehen eigene Wege.
+- Sessions dauern einen Uni-Tag: 18 h statt 30 min — der Logout-Knopf entscheidet, nicht der Timer.
 
 > „Ein Login für alles" war ein Versprechen — jetzt ist es eine Test-Suite.
 
@@ -143,9 +143,8 @@ sso-test-User. Näher dran: SSO war über Monate der breite Graben zwischen
 
 ## Tests als Sicherheitsnetz
 
-- **SSO-Suite**: 59 bestanden · 0 fehlerhaft · 6 Warnungen — beabsichtigt und dokumentiert.
-- **Zwei reale Ausfälle sofort gefangen** — Portal-Login-Regressionstest schlug an, bevor Nutzer es gemeldet hätten.
-- **Warnungen sind Design, nicht Schulden**: Native-Clients ohne Frontchannel-Logout stehen bewusst mit Begründung in der Suite.
+- SSO-Suite: 59 grün, 0 rot, 6 Warnungen — jede Warnung ist ein dokumentierter Beschluss.
+- Bei zwei realen Ausfällen schlug der Portal-Login-Regressionstest zuerst an — vor jedem Nutzer-Ticket.
 
 > Jede Warnung im Testlauf hat einen Beschluss. „Egal" existiert in der Suite nicht.
 
@@ -163,9 +162,9 @@ e2e-Portal-Login-Test war der Erste, der rot wurde.
 
 ## Betrieb ist Debugging: drei Storys
 
-- **Keycloak im CrashLoop** — DB-Hostname `galera-headless` löste über ExternalName falsch auf → ClusterIP + CoreDNS-Loop behoben.
-- **503 auf dem Portal** — Egress-NetworkPolicy blockte Keycloak-Verkehr + doppelter Ingress konkurrierte → Ursachen getrennt, Regeln verfeinert.
-- **oauth2-proxy rot** — stale Secret im Pod + Cookie-Secret im falschen Format → Secret-Management verschärft.
+- **Keycloak im CrashLoop.** Ein DB-Hostname löste falsch auf — behoben mit ClusterIP statt ExternalName.
+- **503 auf dem Portal.** Eine Egress-Policy blockte Keycloak, ein zweiter Ingress konkurrierte — Ursachen getrennt, Regeln verfeinert.
+- **oauth2-proxy rot.** Veraltetes Secret im Pod, Cookie-Secret im falschen Format — Secret-Management verschärft.
 
 > Jeder gefundene Fehler wird ein Test, bevor er wiederkommt.
 
@@ -185,9 +184,9 @@ Incident — so ist die SSO-Suite überhaupt entstanden.
 
 ## Multi-Tenancy: zwei Welten, ein Cluster
 
-- **Tenants `opendesk-staff` und `opendesk-students`** — getrennte Namespaces, getrennte SSO-Clients.
-- **SOGo6-Rollover je Tenant**: Admin-Secrets nur im Cluster, nie im Git.
-- **Bewusst außerhalb von ArgoCD** — Tenants sind Kundenumgebungen, keine Plattform: je Tenant eine Kustomization.
+- Zwei Tenants — `opendesk-staff` und `opendesk-students` — mit getrennten Namespaces und eigenen SSO-Clients.
+- SOGo6 je Tenant; Admin-Passwörter leben nur im Cluster, nie im Git.
+- Tenants sind Kundenumgebungen, keine Plattform — deshalb bewusst außerhalb von ArgoCD geführt.
 
 > Ein Cluster, zwei Zielgruppen, klare Trennung — Staff zuerst, Studierende folgen.
 
@@ -205,9 +204,9 @@ Cluster-Ops danach fertig.
 
 ## Groupware-Pflege: SOGo unter HRZ-Bedingungen
 
-- **SOGo 5.12.11 als Source-Rebuild** — HRZ-Inhouse-Basis, Security-Updates nachziehen ist Routine.
-- **Der Fallstrich**: 5.11-Ära-Patches (`.m`-Quelldateien) crashen den 5.12.11-Build — alte Patches strippen, Image neu taggen.
-- **Die sogo6-Familie** (inkl. `sogo6-api-*`-Clients) wächst parallel für die Tenants.
+- SOGo 5.12.11 bauen wir aus dem Source — Security-Updates nachziehen ist Routine.
+- Der Fallstrich: Patches aus der 5.11-Ära crashen den neuen Build — alte Patches raus, Image neu taggen.
+- Parallel wächst die sogo6-Familie für die Tenants.
 
 > Security-Rebuilds sind bei uns kein Ausnahmezustand, sondern ein Monatsthema mit Test.
 
@@ -225,9 +224,9 @@ Rebuild-Arbeit; die kalkulieren wir ein, statt uns zu wundern.
 
 ## Außenwirkung: Websites, Branding, Konsolidierung
 
-- **openEDU- & openSME-Website** — Next.js, vier Sprachen (de/en/fr/zh), Blog mit Backup-/Betriebsthemen.
-- **Server-Konsolidierung**: kompletter Web-Stack auf einer Maschine, Traefik-File-Router übernimmt Redirects der Alt-Hosts.
-- **Eigene Marke statt Fremd-Branding** — `openedu.graphwiz.ai` / `opensme.graphwiz.ai`; eigene Sites sind bereinigt, übrig blieben externe Verweise.
+- openEDU- und openSME-Website: Next.js, vier Sprachen, Blog zu Backup und Betrieb.
+- Der komplette Web-Stack läuft auf einer Maschine; Traefik übernimmt die Redirects der Alt-Hosts.
+- Eigene Marken — `openedu.graphwiz.ai` und `opensme.graphwiz.ai`; in den eigenen Sites bleibt keine Fremd-Referenz.
 
 > Auch die Website ist Infrastruktur: deploybar, getestet, konsolidiert.
 
@@ -245,9 +244,9 @@ App Router, next-intl, Vitest; Blog-Artikel u. a. Backup (k8up).
 
 ## Die Schwester: openSME mit Rust/Go-Stack
 
-- **Gleiche Methode, andere Zielgruppe**: Mittelstand statt Universität — der Stack ist bewusst anders gewählt.
-- **Vorhandene Software statt Eigenbau**: Kanidm (IdP) · Stalwart (Mail) · Conduit (Matrix) · Garage (Objekt-Speicher) · ocis · Vikunja · LiveKit · Forgejo · Caddy.
-- **Grüne Builds, klare Lizenzen** — jedes Bauteil baut aus dem Source und bleibt grün.
+- Gleiche Methode, andere Zielgruppe: Mittelstand statt Universität.
+- Der Stack besteht aus gepflegter Fremd-Software: Kanidm (IdP) · Stalwart (Mail) · Conduit (Matrix) · Garage (Objekte) · ocis · Vikunja · LiveKit · Forgejo · Caddy.
+- Jedes Bauteil baut aus dem Source — grün und lizenzklar.
 
 > „Rust-basiert“ heißt bei uns: fertige, gepflegte Software wählen — nie einen eigenen Identitätsdienst schreiben.
 
@@ -264,9 +263,9 @@ der Methode, openSME ist eigene Story.
 
 ## Agentic AI im openEDU-Betrieb
 
-- **Upstream-Reconciliation**: 161 Commits aus zwei Richtungen einsortiert — Agenten-Fleet mit exakten Acceptance-Gates.
-- **Test-Suiten entstehen agentisch**: SSO-Suite und e2e-Checks wuchsen in Task-Batches, jedes Ergebnis verifizierbar.
-- **Spezifikation vor Ausführung** — OpenSpec-Changes im openEDU-spec-Repo, gleiche Pyramide wie im Workshop: Spec · Contract · Test.
+- Die Upstream-Reconciliation — 161 Commits aus zwei Richtungen — lief als Agenten-Fleet mit exakten Abnahmekriterien.
+- Test-Suiten entstanden in Agenten-Batches; jedes Ergebnis ist verifizierbar.
+- Vor jeder Ausführung steht die Spezifikation: OpenSpec-Changes, dieselbe Pyramide wie im Workshop — Spec · Contract · Test.
 
 > Die Agenten arbeiten mit uns am Betrieb — aber die Testsuite entscheidet, nicht der Agent.
 
@@ -284,9 +283,9 @@ Kernsatz ist der Merksatz — deckt sich mit der Workshop-These.
 
 ## Bilanz — und was als Nächstes kommt
 
-- **Stabil**: Portal, SSO für 15 Clients, Test-Suiten grün, Web-Stack konsolidiert.
-- **In Arbeit**: DNS-Flip auf die neuen Domains, Tenant-Rollover für Studierende.
-- **Nächst**: openSME-Übertragung, weitere Security-Rebuilds im Monatsrhythmus.
+- Stabil: Portal, SSO über 15 Clients, Test-Suiten grün, Web-Stack konsolidiert.
+- In Arbeit: DNS-Flip auf die neuen Domains, Rollover der Studierenden-Tenants.
+- Danach: openSME-Übertragung, Security-Rebuilds im Monatsrhythmus.
 
 > Eine Suite ist nie fertig. Im Betrieb zu sein — das ist das Ergebnis.
 
