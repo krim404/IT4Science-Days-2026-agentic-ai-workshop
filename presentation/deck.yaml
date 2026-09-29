@@ -796,6 +796,7 @@ slides:
   - text: 'Eigene Installation, Stand 09/2026'
     footnote: true
   - 'Alle Packages: pi.dev/packages': https://pi.dev/packages
+  - 'Option für SAIA: pi-saia-plugin': https://github.com/tobias-weiss-ai-xr/pi-saia-plugin
   speaker: 'Tobias'
   notes: |
     ~90 s. Die Auswahl aus der eigenen Installation, mit der ein Einstieg sicher und sparsam
@@ -808,6 +809,8 @@ slides:
     - pi-websearch ist für die Literaturrecherche die naheliegende Ergänzung.
     - tool-repair und retry lohnen sich vor allem mit offenen Modellen, deren Werkzeugaufrufe
       öfter danebengehen. rtk ist einer der Token-Hebel aus dem Token-Block.
+    - Option: pi-saia-plugin stammt von Tobias und lohnt sich für alle, die mit SAIA arbeiten.
+      Es registriert alle SAIA-Modelle als Provider, der Schlüssel kommt per /login saia.
     Installation je Package im Terminal:
       pi install npm:@narumitw/pi-plan-mode
       pi install npm:pi-permission-system
@@ -818,6 +821,7 @@ slides:
       pi install npm:pi-tool-repair
       pi install npm:@monotykamary/pi-retry
       pi install npm:@sherif-fanous/pi-rtk
+      pi install git:github.com/tobias-weiss-ai-xr/pi-saia-plugin
     Weitere Packages durchsuchen: https://pi.dev/packages
     Vorsicht wie bei Skills: Packages können Code ausführen. Vor der Installation ansehen.
 
