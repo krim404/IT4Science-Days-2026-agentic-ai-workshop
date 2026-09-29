@@ -239,7 +239,6 @@ Vertiefung, Anfänger Start-Hilfe.
 ## Was der Vormittag liefert — und was nicht
 
 - **ein Research-Repo** mit laufender Pipeline
-- **einen Spec-Change**, live umgesetzt
 - **Werkzeuge** für Modelle und Harnesses statt Trendlisten
 
 Was nicht geliefert wird: der fertige Bot. 
